@@ -370,6 +370,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bearing", "Bearing", "{E323
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simargl.Detecting.Bearing.Simulator", "Simargl.Detecting.Bearing.Simulator\Simargl.Detecting.Bearing.Simulator.csproj", "{BF55ABF3-189C-46AB-AD35-01E973E310A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simargl.Viewer", "Simargl.Viewer\Simargl.Viewer.csproj", "{B62362A6-9161-4E82-BF83-1055EAFC32D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -3750,6 +3752,38 @@ Global
 		{BF55ABF3-189C-46AB-AD35-01E973E310A4}.Win8Release|x64.Build.0 = Release|Any CPU
 		{BF55ABF3-189C-46AB-AD35-01E973E310A4}.Win8Release|x86.ActiveCfg = Release|Any CPU
 		{BF55ABF3-189C-46AB-AD35-01E973E310A4}.Win8Release|x86.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Debug|x64.Build.0 = Debug|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Profile|Any CPU.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Profile|Any CPU.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Profile|ARM.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Profile|ARM.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Profile|x64.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Profile|x64.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Profile|x86.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Profile|x86.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Release|ARM.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Release|x64.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Release|x64.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Release|x86.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Win8Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Win8Release|Any CPU.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Win8Release|ARM.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Win8Release|ARM.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Win8Release|x64.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Win8Release|x64.Build.0 = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Win8Release|x86.ActiveCfg = Release|Any CPU
+		{B62362A6-9161-4E82-BF83-1055EAFC32D6}.Win8Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
