@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IView1",
+hmDescription:"Дополнительный интерфейс для вида. Иерархия: IDispatch IView1 Примечание: Дополнительный интерфейс для графических объектов. Данный интерфейс можно получить у интерфейса вид",
+hmPrevLink:"iassociationviewelements_projecttolerances.html",
+hmNextLink:"iview1_props.html",
+hmParentLink:"view_layers.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"view_layers.html\">Виды и слои&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Виды и слои  > Интерфейс IView1 ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IView1 <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbb2330096\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Дополнительный интерфейс для вида.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"iview1.html\" class=\"topiclink\">IView1<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Дополнительный интерфейс для графических объектов. Данный интерфейс можно получить у интерфейса вида <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iview.html\" class=\"topiclink\">IView<\/a><\/span><span class=\"f_bodytext\"> посредством вызова метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"recomendation.html\" class=\"topiclink\">IUnknown::QueryInterface (const GUID far&amp; IID, void** pif)<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iview1_props.html\" class=\"topiclink hmlinklistitem\">IView1 - свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iview1_methods.html\" class=\"topiclink hmlinklistitem\">IView1 - методы <\/a><\/span><\/p>\n\r"
+})

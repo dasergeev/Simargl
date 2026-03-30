@@ -1,0 +1,6 @@
+SELECT NAME, ST_AsEWKT(point) FROM cafes
+ORDER BY ST_Distance(
+           point,
+           ST_GeomFromEWKT('SRID=4326;POINT(35.84608 56.85884)')
+         )
+LIMIT 10;

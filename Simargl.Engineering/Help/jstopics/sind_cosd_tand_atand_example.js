@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Пример использования тригонометрических функций",
+hmDescription:"void Trig_Example (void) {   double h, b, Ang =60;   \/* Построение прямоугольного треугольника с гипотенузой L и углом Ang *\/   h = L * SinD (Ang); \/* высота треугольника *",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Пример использования тригонометрических функций <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcg1716303\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">void Trig_Example (void) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">double h, b, Ang =60;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/* Построение прямоугольного треугольника с гипотенузой L и углом Ang *\/<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">h = L * SinD (Ang); \/* высота треугольника *\/<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">b = L * CosD (Ang); \/* основание треугольника *\/<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">LineSeg ( 0, 0, 0, h, 1);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">LineSeg ( 0, h, b, 0, 1);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">LineSeg ( b, 0, 0, 0, 1);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/* Связь катетов *\/<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">h = b * TanD (Ang);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/* Обратное вычисление угла *\/<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Ang = AtanD (h \/ b);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}; \/* Trig_Example *\/<\/span><\/p>\n\r"
+})

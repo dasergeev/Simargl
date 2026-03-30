@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"INurbsSurface - методы",
+hmDescription:"Подразделы: AddBoundary - Добавить границу для NURBS-поверхности  DeleteBoundary - Удалить границу  GetBoundary - Получить параметры NURBS-представления границы  GetNurbsParams",
+hmPrevLink:"inurbssurface_closedv.html",
+hmNextLink:"inurbssurface_addboundary.html",
+hmParentLink:"inurbssurface.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2288197.html\">Поверхности&nbsp;<\/a> &gt; <a href=\"isurfacecontainer.html\">Интерфейс ISurfaceContainer&nbsp;<\/a> &gt; <a href=\"isurfacecontainer_props.html\">ISurfaceContainer - свойства&nbsp;<\/a> &gt; <a href=\"inurbssurface.html\">Интерфейс INurbsSurface&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Поверхности  > Интерфейс ISurfaceContainer  > ISurfaceContainer - свойства  > Интерфейс INurbsSurface  > INurbsSurface - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">INurbsSurface - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbssurface_addboundary.html\" class=\"topiclink hmlinklistitem\">AddBoundary - Добавить границу для NURBS-поверхности <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbssurface_deleteboundary.html\" class=\"topiclink hmlinklistitem\">DeleteBoundary - Удалить границу <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbssurface_getboundary.html\" class=\"topiclink hmlinklistitem\">GetBoundary - Получить параметры NURBS-представления границы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbssurface_getnurbsparams.html\" class=\"topiclink hmlinklistitem\">GetNurbsParams - Получить параметры NURBS-поверхности <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbssurface_initparambyface.html\" class=\"topiclink hmlinklistitem\">InitParamByFace - Создать по объекту <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbssurface_setnurbsparams.html\" class=\"topiclink hmlinklistitem\">SetNurbsParams - Установить параметры NURBS-поверхности <\/a><\/span><\/p>\n\r"
+})

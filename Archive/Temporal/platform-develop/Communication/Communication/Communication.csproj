@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <RootNamespace>Apeiron.Platform</RootNamespace>
+        <AssemblyName>Apeiron.Platform.Communication</AssemblyName>
+        <DocumentationFile>Apeiron.Platform.Communication.xml</DocumentationFile>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+        <AnalysisLevel>preview</AnalysisLevel>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <WarningLevel>5</WarningLevel>
+        <NoWarn />
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <Optimize>False</Optimize>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+      <Optimize>False</Optimize>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Apeiron" Version="3.1.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    
+</Project>

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksRDimDrawingParam - свойства",
+hmDescription:"Подразделы: ang - Угол наклона размерной линии  pt1 - Тип стрелки у первой выносной линии  pt2 - Тип стрелки у второй выносной линии (для диаметрального размера);признак построе",
+hmPrevLink:"ksrdimdrawingparam.html",
+hmNextLink:"ksrdimdrawingparam_ang.html",
+hmParentLink:"ksrdimdrawingparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"cf1713887.html\">Интерфейсы параметров размеров&nbsp;<\/a> &gt; <a href=\"cf1717982.html\">Радиальные и диаметральные размеры&nbsp;<\/a> &gt; <a href=\"ksrdimdrawingparam.html\">Отрисовка размера (Интерфейс ksRDimDrawingParam)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров размеров  > Радиальные и диаметральные размеры  > Отрисовка размера (Интерфейс ksRDimDrawingParam)  > ksRDimDrawingParam - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksRDimDrawingParam - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrdimdrawingparam_ang.html\" class=\"topiclink hmlinklistitem\">ang - Угол наклона размерной линии <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrdimdrawingparam_pt1.html\" class=\"topiclink hmlinklistitem\">pt1 - Тип стрелки у первой выносной линии <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrdimdrawingparam_pt2.html\" class=\"topiclink hmlinklistitem\">pt2 - Тип стрелки у второй выносной линии (для диаметрального размера);признак построения (для радиального размера) <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrdimdrawingparam_shelfdir.html\" class=\"topiclink hmlinklistitem\">shelfDir - Направление выносной полки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrdimdrawingparam_textpos.html\" class=\"topiclink hmlinklistitem\">textPos - Параметр отрисовки текста или длина &quot;ножки&quot; <\/a><\/span><\/p>\n\r"
+})

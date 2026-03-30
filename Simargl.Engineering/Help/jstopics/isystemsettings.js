@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс ISystemSettings",
+hmDescription:"Параметры системы. Иерархия: IDispatch IKompasAPIObject ISystemSettings Примечание: Данный интерфейс можно получить от интерфейса IApplication с помощью метода IApplication",
+hmPrevLink:"ilibarraysettings_setlibraryuse.html",
+hmNextLink:"isystemsettings_props.html",
+hmParentLink:"adjstment.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"adjstment.html\">Работа с настройками&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Работа с настройками  > Интерфейс ISystemSettings ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс ISystemSettings <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbe1719454\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Параметры системы<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"isystemsettings.html\" class=\"topiclink\">ISystemSettings<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Данный интерфейс можно получить от интерфейса <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iapplication.html\" class=\"topiclink\">IApplication<\/a><\/span><span class=\"f_bodytext\"> с помощью метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iapplication_systemsettings.html\" class=\"topiclink\">IApplication::SystemSettings<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isystemsettings_props.html\" class=\"topiclink hmlinklistitem\">ISystemSettings - свойства <\/a><\/span><\/p>\n\r"
+})

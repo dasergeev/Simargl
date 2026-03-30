@@ -1,0 +1,4 @@
+﻿EntityFrameworkCore\Add-Migration -Project Databases\BomDatabase -StartupProject Databases\BomDatabase -Name
+EntityFrameworkCore\Update-Database -Project Databases\BomDatabase -StartupProject Databases\BomDatabase
+EntityFrameworkCore\Remove-Migration -Project Databases\BomDatabase -StartupProject Databases\BomDatabase
+EntityFrameworkCore\Remove-Migration -Project Databases\BomDatabase -StartupProject Databases\BomDatabase -Force

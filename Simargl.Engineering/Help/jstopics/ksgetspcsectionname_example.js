@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksGetSpcSectionName - пример использования",
+hmDescription:"\/\/ создадим итератор по вспомогательным объектам спецификации в текущем документе",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksGetSpcSectionName - пример использования <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcg1728413\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ создадим итератор по вспомогательным объектам спецификации в текущем документе<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">reference iter = ::CreateSpcIterator (0, 0, 1\/*вспомогательные объекты спецификации*\/);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if (iter) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ встаем на первый объект спецификации<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">reference spcObj = ::MoveIterator (iter, \'F\');<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ проверяем, что объект действительно существует<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if (spcObj &amp;&amp; ::ExistObj (spcObj)) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">do {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">char spcSectionName[128]; \/\/ имя раздела спецификации<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ запрашиваем имя раздела<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if (::ksGetSpcSectionName (spcObj, spcSectionName, sizeof (spcSectionName)))<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::Message (spcSectionName);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ встаем на следующий объект спецификации<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">spcObj = ::MoveIterator (iter, \'N\');<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">} while (spcObj &amp;&amp; ::ExistObj (spcObj));<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::DeleteIterator(iter); \/\/ удаляем итератор<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r"
+})

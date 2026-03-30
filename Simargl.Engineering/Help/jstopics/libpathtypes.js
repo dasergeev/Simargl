@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Типы пути в библиотеке моделей",
+hmDescription:"0 - отказ от выбора пути 1 - \"корень\" библиотеки 2 - папка библиотеки 3 - трехмерная модель в библиотеке Подразделы: (отсутствуют)",
+hmPrevLink:"datatypes.html",
+hmNextLink:"objtypes.html",
+hmParentLink:"bk1808863.html",
+hmBreadCrumbs:"<a href=\"3d_define.html\">Структуры параметров и константы<\/a> &gt; <a href=\"bk1803360.html\">Константы&nbsp;<\/a> &gt; <a href=\"bk1808863.html\">Константы системы&nbsp;<\/a>",
+hmTitlePath:"Структуры параметров и константы > Константы  > Константы системы  > Типы пути в библиотеке моделей ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Типы пути в библиотеке моделей <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbk1811141\" class=\"hmanchor\"><\/a><\/p>\n\r<div style=\"text-align: left; text-indent: 0; line-height: 1.48; padding: 0 0 0 0; margin: 0.2500rem 0 0 4.1250rem;\"><table style=\"border:none; border-spacing:0;\">\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">0<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">- отказ от выбора пути<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">1<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">- &quot;корень&quot; библиотеки<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">2<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">- папка библиотеки<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">3<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">- трехмерная модель в библиотеке<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<\/table>\n\r<\/div>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

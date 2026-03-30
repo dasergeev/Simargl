@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"INurbs - методы",
+hmDescription:"Подразделы: AddPoint - Добавить точку  Clear - Удалить все точки  DeletePoint - Удалить точку  GetNurbsParams - Получить параметры NURBS-кривой  GetPoint - Получить параметры",
+hmPrevLink:"inurbs_style.html",
+hmNextLink:"inurbs_addpoint.html",
+hmParentLink:"inurbs.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb2333035.html\">Геометрия&nbsp;<\/a> &gt; <a href=\"inurbs.html\">Интерфейс INurbs&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Геометрия  > Интерфейс INurbs  > INurbs - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">INurbs - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbs_addpoint.html\" class=\"topiclink hmlinklistitem\">AddPoint - Добавить точку <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbs_clear.html\" class=\"topiclink hmlinklistitem\">Clear - Удалить все точки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbs_deletepoint.html\" class=\"topiclink hmlinklistitem\">DeletePoint - Удалить точку <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbs_getnurbsparams.html\" class=\"topiclink hmlinklistitem\">GetNurbsParams - Получить параметры NURBS-кривой <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbs_getpoint.html\" class=\"topiclink hmlinklistitem\">GetPoint - Получить параметры точки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbs_readfromfile.html\" class=\"topiclink hmlinklistitem\">ReadFromFile - Прочитать файл с данными <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbs_setnurbsparams.html\" class=\"topiclink hmlinklistitem\">SetNurbsParams - Установить параметры NURBS-кривой <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inurbs_writetofile.html\" class=\"topiclink hmlinklistitem\">WriteToFile - Записать файл с данными <\/a><\/span><\/p>\n\r"
+})

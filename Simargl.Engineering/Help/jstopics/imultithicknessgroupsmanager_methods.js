@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"MultiThicknessGroupsManager- методы",
+hmDescription:"Подразделы: AddMultiThicknessGroup - Добавить группу объектов с заданной толщиной  DeleteMultiThicknessGroup - Удалить группу объектов с заданной толщиной  DestroyMultiThickness",
+hmPrevLink:"imultithicknessgroupsmanager_multithicknessgroupsthickness.html",
+hmNextLink:"imultithicknessgroupsmanager_addmultithicknessgroup.html",
+hmParentLink:"imultithicknessgroupsmanager.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2278808.html\">Операции, массивы, эскизы, точки&nbsp;<\/a> &gt; <a href=\"bc2279073.html\">Операции&nbsp;<\/a> &gt; <a href=\"imultithicknessgroupsmanager.html\">Интерфейс IMultiThicknessGroupsManager&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Операции, массивы, эскизы, точки  > Операции  > Интерфейс IMultiThicknessGroupsManager  > MultiThicknessGroupsManager- методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">MultiThicknessGroupsManager- методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imultithicknessgroupsmanager_addmultithicknessgroup.html\" class=\"topiclink hmlinklistitem\">AddMultiThicknessGroup - Добавить группу объектов с заданной толщиной <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imultithicknessgroupsmanager_deletemultithicknessgroup.html\" class=\"topiclink hmlinklistitem\">DeleteMultiThicknessGroup - Удалить группу объектов с заданной толщиной <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imultithicknessgroupsmanager_destroymultithicknessgroup.html\" class=\"topiclink hmlinklistitem\">DestroyMultiThicknessGroup - Разрушить группу объектов с заданной толщиной <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imultithicknessgroupsmanager_excludemultithicknessgroupobjects.html\" class=\"topiclink hmlinklistitem\">ExcludeMultiThicknessGroupObjects - Исключить объекты из групп <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imultithicknessgroupsmanager_clearmultithicknessgroups.html\" class=\"topiclink hmlinklistitem\">ClearMultiThicknessGroups - Удалить все группы толщин <\/a><\/span><\/p>\n\r"
+})

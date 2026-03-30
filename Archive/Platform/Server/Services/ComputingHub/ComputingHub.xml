@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ComputingHub</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.ChannelSearch">
+            <summary>
+            Представляет микрослужбу, выполняющую поиск каналов кадров регистрации.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.ChannelSearch._Random">
+            <summary>
+            Поле для хранения генератора случайных чисел.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.ChannelSearch.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.ChannelSearch})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.ChannelSearch.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.DefiningFileFormats">
+            <summary>
+            Представляет микрослужбу, определяющую форматы файлов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.DefiningFileFormats._FileIds">
+            <summary>
+            Поле для хранения списка идентификаторов файлов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.DefiningFileFormats._Random">
+            <summary>
+            Поле для хранения генератора случайных чисел.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.DefiningFileFormats.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.DefiningFileFormats})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.DefiningFileFormats.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.FileMetrizator">
+            <summary>
+            Представляет микрослужбу, выполняющую расчёт метрик файлов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FileMetrizator._FileIds">
+            <summary>
+            Поле для хранения списка идентификаторов файлов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FileMetrizator._Random">
+            <summary>
+            Поле для хранения генератора случайных чисел.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileMetrizator.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.FileMetrizator})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileMetrizator.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.FileSearch">
+            <summary>
+            Представляет микрослужбу, выполняющую поиск файлов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FileSearch._FilePaths">
+            <summary>
+            Поле для хранения списка путей к файлам.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FileSearch._Random">
+            <summary>
+            Поле для хранения генератора случайных чисел.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileSearch.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.FileSearch})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileSearch.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileSearch.LoadFilePathsAsync(System.IO.DirectoryInfo,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно загружает пути к файлам.
+            </summary>
+            <param name="directoryInfo">
+            Информация о каталоге.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, асинхронно загружающая пути к файлам.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.FileVisor">
+            <summary>
+            Представляет микрослужбу для поиска файлов данных. (Изначально для проекта Ra2)
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FileVisor._RootPathToFiles">
+            <summary>
+            Представляет путь к корневому каталогу размещения файлов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FileVisor._DatabaseFiles">
+            <summary>
+            Поле для хранения списка файлов в базе данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileVisor.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.FileVisor})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileVisor.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileVisor.LoadFilePathsAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет поиск информации по каталогу необработанных данных.
+            </summary>
+            <param name="filePath">
+            Идентификатор каталога необработанных данных.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая поиск.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileVisor.SearchInDatabaseAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет поиск информации в базе данных.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая поиск.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.FrameAnalysis">
+            <summary>
+            Представляет микрослужбу, выполняющую анализ кадров.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FrameAnalysis._Random">
+            <summary>
+            Поле для хранения генератора случайных чисел.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FrameAnalysis.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.FrameAnalysis})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FrameAnalysis.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FrameAnalysis.GetFrameIdsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно загружает идентификаторы кадров регистрации, которые необходимо обработать.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая загрузку идентификаторов.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FrameAnalysis.StatisticsAnalysisAsync(Apeiron.Platform.Server.Database.Entities.FilterInfo[],Apeiron.Frames.Transforms.ChannelTransform[],Apeiron.Platform.Server.Database.Entities.FrameInfo,System.Collections.Generic.List{Apeiron.Platform.Server.Database.Entities.ChannelInfo},Apeiron.Frames.Frame,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет статистический анализ кадра.
+            </summary>
+            <param name="filters">
+            Массив фильтров.
+            </param>
+            <param name="transforms">
+            Массив преобразований канала.
+            </param>
+            <param name="frameInfo">
+            Информация о кадре.
+            </param>
+            <param name="channelInfos">
+            Массив информации о каналах.
+            </param>
+            <param name="frame">
+            Кадр.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая статистический анализ.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FrameAnalysis.DistributionsAnalysisAsync(Apeiron.Platform.Server.Database.Entities.FilterInfo[],Apeiron.Frames.Transforms.ChannelTransform[],Apeiron.Platform.Server.Database.Entities.FrameInfo,System.Collections.Generic.List{Apeiron.Platform.Server.Database.Entities.ChannelInfo},Apeiron.Frames.Frame,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет анализ распределений кадра.
+            </summary>
+            <param name="filters">
+            Массив фильтров.
+            </param>
+            <param name="transforms">
+            Массив преобразований канала.
+            </param>
+            <param name="frameInfo">
+            Информация о кадре.
+            </param>
+            <param name="channelInfos">
+            Массив информации о каналах.
+            </param>
+            <param name="frame">
+            Кадр.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая анализ распределений.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.FrameSearch">
+            <summary>
+            Представляет микрослужбу, выполняющую поиск кадров регистрации.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FrameSearch._FileIds">
+            <summary>
+            Поле для хранения списка идентификаторов файлов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FrameSearch._Random">
+            <summary>
+            Поле для хранения генератора случайных чисел.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FrameSearch.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.FrameSearch})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FrameSearch.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.Ra2Analysis">
+            <summary>
+            Представляет микрослужбу для обработки данных Ra2.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.Ra2Analysis.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.Ra2Analysis})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.Ra2Analysis.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.Ra2Analysis.FramesAnalizedAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет поиск информации в базе данных.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая поиск.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.Ra2Analysis.WorkingWithFrameAsync(System.Int64,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет работу с кадром регистрации.
+            </summary>
+            <param name="fileId">
+            Идентификатор кадра.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая работу с кадром регистрации.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.Ra2Analysis.SafeInvokeAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask},System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно безопасно выполняет действие.
+            </summary>
+            <param name="action">
+            Действие, которое необходимо выполнеить.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, безопасно выполняющая действие.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.StatisticalChannelAnalysis">
+            <summary>
+            Представляет микрослужбу, выполняющую статистический анализ каналов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.StatisticalChannelAnalysis._FrameIds">
+            <summary>
+            Поле для хранения списка идентификаторов кадров регистрации.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.StatisticalChannelAnalysis._Random">
+            <summary>
+            Поле для хранения генератора случайных чисел.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.StatisticalChannelAnalysis.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.StatisticalChannelAnalysis})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.StatisticalChannelAnalysis.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+    </members>
+</doc>

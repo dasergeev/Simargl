@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>GlobalIdentityMonitor</AssemblyName>
+    <RootNamespace>Apeiron.Services.GlobalIdentity</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Apeiron.Services.GlobalIdentityMonitor.xml</DocumentationFile>
+    <Version>2.0.0</Version>
+    <ApplicationIcon>Resources\Icons\ID.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="Apeiron.Services.GlobalIdentityMonitor.xml" />
+    <None Remove="Resources\Icons\ID.ico" />
+    <None Remove="Resources\Icons\Play.ico" />
+    <None Remove="Resources\Icons\Reload.ico" />
+    <None Remove="Resources\Icons\Stop.ico" />
+    <None Remove="Resources\Icons\Tuning.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Icons\ID.ico" />
+  </ItemGroup>
+  
+	<ItemGroup>
+		<PackageReference Include="MaterialDesignThemes" Version="4.6.1" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.ProjectSystem.Analyzers" Version="15.8.243" />
+		<PackageReference Include="Microsoft.VisualStudio.Threading" Version="17.4.27" />
+		<PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.4.27">
+            <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+	</ItemGroup>
+		
+  <ItemGroup>
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+		
+  <ItemGroup>
+    <ProjectReference Include="..\..\Databases\GlobalIdentityDatabase\GlobalIdentityDatabase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Icons\ID.ico" />
+    <Resource Include="Resources\Icons\Play.ico" />
+    <Resource Include="Resources\Icons\Reload.ico" />
+    <Resource Include="Resources\Icons\Stop.ico" />
+    <Resource Include="Resources\Icons\Tuning.ico" />
+  </ItemGroup>
+
+</Project>

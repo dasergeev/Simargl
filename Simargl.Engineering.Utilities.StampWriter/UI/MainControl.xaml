@@ -1,0 +1,101 @@
+﻿<UserControl
+    x:Class="Simargl.Engineering.Utilities.StampWriter.UI.MainControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:Simargl.Engineering.Utilities.StampWriter.UI"
+    xmlns:stampwriter="clr-namespace:Simargl.Engineering.Utilities.StampWriter"
+    d:DataContext="{d:DesignInstance Type=stampwriter:Heart}"
+    mc:Ignorable="d" 
+    d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="18*"/>
+        </Grid.RowDefinitions>
+        <ToolBar ToolBarTray.IsLocked="True">
+            <Button x:Name="_NewButton" IsEnabled="{Binding IsStoped}">
+                <Image Source="/Images/New.png" Width="16" Height="16" />
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Новый" FontWeight="Bold"/>
+                        <TextBlock Text="Создать новый штамп.">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="_OpenButton" IsEnabled="{Binding IsStoped}">
+                <Image Source="/Images/Open.png" Width="16" Height="16" />
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Открыть" FontWeight="Bold"/>
+                        <TextBlock Text="Открыть штамп.">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="_SaveButton" IsEnabled="{Binding IsStoped}">
+                <Image Source="/Images/Save.png" Width="16" Height="16" />
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Сохранить" FontWeight="Bold"/>
+                        <TextBlock Text="Сохранить штамп.">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="_SaveAsButton"  IsEnabled="{Binding IsStoped}">
+                <Image Source="/Images/SaveAs.png" Width="16" Height="16" />
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Сохранить как" FontWeight="Bold"/>
+                        <TextBlock Text="Сохранить штамп как ...">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            <Separator/>
+            <Button x:Name="_StartButton" IsEnabled="{Binding IsStoped}" Click="StartButton_Click" >
+                <Image Source="/Images/Start.png" Width="16" Height="16" />
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Запуск" FontWeight="Bold"/>
+                        <TextBlock Text="Запустить работу.">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="_StopButton" IsEnabled="{Binding IsStarted}" Click="StopButton_Click">
+                <Image Source="/Images/Stop.png" Width="16" Height="16" />
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Остановить" FontWeight="Bold"/>
+                        <TextBlock Text="Остановить работу.">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+        </ToolBar>
+        <local:StampView Grid.Row="1" Visibility="{Binding StampViewVisibility}"/>
+        <local:JournalView Grid.Row="1" Visibility="{Binding JournalViewVisibility}"/>
+    </Grid>
+</UserControl>

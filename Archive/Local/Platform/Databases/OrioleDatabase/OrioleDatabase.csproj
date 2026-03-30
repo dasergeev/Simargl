@@ -1,0 +1,85 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="Apeiron.Support" />
+    <Using Include="Microsoft.EntityFrameworkCore" />
+    <Using Include="Microsoft.EntityFrameworkCore.Metadata.Builders" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>Apeiron.Platform.Databases</RootNamespace>
+    <AssemblyName>Apeiron.Platform.Databases.OrioleDatabase</AssemblyName>
+    <DocumentationFile>Apeiron.Platform.Databases.OrioleDatabase.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>ООО "ТИЦ ЖТ"</Authors>
+    <Company>ООО "ТИЦ ЖТ"</Company>
+    <Copyright>ООО "ТИЦ ЖТ"</Copyright>
+    <Description>Библиотека для работы с базой данных по проекту Иволга-МРБ.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <AnalysisLevel>preview</AnalysisLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+    <NoWarn />
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+    <NoWarn />
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.ProjectSystem.Analyzers" Version="15.8.243" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.4.27">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Platform\Platform.csproj" />
+  </ItemGroup>
+  
+</Project>

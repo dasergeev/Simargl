@@ -1,0 +1,885 @@
+﻿#pragma warning disable CS8600 // Преобразование литерала, допускающего значение NULL или возможного значения NULL в тип, не допускающий значение NULL.
+#pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
+#pragma warning disable CS8622 // Допустимость значений NULL для ссылочных типов в типе параметра не соответствует целевому объекту делегирования (возможно, из-за атрибутов допустимости значений NULL).
+#pragma warning disable CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
+#pragma warning disable CS8625 // Литерал, равный NULL, не может быть преобразован в ссылочный тип, не допускающий значение NULL.
+#pragma warning disable CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+
+using Simargl.Zero.Ssh.Renci.SshNet.Abstractions;
+using Simargl.Zero.Ssh.Renci.SshNet.Channels;
+using Simargl.Zero.Ssh.Renci.SshNet.Common;
+
+namespace Simargl.Zero.Ssh.Renci.SshNet;
+
+/// <summary>
+/// Contains operation for working with SSH Shell.
+/// </summary>
+internal class ShellStream : Stream
+{
+    private const string CrLf = "\r\n";
+
+    private readonly ISession _session;
+    private readonly Encoding _encoding;
+    private readonly int _bufferSize;
+    private readonly Queue<byte> _incoming;
+    private readonly int _expectSize;
+    private readonly Queue<byte> _expect;
+    private readonly Queue<byte> _outgoing;
+    private IChannelSession _channel;
+    private AutoResetEvent _dataReceived = new AutoResetEvent(initialState: false);
+    private bool _isDisposed;
+
+    /// <summary>
+    /// Occurs when data was received.
+    /// </summary>
+    public event EventHandler<ShellDataEventArgs> DataReceived;
+
+    /// <summary>
+    /// Occurs when an error occurred.
+    /// </summary>
+    public event EventHandler<ExceptionEventArgs> ErrorOccurred;
+
+    /// <summary>
+    /// Gets a value indicating whether data is available on the <see cref="ShellStream"/> to be read.
+    /// </summary>
+    /// <value>
+    /// <see langword="true"/> if data is available to be read; otherwise, <see langword="false"/>.
+    /// </value>
+    public bool DataAvailable
+    {
+        get
+        {
+            lock (_incoming)
+            {
+                return _incoming.Count > 0;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Gets the number of bytes that will be written to the internal buffer.
+    /// </summary>
+    /// <value>
+    /// The number of bytes that will be written to the internal buffer.
+    /// </value>
+    internal int BufferSize
+    {
+        get { return _bufferSize; }
+    }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ShellStream"/> class.
+    /// </summary>
+    /// <param name="session">The SSH session.</param>
+    /// <param name="terminalName">The <c>TERM</c> environment variable.</param>
+    /// <param name="columns">The terminal width in columns.</param>
+    /// <param name="rows">The terminal width in rows.</param>
+    /// <param name="width">The terminal width in pixels.</param>
+    /// <param name="height">The terminal height in pixels.</param>
+    /// <param name="terminalModeValues">The terminal mode values.</param>
+    /// <param name="bufferSize">The size of the buffer.</param>
+    /// <param name="expectSize">The size of the expect buffer.</param>
+    /// <exception cref="SshException">The channel could not be opened.</exception>
+    /// <exception cref="SshException">The pseudo-terminal request was not accepted by the server.</exception>
+    /// <exception cref="SshException">The request to start a shell was not accepted by the server.</exception>
+    internal ShellStream(ISession session, string terminalName, uint columns, uint rows, uint width, uint height, IDictionary<TerminalModes, uint> terminalModeValues, int bufferSize, int expectSize)
+    {
+        if (bufferSize <= 0)
+        {
+            throw new ArgumentException($"{nameof(bufferSize)} must be between 1 and {int.MaxValue}.");
+        }
+
+        if (expectSize <= 0)
+        {
+            throw new ArgumentException($"{nameof(expectSize)} must be between 1 and {int.MaxValue}.");
+        }
+
+        _encoding = session.ConnectionInfo.Encoding;
+        _session = session;
+        _bufferSize = bufferSize;
+        _incoming = new Queue<byte>();
+        _expectSize = expectSize;
+        _expect = new Queue<byte>(_expectSize);
+        _outgoing = new Queue<byte>();
+
+        _channel = _session.CreateChannelSession();
+        _channel.DataReceived += Channel_DataReceived;
+        _channel.Closed += Channel_Closed;
+        _session.Disconnected += Session_Disconnected;
+        _session.ErrorOccured += Session_ErrorOccured;
+
+        try
+        {
+            _channel.Open();
+
+            if (!_channel.SendPseudoTerminalRequest(terminalName, columns, rows, width, height, terminalModeValues))
+            {
+                throw new SshException("The pseudo-terminal request was not accepted by the server. Consult the server log for more information.");
+            }
+
+            if (!_channel.SendShellRequest())
+            {
+                throw new SshException("The request to start a shell was not accepted by the server. Consult the server log for more information.");
+            }
+        }
+        catch
+        {
+            UnsubscribeFromSessionEvents(session);
+            _channel.Dispose();
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Gets a value indicating whether the current stream supports reading.
+    /// </summary>
+    /// <returns>
+    /// <see langword="true"/> if the stream supports reading; otherwise, <see langword="false"/>.
+    /// </returns>
+    public override bool CanRead
+    {
+        get { return true; }
+    }
+
+    /// <summary>
+    /// Gets a value indicating whether the current stream supports seeking.
+    /// </summary>
+    /// <returns>
+    /// <see langword="true"/> if the stream supports seeking; otherwise, <see langword="false"/>.
+    /// </returns>
+    public override bool CanSeek
+    {
+        get { return false; }
+    }
+
+    /// <summary>
+    /// Gets a value indicating whether the current stream supports writing.
+    /// </summary>
+    /// <returns>
+    /// <see langword="true"/> if the stream supports writing; otherwise, <see langword="false"/>.
+    /// </returns>
+    public override bool CanWrite
+    {
+        get { return true; }
+    }
+
+    /// <summary>
+    /// Clears all buffers for this stream and causes any buffered data to be written to the underlying device.
+    /// </summary>
+    /// <exception cref="IOException">An I/O error occurs.</exception>
+    /// <exception cref="ObjectDisposedException">Methods were called after the stream was closed.</exception>
+    public override void Flush()
+    {
+#if NET7_0_OR_GREATER
+        ObjectDisposedException.ThrowIf(_channel is null, this);
+#else
+        if (_channel is null)
+        {
+            throw new ObjectDisposedException(GetType().FullName);
+        }
+#endif // NET7_0_OR_GREATER
+
+        if (_outgoing.Count > 0)
+        {
+            _channel.SendData(_outgoing.ToArray());
+            _outgoing.Clear();
+        }
+    }
+
+    /// <summary>
+    /// Gets the length in bytes of the stream.
+    /// </summary>
+    /// <returns>A long value representing the length of the stream in bytes.</returns>
+    /// <exception cref="NotSupportedException">A class derived from Stream does not support seeking.</exception>
+    /// <exception cref="ObjectDisposedException">Methods were called after the stream was closed.</exception>
+    public override long Length
+    {
+        get
+        {
+            lock (_incoming)
+            {
+                return _incoming.Count;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the position within the current stream.
+    /// </summary>
+    /// <returns>
+    /// The current position within the stream.
+    /// </returns>
+    /// <exception cref="IOException">An I/O error occurs.</exception>
+    /// <exception cref="NotSupportedException">The stream does not support seeking.</exception>
+    /// <exception cref="ObjectDisposedException">Methods were called after the stream was closed.</exception>
+    public override long Position
+    {
+        get { return 0; }
+        set { throw new NotSupportedException(); }
+    }
+
+    /// <summary>
+    /// This method is not supported.
+    /// </summary>
+    /// <param name="offset">A byte offset relative to the <paramref name="origin"/> parameter.</param>
+    /// <param name="origin">A value of type <see cref="SeekOrigin"/> indicating the reference point used to obtain the new position.</param>
+    /// <returns>
+    /// The new position within the current stream.
+    /// </returns>
+    /// <exception cref="IOException">An I/O error occurs.</exception>
+    /// <exception cref="NotSupportedException">The stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
+    /// <exception cref="ObjectDisposedException">Methods were called after the stream was closed.</exception>
+    public override long Seek(long offset, SeekOrigin origin)
+    {
+        throw new NotSupportedException();
+    }
+
+    /// <summary>
+    /// This method is not supported.
+    /// </summary>
+    /// <param name="value">The desired length of the current stream in bytes.</param>
+    /// <exception cref="IOException">An I/O error occurs.</exception>
+    /// <exception cref="NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
+    /// <exception cref="ObjectDisposedException">Methods were called after the stream was closed.</exception>
+    public override void SetLength(long value)
+    {
+        throw new NotSupportedException();
+    }
+
+    /// <summary>
+    /// Expects the specified expression and performs action when one is found.
+    /// </summary>
+    /// <param name="expectActions">The expected expressions and actions to perform.</param>
+    public void Expect(params ExpectAction[] expectActions)
+    {
+        Expect(TimeSpan.Zero, expectActions);
+    }
+
+    /// <summary>
+    /// Expects the specified expression and performs action when one is found.
+    /// </summary>
+    /// <param name="timeout">Time to wait for input.</param>
+    /// <param name="expectActions">The expected expressions and actions to perform, if the specified time elapsed and expected condition have not met, that method will exit without executing any action.</param>
+    public void Expect(TimeSpan timeout, params ExpectAction[] expectActions)
+    {
+        var expectedFound = false;
+        var matchText = string.Empty;
+
+        do
+        {
+            lock (_incoming)
+            {
+                if (_expect.Count > 0)
+                {
+                    matchText = _encoding.GetString(_expect.ToArray(), 0, _expect.Count);
+                }
+
+                if (matchText.Length > 0)
+                {
+                    foreach (var expectAction in expectActions)
+                    {
+                        var match = expectAction.Expect.Match(matchText);
+
+                        if (match.Success)
+                        {
+#if NETSTANDARD2_1_OR_GREATER || NET6_0_OR_GREATER
+                            var returnLength = _encoding.GetByteCount(matchText.AsSpan(0, match.Index + match.Length));
+#else
+                            var returnLength = _encoding.GetByteCount(matchText.Substring(0, match.Index + match.Length));
+#endif
+
+                            // Remove processed items from the queue
+                            var returnText = SyncQueuesAndReturn(returnLength);
+
+                            expectAction.Action(returnText);
+                            expectedFound = true;
+                        }
+                    }
+                }
+            }
+
+            if (!expectedFound)
+            {
+                if (timeout.Ticks > 0)
+                {
+                    if (!_dataReceived.WaitOne(timeout))
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    _ = _dataReceived.WaitOne();
+                }
+            }
+        }
+        while (!expectedFound);
+    }
+
+    /// <summary>
+    /// Expects the expression specified by text.
+    /// </summary>
+    /// <param name="text">The text to expect.</param>
+    /// <returns>
+    /// Text available in the shell that ends with expected text.
+    /// </returns>
+    public string Expect(string text)
+    {
+        return Expect(new Regex(Regex.Escape(text)), Session.InfiniteTimeSpan);
+    }
+
+    /// <summary>
+    /// Expects the expression specified by text.
+    /// </summary>
+    /// <param name="text">The text to expect.</param>
+    /// <param name="timeout">Time to wait for input.</param>
+    /// <returns>
+    /// The text available in the shell that ends with expected text, or <see langword="null"/> if the specified time has elapsed.
+    /// </returns>
+    public string Expect(string text, TimeSpan timeout)
+    {
+        return Expect(new Regex(Regex.Escape(text)), timeout);
+    }
+
+    /// <summary>
+    /// Expects the expression specified by regular expression.
+    /// </summary>
+    /// <param name="regex">The regular expression to expect.</param>
+    /// <returns>
+    /// The text available in the shell that contains all the text that ends with expected expression.
+    /// </returns>
+    public string Expect(Regex regex)
+    {
+        return Expect(regex, TimeSpan.Zero);
+    }
+
+    /// <summary>
+    /// Expects the expression specified by regular expression.
+    /// </summary>
+    /// <param name="regex">The regular expression to expect.</param>
+    /// <param name="timeout">Time to wait for input.</param>
+    /// <returns>
+    /// The text available in the shell that contains all the text that ends with expected expression,
+    /// or <see langword="null"/> if the specified time has elapsed.
+    /// </returns>
+    public string Expect(Regex regex, TimeSpan timeout)
+    {
+        var matchText = string.Empty;
+        string returnText;
+
+        while (true)
+        {
+            lock (_incoming)
+            {
+                if (_expect.Count > 0)
+                {
+                    matchText = _encoding.GetString(_expect.ToArray(), 0, _expect.Count);
+                }
+
+                var match = regex.Match(matchText);
+
+                if (match.Success)
+                {
+#if NETSTANDARD2_1_OR_GREATER || NET6_0_OR_GREATER
+                    var returnLength = _encoding.GetByteCount(matchText.AsSpan(0, match.Index + match.Length));
+#else
+                    var returnLength = _encoding.GetByteCount(matchText.Substring(0, match.Index + match.Length));
+#endif
+
+                    // Remove processed items from the queue
+                    returnText = SyncQueuesAndReturn(returnLength);
+
+                    break;
+                }
+            }
+
+            if (timeout.Ticks > 0)
+            {
+                if (!_dataReceived.WaitOne(timeout))
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                _ = _dataReceived.WaitOne();
+            }
+        }
+
+        return returnText;
+    }
+
+    /// <summary>
+    /// Begins the expect.
+    /// </summary>
+    /// <param name="expectActions">The expect actions.</param>
+    /// <returns>
+    /// An <see cref="IAsyncResult" /> that references the asynchronous operation.
+    /// </returns>
+    public IAsyncResult BeginExpect(params ExpectAction[] expectActions)
+    {
+        return BeginExpect(TimeSpan.Zero, callback: null, state: null, expectActions);
+    }
+
+    /// <summary>
+    /// Begins the expect.
+    /// </summary>
+    /// <param name="callback">The callback.</param>
+    /// <param name="expectActions">The expect actions.</param>
+    /// <returns>
+    /// An <see cref="IAsyncResult" /> that references the asynchronous operation.
+    /// </returns>
+    public IAsyncResult BeginExpect(AsyncCallback callback, params ExpectAction[] expectActions)
+    {
+        return BeginExpect(TimeSpan.Zero, callback, state: null, expectActions);
+    }
+
+    /// <summary>
+    /// Begins the expect.
+    /// </summary>
+    /// <param name="callback">The callback.</param>
+    /// <param name="state">The state.</param>
+    /// <param name="expectActions">The expect actions.</param>
+    /// <returns>
+    /// An <see cref="IAsyncResult" /> that references the asynchronous operation.
+    /// </returns>
+    public IAsyncResult BeginExpect(AsyncCallback callback, object state, params ExpectAction[] expectActions)
+    {
+        return BeginExpect(TimeSpan.Zero, callback, state, expectActions);
+    }
+
+    /// <summary>
+    /// Begins the expect.
+    /// </summary>
+    /// <param name="timeout">The timeout.</param>
+    /// <param name="callback">The callback.</param>
+    /// <param name="state">The state.</param>
+    /// <param name="expectActions">The expect actions.</param>
+    /// <returns>
+    /// An <see cref="IAsyncResult" /> that references the asynchronous operation.
+    /// </returns>
+    public IAsyncResult BeginExpect(TimeSpan timeout, AsyncCallback callback, object state, params ExpectAction[] expectActions)
+    {
+        var matchText = string.Empty;
+        string returnText;
+
+        // Create new AsyncResult object
+        var asyncResult = new ExpectAsyncResult(callback, state);
+
+        // Execute callback on different thread
+        ThreadAbstraction.ExecuteThread(() =>
+        {
+            string expectActionResult = null;
+            try
+            {
+                do
+                {
+                    lock (_incoming)
+                    {
+                        if (_expect.Count > 0)
+                        {
+                            matchText = _encoding.GetString(_expect.ToArray(), 0, _expect.Count);
+                        }
+
+                        if (matchText.Length > 0)
+                        {
+                            foreach (var expectAction in expectActions)
+                            {
+                                var match = expectAction.Expect.Match(matchText);
+
+                                if (match.Success)
+                                {
+#if NETSTANDARD2_1_OR_GREATER || NET6_0_OR_GREATER
+                                    var returnLength = _encoding.GetByteCount(matchText.AsSpan(0, match.Index + match.Length));
+#else
+                                    var returnLength = _encoding.GetByteCount(matchText.Substring(0, match.Index + match.Length));
+#endif
+
+                                    // Remove processed items from the queue
+                                    returnText = SyncQueuesAndReturn(returnLength);
+
+                                    expectAction.Action(returnText);
+                                    callback?.Invoke(asyncResult);
+                                    expectActionResult = returnText;
+                                }
+                            }
+                        }
+                    }
+
+                    if (expectActionResult != null)
+                    {
+                        break;
+                    }
+
+                    if (timeout.Ticks > 0)
+                    {
+                        if (!_dataReceived.WaitOne(timeout))
+                        {
+                            callback?.Invoke(asyncResult);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        _ = _dataReceived.WaitOne();
+                    }
+                }
+                while (true);
+
+                asyncResult.SetAsCompleted(expectActionResult, completedSynchronously: true);
+            }
+            catch (Exception exp)
+            {
+                asyncResult.SetAsCompleted(exp, completedSynchronously: true);
+            }
+        });
+
+        return asyncResult;
+    }
+
+    /// <summary>
+    /// Ends the execute.
+    /// </summary>
+    /// <param name="asyncResult">The async result.</param>
+    /// <returns>
+    /// Text available in the shell that ends with expected text.
+    /// </returns>
+    /// <exception cref="ArgumentException">Either the IAsyncResult object did not come from the corresponding async method on this type, or EndExecute was called multiple times with the same IAsyncResult.</exception>
+    public string EndExpect(IAsyncResult asyncResult)
+    {
+        if (asyncResult is not ExpectAsyncResult ar || ar.EndInvokeCalled)
+        {
+            throw new ArgumentException("Either the IAsyncResult object did not come from the corresponding async method on this type, or EndExecute was called multiple times with the same IAsyncResult.");
+        }
+
+        // Wait for operation to complete, then return result or throw exception
+        return ar.EndInvoke();
+    }
+
+    /// <summary>
+    /// Reads the line from the shell. If line is not available it will block the execution and will wait for new line.
+    /// </summary>
+    /// <returns>
+    /// The line read from the shell.
+    /// </returns>
+    public string ReadLine()
+    {
+        return ReadLine(TimeSpan.Zero);
+    }
+
+    /// <summary>
+    /// Reads a line from the shell. If line is not available it will block the execution and will wait for new line.
+    /// </summary>
+    /// <param name="timeout">Time to wait for input.</param>
+    /// <returns>
+    /// The line read from the shell, or <see langword="null"/> when no input is received for the specified timeout.
+    /// </returns>
+    public string ReadLine(TimeSpan timeout)
+    {
+        var text = string.Empty;
+
+        while (true)
+        {
+            lock (_incoming)
+            {
+                if (_incoming.Count > 0)
+                {
+                    text = _encoding.GetString(_incoming.ToArray(), 0, _incoming.Count);
+                }
+
+                var index = text.IndexOf(CrLf, StringComparison.Ordinal);
+
+                if (index >= 0)
+                {
+                    text = text.Substring(0, index);
+
+                    // determine how many bytes to remove from buffer
+                    var bytesProcessed = _encoding.GetByteCount(text + CrLf);
+
+                    // remove processed bytes from the queue
+                    SyncQueuesAndDequeue(bytesProcessed);
+
+                    break;
+                }
+            }
+
+            if (timeout.Ticks > 0)
+            {
+                if (!_dataReceived.WaitOne(timeout))
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                _ = _dataReceived.WaitOne();
+            }
+        }
+
+        return text;
+    }
+
+    /// <summary>
+    /// Reads text available in the shell.
+    /// </summary>
+    /// <returns>
+    /// The text available in the shell.
+    /// </returns>
+    public string Read()
+    {
+        string text;
+
+        lock (_incoming)
+        {
+            text = _encoding.GetString(_incoming.ToArray(), 0, _incoming.Count);
+            _expect.Clear();
+            _incoming.Clear();
+        }
+
+        return text;
+    }
+
+    /// <summary>
+    /// Reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+    /// </summary>
+    /// <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between <paramref name="offset"/> and (<paramref name="offset"/> + <paramref name="count"/> - 1) replaced by the bytes read from the current source.</param>
+    /// <param name="offset">The zero-based byte offset in <paramref name="buffer"/> at which to begin storing the data read from the current stream.</param>
+    /// <param name="count">The maximum number of bytes to be read from the current stream.</param>
+    /// <returns>
+    /// The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.
+    /// </returns>
+    /// <exception cref="ArgumentException">The sum of <paramref name="offset"/> and <paramref name="count"/> is larger than the buffer length. </exception>
+    /// <exception cref="ArgumentNullException"><paramref name="buffer"/> is <see langword="null"/>.</exception>
+    /// <exception cref="ArgumentOutOfRangeException"><paramref name="offset"/> or <paramref name="count"/> is negative.</exception>
+    /// <exception cref="IOException">An I/O error occurs.</exception>
+    /// <exception cref="NotSupportedException">The stream does not support reading.</exception>
+    /// <exception cref="ObjectDisposedException">Methods were called after the stream was closed.</exception>
+    public override int Read(byte[] buffer, int offset, int count)
+    {
+        var i = 0;
+
+        lock (_incoming)
+        {
+            for (; i < count && _incoming.Count > 0; i++)
+            {
+                if (_incoming.Count == _expect.Count)
+                {
+                    _ = _expect.Dequeue();
+                }
+
+                buffer[offset + i] = _incoming.Dequeue();
+            }
+        }
+
+        return i;
+    }
+
+    /// <summary>
+    /// Writes the specified text to the shell.
+    /// </summary>
+    /// <param name="text">The text to be written to the shell.</param>
+    /// <remarks>
+    /// If <paramref name="text"/> is <see langword="null"/>, nothing is written.
+    /// </remarks>
+    public void Write(string text)
+    {
+        if (text is null)
+        {
+            return;
+        }
+
+#if NET7_0_OR_GREATER
+        ObjectDisposedException.ThrowIf(_channel is null, this);
+#else
+        if (_channel is null)
+        {
+            throw new ObjectDisposedException(GetType().FullName);
+        }
+#endif // NET7_0_OR_GREATER
+
+        var data = _encoding.GetBytes(text);
+        _channel.SendData(data);
+    }
+
+    /// <summary>
+    /// Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+    /// </summary>
+    /// <param name="buffer">An array of bytes. This method copies <paramref name="count"/> bytes from <paramref name="buffer"/> to the current stream.</param>
+    /// <param name="offset">The zero-based byte offset in <paramref name="buffer"/> at which to begin copying bytes to the current stream.</param>
+    /// <param name="count">The number of bytes to be written to the current stream.</param>
+    /// <exception cref="ArgumentException">The sum of <paramref name="offset"/> and <paramref name="count"/> is greater than the buffer length.</exception>
+    /// <exception cref="ArgumentNullException"><paramref name="buffer"/> is <see langword="null"/>.</exception>
+    /// <exception cref="ArgumentOutOfRangeException"><paramref name="offset"/> or <paramref name="count"/> is negative.</exception>
+    /// <exception cref="IOException">An I/O error occurs.</exception>
+    /// <exception cref="NotSupportedException">The stream does not support writing.</exception>
+    /// <exception cref="ObjectDisposedException">Methods were called after the stream was closed.</exception>
+    public override void Write(byte[] buffer, int offset, int count)
+    {
+        foreach (var b in buffer.Take(offset, count))
+        {
+            if (_outgoing.Count == _bufferSize)
+            {
+                Flush();
+            }
+
+            _outgoing.Enqueue(b);
+        }
+    }
+
+    /// <summary>
+    /// Writes the line to the shell.
+    /// </summary>
+    /// <param name="line">The line to be written to the shell.</param>
+    /// <remarks>
+    /// If <paramref name="line"/> is <see langword="null"/>, only the line terminator is written.
+    /// </remarks>
+    public void WriteLine(string line)
+    {
+        Write(line + "\r");
+    }
+
+    /// <summary>
+    /// Releases the unmanaged resources used by the <see cref="Stream"/> and optionally releases the managed resources.
+    /// </summary>
+    /// <param name="disposing"><see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.</param>
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+
+        if (_isDisposed)
+        {
+            return;
+        }
+
+        if (disposing)
+        {
+            UnsubscribeFromSessionEvents(_session);
+
+            if (_channel != null)
+            {
+                _channel.DataReceived -= Channel_DataReceived;
+                _channel.Closed -= Channel_Closed;
+                _channel.Dispose();
+                _channel = null;
+            }
+
+            if (_dataReceived != null)
+            {
+                _dataReceived.Dispose();
+                _dataReceived = null;
+            }
+
+            _isDisposed = true;
+        }
+        else
+        {
+            UnsubscribeFromSessionEvents(_session);
+        }
+    }
+
+    /// <summary>
+    /// Unsubscribes the current <see cref="ShellStream"/> from session events.
+    /// </summary>
+    /// <param name="session">The session.</param>
+    /// <remarks>
+    /// Does nothing when <paramref name="session"/> is <see langword="null"/>.
+    /// </remarks>
+    private void UnsubscribeFromSessionEvents(ISession session)
+    {
+        if (session is null)
+        {
+            return;
+        }
+
+        session.Disconnected -= Session_Disconnected;
+        session.ErrorOccured -= Session_ErrorOccured;
+    }
+
+    private void Session_ErrorOccured(object sender, ExceptionEventArgs e)
+    {
+        OnRaiseError(e);
+    }
+
+    private void Session_Disconnected(object sender, EventArgs e)
+    {
+        _channel?.Dispose();
+    }
+
+    private void Channel_Closed(object sender, ChannelEventArgs e)
+    {
+        // TODO: Do we need to call dispose here ??
+        Dispose();
+    }
+
+    private void Channel_DataReceived(object sender, ChannelDataEventArgs e)
+    {
+        lock (_incoming)
+        {
+            foreach (var b in e.Data)
+            {
+                _incoming.Enqueue(b);
+                if (_expect.Count == _expectSize)
+                {
+                    _ = _expect.Dequeue();
+                }
+
+                _expect.Enqueue(b);
+            }
+        }
+
+        if (_dataReceived != null)
+        {
+            _ = _dataReceived.Set();
+        }
+
+        OnDataReceived(e.Data);
+    }
+
+    private void OnRaiseError(ExceptionEventArgs e)
+    {
+        ErrorOccurred?.Invoke(this, e);
+    }
+
+    private void OnDataReceived(byte[] data)
+    {
+        DataReceived?.Invoke(this, new ShellDataEventArgs(data));
+    }
+
+    private string SyncQueuesAndReturn(int bytesToDequeue)
+    {
+        string incomingText;
+
+        lock (_incoming)
+        {
+            var incomingLength = _incoming.Count - _expect.Count + bytesToDequeue;
+            incomingText = _encoding.GetString(_incoming.ToArray(), 0, incomingLength);
+
+            SyncQueuesAndDequeue(bytesToDequeue);
+        }
+
+        return incomingText;
+    }
+
+    private void SyncQueuesAndDequeue(int bytesToDequeue)
+    {
+        lock (_incoming)
+        {
+            while (_incoming.Count > _expect.Count)
+            {
+                _ = _incoming.Dequeue();
+            }
+
+            for (var count = 0; count < bytesToDequeue && _incoming.Count > 0; count++)
+            {
+                _ = _incoming.Dequeue();
+                _ = _expect.Dequeue();
+            }
+        }
+    }
+}

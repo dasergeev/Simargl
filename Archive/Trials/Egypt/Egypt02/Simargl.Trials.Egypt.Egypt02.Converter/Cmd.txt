@@ -1,0 +1,2 @@
+﻿sc.exe create "Simargl.Trials.Egypt.Egypt02.Converter" binpath= "C:\Environs\Programs\Simargl\Trials\Egypt\Egypt02\Converter\Simargl.Trials.Egypt.Egypt02.Converter.exe"
+sc delete "Simargl.Trials.Egypt.Egypt02.Converter"

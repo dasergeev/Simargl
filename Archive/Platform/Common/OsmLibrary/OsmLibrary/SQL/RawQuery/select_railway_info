@@ -1,0 +1,6 @@
+SELECT railway, COUNT(*) AS cnt
+FROM planet_osm_point
+WHERE railway <> ''
+GROUP BY railway
+ORDER BY cnt DESC
+LIMIT 10;

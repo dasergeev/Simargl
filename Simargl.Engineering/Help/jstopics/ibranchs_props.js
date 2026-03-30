@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IBranchs - свойства",
+hmDescription:"Подразделы: BranchCount - Число ответвлений  BranchPoints - Массив SAFEARRAY координат точек ответвления  BranchPointsCount - Число ответвлений  BranchX0 - Координата конечной",
+hmPrevLink:"ibranchs.html",
+hmNextLink:"ibranchs_branchcount.html",
+hmParentLink:"ibranchs.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"obozn_razm.html\">Обозначения и размеры&nbsp;<\/a> &gt; <a href=\"bb2348381.html\">Элементы обозначений&nbsp;<\/a> &gt; <a href=\"ibranchs.html\">Интерфейс IBranchs&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Обозначения и размеры  > Элементы обозначений  > Интерфейс IBranchs  > IBranchs - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IBranchs - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibranchs_branchcount.html\" class=\"topiclink hmlinklistitem\">BranchCount - Число ответвлений <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibranchs_branchpoints.html\" class=\"topiclink hmlinklistitem\">BranchPoints - Массив SAFEARRAY координат точек ответвления <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibranchs_branchpointscount.html\" class=\"topiclink hmlinklistitem\">BranchPointsCount - Число ответвлений <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibranchs_branchx0.html\" class=\"topiclink hmlinklistitem\">BranchX0 - Координата конечной точки ответвления по X <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibranchs_branchy0.html\" class=\"topiclink hmlinklistitem\">BranchY0 - Координата конечной точки ответвления по Y <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibranchs_x0.html\" class=\"topiclink hmlinklistitem\">X0 - Координата начала полки или точка привязки по X <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibranchs_y0.html\" class=\"topiclink hmlinklistitem\">Y0 - Координата начала полки или точка привязки по Y <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IRegularPolygon - свойства",
+hmDescription:"Подразделы: Angle - Угол радиус-вектора, направленного от центра к первой вершине  Count - Количество вершин многоугольника  Describe - Признак построения по описанной или вписа",
+hmPrevLink:"iregularpolygon.html",
+hmNextLink:"iregularpolygon_angle.html",
+hmParentLink:"iregularpolygon.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb2333035.html\">Геометрия&nbsp;<\/a> &gt; <a href=\"iregularpolygon.html\">Интерфейс IRegularPolygon&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Геометрия  > Интерфейс IRegularPolygon  > IRegularPolygon - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IRegularPolygon - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iregularpolygon_angle.html\" class=\"topiclink hmlinklistitem\">Angle - Угол радиус-вектора, направленного от центра к первой вершине <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iregularpolygon_count.html\" class=\"topiclink hmlinklistitem\">Count - Количество вершин многоугольника <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iregularpolygon_describe.html\" class=\"topiclink hmlinklistitem\">Describe - Признак построения по описанной или вписанной окружности <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iregularpolygon_radius.html\" class=\"topiclink hmlinklistitem\">Radius - Радиус вписанной или описанной окружности <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iregularpolygon_style.html\" class=\"topiclink hmlinklistitem\">Style - Cтиль линии <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iregularpolygon_xc.html\" class=\"topiclink hmlinklistitem\">Xc - Координата точки центра вписанной или описанной окружности по оси X <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iregularpolygon_yc.html\" class=\"topiclink hmlinklistitem\">Yc - Координата точки центра вписанной или описанной окружности по оси Y <\/a><\/span><\/p>\n\r"
+})

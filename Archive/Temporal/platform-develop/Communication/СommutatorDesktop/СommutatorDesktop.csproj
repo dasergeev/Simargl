@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>WinExe</OutputType>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <RootNamespace>Apeiron.Platform.Communication</RootNamespace>
+        <AssemblyName>CommutatorDesktop</AssemblyName>
+        <DocumentationFile>CommutatorDesktop.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+        <AnalysisLevel>preview</AnalysisLevel>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <WarningLevel>5</WarningLevel>
+        <NoWarn />
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <ApplicationIcon>ApplicationIcon.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Images\DefaultAvatar.jpg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="ApplicationIcon.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Apeiron" Version="3.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Communication\Communication.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Images\DefaultAvatar.jpg" />
+    </ItemGroup>
+
+</Project>

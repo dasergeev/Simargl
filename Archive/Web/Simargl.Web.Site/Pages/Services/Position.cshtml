@@ -1,0 +1,19 @@
+﻿@page
+@model Simargl.Web.Site.Pages.Services.PositionModel
+@{
+    ViewData["Title"] = @Model.ServicePosition.Name;
+}
+
+<div class="container mt-5" style="max-width: 800px;">
+    <div class="text-center mb-4">
+        <img src="@Model.ServicePosition.ImageUrl"
+             alt="@Model.ServicePosition.Name"
+             class="img-fluid rounded shadow-sm mb-3"
+             style="max-height: 600px;" />
+        <h1 class="display-6">@Model.ServicePosition.Name</h1>
+    </div>
+
+    <div class="content-text" style="font-size: 1.15rem; line-height: 1.7;">
+        @Html.Raw(Model.ServicePosition.HtmlContent)
+    </div>
+</div>

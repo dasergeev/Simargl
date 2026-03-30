@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+	<PropertyGroup>
+		<UserSecretsId>dotnet-Simargl-Projects-Oriole-Oriole01Nmea-aa2d60bb-d6b0-470d-9e59-5685abc7277e</UserSecretsId>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Simargl.Projects.Oriole.Oriole01Nmea</RootNamespace>
+		<AssemblyName>Simargl.Projects.Oriole.Oriole01Nmea</AssemblyName>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Simargl.Projects.Oriole.Oriole01Nmea.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<WarningLevel>5</WarningLevel>
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="5.3.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="10.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="10.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Simargl.Projects.Oriole.Oriole01Storage\Simargl.Projects.Oriole.Oriole01Storage.csproj" />
+	</ItemGroup>
+	
+</Project>

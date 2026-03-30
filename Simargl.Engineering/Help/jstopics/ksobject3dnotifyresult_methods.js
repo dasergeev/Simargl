@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IObject3DNotifyResult - методы",
+hmDescription:"Подразделы: GetFeatureCollection - Получить массив удаляемых объектов  GetNotifyType - Получить тип события  GetPlacement - Получить координаты точки в системе координат листа",
+hmPrevLink:"ksobject3dnotifyresult.html",
+hmNextLink:"ksobject3dnotifyresult_getfeaturecollection.html",
+hmParentLink:"ksobject3dnotifyresult.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument3d.html\">Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )&nbsp;<\/a> &gt; <a href=\"kspart.html\">Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart&nbsp;<\/a> &gt; <a href=\"ksfeature.html\">Объект Дерева построения (Интерфейсы ksFeature, IFeature)&nbsp;<\/a> &gt; <a href=\"ksobject3dnotifyresult.html\">Интерфейс результатов редактирования объекта (Интерфейсы ksObject3DNotifyResult, IObject3DNotifyResult)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )  > Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart  > Объект Дерева построения (Интерфейсы ksFeature, IFeature)  > Интерфейс результатов редактирования объекта (Интерфейсы ksObject3DNotifyResult, IObject3DNotifyResult)  > IObject3DNotifyResult - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IObject3DNotifyResult - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksobject3dnotifyresult_getfeaturecollection.html\" class=\"topiclink hmlinklistitem\">GetFeatureCollection - Получить массив удаляемых объектов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksobject3dnotifyresult_getnotifytype.html\" class=\"topiclink hmlinklistitem\">GetNotifyType - Получить тип события <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksobject3dnotifyresult_getplacement.html\" class=\"topiclink hmlinklistitem\">GetPlacement - Получить координаты точки в системе координат листа <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksobject3dnotifyresult_getprocesstype.html\" class=\"topiclink hmlinklistitem\">GetProcessType - Тип процесса <\/a><\/span><\/p>\n\r"
+})

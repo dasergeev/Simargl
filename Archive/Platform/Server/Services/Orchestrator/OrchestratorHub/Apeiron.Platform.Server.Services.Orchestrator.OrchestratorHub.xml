@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchestratorHub</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ClientConnectedHandler">
+            <summary>Делегат события, возникающего при подключении нового клиента</summary>
+            <param name="client">Клиент.</param>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ClientDisconnectedHandler">
+            <summary>Делегат события, возникающего при отключении нового клиента</summary>
+            <param name="client">Клиент.</param>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ReceivePackageHandler">
+            <summary>Делегат события, возникающего при получении сообщения от клиента</summary>
+            <param name="client">Клиент, от которого получено сообщение.</param>
+            <param name="package">Полученный пакет.</param>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient">
+            <summary>
+            Представляет клиента подключенного к службе Оркестратора на сервере.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient._Logger">
+            <summary>
+            Логгер.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient._TcpClient">
+            <summary>
+            Поле представляет TCP клиент.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient._NetworkStream">
+            <summary>
+            Поле представляет поток для работы с TcpClient.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.disposedValue">
+            <summary>
+            Флаг для реализации паттерна IDisposable
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient._SyncRoot">
+            <summary>
+            Объект синхронизации.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient._LocalCancellationTokenSource">
+            <summary>
+            Представляет ресурс токена отмены.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient._ClientStringSignature">
+            <summary>
+            Строковая сигнатура подключенного TCP клиента.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient._ClientConnectedHandler">
+            <summary>
+            Содержит делегат события, возникающего при подключении нового клиента.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient._ClientDisconnectedHandler">
+            <summary>
+            Содержит делегат события, возникающего при отключении клиента.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient._ReceivePackageHandler">
+            <summary>
+            Содержит делегат события, возникающего при получении данных от клиента.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.Client">
+            <summary>Возвращает TcpClient.</summary>
+            <value>Клиент.</value>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.ClientStringSignature">
+            <summary>Возвращает строковую сигнатуру TCP клиента.</summary>
+            <value>По-умолчанию - ip адрес клиента, порт, TTL, с которого поступило обращение в формате "xxx.xxx.xxx.xxx : yyyy TTL = zzzz"</value>
+        </member>
+        <member name="E:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.ClientConnected">
+            <summary>Событие возникает при подключении нового клиента.</summary>
+        </member>
+        <member name="E:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.ClientDisconnected">
+            <summary>Событие возникает при отключении клиента.</summary>
+        </member>
+        <member name="E:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.ReceivePackage">
+            <summary>Событие возникает, когда от клиента получено корректное сообщение.</summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.#ctor(System.Net.Sockets.TcpClient,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Инициализирует экземпляр класса.
+            </summary>
+            <param name="tcpClient">TCP клиент.</param>
+            <param name="logger">Логгер</param>
+            <exception cref="T:System.ArgumentNullException">
+            В качестве одного из параметров передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В качестве одного из параметров передана пустая ссылка.
+            </exception>    
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.CommunicationAsync(System.Threading.CancellationToken)">
+            <summary>
+            Запускает задачу, осуществляющую работу с клиентом.
+            </summary>
+            <param name="externalСancellationToken">Внешний токен отмены работы клиента.</param>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.Stop">
+            <summary>Останавливает работу клиента.</summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.SendPackageAsync(Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage,System.Threading.CancellationToken)">
+            <summary>
+            Отправляет пакет клиенту.
+            </summary>
+            <param name="package">Пакет, который необходимо отправить.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+            <returns>Возвращает True, если пакет успешно отправлен.</returns>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.OnClientConnected(Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient)">
+            <summary>Вызывается при подключении клиента.</summary>
+            <param name="client">Клиент.</param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.OnClientDisconnected(Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient)">
+            <summary>Вызывается при отключении клиента.</summary>
+            <param name="client">Клиент.</param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.OnReceivePackage(Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient,Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage)">
+            <summary>Вызывается, когда от клиента получено корректное сообщение.</summary>
+            <param name="client">Клиент, от которого получено сообщение.</param>
+            <param name="package">Полученный пакет.</param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.Dispose(System.Boolean)">
+            <summary>
+            Реализация шаблона IDisposable для высвобождения ресурсов.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient.Dispose">
+            <summary>
+            Деструктор.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker">
+            <summary>
+            Представяет микрослужбу, выполняющую управление хостами и развёртыванием ПО на хостах.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker._Port">
+            <summary>
+            Порт TCP сервера.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker._TcpClientsList">
+            <summary>
+            Список подключенных клиентов к серверу оркестрации.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker._ConnectedClientsList">
+            <summary>
+            Список подключенных клиентов к серверу оркестрации.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker._Logger">
+            <summary>
+            Логгер.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет основную фоновую работу микрослужбы.
+            </summary>
+            <param name="stoppingToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая основную фоновую работу микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker.HostClient_ReceivePackage(Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient,Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage)">
+            <summary>
+            Обработчик события получения пакета.
+            </summary>
+            <param name="client">TCP клиент.</param>
+            <param name="package">Пакет данных.</param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker.HostClient_ClientConnected(Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient)">
+            <summary>
+            Обработчик события подключения клиента.
+            </summary>
+            <param name="client">Подключенный клиент.</param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.ServerHubWorker.HostClient_ClientDisconnected(Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHub.HostClient)">
+            <summary>
+            Обработчик события отключения клиента.
+            </summary>
+            <param name="client">TCP клиент.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4A4170C-A19B-471C-A0C8-BD156F7E0057}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RailTest.Hardware.Hbm</RootNamespace>
+    <AssemblyName>RailTest.Hardware.Hbm</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Compile\Binary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>..\..\..\..\Compile\Binary\RailTest.Hardware.Hbm.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Compile\Binary\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>..\..\..\..\Compile\Binary\RailTest.Hardware.Hbm.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gibraltar.Agent">
+      <HintPath>.\Gibraltar.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="Hbm.Api.Common">
+      <HintPath>.\Hbm.Api.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Hbm.Api.GenericStreaming">
+      <HintPath>.\Hbm.Api.GenericStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="Hbm.Api.Logging">
+      <HintPath>.\Hbm.Api.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Hbm.Api.Mgc">
+      <HintPath>.\Hbm.Api.Mgc.dll</HintPath>
+    </Reference>
+    <Reference Include="Hbm.Api.Pmx">
+      <HintPath>.\Hbm.Api.Pmx.dll</HintPath>
+    </Reference>
+    <Reference Include="Hbm.Api.QuantumX">
+      <HintPath>.\Hbm.Api.QuantumX.dll</HintPath>
+    </Reference>
+    <Reference Include="Hbm.Api.Scan">
+      <HintPath>.\Hbm.Api.Scan.dll</HintPath>
+    </Reference>
+    <Reference Include="Hbm.Api.SensorDB">
+      <HintPath>.\Hbm.Api.SensorDB.dll</HintPath>
+    </Reference>
+    <Reference Include="Hbm.Api.Utils">
+      <HintPath>.\Hbm.Api.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="HBM.TEDS">
+      <HintPath>.\HBM.TEDS.dll</HintPath>
+    </Reference>
+    <Reference Include="IBR.XPDF">
+      <HintPath>.\IBR.XPDF.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>.\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations">
+      <HintPath>.\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>.\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VistaDB.5.NET40">
+      <HintPath>.\VistaDB.5.NET40.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ReWrite\Common\HbmChannel.cs" />
+    <Compile Include="ReWrite\Common\HbmChannelCollection.cs" />
+    <Compile Include="ReWrite\Common\HbmConnector.cs" />
+    <Compile Include="ReWrite\Common\HbmConnectorCollection.cs" />
+    <Compile Include="ReWrite\Common\HbmDaqMeasurement.cs" />
+    <Compile Include="ReWrite\Common\HbmDevice.cs" />
+    <Compile Include="ReWrite\Common\HbmSensor.cs" />
+    <Compile Include="ReWrite\Common\HbmSignal.cs" />
+    <Compile Include="ReWrite\Common\HbmStreamingDevice.cs" />
+    <Compile Include="ReWrite\Core\Generated.cs" />
+    <Compile Include="ReWrite\Core\HbmCoreObject.cs" />
+    <Compile Include="ReWrite\HbmEnvelope.cs" />
+    <Compile Include="ReWrite\Enumerations\HbmDataAcquisitionMode.cs" />
+    <Compile Include="ReWrite\Performing.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\HbmQuantumXDevice.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReWrite\Common\Connectors\HbmAnalogInConnector.cs" />
+    <Compile Include="ReWrite\Common\Connectors\HbmAnalogOutConnector.cs" />
+    <Compile Include="ReWrite\Common\Connectors\HbmCanConnector.cs" />
+    <Compile Include="ReWrite\Common\Connectors\HbmDigitalConnector.cs" />
+    <Compile Include="ReWrite\Common\Connectors\HbmFbgConnector.cs" />
+    <Compile Include="ReWrite\Common\Connectors\HbmGenericStreamingVirtualConnector.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Connectors\HbmMgcAnalogInConnector.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Connectors\HbmMgcAnalogOutConnector.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Connectors\HbmMgcCanConnector.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Connectors\HbmMgcDigitalConnector.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Connectors\HbmMgcVirtualConnector.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Connectors\HbmPmxAnalogInConnector.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Connectors\HbmPmxAnalogOutConnector.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Connectors\HbmPmxDigitalConnector.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Connectors\HbmPmxVirtualConnector.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Connectors\HbmQuantumXAnalogInConnector.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Connectors\HbmQuantumXAnalogOutConnector.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Connectors\HbmQuantumXCanConnector.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Connectors\HbmQuantumXDigitalConnector.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Connectors\HbmQuantumXFbgConnector.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Connectors\HbmQuantumXOffConnector.cs" />
+    <Compile Include="ReWrite\Common\Connectors\HbmVirtualConnector.cs" />
+    <Compile Include="ReWrite\Common\Channels\HbmAnalogInChannel.cs" />
+    <Compile Include="ReWrite\Common\Channels\HbmAnalogOutChannel.cs" />
+    <Compile Include="ReWrite\Common\Channels\HbmCanInChannel.cs" />
+    <Compile Include="ReWrite\Common\Channels\HbmCanOutChannel.cs" />
+    <Compile Include="ReWrite\Common\Channels\HbmDigitalChannel.cs" />
+    <Compile Include="ReWrite\Common\Channels\HbmFbgChannel.cs" />
+    <Compile Include="ReWrite\Common\Channels\HbmGenericStreamingVirtualChannel.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Channels\HbmMgcAnalogInChannel.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Channels\HbmMgcAnalogOutChannel.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Channels\HbmMgcCanInChannel.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Channels\HbmMgcDigitalChannel.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Channels\HbmMgcVirtualChannel.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Channels\HbmPmxAnalogInChannel.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Channels\HbmPmxAnalogOutChannel.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Channels\HbmPmxDigitalChannel.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Channels\HbmPmxVirtualChannel.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Channels\HbmQuantumXAnalogInChannel.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Channels\HbmQuantumXAnalogOutChannel.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Channels\HbmQuantumXCanInChannel.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Channels\HbmQuantumXCanOutChannel.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Channels\HbmQuantumXDigitalChannel.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Channels\HbmQuantumXFbgChannel.cs" />
+    <Compile Include="ReWrite\Common\Channels\HbmVirtualChannel.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmAnalogInSignal.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmAnalogOutSignal.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmCanInSignal.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmDigitalCompressedGroupSignal.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmDigitalCompressedSignal.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmDigitalSignal.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmFbgSignal.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmGenericStreamingVirtualSignal.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Signals\HbmMgcAnalogInSignal.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Signals\HbmMgcAnalogOutSignal.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Signals\HbmMgcCanInSignal.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Signals\HbmMgcDigitalSignal.cs" />
+    <Compile Include="ReWrite\Expansions\Mgc\Signals\HbmMgcVirtualSignal.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Signals\HbmPmxAnalogInSignal.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Signals\HbmPmxAnalogOutSignal.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Signals\HbmPmxDigitalSignal.cs" />
+    <Compile Include="ReWrite\Expansions\Pmx\Signals\HbmPmxVirtualSignal.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Signals\HbmQuantumXAnalogInSignal.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Signals\HbmQuantumXAnalogOutSignal.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Signals\HbmQuantumXCanInSignal.cs" />
+    <Compile Include="ReWrite\Expansions\QuantumX\Signals\HbmQuantumXDigitalSignal.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmSyncSignal.cs" />
+    <Compile Include="ReWrite\Common\Signals\HbmVirtualSignal.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmBridgeSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmCanBusSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmCounterSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmCurrentProbeSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmCurrentSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmFbgAccelerometerSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmFbgGenericSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmFbgSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmFbgStrainGaugeSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmFbgThermocoupleSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmFbgWavelengthSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmFrequencySensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmIepeSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmLvdtSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmNotSupportedSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmPiezoPassiveSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmPotentiometerSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmPtSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmPwmSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmResistanceSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmSsiSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmThermoCoupleSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmVoltageProbeSensor.cs" />
+    <Compile Include="ReWrite\Common\Sensors\HbmVoltageSensor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HBMTedsDll.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HBM_QX_Framework.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HBM_Scan.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HBM_Streaming.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HBM_Update.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XPDF.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeviceDriver.plugins">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Firewall_for_all.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="HBMSensorDatabase.vdb5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UserSensorDatabase.vdb5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hardware\Hardware %28.NET Framework%29.csproj">
+      <Project>{d064cb5d-d75e-4a58-8c13-5ba37b544ab6}</Project>
+      <Name>Hardware %28.NET Framework%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

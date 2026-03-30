@@ -1,0 +1,287 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Simargl.Hardware.Recorder.Core
+@using Simargl.Hardware.Recorder.Measurement
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
+@inject NavigationManager Nav
+
+@* Маршрут страницы *@
+@page "/"
+
+@* Указываем, что страница рендерится в режиме Blazor Server (сигналы идут через SignalR) *@
+@rendermode InteractiveServer
+
+@attribute [Authorize]
+
+@* Заголовок вкладки браузера *@
+<PageTitle>Главная</PageTitle>
+
+@* Краткое описание *@
+<h2>Местоположение</h2>
+
+@* HTML-таблица для отображения индикаторов; применяются стили Bootstrap *@
+<table class="table">
+
+    @* Заголовок таблицы *@
+    <thead>
+
+        @* Строка заголовков колонок *@
+        <tr>
+            <th>Скорость</th>
+            <th>Широта</th>
+            <th>Долгота</th>
+        </tr>
+    </thead>
+
+    @* Тело таблицы *@
+    <tbody>
+
+        <tr @key="indicator">
+            @* ключ важен для корректного диффа *@
+            <td>@indicator.Speed</td>
+            <td>@indicator.Latitude</td>
+            <td>@indicator.Longitude</td>
+        </tr>
+    </tbody>
+</table>
+
+@if (indicator.IsMap)
+{
+    <h2>Карта</h2>
+    <div id="map" style="height:500px; width:100%;"></div>
+}
+
+@code {
+
+    private GeolocationIndicator indicator = Heart.Unique.Measurer.GeolocationIndicator;
+    private CancellationTokenSource? _cts;
+    private bool _mapInitialized;
+    private IJSObjectReference? _mapModule;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!indicator.IsMap) return;
+
+        _mapModule ??= await JS.InvokeAsync<IJSObjectReference>("import", $"{Nav.BaseUri}js/map.js");
+
+        // каждый раз при рендере проверяем: если карта не инициализирована – создаём
+        if (!_mapInitialized || firstRender)
+        {
+            await _mapModule.InvokeVoidAsync("init", indicator.LatitudeValue, indicator.LongitudeValue);
+            _mapInitialized = true;
+        }
+        else
+        {
+            await _mapModule.InvokeVoidAsync("update", indicator.LatitudeValue, indicator.LongitudeValue);
+        }
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        _cts = new CancellationTokenSource();
+        var token = _cts.Token;
+
+        _ = Task.Run(async () =>
+        {
+            while (!token.IsCancellationRequested)
+            {
+                await InvokeAsync(StateHasChanged);
+                try { await Task.Delay(1000, token); }
+                catch (TaskCanceledException) { break; }
+            }
+        }, token);
+
+        return Task.CompletedTask;
+    }
+
+    public async void Dispose()
+    {
+        _cts?.Cancel();
+        _cts?.Dispose();
+
+        if (_mapModule is not null)
+        {
+            try { await _mapModule.InvokeVoidAsync("dispose"); } catch { }
+            await _mapModule.DisposeAsync();
+        }
+    }
+}
+
+@* 
+@code {
+
+    private GeolocationIndicator indicator = Heart.Unique.Measurer.GeolocationIndicator;
+    private CancellationTokenSource? _cts;
+    private bool _mapInitialized;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!indicator.IsMap) return;
+
+        try
+        {
+            if (!_mapInitialized)
+            {
+                await JS.InvokeVoidAsync("myMap.init", indicator.LatitudeValue, indicator.LongitudeValue);
+                _mapInitialized = true;
+            }
+            else
+            {
+                await JS.InvokeVoidAsync("myMap.update", indicator.LatitudeValue, indicator.LongitudeValue);
+            }
+        }
+        catch
+        {
+            // если вдруг скрипт ещё не подхватился, подождём один тик и попробуем снова
+            await Task.Delay(50);
+            await JS.InvokeVoidAsync("myMap.init", indicator.LatitudeValue, indicator.LongitudeValue);
+            _mapInitialized = true;
+        }
+
+        // if (indicator.IsMap)
+        // {
+        //     if (!_mapInitialized)
+        //     {
+        //         await JS.InvokeVoidAsync("myMap.init", indicator.LatitudeValue, indicator.LongitudeValue);
+        //         _mapInitialized = true;
+        //     }
+        //     else
+        //     {
+        //         await JS.InvokeVoidAsync("myMap.update", indicator.LatitudeValue, indicator.LongitudeValue);
+        //     }
+        // }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _cts = new CancellationTokenSource();
+        var token = _cts.Token;
+
+        _ = Task.Run(async () =>
+        {
+            while (!token.IsCancellationRequested)
+            {
+                await InvokeAsync(StateHasChanged);
+                try
+                {
+                    await Task.Delay(1000, token);
+                }
+                catch (TaskCanceledException)
+                {
+                    break; // корректный выход из цикла
+                }
+            }
+        }, token);
+
+        await Task.CompletedTask;
+    }
+
+    public async void Dispose()
+    {
+        _cts?.Cancel();
+        _cts?.Dispose();
+        try
+        {
+            await JS.InvokeVoidAsync("myMap.dispose");
+        }
+        catch
+        {
+            // игнорируем ошибки при dispose
+        }
+    }
+}
+
+
+<HeadContent>
+    <!-- Либа и стили грузятся в <head> и остаются между навигациями -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        // Глобальный объект в <head> — доступен при повторном заходе на страницу
+        window.myMap = window.myMap || {
+            map: null,
+            marker: null,
+
+            init(lat, lng) {
+                if (this.map) return;
+
+                const savedZoom = sessionStorage.getItem('mapZoom');
+                const zoom = savedZoom ? parseInt(savedZoom, 10) : 13;
+
+                this.map = L.map('map').setView([lat, lng], zoom);
+
+                // Здесь можешь подставить свой провайдер тайлов с русскими подписями
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(this.map);
+
+                this.marker = L.marker([lat, lng]).addTo(this.map);
+
+                this.map.on('zoomend', () =>
+                    sessionStorage.setItem('mapZoom', this.map.getZoom()));
+            },
+
+            update(lat, lng) {
+                if (!this.map) return;
+                this.marker.setLatLng([lat, lng]);
+                this.map.setView([lat, lng], this.map.getZoom());
+            },
+
+            dispose() {
+                if (this.map) {
+                    this.map.off();
+                    this.map.remove();
+                    this.map = null;
+                    this.marker = null;
+                }
+            }
+        };
+    </script>
+</HeadContent> *@
+
+@* 
+<HeadContent>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</HeadContent>
+
+<script>
+    window.myMap = {
+        map: null,
+        marker: null,
+
+        init(lat, lng) {
+            if (this.map) return;
+            const savedZoom = sessionStorage.getItem('mapZoom');
+            const zoom = savedZoom ? parseInt(savedZoom, 10) : 13;
+
+            this.map = L.map('map').setView([lat, lng], zoom);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(this.map);
+
+            this.marker = L.marker([lat, lng]).addTo(this.map);
+
+            this.map.on('zoomend', () =>
+                sessionStorage.setItem('mapZoom', this.map.getZoom()));
+        },
+
+        update(lat, lng) {
+            if (!this.map) return;
+            this.marker.setLatLng([lat, lng]);
+            this.map.setView([lat, lng], this.map.getZoom());
+        }
+
+            dispose() {
+          if (this.map) {
+            this.map.remove();
+            this.map = null;
+            this.marker = null;
+          }
+        }
+
+    };
+</script>
+ *@

@@ -1,0 +1,22 @@
+WITH
+ENVELOPE AS (SELECT ST_MakeEnvelope(ST_X(ST_GeomFromEWKT('SRID=4326;POINT(37.02908 55.92189)')), 
+                             ST_Y(ST_GeomFromEWKT('SRID=4326;POINT(37.02908 55.92189)')),
+                             ST_X(ST_GeomFromEWKT('SRID=4326;POINT(37.25361 55.76363)')), 
+                             ST_Y(ST_GeomFromEWKT('SRID=4326;POINT(37.25361 55.76363)')),4326) as geom)
+
+SELECT name, oneway, railway, service, way
+FROM public.planet_osm_line_railway, ENVELOPE
+WHERE
+railway IN ('rail') AND
+planet_osm_line_railway.way && ST_Transform(ENVELOPE.geom, 3857);
+
+--SELECT name, oneway, railway, service, way
+--FROM public.planet_osm_line_railway
+--WHERE
+--railway IN ('rail') AND
+--planet_osm_line_railway.way &&
+--ST_Transform(ST_MakeEnvelope(ST_X(ST_GeomFromEWKT('SRID=4326;POINT(37.02908 55.92189)')), 
+--                             ST_Y(ST_GeomFromEWKT('SRID=4326;POINT(37.02908 55.92189)')),
+--                             ST_X(ST_GeomFromEWKT('SRID=4326;POINT(37.25361 55.76363)')), 
+--                             ST_Y(ST_GeomFromEWKT('SRID=4326;POINT(37.25361 55.76363)')),4326), 3857);
+

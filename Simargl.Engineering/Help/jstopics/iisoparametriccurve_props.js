@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IIsoparametricCurve - свойства",
+hmDescription:"Подразделы: AssociationObject - Установить опорный объект для вершины  SurfaceObject - Установить поверхность для изопараметрической кривой  V - Значение параметра V в %  U - З",
+hmPrevLink:"iisoparametriccurve.html",
+hmNextLink:"iisoparametriccurve_associationobject.html",
+hmParentLink:"iisoparametriccurve.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc1711351.html\">Вспомогательные объекты, 3D-кривые и элементы тела&nbsp;<\/a> &gt; <a href=\"bc2014000.html\">3D-кривые и элементы тела&nbsp;<\/a> &gt; <a href=\"imodelobjects.html\">Интерфейс IModelObjects&nbsp;<\/a> &gt; <a href=\"imodelobjects_props.html\">IModelObjects - свойства&nbsp;<\/a> &gt; <a href=\"iisoparametriccurve.html\">Интерфейс IIsoparametricCurve&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Вспомогательные объекты, 3D-кривые и элементы тела  > 3D-кривые и элементы тела  > Интерфейс IModelObjects  > IModelObjects - свойства  > Интерфейс IIsoparametricCurve  > IIsoparametricCurve - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IIsoparametricCurve - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iisoparametriccurve_associationobject.html\" class=\"topiclink hmlinklistitem\">AssociationObject - Установить опорный объект для вершины <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iisoparametriccurve_surfaceobject.html\" class=\"topiclink hmlinklistitem\">SurfaceObject - Установить поверхность для изопараметрической кривой <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iisoparametriccurve_v.html\" class=\"topiclink hmlinklistitem\">V - Значение параметра V в % <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iisoparametriccurve_u.html\" class=\"topiclink hmlinklistitem\">U - Значение параметра U в % <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iisoparametriccurve_udirection.html\" class=\"topiclink hmlinklistitem\">UDirection - Направление <\/a><\/span><\/p>\n\r"
+})

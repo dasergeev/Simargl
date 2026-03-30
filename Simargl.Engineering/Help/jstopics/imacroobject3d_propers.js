@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IMacroObject3D - свойства",
+hmDescription:"Подразделы: AssociationObject - Установить опорный объект  AssociationObjectCount - Количество опорных объектов  DoubleClickEditable - Редактирование по двойному клику поддержив",
+hmPrevLink:"imacroobject3d.html",
+hmNextLink:"imacroobject3d_associationobject.html",
+hmParentLink:"imacroobject3d.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2753948.html\">Макрообъекты 3D&nbsp;<\/a> &gt; <a href=\"imacroobject3d.html\">Интерфейс IMacroObject3D&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Макрообъекты 3D  > Интерфейс IMacroObject3D  > IMacroObject3D - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IMacroObject3D - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imacroobject3d_associationobject.html\" class=\"topiclink hmlinklistitem\">AssociationObject - Установить опорный объект <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imacroobject3d_associationobjectcount.html\" class=\"topiclink hmlinklistitem\">AssociationObjectCount - Количество опорных объектов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imacroobject3d_doubleclickeditable.html\" class=\"topiclink hmlinklistitem\">DoubleClickEditable - Редактирование по двойному клику поддерживается <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imacroobject3d_label.html\" class=\"topiclink hmlinklistitem\">Label - Отображаемое имя объекта в дереве <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imacroobject3d_objects.html\" class=\"topiclink hmlinklistitem\">Objects - Внутренние объекты макро <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imacroobject3d_propertyobjecteditable.html\" class=\"topiclink hmlinklistitem\">PropertyObjectEditable - Поддерживается интерфейс внешних свойств объекта <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imacroobject3d_staffvisible.html\" class=\"topiclink hmlinklistitem\">StaffVisible - Управление видимостью состава <\/a><\/span><\/p>\n\r"
+})

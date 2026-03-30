@@ -1,0 +1,110 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using Simargl.Hardware.Recorder.Core
+@using Simargl.Hardware.Recorder.Measurement
+@using System.ComponentModel
+
+@* Маршрут страницы *@
+@page "/Indicators"
+
+@* Указываем, что страница рендерится в режиме Blazor Server (сигналы идут через SignalR) *@
+@rendermode InteractiveServer
+
+@attribute [Authorize]
+
+@* Заголовок вкладки браузера *@
+<PageTitle>Измерения</PageTitle>
+
+
+@* Заголовок страницы, видимый пользователю *@
+@* <h1>Измерения</h1> *@
+
+@* Краткое описание *@
+<h2>Значения основных измеряемых показателей</h2>
+
+@* HTML-таблица для отображения индикаторов; применяются стили Bootstrap *@
+<table class="table">
+    
+    @* Заголовок таблицы *@
+    <thead>
+
+        @* Строка заголовков колонок *@
+        <tr>
+            <th>№</th>
+            <th>Имя</th>
+            <th>Значение</th>
+            <th>Ед.</th>
+            <th class="d-none d-md-table-cell">Масштаб</th>
+            <th class="d-none d-md-table-cell">Датчик</th>
+        </tr>
+    </thead>
+
+    @* Тело таблицы *@
+    <tbody>
+
+        @* Для каждого индикатора рендерим строку *@
+        @foreach (var ind in indicators)   // без промежуточного массива
+        {
+            <tr @key="ind">
+                @* ключ важен для корректного диффа *@
+                <td>@ind.Number</td>
+                <td>@ind.Name</td>
+                <td>@ind.Value</td>
+                <td>@ind.Unit</td>
+                <td class="d-none d-md-table-cell">@ind.Scale.ToString("0.0000")</td>
+                <td class="d-none d-md-table-cell">@($"{ind.Serial}-{ind.Index}")</td>
+            </tr>
+        }
+
+        @* Для каждого индикатора рендерим строку *@
+        @foreach (var ind in rsIndicators)   // без промежуточного массива
+        {
+            <tr @key="ind">
+                @* ключ важен для корректного диффа *@
+                <td>@ind.Number</td>
+                <td>@ind.Name</td>
+                <td>@ind.Value</td>
+                <td>@ind.Unit</td>
+                <td class="d-none d-md-table-cell">@ind.Scale.ToString("0.0000")</td>
+                <td class="d-none d-md-table-cell">@($"{ind.Serial}")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@* Блок C#-кода для компонента *@
+@code {
+
+    private MeasurementIndicatorCollection indicators = Heart.Unique.Measurer.Indicators;
+    private MeasurementIndicator[] rsIndicators = Heart.Unique.Measurer.RSIndicators;
+    private CancellationTokenSource? _cts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _cts = new CancellationTokenSource();
+        var token = _cts.Token;
+
+        _ = Task.Run(async () =>
+        {
+            while (!token.IsCancellationRequested)
+            {
+                await InvokeAsync(StateHasChanged);
+                try
+                {
+                    await Task.Delay(1000, token);
+                }
+                catch (TaskCanceledException)
+                {
+                    break; // корректный выход из цикла
+                }
+            }
+        }, token);
+
+        await Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _cts?.Cancel();
+        _cts?.Dispose();
+    }
+}

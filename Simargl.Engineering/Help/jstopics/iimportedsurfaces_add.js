@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Add - Добавить новый элемент",
+hmDescription:"Интерфейс... Синтаксис Automation: LPDISPATCH Add(); Синтаксис COM: HRESULT Add( IImportedSurface ** Result ); Возвращаемое значение: Указатель на интерфейс IImportedSurface",
+hmPrevLink:"iimportedsurfaces_methods.html",
+hmNextLink:"iimportedsurfaces_load.html",
+hmParentLink:"iimportedsurfaces_methods.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2288197.html\">Поверхности&nbsp;<\/a> &gt; <a href=\"isurfacecontainer.html\">Интерфейс ISurfaceContainer&nbsp;<\/a> &gt; <a href=\"isurfacecontainer_props.html\">ISurfaceContainer - свойства&nbsp;<\/a> &gt; <a href=\"iimportedsurfaces.html\">Интерфейс IImportedSurfaces&nbsp;<\/a> &gt; <a href=\"iimportedsurfaces_methods.html\">IImportedSurfaces - методы&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Поверхности  > Интерфейс ISurfaceContainer  > ISurfaceContainer - свойства  > Интерфейс IImportedSurfaces  > IImportedSurfaces - методы  > Add - Добавить новый элемент ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Add - Добавить новый элемент <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iimportedsurfaces.html\" class=\"topiclink\">Интерфейс...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис Automation<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">LPDISPATCH Add();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис COM<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">HRESULT Add( IImportedSurface ** Result );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Возвращаемое значение<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Указатель на интерфейс <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iimportedsurface.html\" class=\"topiclink\">IImportedSurface<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

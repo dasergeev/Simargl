@@ -1,0 +1,90 @@
+﻿
+#pragma warning disable CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Simargl.Zero.Ssh.Renci.SshNet.Common;
+
+namespace Simargl.Zero.Ssh.Renci.SshNet.Messages.Authentication;
+
+/// <summary>
+/// Represents SSH_MSG_USERAUTH_INFO_REQUEST message.
+/// </summary>
+internal sealed class InformationRequestMessage : Message
+{
+    /// <inheritdoc />
+    public override string MessageName
+    {
+        get
+        {
+            return "SSH_MSG_USERAUTH_INFO_REQUEST";
+        }
+    }
+
+    /// <inheritdoc />
+    public override byte MessageNumber
+    {
+        get
+        {
+            return 60;
+        }
+    }
+
+    /// <summary>
+    /// Gets information request name.
+    /// </summary>
+    public string Name { get; private set; }
+
+    /// <summary>
+    /// Gets information request instruction.
+    /// </summary>
+    public string Instruction { get; private set; }
+
+    /// <summary>
+    /// Gets information request language.
+    /// </summary>
+    public string Language { get; private set; }
+
+    /// <summary>
+    /// Gets information request prompts.
+    /// </summary>
+    public IReadOnlyList<AuthenticationPrompt> Prompts { get; private set; }
+
+    /// <summary>
+    /// Called when type specific data need to be loaded.
+    /// </summary>
+    protected override void LoadData()
+    {
+        Name = ReadString(Encoding.UTF8);
+        Instruction = ReadString(Encoding.UTF8);
+
+        // language tag as defined in rfc3066:
+        // Language tags may always be presented using the characters A-Z, a-z, 0 - 9 and HYPHEN-MINUS
+        Language = ReadString(Ascii);
+
+        var numOfPrompts = ReadUInt32();
+        var prompts = new List<AuthenticationPrompt>();
+
+        for (var i = 0; i < numOfPrompts; i++)
+        {
+            var prompt = ReadString(Encoding.UTF8);
+            var echo = ReadBoolean();
+            prompts.Add(new AuthenticationPrompt(i, echo, prompt));
+        }
+
+        Prompts = prompts;
+    }
+
+    /// <summary>
+    /// Called when type specific data need to be saved.
+    /// </summary>
+    protected override void SaveData()
+    {
+        throw new NotImplementedException();
+    }
+
+    internal override void Process(Session session)
+    {
+        session.OnUserAuthenticationInformationRequestReceived(this);
+    }
+}

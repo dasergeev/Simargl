@@ -1,0 +1,468 @@
+{
+  "Modules": [
+    {
+      "Label": "А1",
+      "Rail": "Right",
+      "Section": 1,
+      "Name": "МТ6.1оп.18.043",
+      "IPAddress1": "192.168.1.86",
+      "IPAddress2": "192.168.1.87",
+      "Scale": 0.00566110497421625
+    },
+    {
+      "Label": "А2",
+      "Rail": "Right",
+      "Section": 2,
+      "Name": "МТ6.1оп.18.003",
+      "IPAddress1": "192.168.1.6",
+      "IPAddress2": "192.168.1.7",
+      "Scale": 0.00693014867471293
+    },
+    {
+      "Label": "А3",
+      "Rail": "Right",
+      "Section": 3,
+      "Name": "МТ6.1оп.18.005",
+      "IPAddress1": "192.168.1.10",
+      "IPAddress2": "192.168.1.11",
+      "Scale": 0.00821492723062607
+    },
+    {
+      "Label": "А4",
+      "Rail": "Right",
+      "Section": 4,
+      "Name": "МТ6.1оп.18.007",
+      "IPAddress1": "192.168.1.14",
+      "IPAddress2": "192.168.1.15",
+      "Scale": 0.00635742732270158
+    },
+    {
+      "Label": "А5",
+      "Rail": "Right",
+      "Section": 5,
+      "Name": "МТ6.1оп.18.009",
+      "IPAddress1": "192.168.1.18",
+      "IPAddress2": "192.168.1.19",
+      "Scale": 0.00623961161532692
+    },
+    {
+      "Label": "А6",
+      "Rail": "Right",
+      "Section": 6,
+      "Name": "МТ6.1оп.18.011",
+      "IPAddress1": "192.168.1.22",
+      "IPAddress2": "192.168.1.23",
+      "Scale": 0.00623961161532692
+    },
+    {
+      "Label": "А7",
+      "Rail": "Right",
+      "Section": 7,
+      "Name": "МТ6.1оп.18.013",
+      "IPAddress1": "192.168.1.26",
+      "IPAddress2": "192.168.1.27",
+      "Scale": 0.00623961161532692
+    },
+    {
+      "Label": "А8",
+      "Rail": "Right",
+      "Section": 8,
+      "Name": "МТ6.1оп.18.015",
+      "IPAddress1": "192.168.1.30",
+      "IPAddress2": "192.168.1.31",
+      "Scale": 0.00762324124294729
+    },
+    {
+      "Label": "А9",
+      "Rail": "Right",
+      "Section": 9,
+      "Name": "МТ6.1оп.18.017",
+      "IPAddress1": "192.168.1.34",
+      "IPAddress2": "192.168.1.35",
+      "Scale": 0.00623961161532692
+    },
+    {
+      "Label": "А10",
+      "Rail": "Right",
+      "Section": 10,
+      "Name": "МТ6.1оп.18.019",
+      "IPAddress1": "192.168.1.38",
+      "IPAddress2": "192.168.1.39",
+      "Scale": 0.00647168271438172
+    },
+    {
+      "Label": "А11",
+      "Rail": "Right",
+      "Section": 11,
+      "Name": "МТ6.1оп.18.028",
+      "IPAddress1": "192.168.1.56",
+      "IPAddress2": "192.168.1.57",
+      "Scale": 0.00623961161532692
+    },
+    {
+      "Label": "А12",
+      "Rail": "Right",
+      "Section": 12,
+      "Name": "МТ6.1оп.18.023",
+      "IPAddress1": "192.168.1.46",
+      "IPAddress2": "192.168.1.47",
+      "Scale": 0.00580920163803681
+    },
+    {
+      "Label": "А13",
+      "Rail": "Right",
+      "Section": 13,
+      "Name": "МТ6.1оп.18.025",
+      "IPAddress1": "192.168.1.50",
+      "IPAddress2": "192.168.1.51",
+      "Scale": 0.00557552189598147
+    },
+    {
+      "Label": "А14",
+      "Rail": "Right",
+      "Section": 14,
+      "Name": "МТ6.1оп.18.027",
+      "IPAddress1": "192.168.1.54",
+      "IPAddress2": "192.168.1.55",
+      "Scale": 0.00547992431582457
+    },
+    {
+      "Label": "А15",
+      "Rail": "Right",
+      "Section": 15,
+      "Name": "МТ6.1оп.18.029",
+      "IPAddress1": "192.168.1.58",
+      "IPAddress2": "192.168.1.59",
+      "Scale": 0.0054461077110115
+    },
+    {
+      "Label": "А16",
+      "Rail": "Right",
+      "Section": 16,
+      "Name": "МТ6.1оп.18.031",
+      "IPAddress1": "192.168.1.62",
+      "IPAddress2": "192.168.1.63",
+      "Scale": 0.0054974468725986
+    },
+    {
+      "Label": "А17",
+      "Rail": "Right",
+      "Section": 17,
+      "Name": "МТ6.1оп.18.033",
+      "IPAddress1": "192.168.1.66",
+      "IPAddress2": "192.168.1.67",
+      "Scale": 0.0059494421811208
+    },
+    {
+      "Label": "А18",
+      "Rail": "Right",
+      "Section": 18,
+      "Name": "МТ6.1оп.18.035",
+      "IPAddress1": "192.168.1.70",
+      "IPAddress2": "192.168.1.71",
+      "Scale": 0.00527486270580849
+    },
+    {
+      "Label": "А19",
+      "Rail": "Right",
+      "Section": 19,
+      "Name": "МТ6.1оп.18.037",
+      "IPAddress1": "192.168.1.74",
+      "IPAddress2": "192.168.1.75",
+      "Scale": 0.0054066499719242
+    },
+    {
+      "Label": "А20",
+      "Rail": "Right",
+      "Section": 20,
+      "Name": "МТ6.1оп.18.039",
+      "IPAddress1": "192.168.1.78",
+      "IPAddress2": "192.168.1.79",
+      "Scale": 0.00511982769756536
+    },
+    {
+      "Label": "А21",
+      "Rail": "Right",
+      "Section": 21,
+      "Name": "МТ6.1оп.18.041",
+      "IPAddress1": "192.168.1.82",
+      "IPAddress2": "192.168.1.83",
+      "Scale": 0.00492707494158584
+    },
+    {
+      "Label": "Б1",
+      "Rail": "Left",
+      "Section": 1,
+      "Name": "МТ6.1оп.18.045",
+      "IPAddress1": "192.168.1.90",
+      "IPAddress2": "192.168.1.91",
+      "Scale": 0.0117733663009214
+    },
+    {
+      "Label": "Б2",
+      "Rail": "Left",
+      "Section": 2,
+      "Name": "МТ6.1оп.18.046",
+      "IPAddress1": "192.168.1.92",
+      "IPAddress2": "192.168.1.93",
+      "Scale": 0.00579662447677587
+    },
+    {
+      "Label": "Б3",
+      "Rail": "Left",
+      "Section": 3,
+      "Name": "МТ6.1оп.18.006",
+      "IPAddress1": "192.168.1.12",
+      "IPAddress2": "192.168.1.13",
+      "Scale": 0.0077154143658337
+    },
+    {
+      "Label": "Б4",
+      "Rail": "Left",
+      "Section": 4,
+      "Name": "МТ6.1оп.18.008",
+      "IPAddress1": "192.168.1.16",
+      "IPAddress2": "192.168.1.17",
+      "Scale": 0.00719582415082113
+    },
+    {
+      "Label": "Б5",
+      "Rail": "Left",
+      "Section": 5,
+      "Name": "МТ6.1оп.18.010",
+      "IPAddress1": "192.168.1.20",
+      "IPAddress2": "192.168.1.21",
+      "Scale": 0.00647318625144836
+    },
+    {
+      "Label": "Б6",
+      "Rail": "Left",
+      "Section": 6,
+      "Name": "МТ6.1оп.18.012",
+      "IPAddress1": "192.168.1.24",
+      "IPAddress2": "192.168.1.25",
+      "Scale": 0.00664068505651526
+    },
+    {
+      "Label": "Б7",
+      "Rail": "Left",
+      "Section": 7,
+      "Name": "МТ6.1оп.18.014",
+      "IPAddress1": "192.168.1.28",
+      "IPAddress2": "192.168.1.29",
+      "Scale": 0.00672460877455905
+    },
+    {
+      "Label": "Б8",
+      "Rail": "Left",
+      "Section": 8,
+      "Name": "МТ6.1оп.18.016",
+      "IPAddress1": "192.168.1.32",
+      "IPAddress2": "192.168.1.33",
+      "Scale": 0.00709892481519414
+    },
+    {
+      "Label": "Б9",
+      "Rail": "Left",
+      "Section": 9,
+      "Name": "МТ6.1оп.18.018",
+      "IPAddress1": "192.168.1.36",
+      "IPAddress2": "192.168.1.37",
+      "Scale": 0.00676964131461961
+    },
+    {
+      "Label": "Б10",
+      "Rail": "Left",
+      "Section": 10,
+      "Name": "МТ6.1оп.18.020",
+      "IPAddress1": "192.168.1.40",
+      "IPAddress2": "192.168.1.41",
+      "Scale": 0.00661763908493537
+    },
+    {
+      "Label": "Б11",
+      "Rail": "Left",
+      "Section": 11,
+      "Name": "МТ6.1оп.18.022",
+      "IPAddress1": "192.168.1.44",
+      "IPAddress2": "192.168.1.45",
+      "Scale": 0.00623961161532692
+    },
+    {
+      "Label": "Б12",
+      "Rail": "Left",
+      "Section": 12,
+      "Name": "МТ6.1оп.18.024",
+      "IPAddress1": "192.168.1.48",
+      "IPAddress2": "192.168.1.49",
+      "Scale": 0.00538353529901022
+    },
+    {
+      "Label": "Б13",
+      "Rail": "Left",
+      "Section": 13,
+      "Name": "МТ6.1оп.18.026",
+      "IPAddress1": "192.168.1.52",
+      "IPAddress2": "192.168.1.53",
+      "Scale": 0.00623961161532692
+    },
+    {
+      "Label": "Б14",
+      "Rail": "Left",
+      "Section": 14,
+      "Name": "МТ6.1оп.18.044",
+      "IPAddress1": "192.168.1.88",
+      "IPAddress2": "192.168.1.89",
+      "Scale": 0.00623961161532692
+    },
+    {
+      "Label": "Б15",
+      "Rail": "Left",
+      "Section": 15,
+      "Name": "МТ6.1оп.18.030",
+      "IPAddress1": "192.168.1.60",
+      "IPAddress2": "192.168.1.61",
+      "Scale": 0.00523890357554971
+    },
+    {
+      "Label": "Б16",
+      "Rail": "Left",
+      "Section": 16,
+      "Name": "МТ6.1оп.18.032",
+      "IPAddress1": "192.168.1.64",
+      "IPAddress2": "192.168.1.65",
+      "Scale": 0.00605669345208013
+    },
+    {
+      "Label": "Б17",
+      "Rail": "Left",
+      "Section": 17,
+      "Name": "МТ6.1оп.18.034",
+      "IPAddress1": "192.168.1.68",
+      "IPAddress2": "192.168.1.69",
+      "Scale": 0.00575738977552325 
+    },
+    {
+      "Label": "Б18",
+      "Rail": "Left",
+      "Section": 18,
+      "Name": "МТ6.1оп.18.036",
+      "IPAddress1": "192.168.1.72",
+      "IPAddress2": "192.168.1.73",
+      "Scale": 0.00623364046576544 
+    },
+    {
+      "Label": "Б19",
+      "Rail": "Left",
+      "Section": 19,
+      "Name": "МТ6.1оп.18.038",
+      "IPAddress1": "192.168.1.76",
+      "IPAddress2": "192.168.1.77",
+      "Scale": 0.00529486703426048 
+    },
+    {
+      "Label": "Б20",
+      "Rail": "Left",
+      "Section": 20,
+      "Name": "МТ6.1оп.18.040",
+      "IPAddress1": "192.168.1.80",
+      "IPAddress2": "192.168.1.81",
+      "Scale": 0.00494037713695288 
+    },
+    {
+      "Label": "Б21",
+      "Rail": "Left",
+      "Section": 21,
+      "Name": "МТ6.1оп.18.042",
+      "IPAddress1": "192.168.1.84",
+      "IPAddress2": "192.168.1.85",
+      "Scale": 0.00469088149930592 
+    }
+  ],
+  "Sections": [
+    {
+      "Number": 1,
+      "Position": 0
+    },
+    {
+      "Number": 2,
+      "Position": 0.544
+    },
+    {
+      "Number": 3,
+      "Position": 1.088
+    },
+    {
+      "Number": 4,
+      "Position": 1.632
+    },
+    {
+      "Number": 5,
+      "Position": 2.176
+    },
+    {
+      "Number": 6,
+      "Position": 2.72
+    },
+    {
+      "Number": 7,
+      "Position": 3.264
+    },
+    {
+      "Number": 8,
+      "Position": 3.808
+    },
+    {
+      "Number": 9,
+      "Position": 4.352
+    },
+    {
+      "Number": 10,
+      "Position": 4.896
+    },
+    {
+      "Number": 11,
+      "Position": 5.44
+    },
+    {
+      "Number": 12,
+      "Position": 5.984
+    },
+    {
+      "Number": 13,
+      "Position": 6.528
+    },
+    {
+      "Number": 14,
+      "Position": 7.072
+    },
+    {
+      "Number": 15,
+      "Position": 7.616
+    },
+    {
+      "Number": 16,
+      "Position": 8.16
+    },
+    {
+      "Number": 17,
+      "Position": 9.021
+    },
+    {
+      "Number": 18,
+      "Position": 9.565
+    },
+    {
+      "Number": 19,
+      "Position": 10.109
+    },
+    {
+      "Number": 20,
+      "Position": 10.653
+    },
+    {
+      "Number": 21,
+      "Position": 11.197
+    }
+  ]
+}

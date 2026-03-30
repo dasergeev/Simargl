@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"sysKey",
+hmDescription:"Параметр sysKey позволяет получить состояние клавиши <Alt> при нажатии клавиши.",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">sysKey <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcq1942802\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Параметр sysKey позволяет получить состояние клавиши &lt;<\/span><span class=\"f_bodytext\" style=\"font-style: italic;\">Alt<\/span><span class=\"f_bodytext\">&gt; при нажатии клавиши.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Значения параметра<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<div style=\"text-align: left; text-indent: 0; line-height: 1.48; padding: 0 0 0 0; margin: 0.2500rem 0 0 4.1250rem;\"><table style=\"border:none; border-spacing:0;\">\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">TRUE<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">- была нажата клавиша <\/span><span class=\"f_Table_Cell\" style=\"font-style: italic;\">&lt;Alt&gt;<\/span><span class=\"f_Table_Cell\">, что соответствует событию <\/span><span class=\"f_Table_Cell\" style=\"text-decoration: underline;\"><a href=\"wm_syskeydown.html\" class=\"topiclink\">WM_SYSKEYDOWN<\/a><\/span><span class=\"f_Table_Cell\">,<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">FALSE<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">- не была нажата клавиша &lt;<\/span><span class=\"f_Table_Cell\" style=\"font-style: italic;\">Alt<\/span><span class=\"f_Table_Cell\">&gt;, что соответствует событию <\/span><span class=\"f_Table_Cell\" style=\"text-decoration: underline;\"><a href=\"wm_keydown.html\" class=\"topiclink\">WM_KEYDOWN<\/a><\/span><span class=\"f_Table_Cell\">.<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<\/table>\n\r<\/div>\n\r"
+})

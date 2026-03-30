@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ILayerGroup - свойства",
+hmDescription:"Подразделы: Current - Группа является текущей (состояния слоев переданы в модель)  Layers - Коллекция слоев группы  LayerFilterConditions - Коллекция условий фильтрации слоев",
+hmPrevLink:"ilayergroup.html",
+hmNextLink:"ilayergroup_current.html",
+hmParentLink:"ilayergroup.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"view_layers.html\">Виды и слои&nbsp;<\/a> &gt; <a href=\"ilayergroup.html\">Интерфейс ILayerGroup&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Виды и слои  > Интерфейс ILayerGroup  > ILayerGroup - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ILayerGroup - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroup_current.html\" class=\"topiclink hmlinklistitem\">Current - Группа является текущей (состояния слоев переданы в модель) <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroup_layers.html\" class=\"topiclink hmlinklistitem\">Layers - Коллекция слоев группы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroup_layerfilterconditions.html\" class=\"topiclink hmlinklistitem\">LayerFilterConditions - Коллекция условий фильтрации слоев <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroup_layergroups.html\" class=\"topiclink hmlinklistitem\">LayerGroups - Коллекция групп слоев <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroup_name.html\" class=\"topiclink hmlinklistitem\">Name - Имя группы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroup_ownergroup.html\" class=\"topiclink hmlinklistitem\">OwnerGroup - Владелец группы - другая группа <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroup_ownerview.html\" class=\"topiclink hmlinklistitem\">OwnerView - Владелец группы - вид <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroup_uniqueid.html\" class=\"topiclink hmlinklistitem\">UniqueId - Уникальный идентификатор группы слоев <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IRuledSurface - методы",
+hmDescription:"Подразделы: AddNewEdge - Добавление ребра линейчатой поверхности после указанного индексом  DeleteEdge - Удаление ребра линейчатой поверхности  GetEdgePointParam - Получение пар",
+hmPrevLink:"iruledsurface_parameters.html",
+hmNextLink:"iruledsurface_addnewedge.html",
+hmParentLink:"iruledsurface.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2288197.html\">Поверхности&nbsp;<\/a> &gt; <a href=\"isurfacecontainer.html\">Интерфейс ISurfaceContainer&nbsp;<\/a> &gt; <a href=\"isurfacecontainer_props.html\">ISurfaceContainer - свойства&nbsp;<\/a> &gt; <a href=\"iruledsurface.html\">Интерфейс IRuledSurface&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Поверхности  > Интерфейс ISurfaceContainer  > ISurfaceContainer - свойства  > Интерфейс IRuledSurface  > IRuledSurface - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IRuledSurface - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iruledsurface_addnewedge.html\" class=\"topiclink hmlinklistitem\">AddNewEdge - Добавление ребра линейчатой поверхности после указанного индексом <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iruledsurface_deleteedge.html\" class=\"topiclink hmlinklistitem\">DeleteEdge - Удаление ребра линейчатой поверхности <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iruledsurface_getedgepointparam.html\" class=\"topiclink hmlinklistitem\">GetEdgePointParam - Получение параметров точки ребра линейчатой поверхности <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iruledsurface_getedgepointparams.html\" class=\"topiclink hmlinklistitem\">GetEdgePointParams - Получение параметров ребер линейчатой поверхности <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iruledsurface_setedgepointparam.html\" class=\"topiclink hmlinklistitem\">SetEdgePointParam - Изменение положения точки ребра линейчатой поверхности <\/a><\/span><\/p>\n\r"
+})

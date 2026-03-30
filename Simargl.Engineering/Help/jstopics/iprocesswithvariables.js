@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IProcessWithVariables",
+hmDescription:"Интерфейс процесса с переменными. Иерархия: IDispatch IProcessWithVariables Описание: Интерфейс является дополнительным к интерфейсу IProcess3D. Интерфейс можно получить с по",
+hmPrevLink:"ivariable7_setlinkembodiment.html",
+hmNextLink:"iprocesswithvariables_methods.html",
+hmParentLink:"ba1859837.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"ba1859837.html\">Переменные&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Переменные  > Интерфейс IProcessWithVariables ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IProcessWithVariables <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xba1948239\" class=\"hmanchor\"><\/a><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс процесса с переменными<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"iprocesswithvariables.html\" class=\"topiclink\">IProcessWithVariables<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Описание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс является дополнительным к интерфейсу <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iprocess3d.html\" class=\"topiclink\">IProcess3D<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс можно получить с помощью метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"recomendation.html\" class=\"topiclink\">IUnknown::QueryInterface<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Версия: Компас v20<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocesswithvariables_methods.html\" class=\"topiclink hmlinklistitem\">IProcessWithVariables - методы <\/a><\/span><\/p>\n\r"
+})

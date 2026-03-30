@@ -1,0 +1,31 @@
+﻿[MERA]
+DataSourceApp=MERA Recorder
+DataSourceVer=3.2.0.7
+
+Time=00:00:00.000
+Date=01.01.2018
+Test=Test
+Prod=Prod
+
+[P_Signal]
+Freq=2400.000000
+XUnits=сек.
+Comment=Comment
+Address=m11-1- 1
+ModSN=00000002
+ModName=MIC1100
+YUnits=mV/V
+Start=0.0000000000
+YFormat=R4
+
+[P_Platon]
+Freq=2400.000000
+XUnits=сек.
+Comment=Comment
+Address=m11-1- 2
+ModSN=00000002
+ModName=MIC1100
+YUnits=kN
+Start=0.0000000000
+YFormat=R4
+

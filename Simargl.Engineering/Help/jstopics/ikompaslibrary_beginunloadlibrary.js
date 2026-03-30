@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"BeginUnloadLibrary - Завершающие действия перед отключением библиотеки, отписка от событий",
+hmDescription:"Интерфейс... Синтаксис: HRESULT BeginUnloadLibrary( VARIANT_BOOL * Result ); Возвращаемое значение: Не используется Примечание: Приложение в данном методе должно отписаться",
+hmPrevLink:"ikompaslibrary_methods.html",
+hmNextLink:"ikompaslibrary_contextpanelstylecombochanged.html",
+hmParentLink:"ikompaslibrary_methods.html",
+hmBreadCrumbs:"<a href=\"libraries_create.html\">Создание прикладных библиотек&nbsp;<\/a> &gt; <a href=\"cr119224.html\">Оформление прикладных библиотек типа ActiveX&nbsp;<\/a> &gt; <a href=\"ikompaslibrary.html\">Интерфейс IKompasLibrary&nbsp;<\/a> &gt; <a href=\"ikompaslibrary_methods.html\">IKompasLibrary- методы&nbsp;<\/a>",
+hmTitlePath:"Создание прикладных библиотек  > Оформление прикладных библиотек типа ActiveX  > Интерфейс IKompasLibrary  > IKompasLibrary- методы  > BeginUnloadLibrary - Завершающие действия перед отключением библиотеки, отписка от событий ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">BeginUnloadLibrary - Завершающие действия перед отключением библиотеки, отписка от событий <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcr146678\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ikompaslibrary.html\" class=\"topiclink\">Интерфейс...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">HRESULT BeginUnloadLibrary( VARIANT_BOOL * Result );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Возвращаемое значение<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Не используется<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Приложение в данном методе должно отписаться от событий и освободить запомненные интерфейсы API Компас.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

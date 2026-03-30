@@ -1,0 +1,3392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apeiron.Oriole.Server.Database</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Oriole.Server.Database.DatabaseContext">
+            <summary>
+            Представляет контекст сеанса работы с базой данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.DatabaseContext.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.DatabaseContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Apeiron.Oriole.Server.Database.DatabaseContext})">
+            <summary>
+            Инициализирует новый экземпляр класса, передаёт в родительский класс настройки подклключения к БД.
+            </summary>
+            <param name="options">Настройки.</param>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Services">
+            <summary>
+            Возвращает таблицу служб.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Computers">
+            <summary>
+            Возвращает таблицу компьютеров.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Registrars">
+            <summary>
+            Возвращает таблицу регистраторов.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.RawDirectories">
+            <summary>
+            Возвращает таблицу каталогов необработанных данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.RecordDirectories">
+            <summary>
+            Возвращает таблицу каталогов с записями.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Sensors">
+            <summary>
+            Возвращает таблицу датчиков.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Channels">
+            <summary>
+            Возвращает таблицу каналов.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Sources">
+            <summary>
+            Возвращает таблицу источников.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.PackageFiles">
+            <summary>
+            Возвращает таблицу файлов с пакетами данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Packages">
+            <summary>
+            Возвращает таблицу пакетов.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.NmeaFiles">
+            <summary>
+            Возвращает таблицу файлов с пакетами данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.GgaMessages">
+            <summary>
+            Возвращает таблицу сообщений GPS, содержащих данные местоположения.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.RmcMessages">
+            <summary>
+            Возвращает таблицу сообщений GPS, содержащих минимальный рекомендованный набор данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.VtgMessages">
+            <summary>
+            Возвращает таблицу сообщений GPS, содержащих данные о наземном курсе и скорости.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Geolocations">
+            <summary>
+            Возвращает таблицу геолокационных данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Frames">
+            <summary>
+            Возвращает таблицу кадров.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Spectrums">
+            <summary>
+            Возвращает таблицу спектров.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Amplitudes">
+            <summary>
+            Возвращает таблицу амплитуд.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Filters">
+            <summary>
+            Возвращает таблицу фильтров.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Locations">
+            <summary>
+            Возвращает таблицу местоположений.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Statistics">
+            <summary>
+            Возвращает таблицу статистических данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseContext.Extremums">
+            <summary>
+            Возвращает таблицу экстремальных данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.DatabaseContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Выполняет настройку базы данных.
+            </summary>
+            <param name="optionsBuilder">
+            Построитель, используемый для создания или изменения параметров этого контекста.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.DatabaseContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Выполняет настройку модели базы данных.
+            </summary>
+            <param name="modelBuilder">
+            Построитель, используемый для настройки модели базы данных.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.DatabaseSession">
+            <summary>
+            Представляет сеанс работы с базой данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.DatabaseSession.#ctor(Apeiron.Oriole.Server.Database.DatabaseContext)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="context">
+            Контекст сеанса работы с базой данных.
+            </param>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.DatabaseSession.Context">
+            <summary>
+            Возвращает контекст сеанса работы с базой данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.DatabaseSession.Dispose">
+            <summary>
+            Разрушает объект.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.DatabaseSession.DisposeAsync">
+            <summary>
+            Аснихронно разрушает объект.
+            </summary>
+            <returns>
+            Задача, разрушающая объект.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.DatabaseSessionExtensions">
+            <summary>
+            Предоставляет методы расширения для интерфейса <see cref="T:Apeiron.Oriole.Server.Database.ISession"/>.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.ISession">
+            <summary>
+            Представляет сеанс работы с базой данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.ISession.Context">
+            <summary>
+            Возвращает контекст сеанса работы с базой данных.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.ITransaction">
+            <summary>
+            Представляет транзакцию.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.ITransaction.ChangesCount">
+            <summary>
+            Возвращает количество изменений внесённых в базу.
+            </summary>
+            <remarks>
+            Значение свойства устанавливается после разрушения объекта.
+            </remarks>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Manager">
+            <summary>
+            Представляет управляющего базой данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.CreateSession">
+            <summary>
+            Создаёт сессию для работы с базой данных.
+            </summary>
+            <returns>
+            Сессия для работы с базой данных.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.CreateSessionAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно создаёт сессию для работы с базой данных.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, создающая сессию для работы с базой данных.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.Attach">
+            <summary>
+            Получает контекст сеанса работы с базой данных.
+            </summary>
+            <returns>
+            Контекст сеанса работы с базой данных.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.AttachAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно получает контекст сеанса работы с базой данных.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, асинхронно получающая соединение к базе данных.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.DetachAsync(Apeiron.Oriole.Server.Database.DatabaseContext)">
+            <summary>
+            Освобождает контекст сеанса работы с базой данных.
+            </summary>
+            <param name="context">
+            Контекст сеанса работы с базой данных.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.Detach(Apeiron.Oriole.Server.Database.DatabaseContext)">
+            <summary>
+            Освобождает контекст сеанса работы с базой данных.
+            </summary>
+            <param name="context">
+            Контекст сеанса работы с базой данных.
+            </param>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Manager._ChangeCount">
+            <summary>
+            Поле для хранения счётчика внесённых изменений.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Manager._WorkCount">
+            <summary>
+            Поле для хранения счётчика выделенных контекстов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Manager._MaxWorkCount">
+            <summary>
+            Поле для хранения максимального значения счётчика выделенных контекстов.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Manager.WorkCount">
+            <summary>
+            Возвращает количество активных подключений к базе данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.ResetChangeCount">
+            <summary>
+            Сбрасывает счётчик внесённых изменений.
+            </summary>
+            <returns>
+            Значение счётчика внесённых изменений.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.ResetMaxWorkCount">
+            <summary>
+            Сбрасывает максимальное значение счётчика выделенных контекстов.
+            </summary>
+            <returns>
+            Максимальное значения счётчика выделенных контекстов.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.Request``1(System.Func{Apeiron.Oriole.Server.Database.DatabaseContext,``0})">
+            <summary>
+            Выполняет запрос к базе данных.
+            </summary>
+            <typeparam name="TResult">
+            Тип результата запроса.
+            </typeparam>
+            <param name="request">
+            Запрос.
+            </param>
+            <returns>
+            Результат запроса.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.RequestAsync``1(System.Func{Apeiron.Oriole.Server.Database.DatabaseContext,System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет запрос к базе данных.
+            </summary>
+            <typeparam name="TResult">
+            Тип результата запроса.
+            </typeparam>
+            <param name="request">
+            Запрос.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая запрос к базе данных.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.TryTransactionAsync(System.Func{Apeiron.Oriole.Server.Database.DatabaseContext,System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет транзакцию с перехватом всех несистемных сиключений.
+            </summary>
+            <param name="changer">
+            Метод, вносящий изменения в базу данных.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая транзакцию.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.Transaction(System.Action{Apeiron.Oriole.Server.Database.DatabaseContext})">
+            <summary>
+            Выполняет транзакцию.
+            </summary>
+            <param name="changer">
+            Метод, вносящий изменения в базу данных.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Manager.TransactionAsync(System.Func{Apeiron.Oriole.Server.Database.DatabaseContext,System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет транзакцию.
+            </summary>
+            <param name="changer">
+            Метод, вносящий изменения в базу данных.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая транзакцию.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Amplitude">
+            <summary>
+            Представляет амплитуду сигнала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Amplitude.Id">
+            <summary>
+            Возвращает или инициализирует идентификатор амплитуды.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Amplitude.SpectrumId">
+            <summary>
+            Возвращает или задаёт идентификатор спектра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Amplitude.Frequency">
+            <summary>
+            Возвращает или задаёт частоту.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Amplitude.Real">
+            <summary>
+            Возвращает или задаёт действительную часть амплитуды.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Amplitude.Imaginary">
+            <summary>
+            Возвращает или задаёт мнимую часть амплитуды.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Amplitude.Magnitude">
+            <summary>
+            Возвращает или задаёт абсолютное значение амплитуды.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Amplitude.Phase">
+            <summary>
+            Возвращает или задаёт фазу амплитуды.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Amplitude.Spectrum">
+            <summary>
+            Возвращает или задаёт спектр.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Extremum">
+            <summary>
+            Представляет информацию об экстремуме.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Id">
+            <summary>
+            Возвращает или инициализирует идентификатор информации.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.RegistrarId">
+            <summary>
+            Возвращает или задаёт идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.FrameTimestamp">
+            <summary>
+            Возвращает или задаёт метку времени получения данных кадра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.ChannelId">
+            <summary>
+            Возвращает или инициализирует идентификатор канала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Cutoff">
+            <summary>
+            Возвращает или задаёт частоту среза фильтра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.LocationId">
+            <summary>
+            Возвращает или задаёт идентификатор местоположения.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Path">
+            <summary>
+            Возвращает или задаёт путь к кадру регистрации.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Speed">
+            <summary>
+            Возвращает или задаёт скорость движения.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.IsMin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.ExtremumIndex">
+            <summary>
+            Индекс экстремального значения в канале.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.ExtremumValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uxb1Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uyb1Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uzb1Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uxb2Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uyb2Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uzb2Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.UxrValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.UyrValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.UzrValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uxk1Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uyk1Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uzk1Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uxk2Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uyk2Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Uzk2Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Registrar">
+            <summary>
+            Возвращает или задаёт регистратор.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Frame">
+            <summary>
+            Возвращает или задаёт кадр регистрации.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Channel">
+            <summary>
+            Возвращает или задаёт канал регистрации.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Filter">
+            <summary>
+            Возвращает или задаёт фильтр.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Extremum.Location">
+            <summary>
+            Возвращает или задаёт местоположение.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Extremum.BuildAction(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Apeiron.Oriole.Server.Database.Extremum})">
+            <summary>
+            Выполняет настройку данного типа сущности в модели.
+            </summary>
+            <param name="typeBuilder">
+            Построитель типа.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Filter">
+            <summary>
+            Представляет фильтр.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Filter._Cutoff">
+            <summary>
+            Поле для хранения частоты среза фильтра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Filter.Cutoff">
+            <summary>
+            Возвращает или задаёт частоту среза фильтра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Filter.Statistics">
+            <summary>
+            Возвращает коллекцию статистических данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Filter.Extremums">
+            <summary>
+            Возвращает коллекцию экстремальных данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Filter.BuildAction``1(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{``0})">
+            <summary>
+            Выполняет настройку данного типа сущности в модели.
+            </summary>
+            <typeparam name="TFilter">
+            Тип сущности.
+            </typeparam>
+            <param name="typeBuilder">
+            Построитель типа.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Location">
+            <summary>
+            Представляет местоположение.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Location.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Location.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="latitude">
+            Широта в градусах.
+            </param>
+            <param name="longitude">
+            Долгота в градусах.
+            </param>
+            <param name="altitude">
+            Высоты над средним уровнем моря в метрах.
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="latitude"/> передано значение,
+            которое меньше значения <see cref="F:Apeiron.Gps.GpsPoint.MinLatitude"/>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="latitude"/> передано значение,
+            которое превышает значение <see cref="F:Apeiron.Gps.GpsPoint.MaxLatitude"/>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="latitude"/> передано бесконечное значение.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="latitude"/> передано нечисловое значение.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="longitude"/> передано бесконечное значение.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="longitude"/> передано нечисловое значение.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="altitude"/> передано бесконечное значение.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="altitude"/> передано нечисловое значение.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Location.Latitude">
+            <summary>
+            Возвращает широту в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Location.Longitude">
+            <summary>
+            Возвращает долготу в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Location.Altitude">
+            <summary>
+            Возвращает высоту над средним уровнем моря в метрах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Location.FirstVerticalRadius">
+            <summary>
+            Возвращает радиус кривизны первого вертикала для данного метсоположения в системе МГС (WGS 84) в метрах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Location.X">
+            <summary>
+            Возвращает абсциссу точки в пространственной системе координат, определённой в пункте 3.1. ГОСТ Р 51794-2001.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Location.Y">
+            <summary>
+            Возвращает ординату точки в пространственной системе координат, определённой в пункте 3.1. ГОСТ Р 51794-2001.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Location.Z">
+            <summary>
+            Возвращает аппликату точки в пространственной системе координат, определённой в пункте 3.1. ГОСТ Р 51794-2001.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Location.Statistics">
+            <summary>
+            Возвращает коллекцию статистических данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Location.Extremums">
+            <summary>
+            Возвращает коллекцию экстремальных данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Location.BuildAction(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Apeiron.Oriole.Server.Database.Location})">
+            <summary>
+            Выполняет настройку данного типа сущности в модели.
+            </summary>
+            <param name="typeBuilder">
+            Построитель типа.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Spectrum">
+            <summary>
+            Представляет спектр.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Spectrum.Id">
+            <summary>
+            Возвращает или инициализирует идентификатор спектра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Spectrum.ChannelId">
+            <summary>
+            Возвращает или задаёт идентификатор канала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Spectrum.RegistrarId">
+            <summary>
+            Возвращает или задаёт идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Spectrum.Timestamp">
+            <summary>
+            Возвращает или задаёт метку времени получения данных кадра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Spectrum.Registrar">
+            <summary>
+            Возвращает или задаёт регистратор.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Spectrum.Channel">
+            <summary>
+            Возвращает или задаёт канал.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Spectrum.Frame">
+            <summary>
+            Возвращает или задаёт кадр.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Spectrum.Amplitudes">
+            <summary>
+            Возвращает коллекцию амплитуд.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Statistic">
+            <summary>
+            Представляет статистические данные.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._TimestampName">
+            <summary>
+            Постоянная, определяющая имя столбца таблиц базы данных,
+            содержащего метку времени получения данных кадра.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._ChannelId">
+            <summary>
+            Поле для хранения идентификатора канала.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._RegistrarId">
+            <summary>
+            Поле для хранения идентификатора регистратора.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Timestamp">
+            <summary>
+            Поле для хранения метки времени получения данных кадра.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Cutoff">
+            <summary>
+            Поле для хранения частоты среза фильтра.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Registrar">
+            <summary>
+            Поле для хранения регистратора.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Channel">
+            <summary>
+            Поле для хранения канала.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Frame">
+            <summary>
+            Поле для хранения кадра.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Filter">
+            <summary>
+            Поле для хранения фильтра.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Latitude">
+            <summary>
+            Поле для хранения широты.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Longitude">
+            <summary>
+            Поле для хранения долготы.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Location">
+            <summary>
+            Поле для хранения местоположения.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Speed">
+            <summary>
+            Поле для хранения скорости.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Count">
+            <summary>
+            Поле для хранения количества значений.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Min">
+            <summary>
+            Поле для хранения минимального значения.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Max">
+            <summary>
+            Поле для хранения максимального значения.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Average">
+            <summary>
+            Поле для хранения среднего значения.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Deviation">
+            <summary>
+            Поле для хранения среднеквадратического отклонения.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._Sum">
+            <summary>
+            Поле для хранения суммы значений.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._SquaresSum">
+            <summary>
+            Поле для хранения суммы квадратов значений.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._MinModulo">
+            <summary>
+            Поле для хранения минимального значения по модулю.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._MaxModulo">
+            <summary>
+            Поле для хранения максимального значения по модулю.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._AverageModulo">
+            <summary>
+            Поле для хранения среднего значения по модулю.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._DeviationModulo">
+            <summary>
+            Поле для хранения среднеквадратического отклонения по модулю.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Statistic._SumModulo">
+            <summary>
+            Поле для хранения суммы значений по модулю.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.ChannelId">
+            <summary>
+            Возвращает или задаёт идентификатор канала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.RegistrarId">
+            <summary>
+            Возвращает или задаёт идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.FrameTime">
+            <summary>
+            Возвращает или задаёт время получения данных кадра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Cutoff">
+            <summary>
+            Возвращает или задаёт частоту среза фильтра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Latitude">
+            <summary>
+            Возвращает или задаёт широту в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Longitude">
+            <summary>
+            Возвращает или задаёт долготу в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Speed">
+            <summary>
+            Возвращает или задаёт скорость.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Count">
+            <summary>
+            Возвращает или задаёт количество значений.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Min">
+            <summary>
+            Возвращает или задаёт минимальное значение.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Max">
+            <summary>
+            Возвращает или задаёт максимальное значение.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Average">
+            <summary>
+            Возвращает или задаёт среднее значение.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Deviation">
+            <summary>
+            Возвращает или задаёт среднеквадратическое отклонение.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.Sum">
+            <summary>
+            Возвращает или задаёт сумму значений.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.SquaresSum">
+            <summary>
+            Возвращает или задаёт сумму квадратов значений.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.MinModulo">
+            <summary>
+            Возвращает или задаёт минимальное значение по модулю.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.MaxModulo">
+            <summary>
+            Возвращает или задаёт максимальное значение по модулю.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.AverageModulo">
+            <summary>
+            Возвращает или задаёт среднее значение по модулю.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.DeviationModulo">
+            <summary>
+            Возвращает или задаёт среднеквадратическое отклонение по модулю.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Statistic.SumModulo">
+            <summary>
+            Возвращает или задаёт сумму значений по модулю.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Statistic.BuildAction(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Apeiron.Oriole.Server.Database.Statistic})">
+            <summary>
+            Выполняет настройку данного типа сущности в модели.
+            </summary>
+            <param name="typeBuilder">
+            Построитель типа.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Channel">
+            <summary>
+            Представляет канал.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Id">
+            <summary>
+            Возвращает или инициализирует идентификатор канала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.RegistrarId">
+            <summary>
+            Возвращает или задаёт идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Name">
+            <summary>
+            Возвращает или задаёт имя канала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Description">
+            <summary>
+            Возвращает или задаёт описание канала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Sampling">
+            <summary>
+            Возвращает или задаёт частоту дискретизации канала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Cutoff">
+            <summary>
+            Возвращает или задаёт частоту среза фильтра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Registrar">
+            <summary>
+            Возвращает или задаёт регистратор.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Sources">
+            <summary>
+            Возвращает коллекцию источников.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Spectrums">
+            <summary>
+            Возвращает коллекцию спектров.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Statistics">
+            <summary>
+            Возвращает коллекцию статистических данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Channel.Extremums">
+            <summary>
+            Возвращает коллекцию экстремальных данных.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Entity">
+            <summary>
+            Представляет сущность.
+            </summary>
+        </member>
+        <member name="E:Apeiron.Oriole.Server.Database.Entity.PropertyChanged">
+            <summary>
+            Происходит при изменении значения свойства.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Entity._Id">
+            <summary>
+            Поле для хранения идентификатора сущности.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Entity._SyncRoot">
+            <summary>
+            Поле для хранения объекта, с помощью которого может быть синхронизирован доступ к внутренним данным сущности.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Entity.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Entity.Id">
+            <summary>
+            Возвращает идентификатор сущности.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Entity.SyncRoot">
+            <summary>
+            Возвращает объект, с помощью которого может быть синхронизирован доступ к внутренним данным сущности.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Entity.SetProperty(System.String,System.Int32@,System.Int32)">
+            <summary>
+            Устанавливает значение свойства.
+            </summary>
+            <param name="propertyName">
+            Имя свойства.
+            </param>
+            <param name="actualValue">
+            Текущее значение свойства.
+            </param>
+            <param name="newValue">
+            Новое значение свойства.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Entity.SetProperty(System.String,System.Int64@,System.Int64)">
+            <summary>
+            Устанавливает значение свойства.
+            </summary>
+            <param name="propertyName">
+            Имя свойства.
+            </param>
+            <param name="actualValue">
+            Текущее значение свойства.
+            </param>
+            <param name="newValue">
+            Новое значение свойства.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Entity.SetProperty(System.String,System.Double@,System.Double)">
+            <summary>
+            Устанавливает значение свойства.
+            </summary>
+            <param name="propertyName">
+            Имя свойства.
+            </param>
+            <param name="actualValue">
+            Текущее значение свойства.
+            </param>
+            <param name="newValue">
+            Новое значение свойства.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Entity.SetProperty(System.String,System.Object@,System.Object)">
+            <summary>
+            Устанавливает значение свойства.
+            </summary>
+            <param name="propertyName">
+            Имя свойства.
+            </param>
+            <param name="actualValue">
+            Текущее значение свойства.
+            </param>
+            <param name="newValue">
+            Новое значение свойства.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Entity.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:Apeiron.Oriole.Server.Database.Entity.PropertyChanged"/>.
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Entity.BuildAction``1(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{``0})">
+            <summary>
+            Выполняет настройку данного типа сущности в модели.
+            </summary>
+            <typeparam name="TEntity">
+            Тип сущности.
+            </typeparam>
+            <param name="typeBuilder">
+            Построитель типа.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Relation`2">
+            <summary>
+            Представляет связь с сущностью.
+            </summary>
+            <typeparam name="TParentEntity">
+            Тип родительской сущности.
+            </typeparam>
+            <typeparam name="TChildEntity">
+            Тип дочерней сущности.
+            </typeparam>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.RawDirectory">
+            <summary>
+            Представляет каталог необработанных данных.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.RawDirectory._GpsDirectoryName">
+            <summary>
+            Постоянная, определяющая имя каталога, содержащего GPS-данные.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.RawDirectory._PackageDirectoryPrefix">
+            <summary>
+            Постоянная, определяющая префикс имени каталога, содержащего пакеты данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.Id">
+            <summary>
+            Возвращает или инициализирует идентификатор каталога.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.RegistrarId">
+            <summary>
+            Возвращает или задаёт идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.Path">
+            <summary>
+            Возвращает или задаёт путь к каталогу.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.Registrar">
+            <summary>
+            Возвращает или задаёт регистратор.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.PackageFiles">
+            <summary>
+            Возвращает коллекцию файлов с пакетами данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.NmeaFiles">
+            <summary>
+            Возвращает коллекцию файлов с NMEA сообщениями.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.Packages">
+            <summary>
+            Возвращает коллекцию пакетов данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.GgaMessages">
+            <summary>
+            Возвращает коллекцию сообщений GPS, содержащих данные местоположения.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.RmcMessages">
+            <summary>
+            Возвращает коллекцию сообщений GPS, содержащих минимальный рекомендованный набор данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RawDirectory.VtgMessages">
+            <summary>
+            Возвращает коллекцию сообщений GPS, содержащих данные о наземном курсе и скорости.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.RawDirectory.TryParseDirectoryFormat(System.String,System.Int32@)">
+            <summary>
+            Выполняет разбор имени каталога.
+            </summary>
+            <param name="name">
+            Имя каталога.
+            </param>
+            <param name="format">
+            Формат файла.
+            </param>
+            <returns>
+            Результат разбора.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.RawDirectory.TryParseFileTime(System.String,System.DateTime@)">
+            <summary>
+            Возвращает дату файла по его имени.
+            </summary>
+            <param name="name">
+            Имя файла.
+            </param>
+            <param name="time">
+            Дата файла.
+            </param>
+            <returns>
+            Результат разбора.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.RecordDirectory">
+            <summary>
+            Представляет каталог с записями.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RecordDirectory.Id">
+            <summary>
+            Возвращает или инициализирует каталога.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RecordDirectory.RegistrarId">
+            <summary>
+            Возвращает или задаёт идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RecordDirectory.Path">
+            <summary>
+            Возвращает или задаёт путь к каталогу.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RecordDirectory.Registrar">
+            <summary>
+            Возвращает или задаёт регистратор.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.NmeaFile">
+            <summary>
+            Представляет файл, содержащий NMEA сообщения.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaFile.IsLoaded">
+            <summary>
+            Возвращает или задаёт значение, определяющее загружен ли файл.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaFile.GgaMessages">
+            <summary>
+            Возвращает коллекцию сообщений GPS, содержащих данные местоположения.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaFile.RmcMessages">
+            <summary>
+            Возвращает коллекцию сообщений GPS, содержащих минимальный рекомендованный набор данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaFile.VtgMessages">
+            <summary>
+            Возвращает коллекцию сообщений GPS, содержащих данные о наземном курсе и скорости.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.PackageFile">
+            <summary>
+            Представляет файл с пакетами данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.Format">
+            <summary>
+            Возвращает или задаёт формат данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.IsLoaded">
+            <summary>
+            Возвращает или задаёт значение, определяющее загружен ли файл.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.PackageCount">
+            <summary>
+            Возвращает или задаёт количество пакетов в файле.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.Length">
+            <summary>
+            Возвращает или задаёт длину синхронных сигналов.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.IsNormalized">
+            <summary>
+            Возвращает или задаёт значение, определяющее нормализована ли запись.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.LocationType">
+            <summary>
+            Возвращает или задаёт значение, определяющее тип расположения файла в последовательности.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.SequentialIndex">
+            <summary>
+            Возвращает или задаёт индекс файла в последовательности.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.FirstSynchromarker">
+            <summary>
+            Возвращает или задаёт первый синхромаркер в тактах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.LastSynchromarker">
+            <summary>
+            Возвращает или задаёт последний синхромаркер в тактах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.Sampling">
+            <summary>
+            Возвращает или задаёт частоту дискретизации.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.Duration">
+            <summary>
+            Возвращает или задаёт продолжительность синхронных сигналов в секундах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.NormalizedBeginTime">
+            <summary>
+            Возвращает или задаёт нормализованное время начала файла.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.NormalizedEndTime">
+            <summary>
+            Возвращает или задаёт нормализованное время конца файла.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.IsAnalyzed">
+            <summary>
+            Возвращает или задаёт значение, определяющее проанализирован ли файл.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.PackageFile.Packages">
+            <summary>
+            Возвращает коллекцию пакетов данных.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.PackageFileLocationType">
+            <summary>
+            Представляет значение, определяющее тип расположения файла в последовательности.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.PackageFileLocationType.Incorrect">
+            <summary>
+            Некорректный файл.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.PackageFileLocationType.Single">
+            <summary>
+            Одиночный файл.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.PackageFileLocationType.First">
+            <summary>
+            Первый файл.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.PackageFileLocationType.Internal">
+            <summary>
+            Внутренний файл.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.PackageFileLocationType.Last">
+            <summary>
+            Последний файл.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.SourceFile">
+            <summary>
+            Представляет файл с исходными данными.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.SourceFile.RawDirectoryId">
+            <summary>
+            Возвращает или задаёт идентификатор каталога необработанных данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.SourceFile.Time">
+            <summary>
+            Возвращает или задаёт время начала записи в файл.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.SourceFile.RawDirectory">
+            <summary>
+            Возвращвет или задаёт каталог необработанных данных.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Frame">
+            <summary>
+            Представляет кадр регистрации.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.RegistrarId">
+            <summary>
+            Возвращает или задаёт идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.Timestamp">
+            <summary>
+            Возвращает или задаёт метку времени получения данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.IsSpectrum">
+            <summary>
+            Возвращает или задаёт значение, определяющее построены ли спектры по кадру.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.IsStatistic">
+            <summary>
+            Возвращает или задаёт значение, определяющее расчитана ли статистика по кадру.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.IsExtremum">
+            <summary>
+            Возвращает или задаёт значение, определяющее расчитаны ли экстремумы по кадру.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.Time">
+            <summary>
+            Возвращает или задаёт время начала записи в кадр.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.Number">
+            <summary>
+            Возвращает или задаёт номер кадра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.Path">
+            <summary>
+            Возвращает или задаёт путь к файлу регистрации.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.Registrar">
+            <summary>
+            Возвращает или задаёт регистратор.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.Spectrums">
+            <summary>
+            Возвращает коллекцию спектров.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.Statistics">
+            <summary>
+            Возвращает коллекцию статистических данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Frame.Extremums">
+            <summary>
+            Возвращает коллекцию экстремальных данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Frame.GetPath">
+            <summary>
+            Возвращает путь к файлу.
+            </summary>
+            <returns>
+            Путь к файлу.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Frame.ToTimestamp(System.DateTime)">
+            <summary>
+            Возвращает метку времени для времени.
+            </summary>
+            <param name="time">
+            Время.
+            </param>
+            <returns>
+            Метка времени.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Frame.FromTimestamp(System.Int64)">
+            <summary>
+            Возвращает время для заданной метки времени.
+            </summary>
+            <param name="timestamp">
+            Метка времени.
+            </param>
+            <returns>
+            Время.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Geolocation">
+            <summary>
+            Представляет геолокационные данные.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.RegistrarId">
+            <summary>
+            Возвращает или задаёт идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Timestamp">
+            <summary>
+            Возвращает или задаёт метку времени получения данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.IsAnalyzed">
+            <summary>
+            Возвращает или задаёт значение, определяющее проанализированы ли данные.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Time">
+            <summary>
+            Возвращает или задаёт время определения координат.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Latitude">
+            <summary>
+            Возвращает или задаёт широту в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Longitude">
+            <summary>
+            Возвращает или задаёт долготу в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Altitude">
+            <summary>
+            Возвращает или задаёт высоту над средним уровнем моря в метрах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Speed">
+            <summary>
+            Возвращает или задаёт скорость в километрах в час.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.PoleCourse">
+            <summary>
+            Возвращает или задаёт курс на истинный полюс в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.MagneticCourse">
+            <summary>
+            Возвращает или задаёт курс на магнитный полюс в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Solution">
+            <summary>
+            Возвращает или задаёт значение, определяющее способ вычисления координат.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Satellites">
+            <summary>
+            Возвращает или задаёт количество активных спутников.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Hdop">
+            <summary>
+            Возвращает или задаёт горизонтальное снижение точности.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Geoidal">
+            <summary>
+            Возвращает или задаёт отклонение геоида.
+            </summary>
+            <remarks>
+            Отклонение геоида - это различие между поверхностью земного эллипсоида WGS-84
+            и средним уровнем моря (поверхностью геоида).
+            Если значение отрицательное, то средний уровень моря
+            находится ниже уровня поверхности эллипсоида WGS-84.
+            </remarks>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Age">
+            <summary>
+            Возвращает или задаёт возраст дифференциальных поправок.
+            </summary>
+            <remarks>
+            Возраст дифференциальных поправок - это количество секунд,
+            прошедшее с момента прихода последнего сообщения с дифференциальными коррекциями.
+            </remarks>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Station">
+            <summary>
+            Возвращает или задаёт идентификатор дифференциальной станции.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Valid">
+            <summary>
+            Возвращает или задаёт значение, определяющее достоверность координат.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Knots">
+            <summary>
+            Возвращает или задаёт скорость в узлах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.MagneticVariation">
+            <summary>
+            Возвращает или задаёт отклонение курса на магнитный полюс.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Mode">
+            <summary>
+            Возвращает или задаёт значение, определяющее режим системы позиционирования.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Geolocation.Registrar">
+            <summary>
+            Возвращает или задаёт регистратор.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Geolocation.ToTimestamp(System.DateTime)">
+            <summary>
+            Возвращает метку времени для времени.
+            </summary>
+            <param name="time">
+            Время.
+            </param>
+            <returns>
+            Метка времени.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Geolocation.FromTimestamp(System.Int64)">
+            <summary>
+            Возвращает время для заданной метки времени.
+            </summary>
+            <param name="timestamp">
+            Метка времени.
+            </param>
+            <returns>
+            Время.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.GgaMessage">
+            <summary>
+            Представляет сообщение GPS, содержащее данные местоположения.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Time">
+            <summary>
+            Возвращает или задаёт время определения координат.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Latitude">
+            <summary>
+            Возвращает или задаёт широту в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Longitude">
+            <summary>
+            Возвращает или задаёт долготу в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Solution">
+            <summary>
+            Возвращает или задаёт значение, определяющее способ вычисления координат.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Satellites">
+            <summary>
+            Возвращает или задаёт количество активных спутников.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Hdop">
+            <summary>
+            Возвращает или задаёт горизонтальное снижение точности.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Altitude">
+            <summary>
+            Возвращает или задаёт высоту над средним уровнем моря в метрах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Geoidal">
+            <summary>
+            Возвращает или задаёт отклонение геоида.
+            </summary>
+            <remarks>
+            Отклонение геоида - это различие между поверхностью земного эллипсоида WGS-84
+            и средним уровнем моря (поверхностью геоида).
+            Если значение отрицательное, то средний уровень моря
+            находится ниже уровня поверхности эллипсоида WGS-84.
+            </remarks>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Age">
+            <summary>
+            Возвращает или задаёт возраст дифференциальных поправок.
+            </summary>
+            <remarks>
+            Возраст дифференциальных поправок - это количество секунд,
+            прошедшее с момента прихода последнего сообщения с дифференциальными коррекциями.
+            </remarks>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.GgaMessage.Station">
+            <summary>
+            Возвращает или задаёт идентификатор дифференциальной станции.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.NmeaMessage">
+            <summary>
+            Представляет сообщение в формате NMEA.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaMessage.RawDirectoryId">
+            <summary>
+            Возвращает или задаёт идентификатор каталога необработанных данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaMessage.FileTime">
+            <summary>
+            Возвращает или задаёт время начала записи в файл.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaMessage.Index">
+            <summary>
+            Возвращает или задаёт индекс сообщения в файле.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaMessage.RegistrarId">
+            <summary>
+            Возвращает или задаёт идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaMessage.IsAnalyzed">
+            <summary>
+            Возвращает или задаёт значение, определяющее проанализировано ли сообщение.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaMessage.RawDirectory">
+            <summary>
+            Возвращвет или задаёт каталог необработанных данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaMessage.NmeaFile">
+            <summary>
+            Возвращает или задаёт файл, содержащий NMEA сообщения.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.NmeaMessage.Registrar">
+            <summary>
+            Возвращает или задаёт регистратор.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.RmcMessage">
+            <summary>
+            Представляет сообщение GPS, содержащее минимальный рекомендованный набор данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.Time">
+            <summary>
+            Возвращает или задаёт время определения координат.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.Valid">
+            <summary>
+            Возвращает или задаёт значение, определяющее достоверность координат.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.Latitude">
+            <summary>
+            Возвращает или задаёт широту в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.Longitude">
+            <summary>
+            Возвращает или задаёт долготу в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.Knots">
+            <summary>
+            Возвращает или задаёт скорость в узлах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.Speed">
+            <summary>
+            Возвращает или задаёт скорость в километрах в час.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.PoleCourse">
+            <summary>
+            Возвращает или задаёт курс на истинный полюс в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.Date">
+            <summary>
+            Возвращает или задаёт дату.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.MagneticVariation">
+            <summary>
+            Возвращает или задаёт отклонение курса на магнитный полюс.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.MagneticCourse">
+            <summary>
+            Возвращает или задаёт курс на магнитный полюс в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.RmcMessage.Mode">
+            <summary>
+            Возвращает или задаёт значение, определяющее режим системы позиционирования.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.VtgMessage">
+            <summary>
+            Представляет сообщение GPS, содержащее данные о наземном курсе и скорости.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.VtgMessage.PoleCourse">
+            <summary>
+            Возвращает или задаёт курс на истинный полюс в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.VtgMessage.MagneticCourse">
+            <summary>
+            Возвращает или задаёт курс на магнитный полюс в градусах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.VtgMessage.Knots">
+            <summary>
+            Возвращает или задаёт скорость в узлах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.VtgMessage.Speed">
+            <summary>
+            Возвращает или задаёт скорость в километрах в час.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.VtgMessage.Mode">
+            <summary>
+            Возвращает или задаёт значение, определяющее режим системы позиционирования.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Package">
+            <summary>
+            Представляет пакет данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.RawDirectoryId">
+            <summary>
+            Возвращает или задаёт каталога необработанных данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.Format">
+            <summary>
+            Возвращает или задаёт формат данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.FileTime">
+            <summary>
+            Возвращает или задаёт время начала записи файла.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.FileOffset">
+            <summary>
+            Возвращает или задаёт смещение в файле.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.Synchromarker">
+            <summary>
+            Возвращает или задаёт синхромаркер в тактах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.Length">
+            <summary>
+            Возвращает или задаёт длину синхронных сигналов.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.IsAnalyzed">
+            <summary>
+            Возвращает или задаёт значение, определяющее проанализирован ли пакет.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.StartTime">
+            <summary>
+            Возвращает или задаёт время начала записи пакета.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.Sampling">
+            <summary>
+            Возвращает или задаёт частоту дискретизации данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.RawDirectory">
+            <summary>
+            Возвращвет или задаёт каталог необработанных данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Package.PackageFile">
+            <summary>
+            Возвращвет или задаёт файл с пакетами данных.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Registrar">
+            <summary>
+            Представляет регистратор.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.Id">
+            <summary>
+            Возвращает или инициализирует идентификатор регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.Name">
+            <summary>
+            Возвращает или задаёт имя регистратора.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.RawDirectories">
+            <summary>
+            Возвращает коллекцию каталогов необработанных данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.RecordDirectories">
+            <summary>
+            Возвращает коллекцию каталогов с записями.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.Channels">
+            <summary>
+            Возвращает коллекцию каналов.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.GgaMessages">
+            <summary>
+            Возвращает коллекцию сообщений GPS, содержащих данные местоположения.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.RmcMessages">
+            <summary>
+            Возвращает коллекцию сообщений GPS, содержащих минимальный рекомендованный набор данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.VtgMessages">
+            <summary>
+            Возвращает коллекцию сообщений GPS, содержащих данные о наземном курсе и скорости.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.Geolocations">
+            <summary>
+            Возвращает коллекцию геолокационных данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.Frames">
+            <summary>
+            Возвращает коллекцию кадров.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.Spectrums">
+            <summary>
+            Возвращает коллекцию спектров.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.Statistics">
+            <summary>
+            Возвращает коллекцию статистических данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Registrar.Extremums">
+            <summary>
+            Возвращает коллекцию экстремальных данных.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Sensor">
+            <summary>
+            Представляет датчик.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Sensor.Id">
+            <summary>
+            Возвращает или инициализирует идентификатор датчика.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Sensor.SerialNumber">
+            <summary>
+            Возвращает или задаёт серийный номер датчика.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Sensor.Sources">
+            <summary>
+            Возвращает коллекцию источников.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Source">
+            <summary>
+            Представляет источник данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.Id">
+            <summary>
+            Возвращает или инициализирует идентификатор источника данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.SensorId">
+            <summary>
+            Возвращает или задаёт идентификатор датика.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.ChannelId">
+            <summary>
+            Возвращает или задаёт идентификатор канала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.BeginTime">
+            <summary>
+            Возвращает или задаёт время начала действия источника.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.EndTime">
+            <summary>
+            Возвращает или задаёт время окончания действия источника.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.Format">
+            <summary>
+            Возвращает или задаёт формат данных.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.Signal">
+            <summary>
+            Возвращает или задаёт номер сигнала.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.Sampling">
+            <summary>
+            Возвращает или задаёт частоту дискретизации.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.Cutoff">
+            <summary>
+            Возвращает или задаёт частоту среза фильтра.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.Sensor">
+            <summary>
+            Возвращает или задаёт датчик.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Source.Channel">
+            <summary>
+            Возвращает или задаёт канал.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Computer">
+            <summary>
+            Представляет компьютер.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Computer._Name">
+            <summary>
+            Поле для хранения имени компьютера.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Computer.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Computer.#ctor(System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="name">
+            Имя компьютера.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Computer.Name">
+            <summary>
+            Возвращает или задаёт имя компьютера.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            Передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Computer.BuildAction(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Apeiron.Oriole.Server.Database.Computer})">
+            <summary>
+            Выполняет настройку данного типа сущности в модели.
+            </summary>
+            <param name="typeBuilder">
+            Построитель типа.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Launch">
+            <summary>
+            Представляет запуск службы на компьютере.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Launch._ComputerId">
+            <summary>
+            Поле для хранения идентификатора компьютера.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Launch._ServiceId">
+            <summary>
+            Поле для хранения идентификатора службы.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Launch.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Launch.ComputerId">
+            <summary>
+            Возвращает или задаёт идентификатор компьютера.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Launch.ServiceId">
+            <summary>
+            Возвращает или задаёт идентификатор службы.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Service">
+            <summary>
+            Представляет информацию о службе.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Service._Name">
+            <summary>
+            Поле для хранения имени службы.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Service._Timeout">
+            <summary>
+            Поле для хранения таймаута работы службы.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Service.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Service.#ctor(System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="name">
+            Имя службы.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Service.#ctor(System.String,System.TimeSpan)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="name">
+            Имя службы.
+            </param>
+            <param name="timeout">
+            Таймаут работы службы.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="timeout"/> передано отрицательное значение.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="timeout"/> передано нулевое значение.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Service.Name">
+            <summary>
+            Возвращает или задаёт имя службы.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            Передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Database.Service.Timeout">
+            <summary>
+            Возвращает или задаёт таймаут работы службы.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Передано отрицательное значение.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Передано нулевое значение.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Service.BuildAction(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Apeiron.Oriole.Server.Database.Service})">
+            <summary>
+            Выполняет настройку данного типа сущности в модели.
+            </summary>
+            <param name="typeBuilder">
+            Построитель типа.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Fragments">
+            <summary>
+            Содержит полезные фрагменты кода.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Fragments._GpsDirectoryName">
+            <summary>
+            Постоянная, определяющая имя каталога, содержащего GPS-данные.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Database.Fragments._PackageDirectoryPrefix">
+            <summary>
+            Постоянная, определяющая префикс имени каталога, содержащего пакеты данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Fragments.TryParse(System.String,System.Int32@)">
+            <summary>
+            Выполняет разбор имени каталога.
+            </summary>
+            <param name="name">
+            Имя каталога.
+            </param>
+            <param name="format">
+            Формат файла.
+            </param>
+            <returns>
+            Результат разбора.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Fragments.TryParse(System.String,System.DateTime@)">
+            <summary>
+            Выполняет разбор имени каталога.
+            </summary>
+            <param name="name">
+            Имя каталога.
+            </param>
+            <param name="time">
+            Время каталога.
+            </param>
+            <returns>
+            Результат разбора.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Fragments.TryParseFileName(System.String,System.DateTime@)">
+            <summary>
+            Возвращает дату файла по его имени.
+            </summary>
+            <param name="name">
+            Имя файла.
+            </param>
+            <param name="time">
+            Дата файла.
+            </param>
+            <returns>
+            Результат разбора.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Initial">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Registrars_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Registrars_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Registrars_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Registrars_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_RawDirectories_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_RawDirectories_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_RawDirectories_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_RawDirectories_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_RecordDirectories_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_RecordDirectories_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_RecordDirectories_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_RecordDirectories_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Sensors_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Sensors_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Sensors_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Sensors_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Channels_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Channels_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Channels_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Channels_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Sources_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Sources_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Sources_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Sources_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_PackageFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_PackageFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_PackageFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_PackageFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_IsLoaded_In_PackageFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsLoaded_In_PackageFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsLoaded_In_PackageFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsLoaded_In_PackageFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Correct_Fields_In_Packages_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Correct_Fields_In_Packages_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Correct_Fields_In_Packages_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Correct_Fields_In_Packages_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Length_In_Packages_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Length_In_Packages_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Length_In_Packages_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Length_In_Packages_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Loaded_Fields_In_PackageFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Loaded_Fields_In_PackageFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Loaded_Fields_In_PackageFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Loaded_Fields_In_PackageFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_IsNormalized_Duration_NormalizedTime_In_PackageFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsNormalized_Duration_NormalizedTime_In_PackageFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsNormalized_Duration_NormalizedTime_In_PackageFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsNormalized_Duration_NormalizedTime_In_PackageFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Remove_Duration_In_PackageFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Remove_Duration_In_PackageFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Remove_Duration_In_PackageFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Remove_Duration_In_PackageFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Duration_In_PackageFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Duration_In_PackageFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Duration_In_PackageFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Duration_In_PackageFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_GpsMessage_Tables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_GpsMessage_Tables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_GpsMessage_Tables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_GpsMessage_Tables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_IsLoaded_Field_In_NmeaFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsLoaded_Field_In_NmeaFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsLoaded_Field_In_NmeaFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsLoaded_Field_In_NmeaFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Remove_Nmea_Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Remove_Nmea_Data.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Remove_Nmea_Data.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Remove_Nmea_Data.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Nmea_Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Nmea_Data.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Nmea_Data.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Nmea_Data.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_SynchromarkersFields_In_PackageFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_SynchromarkersFields_In_PackageFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_SynchromarkersFields_In_PackageFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_SynchromarkersFields_In_PackageFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_SequentialIndex_Field_In_PackageFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_SequentialIndex_Field_In_PackageFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_SequentialIndex_Field_In_PackageFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_SequentialIndex_Field_In_PackageFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Delete_Nmea_Tables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Delete_Nmea_Tables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Delete_Nmea_Tables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Delete_Nmea_Tables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_ReceivingTime_Field_In_NmeaMessages_Tables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_ReceivingTime_Field_In_NmeaMessages_Tables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_ReceivingTime_Field_In_NmeaMessages_Tables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_ReceivingTime_Field_In_NmeaMessages_Tables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Begin_Reorganization_Nmea_Tables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Begin_Reorganization_Nmea_Tables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Begin_Reorganization_Nmea_Tables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Begin_Reorganization_Nmea_Tables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.End_Reorganization_Nmea_Tables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.End_Reorganization_Nmea_Tables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.End_Reorganization_Nmea_Tables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.End_Reorganization_Nmea_Tables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Chenged_Time_Field_In_PackageFiles_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Chenged_Time_Field_In_PackageFiles_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Chenged_Time_Field_In_PackageFiles_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Chenged_Time_Field_In_PackageFiles_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_IsAnalyzed_Field_In_NmeaMessage_Tables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsAnalyzed_Field_In_NmeaMessage_Tables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsAnalyzed_Field_In_NmeaMessage_Tables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsAnalyzed_Field_In_NmeaMessage_Tables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Geolocations_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Geolocations_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Geolocations_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Geolocations_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Extra_Fields_In_Geolocations_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Extra_Fields_In_Geolocations_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Extra_Fields_In_Geolocations_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Extra_Fields_In_Geolocations_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Frames_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Frames_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Frames_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Frames_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Spectrums_Tables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Spectrums_Tables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Spectrums_Tables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Spectrums_Tables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Tunings_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Tunings_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Tunings_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Tunings_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Index_For_Key_In_Tunings_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Index_For_Key_In_Tunings_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Index_For_Key_In_Tunings_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Index_For_Key_In_Tunings_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Services_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Services_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Services_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Services_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Cascade_Delete_In_Tables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Cascade_Delete_In_Tables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Cascade_Delete_In_Tables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Cascade_Delete_In_Tables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Filters_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Filters_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Filters_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Filters_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Statistics_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Statistics_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Statistics_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Statistics_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Locations_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Locations_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Locations_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Locations_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Locations_Fields_In_Statistics_Table">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Locations_Fields_In_Statistics_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Locations_Fields_In_Statistics_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Locations_Fields_In_Statistics_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Correct_Relation_Statistics_Filters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Correct_Relation_Statistics_Filters.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Correct_Relation_Statistics_Filters.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Correct_Relation_Statistics_Filters.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Speed_Field_In_Statistics_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Speed_Field_In_Statistics_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Speed_Field_In_Statistics_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Speed_Field_In_Statistics_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_IsStatistic_Filed_In_Frames_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsStatistic_Filed_In_Frames_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsStatistic_Filed_In_Frames_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_IsStatistic_Filed_In_Frames_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Target_Fields_In_Statistics_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Target_Fields_In_Statistics_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Target_Fields_In_Statistics_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Target_Fields_In_Statistics_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.Migrations.Add_Computers_Table">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Computers_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Computers_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.Migrations.Add_Computers_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Database.TransactSql">
+            <summary>
+            Предоставляет методы для выполнения T-SQL команд.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.TransactSql.CreateDatabase(System.Data.SqlClient.SqlConnection,System.String)">
+            <summary>
+            Создаёт базу данных.
+            </summary>
+            <param name="sqlConnection">
+            Подключение к серверу.
+            </param>
+            <param name="name">
+            Имя базы данных.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.TransactSql.DropDatabase(System.Data.SqlClient.SqlConnection,System.String)">
+            <summary>
+            Удаляет базу данных.
+            </summary>
+            <param name="sqlConnection">
+            Подключение к серверу.
+            </param>
+            <param name="name">
+            Имя базы данных.
+            </param>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.TransactSql.IsExistsDatabase(System.Data.SqlClient.SqlConnection,System.String)">
+            <summary>
+            Проверяет существует ли база данных с указанным именем.
+            </summary>
+            <param name="sqlConnection">
+            Подключение к серверу.
+            </param>
+            <param name="name">
+            Имя базы данных.
+            </param>
+            <returns>
+            Результат проверки.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Database.TransactSql.GetDatabaseNames(System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Возвращает имена баз данных.
+            </summary>
+            <param name="sqlConnection">
+            Подключение к серверу.
+            </param>
+            <returns>
+            Массив имён баз данных.
+            </returns>
+        </member>
+    </members>
+</doc>

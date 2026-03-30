@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфей IZoneDivision",
+hmDescription:"Интерфейс параметров разбиения зоны Иерархия: IDispatch IKompasAPIObject IZoneDivision Данный интерфейс можно получить с помощью метода IZonesManager::AddZoneDivision или св",
+hmPrevLink:"izonesmanager_addzonedivision.html",
+hmNextLink:"izonedivision_propers.html",
+hmParentLink:"cu1735335.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"service.html\">Сервисные функции&nbsp;<\/a> &gt; <a href=\"cu1735335.html\">Зоны&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Сервисные функции  > Зоны  > Интерфей IZoneDivision ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфей IZoneDivision <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcu1733557\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс параметров разбиения зоны<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"izonedivision.html\" class=\"topiclink\">IZoneDivision<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Данный интерфейс можно получить с помощью метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"izonesmanager_addzonedivision.html\" class=\"topiclink\">IZonesManager::AddZoneDivision<\/a><\/span><span class=\"f_bodytext\"> или свойства <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"izonesmanager_zonedivision.html\" class=\"topiclink\">IZonesManager::ZoneDivision<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Версия Компас v18.1<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"izonedivision_propers.html\" class=\"topiclink hmlinklistitem\">IZoneDivision - свойства <\/a><\/span><\/p>\n\r"
+})

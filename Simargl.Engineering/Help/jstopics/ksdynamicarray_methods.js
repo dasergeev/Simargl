@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksDynamicArray - методы",
+hmDescription:"Подразделы: ksAddArrayItem - Добавить элемент в массив  ksClearArray - Очистить массив  ksDeleteArray - Удалить массив  ksExcludeArrayItem - Удалить элемент массива  ksGetArra",
+hmPrevLink:"ksdynamicarray_reference.html",
+hmNextLink:"ksdynamicarray_ksaddarrayitem.html",
+hmParentLink:"ksdynamicarray.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdynamicarray.html\">Динамический массив (Интерфейс ksDynamicArray)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Динамический массив (Интерфейс ksDynamicArray)  > ksDynamicArray - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksDynamicArray - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdynamicarray_ksaddarrayitem.html\" class=\"topiclink hmlinklistitem\">ksAddArrayItem - Добавить элемент в массив <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdynamicarray_kscleararray.html\" class=\"topiclink hmlinklistitem\">ksClearArray - Очистить массив <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdynamicarray_ksdeletearray.html\" class=\"topiclink hmlinklistitem\">ksDeleteArray - Удалить массив <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdynamicarray_ksexcludearrayitem.html\" class=\"topiclink hmlinklistitem\">ksExcludeArrayItem - Удалить элемент массива <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdynamicarray_ksgetarraycount.html\" class=\"topiclink hmlinklistitem\">ksGetArrayCount - Получить количество элементов в массиве <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdynamicarray_ksgetarrayitem.html\" class=\"topiclink hmlinklistitem\">ksGetArrayItem - Получить элемент массива <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdynamicarray_ksgetarraytype.html\" class=\"topiclink hmlinklistitem\">ksGetArrayType - Получить тип массива <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdynamicarray_kssetarrayitem.html\" class=\"topiclink hmlinklistitem\">ksSetArrayItem - Установить параметры элемента в массиве <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,9 @@
+--SELECT *
+--FROM public.planet_osm_line_railway
+--WHERE
+--railway IN ('rail') AND
+--planet_osm_line_railway.way &&
+--ST_Transform(ST_MakeEnvelope(ST_X(ST_GeomFromText('POINT(37.02908 55.92189)', 4326)), 
+--                             ST_Y(ST_GeomFromText('POINT(37.02908 55.92189)', 4326)),
+--                             ST_X(ST_GeomFromText('POINT(37.25361 55.76363)', 4326)), 
+--                             ST_Y(ST_GeomFromText('POINT(37.25361 55.76363)', 4326)),4326), 3857);

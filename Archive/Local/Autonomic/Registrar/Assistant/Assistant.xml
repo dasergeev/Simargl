@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Assistant</name>
+    </assembly>
+    <members>
+        <member name="T:RailTest.Satellite.Autonomic.AssistantForm">
+            <summary>
+            Представляет главное окно приложения.
+            </summary>
+        </member>
+        <member name="F:RailTest.Satellite.Autonomic.AssistantForm._OscillogramView">
+            <summary>
+            Поле для хранения элемента управления, отображающего осциллограммы.
+            </summary>
+        </member>
+        <member name="F:RailTest.Satellite.Autonomic.AssistantForm._LoggerView">
+            <summary>
+            Поле для хранения элемента управления, отображающего сообщения журнала.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.AssistantForm.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="F:RailTest.Satellite.Autonomic.AssistantForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.AssistantForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.AssistantForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RailTest.Satellite.Autonomic.LoggerView">
+            <summary>
+            Представляет элемент управления, отображающий журнал сообщений.
+            </summary>
+        </member>
+        <member name="F:RailTest.Satellite.Autonomic.LoggerView._LoggerTracker">
+            <summary>
+            Поле для хранения отслеживателя самописца.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.LoggerView.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.LoggerView.LoggerTracker_NewMessage(System.Object,RailTest.Satellite.Autonomic.Logging.LoggerTrackerEventArgs)">
+            <summary>
+            Обрабатывает событие поступления нового сообщения.
+            </summary>
+            <param name="sender">
+            Объект, создавший событие.
+            </param>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.LoggerView.Timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Обрабатывает событие таймера.
+            </summary>
+            <param name="sender">
+            Объект, создавший событие.
+            </param>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="F:RailTest.Satellite.Autonomic.LoggerView.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.LoggerView.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.LoggerView.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="T:RailTest.Satellite.Autonomic.OscillogramView">
+            <summary>
+            Представляет элемент управления, отображающий осциллограммы.
+            </summary>
+        </member>
+        <member name="F:RailTest.Satellite.Autonomic.OscillogramView._MeasuringBuffer">
+            <summary>
+            Поле для хранения буфера измерений.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.OscillogramView.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.OscillogramView.Timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Обрабатывает событие таймера.
+            </summary>
+            <param name="sender">
+            Объект, создавший событие.
+            </param>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="F:RailTest.Satellite.Autonomic.OscillogramView.components">
+            <summary> 
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.OscillogramView.Dispose(System.Boolean)">
+            <summary> 
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.OscillogramView.InitializeComponent">
+            <summary> 
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.Program.Main">
+            <summary>
+            Главная точка входа для приложения.
+            </summary>
+        </member>
+        <member name="T:RailTest.Satellite.Autonomic.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:RailTest.Satellite.Autonomic.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:RailTest.Satellite.Autonomic.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+    </members>
+</doc>

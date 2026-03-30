@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IReportParam - свойства",
+hmDescription:"Подразделы: BuildingType - Способ выбора объектов  LevelsCount - Число уровней  PagesColumnsCount - Число колонок таблиц при установке таблиц в 2D документ  PageLayoutType - Ти",
+hmPrevLink:"ireportparam.html",
+hmNextLink:"ireportparam_buildingtype.html",
+hmParentLink:"ireportparam.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"ba1858294.html\">Таблицы отчетов&nbsp;<\/a> &gt; <a href=\"ireportparam.html\">Интерфейс IReportParam&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Таблицы отчетов  > Интерфейс IReportParam  > IReportParam - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IReportParam - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportparam_buildingtype.html\" class=\"topiclink hmlinklistitem\">BuildingType - Способ выбора объектов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportparam_levelscount.html\" class=\"topiclink hmlinklistitem\">LevelsCount - Число уровней <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportparam_pagescolumnscount.html\" class=\"topiclink hmlinklistitem\">PagesColumnsCount - Число колонок таблиц при установке таблиц в 2D документ <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportparam_pagelayouttype.html\" class=\"topiclink hmlinklistitem\">PageLayoutType - Тиn компоновки таблиц отчета <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportparam_pagesrowscount.html\" class=\"topiclink hmlinklistitem\">PagesRowsCount - Число рядов таблиц при установке таблиц в 2D документ <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportparam_pagesspace.html\" class=\"topiclink hmlinklistitem\">PagesSpace - Зазор между таблицами, мм <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportparam_usehypertext.html\" class=\"topiclink hmlinklistitem\">UseHyperText - Тип формирования текстов (true - ссылками, false - обычный текст) <\/a><\/span><\/p>\n\r"
+})

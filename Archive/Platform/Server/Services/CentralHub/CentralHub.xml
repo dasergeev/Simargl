@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CentralHub</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.DatabaseAnalyser">
+            <summary>
+            Представляет микрослужбу, выполняющую анализ базы данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.DatabaseAnalyser.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.DatabaseAnalyser})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство ведения журнала микрослужбы.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.DatabaseAnalyser.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.FileTransfer">
+            <summary>
+            Представляет микрослужбу, выполняющую приём файлов от удалённых устройств.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Microservices.FileTransfer})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection">
+            <summary>
+            Представляет коллекцию правил, выполняющихся на сервере.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection._Items">
+            <summary>
+            Поле для хранения списка элементов коллекции.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection._Logger">
+            <summary>
+            Поле для хранения средства записи в журнал службы.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection.#ctor(Microsoft.Extensions.Logging.ILogger,Apeiron.Platform.Server.Database.Entities.MicroserviceInfo)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <param name="microservice">
+            Информация о микрослужбе.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection.Microservice">
+            <summary>
+            Возвращает информацию о микрослужбе.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection.RequestTimeout">
+            <summary>
+            Возвращает время запроса на соединение в миллисекундах.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection.InitializeAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет инициализацию всех правил.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая инициализацию всех правил.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection.InvokeAsync(System.Net.Sockets.TcpClient,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет работу с клиентом.
+            </summary>
+            <param name="client">
+            Клиент.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая работу с клиентом.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="client"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection.FromIdentifierCore(System.Int32)">
+            <summary>
+            Выполняет поиск правила по идентификатору.
+            </summary>
+            <param name="identifier">
+            Идентификатор для поиска.
+            </param>
+            <returns>
+            Найденное правило или пустая ссылка.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection.GetEnumerator">
+            <summary>
+            Возвращает перечислитель коллекции.
+            </summary>
+            <returns>
+            Перечислитель коллекции.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRuleCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Возвращает перечислитель коллекции.
+            </summary>
+            <returns>
+            Перечислитель коллекции.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule">
+            <summary>
+            Представляет правило, выполняющееся на сервере.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule._Logger">
+            <summary>
+            Поле для хранения средства записи в журнал службы.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule.#ctor(Microsoft.Extensions.Logging.ILogger,System.String,System.Int32,System.String,Apeiron.Platform.Server.Database.Entities.MicroserviceInfo)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="name">
+            Имя правила.
+            </param>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <param name="identifier">
+            Идентификатор клиента.
+            </param>
+            <param name="path">
+            Путь к корневому каталогу.
+            </param>
+            <param name="microservice">
+            Информация о микрослужбе.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="identifier"/> передано отрицательное значение.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="path"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule.Name">
+            <summary>
+            Возвращает имя правила.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule.Identifier">
+            <summary>
+            Возвращает идентификатор клиента.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule.Directory">
+            <summary>
+            Возвращает корневой каталог.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule.Microservice">
+            <summary>
+            Возвращает информацию о микрослужбе.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule.ParcelTimeout">
+            <summary>
+            Возвращает время ожидания пакета данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule.InitializeAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет инициализацию правила.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая инициализацию правила.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule.InvokeAsync(System.IO.Stream,Apeiron.Platform.Specialized.FileTransfer.Response,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет работу правила.
+            </summary>
+            <param name="stream">
+            Поток для работы с клиентом.
+            </param>
+            <param name="response">
+            Ответ на запрос о соединении.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая работу правила.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="response"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Microservices.FileTransfer.ServerRule.InitializeDirectoryAsync(System.IO.DirectoryInfo,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет инициализацию каталога.
+            </summary>
+            <param name="directory">
+            Каталог.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая инициализацию каталога.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="directory"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IBase - свойства",
+hmDescription:"Подразделы: AutoSorted - Автосортировка  BaseObject - Опорный объект  BranchX - Координата X конечной точки выноски  BranchY - Координата Y конечной точки выноски  DrawType -",
+hmPrevLink:"ibase.html",
+hmNextLink:"ibase_autosorted.html",
+hmParentLink:"ibase.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"obozn_razm.html\">Обозначения и размеры&nbsp;<\/a> &gt; <a href=\"bb3219840.html\">Обозначения&nbsp;<\/a> &gt; <a href=\"ibase.html\">Интерфейс IBase&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Обозначения и размеры  > Обозначения  > Интерфейс IBase  > IBase - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IBase - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibase_autosorted.html\" class=\"topiclink hmlinklistitem\">AutoSorted - Автосортировка <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibase_baseobject.html\" class=\"topiclink hmlinklistitem\">BaseObject - Опорный объект <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibase_branchx.html\" class=\"topiclink hmlinklistitem\">BranchX - Координата X конечной точки выноски <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibase_branchy.html\" class=\"topiclink hmlinklistitem\">BranchY - Координата Y конечной точки выноски <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibase_drawtype.html\" class=\"topiclink hmlinklistitem\">DrawType - Способ отрисовки обозначения базы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibase_text.html\" class=\"topiclink hmlinklistitem\">Text - Текст базы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibase_x0.html\" class=\"topiclink hmlinklistitem\">X0 - Координата X положения знака на поверхности <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibase_y0.html\" class=\"topiclink hmlinklistitem\">Y0 - Координата Y положения знака на поверхности <\/a><\/span><\/p>\n\r"
+})

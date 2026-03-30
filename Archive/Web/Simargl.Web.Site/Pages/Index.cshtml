@@ -1,0 +1,158 @@
+﻿@page
+@using Simargl.Web.Site.Core
+@model IndexModel
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<h1 class="display-5 fw-bold text-center mt-4">Инженерные решения и технологии для промышленности</h1>
+<p class="lead text-center">Проектирование, контроль, программное обеспечение и сопровождение на всех этапах жизненного цикла продукции</p>
+
+
+<div class="container mt-4">
+    <div class="auto-scroll-container">
+        <div id="scroll-track" class="auto-scroll-track">
+            @foreach (var group in ServiceGroup.ServiceGroups.Concat(ServiceGroup.ServiceGroups))
+            {
+                <div class="scroll-tile">
+                    <a asp-page="/Services/Group" asp-route-key="@group.Key" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                            <img src="@group.ImageUrl" class="card-img-top" alt="@group.Name" />
+                            <div class="card-body">
+                                <h5 class="card-title">@group.Name</h5>
+                                @* <p class="card-text">@group.Description</p> *@
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@* <div class="container mt-5">
+    <h2 class="text-center mb-4">Почему выбирают МПТ</h2>
+    <div class="row text-center">
+        <div class="col-md-3">
+            <i class="bi bi-cpu fs-1 mb-2"></i>
+            <h5>Инновационные технологии</h5>
+            <p>Разработка с использованием искусственного интеллекта, цифровых двойников и систем предиктивного анализа.</p>
+        </div>
+        <div class="col-md-3">
+            <i class="bi bi-tools fs-1 mb-2"></i>
+            <h5>Комплексный подход</h5>
+            <p>От проектирования и испытаний до программного сопровождения и сертификации — всё в одном месте.</p>
+        </div>
+        <div class="col-md-3">
+            <i class="bi bi-graph-up fs-1 mb-2"></i>
+            <h5>Результаты в цифрах</h5>
+            <p>Сокращение времени на ввод в эксплуатацию, снижение отказов, рост эффективности производства.</p>
+        </div>
+        <div class="col-md-3">
+            <i class="bi bi-shield-check fs-1 mb-2"></i>
+            <h5>Гарантия качества</h5>
+            <p>Опытные специалисты, проверенные методики, соответствие всем техническим регламентам.</p>
+        </div>
+    </div>
+</div>
+ *@
+
+<div class="container mt-5">
+    @* <h2 class="text-center mb-5 fw-bold">Почему выбирают МПТ</h2> *@
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col text-center">
+            <div class="p-4 border rounded-4 h-100 shadow-sm">
+                <div class="mb-3 d-inline-flex justify-content-center align-items-center rounded-circle bg-light" style="width: 64px; height: 64px;">
+                    <i class="bi bi-cpu fs-3 text-primary"></i>
+                </div>
+                <h5 class="fw-semibold">Инновационные технологии</h5>
+                <p class="text-muted small">Искусственный интеллект, цифровые двойники и диагностика процессов в реальном времени.</p>
+            </div>
+        </div>
+        <div class="col text-center">
+            <div class="p-4 border rounded-4 h-100 shadow-sm">
+                <div class="mb-3 d-inline-flex justify-content-center align-items-center rounded-circle bg-light" style="width: 64px; height: 64px;">
+                    <i class="bi bi-tools fs-3 text-primary"></i>
+                </div>
+                <h5 class="fw-semibold">Комплексный подход</h5>
+                <p class="text-muted small">От проектирования до внедрения и сопровождения — единый инженерный цикл.</p>
+            </div>
+        </div>
+        <div class="col text-center">
+            <div class="p-4 border rounded-4 h-100 shadow-sm">
+                <div class="mb-3 d-inline-flex justify-content-center align-items-center rounded-circle bg-light" style="width: 64px; height: 64px;">
+                    <i class="bi bi-graph-up-arrow fs-3 text-primary"></i>
+                </div>
+                <h5 class="fw-semibold">Ориентация на результат</h5>
+                <p class="text-muted small">Рост эффективности, снижение отказов и сокращение сроков внедрения решений.</p>
+            </div>
+        </div>
+        <div class="col text-center">
+            <div class="p-4 border rounded-4 h-100 shadow-sm">
+                <div class="mb-3 d-inline-flex justify-content-center align-items-center rounded-circle bg-light" style="width: 64px; height: 64px;">
+                    <i class="bi bi-shield-lock fs-3 text-primary"></i>
+                </div>
+                <h5 class="fw-semibold">Надёжность и контроль</h5>
+                <p class="text-muted small">Работаем по стандартам отрасли, соблюдаем сроки и обеспечиваем техническую прозрачность.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@* <div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">О компании</h2>
+    <p class="text-center mx-auto" style="max-width: 900px;">
+        Мир прогрессивных технологий — это объединение инженеров, исследователей и разработчиков, предоставляющее профессиональные решения в сфере промышленного проектирования, измерений и цифровизации. Мы обеспечиваем предприятия всей цепочкой поддержки: от идеи и конструкторской документации — до внедрения автоматизированных систем и сертификации готовой продукции.
+    </p>
+</div>
+ *@
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            @* <h2 class="text-center mb-4 fw-bold">О компании</h2> *@
+            <p class="lead text-center text-muted">
+                Мир прогрессивных технологий — инженерная компания, специализирующаяся на разработке и интеграции высокотехнологичных решений для промышленности. Мы соединяем опыт проектирования, научных исследований и цифровизации, чтобы создавать продукцию и системы, соответствующие требованиям завтрашнего дня.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        const container = document.querySelector('.auto-scroll-container');
+        const track = document.getElementById('scroll-track');
+
+        let lastTime = performance.now();
+        let scrollPos = 0;
+        const speed = 30;
+
+        function step(timestamp) {
+            const delta = timestamp - lastTime;
+            lastTime = timestamp;
+
+            scrollPos += (delta / 1000) * speed;
+
+            if (scrollPos >= track.scrollWidth / 2) {
+                scrollPos = 0;
+            }
+
+            container.scrollLeft = scrollPos;
+            requestAnimationFrame(step);
+        }
+
+        requestAnimationFrame(step);
+    </script>
+}
+
+
+
+
+
+
+

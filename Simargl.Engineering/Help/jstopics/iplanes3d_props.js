@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IPlanes3D - свойства",
+hmDescription:"Подразделы: Plane3D - Возвращает элемент, заданный по индексу или по имени",
+hmPrevLink:"iplanes3d.html",
+hmNextLink:"iplanes3d_plane3d.html",
+hmParentLink:"iplanes3d.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2288197.html\">Поверхности&nbsp;<\/a> &gt; <a href=\"isurfacecontainer.html\">Интерфейс ISurfaceContainer&nbsp;<\/a> &gt; <a href=\"isurfacecontainer_props.html\">ISurfaceContainer - свойства&nbsp;<\/a> &gt; <a href=\"iplanes3d.html\">Интерфейс IPlanes3D&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Поверхности  > Интерфейс ISurfaceContainer  > ISurfaceContainer - свойства  > Интерфейс IPlanes3D  > IPlanes3D - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IPlanes3D - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iplanes3d_plane3d.html\" class=\"topiclink hmlinklistitem\">Plane3D - Возвращает элемент, заданный по индексу или по имени <\/a><\/span><\/p>\n\r"
+})

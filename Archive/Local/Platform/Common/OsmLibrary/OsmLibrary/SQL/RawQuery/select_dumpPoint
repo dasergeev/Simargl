@@ -1,0 +1,10 @@
+SELECT ST_AsText(ST_Transform((dp).geom, 4326)) As wktnode
+FROM (SELECT ST_DumpPoints(
+        (SELECT way                             
+            FROM public.planet_osm_roads
+            WHERE railway IN ('rail')
+            ORDER BY way <-> ST_Transform(ST_GeomFromText('POINT(37.19427 55.83952)',4326) ,3857)             
+            LIMIT 1)) AS dp) 
+        as foo
+
+

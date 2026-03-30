@@ -1,0 +1,47 @@
+﻿<UserControl
+    x:Class="Simargl.Embedded.Tunings.TuningsEditor.UI.Controls.NodeAttributeEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:Simargl.Embedded.Tunings.TuningsEditor.UI.Controls"
+    mc:Ignorable="d" 
+    d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Tag="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:NodeAttributeEditor}}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{StaticResource LabelWidth}"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Отображение имени атрибута -->
+        <TextBlock VerticalAlignment="Center" Text="{Binding NodeAttribute.Name,
+                RelativeSource={RelativeSource AncestorType={x:Type local:NodeAttributeEditor}},
+                UpdateSourceTrigger=PropertyChanged}"/>
+
+        <!-- Поле редактирования значения -->
+        <TextBox x:Name="ValueTextBox"
+                 Grid.Column="1"
+                 VerticalAlignment="Center" 
+                   Visibility="{Binding NodeAttribute.TextBoxVisibility,
+                RelativeSource={RelativeSource AncestorType={x:Type local:NodeAttributeEditor}},
+                UpdateSourceTrigger=PropertyChanged}"/>
+        <ComboBox Grid.Column="1"
+VerticalAlignment="Center"
+                  SelectedValue="{Binding NodeAttribute.Value,
+RelativeSource={RelativeSource AncestorType={x:Type local:NodeAttributeEditor}},
+UpdateSourceTrigger=PropertyChanged}"
+                  ItemsSource="{Binding NodeAttribute.Values,
+RelativeSource={RelativeSource AncestorType={x:Type local:NodeAttributeEditor}},
+UpdateSourceTrigger=PropertyChanged}"
+                     Visibility="{Binding NodeAttribute.ComboBoxVisibility,
+RelativeSource={RelativeSource AncestorType={x:Type local:NodeAttributeEditor}},
+UpdateSourceTrigger=PropertyChanged}"
+            />
+        <Grid.ToolTip>
+            <ToolTip DataContext="{Binding PlacementTarget.Tag,
+                          RelativeSource={RelativeSource Self}}">
+                <TextBlock TextWrapping="Wrap" Text="{Binding NodeAttribute.Description}"/>
+            </ToolTip>
+        </Grid.ToolTip>
+    </Grid>
+</UserControl>

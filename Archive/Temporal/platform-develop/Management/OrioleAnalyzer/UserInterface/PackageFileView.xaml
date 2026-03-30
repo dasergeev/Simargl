@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Apeiron.Oriole.Analysis.UserInterface.PackageFileView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Apeiron.Oriole.Analysis.UserInterface"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:BinaryView x:Name="_BinaryView" Grid.Row="1"/>
+        <ListView x:Name="_PackagesView">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Position, StringFormat=X8}">Позиция</GridViewColumn>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Data.Synchromarker}">Синхромаркер</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Data.AsyncValues[0]}">Температура CPU</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Data.AsyncValues[1]}">Температура ADXL</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Data.AsyncValues[2]}">Напряжение</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

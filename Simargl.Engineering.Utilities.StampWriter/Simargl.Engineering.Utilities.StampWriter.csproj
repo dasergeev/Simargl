@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Simargl.Engineering.Utilities.StampWriter</RootNamespace>
+		<AssemblyName>Simargl.Engineering.Utilities.StampWriter</AssemblyName>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Simargl.Engineering.Utilities.StampWriter.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<WarningLevel>5</WarningLevel>
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ApplicationIcon>Application.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Images\New.png" />
+	  <None Remove="Images\Open.png" />
+	  <None Remove="Images\Save.png" />
+	  <None Remove="Images\SaveAs.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Application.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="5.3.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Images\New.png" />
+	  <Resource Include="Images\Open.png" />
+	  <Resource Include="Images\Start.png" />
+	  <Resource Include="Images\Save.png" />
+	  <Resource Include="Images\SaveAs.png" />
+	  <Resource Include="Images\Stop.png" />
+	</ItemGroup>
+
+</Project>

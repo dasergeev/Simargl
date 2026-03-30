@@ -1,0 +1,1 @@
+﻿sc.exe create "Apeiron.FileTransferClient" binpath= "C:\Foundation\Services\FileTransferClient\FileTransferClient.exe"

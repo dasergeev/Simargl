@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"INumericGroup - методы",
+hmDescription:"Подразделы: Attach - Добавить объект в группу  Delete - Удалить пользовательскую группу  Dettach - Исключить объект из группы  IsExist - Входит ли объект в группу  IsEnableAdd",
+hmPrevLink:"inumericgroup_startindex.html",
+hmNextLink:"inumericgroup_attach.html",
+hmParentLink:"inumericgroup.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb3107129.html\">Автонумерация и сортировка объектов&nbsp;<\/a> &gt; <a href=\"inumericgroup.html\">Интерфейс INumericGroup&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Автонумерация и сортировка объектов  > Интерфейс INumericGroup  > INumericGroup - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">INumericGroup - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inumericgroup_attach.html\" class=\"topiclink hmlinklistitem\">Attach - Добавить объект в группу <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inumericgroup_delete.html\" class=\"topiclink hmlinklistitem\">Delete - Удалить пользовательскую группу <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inumericgroup_dettach.html\" class=\"topiclink hmlinklistitem\">Dettach - Исключить объект из группы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inumericgroup_isexist.html\" class=\"topiclink hmlinklistitem\">IsExist - Входит ли объект в группу <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inumericgroup_isenableadd.html\" class=\"topiclink hmlinklistitem\">IsEnableAdd - Можно ли добавить объект в группу <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inumericgroup_getnextname.html\" class=\"topiclink hmlinklistitem\">GetNextName - Получить имя следующего объекта в группе <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"inumericgroup_getobjectnumber.html\" class=\"topiclink hmlinklistitem\">GetObjectNumber - Строковый номер объекта в группе <\/a><\/span><\/p>\n\r"
+})

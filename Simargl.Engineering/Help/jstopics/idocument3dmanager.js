@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IDocument3DManager",
+hmDescription:"Менеджер 3D документа. Иерархия: IDispatch IKompasAPIObject IDocument3DManager Интерфейс можно получить с помощью свойства IKompasDocument3D1::Document3DManager. Подразделы",
+hmPrevLink:"cu1735361.html",
+hmNextLink:"idocument3dmanager_props.html",
+hmParentLink:"cu1735361.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"service.html\">Сервисные функции&nbsp;<\/a> &gt; <a href=\"cu1735361.html\">Слои&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Сервисные функции  > Слои  > Интерфейс IDocument3DManager ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IDocument3DManager <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcu1735363\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Менеджер 3D документа.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"idocument3dmanager.html\" class=\"topiclink\">IDocument3DManager<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс можно получить с помощью свойства <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ikompasdocument3d1_document3dmanager.html\" class=\"topiclink\">IKompasDocument3D1::Document3DManager<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocument3dmanager_props.html\" class=\"topiclink hmlinklistitem\">IDocument3DManager - свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocument3dmanager_methods.html\" class=\"topiclink hmlinklistitem\">IDocument3DManager - методы <\/a><\/span><\/p>\n\r"
+})

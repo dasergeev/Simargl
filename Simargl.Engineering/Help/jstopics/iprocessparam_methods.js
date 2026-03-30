@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IProcessParam - методы",
+hmDescription:"Подразделы: AddSetupMenuCommand - Добавить пункт в меню настроек процесса  AddSpecToolbarButton - Добавить кнопку в спецпанель  ClearSpecToolbar - Очистить спецпанель  GetGabar",
+hmPrevLink:"iprocessparam_spectoolbarex.html",
+hmNextLink:"iprocessparam_addsetupmenucommand.html",
+hmParentLink:"iprocessparam.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a> &gt; <a href=\"ap1803662.html\">Параметры процесса&nbsp;<\/a> &gt; <a href=\"iprocessparam.html\">Интерфейс IProcessParam&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Параметры процесса  > Интерфейс IProcessParam  > IProcessParam - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IProcessParam - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocessparam_addsetupmenucommand.html\" class=\"topiclink hmlinklistitem\">AddSetupMenuCommand - Добавить пункт в меню настроек процесса <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocessparam_addspectoolbarbutton.html\" class=\"topiclink hmlinklistitem\">AddSpecToolbarButton - Добавить кнопку в спецпанель <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocessparam_clearspectoolbar.html\" class=\"topiclink hmlinklistitem\">ClearSpecToolbar - Очистить спецпанель <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocessparam_getgabaritrect.html\" class=\"topiclink hmlinklistitem\">GetGabaritRect - Получить габаритный прямоугольник Панели свойств <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocessparam_popprocessname.html\" class=\"topiclink hmlinklistitem\">PopProcessName - Убрать имя подпроцесса <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocessparam_pushprocessname.html\" class=\"topiclink hmlinklistitem\">PushProcessName - Установить имя подпроцесса <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocessparam_setsetupmenucommandstate.html\" class=\"topiclink hmlinklistitem\">SetSetupMenuCommandState - Установить состояние команды меню настроек процесса <\/a><\/span><\/p>\n\r"
+})

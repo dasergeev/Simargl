@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksTextParam - методы",
+hmDescription:"Подразделы: GetParagraphParam - Получить указатель на интерфейс параметров параграфа ksParagraphParam  GetTextLineArr - Получить указатель на интерфейс динамического массива...",
+hmPrevLink:"kstextparam.html",
+hmNextLink:"kstextparam_getparagraphparam.html",
+hmParentLink:"kstextparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocumenttxt.html\">Текстовый документ (Интерфейс ksDocumentTxt)&nbsp;<\/a> &gt; <a href=\"ksdocumenttxt_methods.html\">ksDocumentTxt - методы&nbsp;<\/a> &gt; <a href=\"ck1918891.html\">Интерфейсы параметров элементов текста&nbsp;<\/a> &gt; <a href=\"kstextparam.html\">Интерфейс ksTextParam&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Текстовый документ (Интерфейс ksDocumentTxt)  > ksDocumentTxt - методы  > Интерфейсы параметров элементов текста  > Интерфейс ksTextParam  > ksTextParam - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksTextParam - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kstextparam_getparagraphparam.html\" class=\"topiclink hmlinklistitem\">GetParagraphParam - Получить указатель на интерфейс параметров параграфа ksParagraphParam <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kstextparam_gettextlinearr.html\" class=\"topiclink hmlinklistitem\">GetTextLineArr - Получить указатель на интерфейс динамического массива ksDynamicArray строк текста типа TEXT_LINE_ARR <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kstextparam_init.html\" class=\"topiclink hmlinklistitem\">Init - Инициализировать параметры <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kstextparam_setparagraphparam.html\" class=\"topiclink hmlinklistitem\">SetParagraphParam - Установить параметры параграфа ksParagraphParam <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kstextparam_settextlinearr.html\" class=\"topiclink hmlinklistitem\">SetTextLineArr - Заменить динамический массив ksDynamicArray строк текста типа TEXT_LINE_ARR <\/a><\/span><\/p>\n\r"
+})

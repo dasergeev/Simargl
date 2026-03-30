@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Apeiron.Platform.MediatorLibrary</RootNamespace>
+		<AssemblyName>MediatorLibrary</AssemblyName>
+		<DocumentationFile>MediatorLibrary.xml</DocumentationFile>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<Authors>ООО "ТИЦ ЖТ"</Authors>
+		<Company>ООО "ТИЦ ЖТ"</Company>
+		<Copyright>ООО "ТИЦ ЖТ"</Copyright>
+		<Description>Библиотека содержит основные методы и интерфейсы работы с Mediator.</Description>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+	
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+		<NoWarn />
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+		<NoWarn />
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="DataResults\**" />
+	  <EmbeddedResource Remove="DataResults\**" />
+	  <None Remove="DataResults\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove=".gitignore" />
+
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Apeiron" Version="3.0.4" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.ProjectSystem.Analyzers" Version="15.8.243" />
+		<PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.4.27">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,5 @@
+﻿EntityFrameworkCore\Add-Migration -Project Databases\OrioleDatabase -StartupProject Databases\OrioleDatabase -Name
+EntityFrameworkCore\Update-Database -Project Databases\OrioleDatabase -StartupProject Databases\OrioleDatabase
+EntityFrameworkCore\Remove-Migration -Project Databases\OrioleDatabase -StartupProject Databases\OrioleDatabase
+EntityFrameworkCore\Remove-Migration -Project Databases\OrioleDatabase -StartupProject Databases\OrioleDatabase -Force
+

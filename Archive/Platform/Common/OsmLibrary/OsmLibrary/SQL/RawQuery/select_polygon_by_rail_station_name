@@ -1,0 +1,8 @@
+SELECT * 
+FROM public.planet_osm_polygon
+WHERE
+ST_contains(way, (SELECT way FROM public.planet_osm_point WHERE (railway = 'station') AND (name = 'Нахабино')));
+
+--SELECT ST_AsText(way) FROM public.planet_osm_point
+--WHERE (railway = 'station') AND (name = 'Нахабино')
+--LIMIT 10;

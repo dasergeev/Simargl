@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RailTest.Satellite.Autonomic.FilesPlacement</name>
+    </assembly>
+    <members>
+        <member name="T:RailTest.Satellite.Autonomic.Customization">
+            <summary>
+            Предоставляет настройки приложения.
+            </summary>
+        </member>
+        <member name="P:RailTest.Satellite.Autonomic.Customization.SourcePath">
+            <summary>
+            Возвращает исходный путь.
+            </summary>
+        </member>
+        <member name="P:RailTest.Satellite.Autonomic.Customization.DestinationPath">
+            <summary>
+            Возвращает путь назначения.
+            </summary>
+        </member>
+        <member name="P:RailTest.Satellite.Autonomic.Customization.TransferTimeout">
+            <summary>
+            Возвращает тайм-аут переноса.
+            </summary>
+        </member>
+        <member name="T:RailTest.Satellite.Autonomic.Program">
+            <summary>
+            Представляет приложение.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.Program.Main(System.String[])">
+            <summary>
+            Определяет точку входа в приложение.
+            </summary>
+            <param name="args">
+            Аргументы.
+            </param>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Создает конструктор хоста.
+            </summary>
+            <param name="args">
+            Аргументы.
+            </param>
+            <returns>
+            Конструктор хоста.
+            </returns>
+        </member>
+        <member name="T:RailTest.Satellite.Autonomic.Worker">
+            <summary>
+            Представляет фоновый сервис.
+            </summary>
+            <seealso cref="T:Microsoft.Extensions.Hosting.BackgroundService"/>
+        </member>
+        <member name="F:RailTest.Satellite.Autonomic.Worker._Logger">
+            <summary>
+            Поле для хранения журнала.
+            </summary>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.Worker.#ctor(Microsoft.Extensions.Logging.ILogger{RailTest.Satellite.Autonomic.Worker})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Журнал.
+            </param>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.Worker.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Этот метод вызывается при запуске <see cref="T:Microsoft.Extensions.Hosting.IHostedService"/>.
+            Реализация должна возвращать задачу, которая представляет время существования выполняемых длительных операций.
+            </summary>
+            <param name="stoppingToken">
+            Токен отмены.
+            </param>
+        </member>
+        <member name="M:RailTest.Satellite.Autonomic.Worker.GetFileTime(System.IO.FileInfo)">
+            <summary>
+            Получение времени файла.
+            </summary>
+            <param name="file">
+            Файл.
+            </param>
+            <returns>
+            Время файла.
+            </returns>
+        </member>
+    </members>
+</doc>

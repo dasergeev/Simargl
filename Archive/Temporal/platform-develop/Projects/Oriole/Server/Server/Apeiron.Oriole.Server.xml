@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apeiron.Oriole.Server</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Oriole.Server.Logging.LoggingBuilderExtensions">
+            <summary>
+            Предоставляет методы расширения для интерфейса <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Logging.LoggingBuilderExtensions.AddSpecializedConsoleFormatter(Microsoft.Extensions.Logging.ILoggingBuilder)">
+            <summary>
+            Добавляет настраиваемый модуль форматирования средства ведения журнала консоли.
+            </summary>
+            <param name="builder">
+            Построитель журналов.
+            </param>
+            <returns>
+            Построитель журналов.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter">
+            <summary>
+            Представляет специализированный модуль форматирования журнала консоли.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter.NameFormatter">
+            <summary>
+            Постоянная, определяющая имя, связанное с модулем форматирования журнала консоли.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter._TimeAndSpacesLength">
+            <summary>
+            Постоянная, определяющая длину времени и разделяющих пробелов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter._CategoryLength">
+            <summary>
+            Постоянная, определяющая длину названия категории.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter._EndBlock">
+            <summary>
+            Постоянная, определяющая строку конца блока.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter._TimeColor">
+            <summary>
+            Постоянная, определяющая цвет отображения времени.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter._CategoryColor">
+            <summary>
+            Постоянная, определяющая цвет имени категории.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter._LevelColor">
+            <summary>
+            Поле для хранения массива цветов уровней.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter._NewLineFiller">
+            <summary>
+            Поле для хранения наполнителя для новой строки.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Microsoft.Extensions.Logging.Console.ConsoleFormatterOptions})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="monitor">
+            Наблюдатель за изменениями параметров модуля форматирования журнала консоли.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="monitor"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Logging.SpecializedConsoleFormatter.Write``1(Microsoft.Extensions.Logging.Abstractions.LogEntry{``0}@,Microsoft.Extensions.Logging.IExternalScopeProvider,System.IO.TextWriter)">
+            <summary>
+            Выполняет запись в журнал.
+            </summary>
+            <typeparam name="TState">
+            Тип значения состояния.
+            </typeparam>
+            <param name="entry">
+            Сведения для одной записи в журнал.
+            </param>
+            <param name="scope">
+            Хранилище данных общей области.
+            </param>
+            <param name="writer">
+            Средство записи текстовой информации.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Services.HostBuilderExtensions">
+            <summary>
+            Предоставляет методы расширения для интерфейса <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.HostBuilderExtensions.UseSingleService``1(Microsoft.Extensions.Hosting.IHostBuilder)">
+            <summary>
+            Выполняет настройку инициализации программы с одной службой.
+            </summary>
+            <typeparam name="THostedService">
+            Тип службы.
+            </typeparam>
+            <param name="hostBuilder">
+            Инициализатор программы.
+            </param>
+            <returns>
+            Инициализатор программы.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Oriole.Server.Services.Service`1">
+            <summary>
+            Представляет службу.
+            </summary>
+            <typeparam name="TService">
+            Тип службы.
+            </typeparam>
+        </member>
+        <member name="F:Apeiron.Oriole.Server.Services.Service`1._InitializationDelay">
+            <summary>
+            Постоянная, определяющая задержку в милисекундах запуска службы
+            для инициализации консоли и выдачи служебных сообщений.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.Service`1.#ctor(System.String,Microsoft.Extensions.Logging.ILogger{`0})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="name">
+            Имя службы.
+            </param>
+            <param name="logger">
+            Средство записи в журнал службы.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.Data.Entity.Core.ObjectNotFoundException">
+            Не удалось загрузить из базы данных информацию о службе.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Services.Service`1.Name">
+            <summary>
+            Возвращает имя службы.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Services.Service`1.Logger">
+            <summary>
+            Возвращает средство записи в журнал службы.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Server.Services.Service`1.Timeout">
+            <summary>
+            Возвращает таймаут работы службы.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.Service`1.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Ассинхронно выполняет фоновую работу с поддержкой.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая фоновую работу с поддержкой.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.Service`1.InvokeAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет фоновую работу.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая фоновую работу.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.Service`1.SafeCallAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask},System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно безопасно выполняет действие.
+            </summary>
+            <param name="action">
+            Действие, которое необходимо выполнить безопасно.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая безопасный вызов действия.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+    </members>
+</doc>

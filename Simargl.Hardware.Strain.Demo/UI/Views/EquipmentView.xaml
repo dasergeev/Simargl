@@ -1,0 +1,53 @@
+﻿<ui:NodeView
+    x:Class="Simargl.Hardware.Strain.Demo.UI.Views.EquipmentView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:Simargl.Hardware.Strain.Demo.UI.Views"
+    xmlns:ui="clr-namespace:Simargl.Hardware.Strain.Demo.UI"
+    xmlns:nodes="clr-namespace:Simargl.Hardware.Strain.Demo.Nodes"
+    d:DataContext="{d:DesignInstance Type=nodes:EquipmentNode}"
+    mc:Ignorable="d" 
+    d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ToolBar x:Name="_ToolBar" ToolBarTray.IsLocked="True">
+            <Button x:Name="_CopyButton" Click="CopyButton_Click">
+                <Image Source="/Images/Copy.png" />
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Копировать" FontWeight="Bold"/>
+                        <TextBlock Text="Скопировать информацию в буфер обмена.">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+        </ToolBar>
+        <ListView Grid.Row="1" ItemsSource="{Binding Nodes}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding Image}" Width="16" Height="16" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Text="{Binding Path=Sensor.Serial, StringFormat='X8'}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text="{Binding Path=Sensor.Address}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="3" Text="{Binding Path=Sensor.ConnectionDuration, StringFormat='{}{0:hh\\:mm\\:ss}'}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ui:NodeView>

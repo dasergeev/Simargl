@@ -1,0 +1,2 @@
+﻿sc.exe create "Aekmot.Web.WebProxyChecker" binpath= "C:\Aekmot\Services\Web\WebProxyChecker\Aekmot.Web.WebProxyChecker.exe"
+sc delete "Aekmot.Web.WebProxyChecker"

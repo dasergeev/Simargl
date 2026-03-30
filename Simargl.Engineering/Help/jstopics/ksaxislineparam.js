@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс параметров осевой линии (Интерфейс ksAxisLineParam)",
+hmDescription:"Интерфейс параметров осевой линии. Аналог данных параметров при использовании API экспортных функций - AxisLineParam. Примечание: Указатель на интерфейс можно получить при пом",
+hmPrevLink:"ksinsertfragmentparamex_setplace.html",
+hmNextLink:"ksaxislineparam_methods.html",
+hmParentLink:"cd1743949.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"cd1743949.html\">Интерфейсы параметров графических примитивов&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров графических примитивов  > Интерфейс параметров осевой линии (Интерфейс ksAxisLineParam) ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс параметров осевой линии (Интерфейс ksAxisLineParam) <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcd1763358\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс параметров осевой линии<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Аналог данных параметров при использовании API экспортных функций - <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"axislineparam.html\" class=\"topiclink\">AxisLineParam<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Указатель на интерфейс можно получить при помощи метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kompasobject_getparamstruct.html\" class=\"topiclink\">KompasObject::GetParamStruct<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksaxislineparam_methods.html\" class=\"topiclink hmlinklistitem\">ksAxisLineParam - методы <\/a><\/span><\/p>\n\r"
+})

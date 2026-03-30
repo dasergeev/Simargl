@@ -1,0 +1,5 @@
+SELECT name FROM planet_osm_point_railway
+WHERE railway = 'station'
+ORDER BY ST_Distance(way,
+                    ST_Transform(ST_GeomFromText('POINT(35.84608 56.85884)',4326) ,3857))
+LIMIT 5;

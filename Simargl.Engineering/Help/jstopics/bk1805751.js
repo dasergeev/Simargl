@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Константы документов",
+hmDescription:"Подразделы: Стандартные форматы листа  Типы локальной привязки  Общие настройки привязок  Состояния слоев и видов  Форматы для сохранения модели  Форматы растра  Цвета вывод",
+hmPrevLink:"dmodes.html",
+hmNextLink:"fstyles.html",
+hmParentLink:"bk1803360.html",
+hmBreadCrumbs:"<a href=\"3d_define.html\">Структуры параметров и константы<\/a> &gt; <a href=\"bk1803360.html\">Константы&nbsp;<\/a>",
+hmTitlePath:"Структуры параметров и константы > Константы  > Константы документов ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Константы документов <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"fstyles.html\" class=\"topiclink hmlinklistitem\">Стандартные форматы листа <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"stypes.html\" class=\"topiclink hmlinklistitem\">Типы локальной привязки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"sstypes.html\" class=\"topiclink hmlinklistitem\">Общие настройки привязок <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"layertypes.html\" class=\"topiclink hmlinklistitem\">Состояния слоев и видов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"l3dexportformats.html\" class=\"topiclink hmlinklistitem\">Форматы для сохранения модели <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"lrasterformats.html\" class=\"topiclink hmlinklistitem\">Форматы растра <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"lobjcolors.html\" class=\"topiclink hmlinklistitem\">Цвета вывода объектов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"lpalettes.html\" class=\"topiclink hmlinklistitem\">Глубина цвета растра <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"standartviewtypes.html\" class=\"topiclink hmlinklistitem\">Типы стандартных видов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdrawinscreenplaneenum.html\" class=\"topiclink hmlinklistitem\">ksDrawInScreenPlaneEnum - Способ преобразования координат внешней триангуляции <\/a><\/span><\/p>\n\r"
+})

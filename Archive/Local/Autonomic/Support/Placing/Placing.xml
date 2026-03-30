@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Placing</name>
+    </assembly>
+    <members>
+        <member name="T:Placing.PlacingForm">
+            <summary>
+            Представляет главное окно приложения.
+            </summary>
+        </member>
+        <member name="F:Placing.PlacingForm._SourcePath">
+            <summary>
+            Постоянная для хранения исходного пути.
+            </summary>
+        </member>
+        <member name="F:Placing.PlacingForm._ScoutPath">
+            <summary>
+            Постоянная для хранения пути на разведчике.
+            </summary>
+        </member>
+        <member name="F:Placing.PlacingForm._CommonFiles">
+            <summary>
+            Поле для хранения коллекции общих файлов.
+            </summary>
+        </member>
+        <member name="F:Placing.PlacingForm._ScoutFiles">
+            <summary>
+            Поле для хранения коллекции файлов для разведчика.
+            </summary>
+        </member>
+        <member name="M:Placing.PlacingForm.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="P:Placing.PlacingForm.Output">
+            <summary>
+            Возвращает средство вывода текстовой информации.
+            </summary>
+        </member>
+        <member name="F:Placing.PlacingForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Placing.PlacingForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Placing.PlacingForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Placing.Program">
+            <summary>
+            Представляет главное окно приложения.
+            </summary>
+        </member>
+        <member name="M:Placing.Program.Main">
+            <summary>
+            Главная точка входа для приложения.
+            </summary>
+        </member>
+        <member name="T:Placing.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:Placing.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:Placing.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>

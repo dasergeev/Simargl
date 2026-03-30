@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksGetQualityNames - Пример использования",
+hmDescription:"reference names = ::CreateArray(CHAR_STR_ARR, 0); \/\/ динамический массив строк",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksGetQualityNames - Пример использования <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcg1723237\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">reference names = ::CreateArray(CHAR_STR_ARR, 0); \/\/ динамический массив строк<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ получить поля допусков для размера 139 мм, верхнее отклонение 0.16 мм,<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ нижнее - 0 мм, система отверстия, с учётом ограничений<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if (::ksGetQualityNames(names, 139, 0.16, 0, 1\/*system*\/, 1\/*withLimitation*\/)) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">string s(&quot;&quot;); \/\/ строка сообщения<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">int count = ::GetArrayCount(names); \/\/ кол-во элементов в массиве<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">for (int i = 0; i &lt; count; i++) { \/\/ пройдём по всему массиву<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">char item[255]; \/\/ буфер<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if (::GetArrayItem(names, i, item, 255)) { \/\/ взять текущую строку из массива<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">s += item; \/\/ добавить её к сообщению<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">s += &quot; &quot;; \/\/ разделитель<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">} \/\/ выводим сообщение<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::Message((char*)s.c_str()); \/\/ удалить массив<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::DeleteArray(names);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IAssociationViewElements",
+hmDescription:"Интерфейс - Объекты и элементы для передачи в ассоциативный вид.",
+hmPrevLink:"iassociationview_setprojectionobjects.html",
+hmNextLink:"iassociationviewelements_props.html",
+hmParentLink:"view_layers.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"view_layers.html\">Виды и слои&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Виды и слои  > Интерфейс IAssociationViewElements ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IAssociationViewElements <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbb2329321\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс - Объекты и элементы для передачи в ассоциативный вид.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"iassociationviewelements.html\" class=\"topiclink\">IAssociationViewElements<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Описание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс позволяет задать, какие объекты и элементы надо передавать в ассоциативный вид.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс является дополнительным к интерфейсу ассоциативного вида <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iassociationview.html\" class=\"topiclink\">IAssociationView<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iassociationviewelements_props.html\" class=\"topiclink hmlinklistitem\">IAssociationViewElements - свойства <\/a><\/span><\/p>\n\r"
+})

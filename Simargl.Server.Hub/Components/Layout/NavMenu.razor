@@ -1,0 +1,67 @@
+﻿@* Верхняя панель навигации с классами Bootstrap *@
+<div class="top-row ps-3 navbar navbar-dark">
+
+    @* Контейнер Bootstrap, растягивающийся на всю ширину *@
+    <div class="container-fluid">
+
+        @* Заголовок/бренд приложения, ссылка на главную страницу *@
+        <a class="navbar-brand" href="">Серверный узел</a>
+    </div>
+</div>
+
+@* Чекбокс, используемый Bootstrap для переключения меню на маленьких экранах (гамбургер) *@
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+@* Контейнер для прокручиваемого меню; при клике закрывает меню (триггерит клик по .navbar-toggler) *@
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+
+    @* Навигационный блок; flex-column выстраивает элементы вертикально *@
+    <nav class="nav flex-column">
+
+        @*
+            Иконки см.:
+            https://icons.getbootstrap.com/
+        *@
+
+        @* Элемент меню *@
+        <div class="nav-item px-3">
+
+            @* Ссылка Blazor (NavLink подсвечивается, если URL совпадает).
+                   href="" означает корневой адрес, Match.All — точное совпадение *@
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+
+                @* Иконка "дом" (Bootstrap Icons) + текст ссылки "Главная" *@
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Главная
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="LogViewer">
+                <span class="bi bi-gear-fill-nav-menu" aria-hidden="true"></span> Журналы
+            </NavLink>
+        </div>
+
+
+        @* Элемент меню *@
+        <div class="nav-item px-3">
+
+            @* Ссылка на страницу /counter *@
+            <NavLink class="nav-link" href="counter">
+
+                @* Иконка "плюс в квадрате" + текст ссылки "Счётчик" *@
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Счётчик
+            </NavLink>
+        </div>
+
+        @* Элемент меню *@
+        <div class="nav-item px-3">
+
+            @* Ссылка на страницу /weather *@
+            <NavLink class="nav-link" href="weather">
+
+                @* Иконка "список" + текст ссылки "Погода" *@
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Погода
+            </NavLink>
+        </div>
+    </nav>
+</div>

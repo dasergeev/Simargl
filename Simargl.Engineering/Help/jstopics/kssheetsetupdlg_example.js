@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksSheetSetupDlg - пример использования",
+hmDescription:"DocumentParam par; par.type = lt_DocSheetStandart; par.sheet.stPar.format = 4; par.sheet.stPar.multiply = 1; par.sheet.stPar.direct = 0; if ( ::ksSheetSetupDlg(&par, ::GetHW",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksSheetSetupDlg - пример использования <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcq1943433\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">DocumentParam par;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">par.type = lt_DocSheetStandart;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">par.sheet.stPar.format = 4;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">par.sheet.stPar.multiply = 1;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">par.sheet.stPar.direct = 0;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if ( ::ksSheetSetupDlg(&amp;par, ::GetHWindow()) ) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">char buf[256];<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if ( par.type == lt_DocSheetStandart ) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::sprintf( buf, &quot;Стандартный лист : формат A%d, кратность %d, расположение %s&quot;, par.sheet.stPar.format,<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">par.sheet.stPar.multiply, par.sheet.stPar.direct ? &quot;горизонтально&quot; : &quot;вертикально&quot; );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">else {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::sprintf( buf, &quot;Пользовательский формат : Длина %g, Высота %g&quot;, par.sheet.usPar.width,<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">par.sheet.usPar.height );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::Message( buf );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r"
+})

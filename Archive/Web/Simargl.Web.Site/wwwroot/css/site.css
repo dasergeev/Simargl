@@ -1,0 +1,63 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.service-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+
+
+
+.auto-scroll-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.auto-scroll-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    width: max-content;
+}
+
+.scroll-tile {
+    flex: 0 0 auto;
+    width: 300px;
+}
+
+    .scroll-tile:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+

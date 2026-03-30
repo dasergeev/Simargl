@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IDocuments - свойства",
+hmDescription:"Подразделы: DocumentSynchronize - Синхронизироватьс зависимыми документами  Item - Документ, заданный по имени, ссылке или по индексу  LockTemplatesSettings - Игнорировать настр",
+hmPrevLink:"idocuments.html",
+hmNextLink:"idocuments_documentsynchronize.html",
+hmParentLink:"idocuments.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a> &gt; <a href=\"ap2013730.html\">Коллекция документов&nbsp;<\/a> &gt; <a href=\"idocuments.html\">Интерфейс IDocuments&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Коллекция документов  > Интерфейс IDocuments  > IDocuments - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IDocuments - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocuments_documentsynchronize.html\" class=\"topiclink hmlinklistitem\">DocumentSynchronize - Синхронизироватьс зависимыми документами <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocuments_item.html\" class=\"topiclink hmlinklistitem\">Item - Документ, заданный по имени, ссылке или по индексу <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocuments_locktemplatessettings.html\" class=\"topiclink hmlinklistitem\">LockTemplatesSettings - Игнорировать настройки шаблонов новых документов при создании документов через функции API<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocuments_recovererror.html\" class=\"topiclink hmlinklistitem\">RecoverError - Признак ошибки после открытия файла с восстановлением <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocuments_recovermode.html\" class=\"topiclink hmlinklistitem\">RecoverMode - Признак открытия файлов в режиме восстановления <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocuments_recovermodeerrorlist.html\" class=\"topiclink hmlinklistitem\">RecoverModeErrorList - Список ошибок, исправленных при открытии файла с восстановлением <\/a><\/span><\/p>\n\r"
+})

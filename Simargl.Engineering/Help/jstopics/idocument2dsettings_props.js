@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IDocument2DSettings - свойства",
+hmDescription:"Подразделы: AutoSortObjectsParameters - Параметры автосортировки буквенных обозначений  CompositionInherit - Наследовать состав родительского объекта  DecimalDelimiterType - Раз",
+hmPrevLink:"idocument2dsettings.html",
+hmNextLink:"idocument2dsettings_autosortobjectsparameters.html",
+hmParentLink:"idocument2dsettings.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"adjstment.html\">Работа с настройками&nbsp;<\/a> &gt; <a href=\"idocument2dsettings.html\">Интерфейс IDocument2DSettings&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Работа с настройками  > Интерфейс IDocument2DSettings  > IDocument2DSettings - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IDocument2DSettings - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocument2dsettings_autosortobjectsparameters.html\" class=\"topiclink hmlinklistitem\">AutoSortObjectsParameters - Параметры автосортировки буквенных обозначений <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocument2dsettings_compositioninherit.html\" class=\"topiclink hmlinklistitem\">CompositionInherit - Наследовать состав родительского объекта <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocument2dsettings_decimaldelimitertype.html\" class=\"topiclink hmlinklistitem\">DecimalDelimiterType - Разделитель десятичной части размеров<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocument3dsettings_embodimentsreportsettings.html\" class=\"topiclink hmlinklistitem\">EmbodimentsReportSettings - Настройка используемых свойств для редактора исполнений<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocument2dsettings_layersgroupway.html\" class=\"topiclink hmlinklistitem\">LayersGroupWay - Способ группировки слоев <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idocument2dsettings_roughmodification.html\" class=\"topiclink hmlinklistitem\">RoughModification - Вариант создания шероховатости <\/a><\/span><\/p>\n\r"
+})

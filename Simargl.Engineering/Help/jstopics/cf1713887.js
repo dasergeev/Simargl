@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейсы параметров размеров",
+hmDescription:"Подразделы: Настройки размеров (Интерфейс ksDimensionsOptions)  Объекты, составляющие размер (Интерфейс ksDimensionPartsParam)  Размерная надпись (Интерфейс ksDimTextParam)  Кв",
+hmPrevLink:"kslibstyle_init.html",
+hmNextLink:"ksdimensionsoptions.html",
+hmParentLink:"ksdocument2d.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров размеров ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейсы параметров размеров <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdimensionsoptions.html\" class=\"topiclink hmlinklistitem\">Настройки размеров (Интерфейс ksDimensionsOptions) <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdimensionpartsparam.html\" class=\"topiclink hmlinklistitem\">Объекты, составляющие размер (Интерфейс ksDimensionPartsParam) <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdimtextparam.html\" class=\"topiclink hmlinklistitem\">Размерная надпись (Интерфейс ksDimTextParam) <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cf1714925.html\" class=\"topiclink hmlinklistitem\">Квалитеты <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cf1715343.html\" class=\"topiclink hmlinklistitem\">Линейные и угловые размеры <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cf1760627.html\" class=\"topiclink hmlinklistitem\">Линейные размеры <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cf1716901.html\" class=\"topiclink hmlinklistitem\">Угловые размеры <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cf1717533.html\" class=\"topiclink hmlinklistitem\">Размеры высоты <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cf1717982.html\" class=\"topiclink hmlinklistitem\">Радиальные и диаметральные размеры <\/a><\/span><\/p>\n\r"
+})

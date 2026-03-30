@@ -1,0 +1,82 @@
+﻿@page "/channels"
+@using Simargl.Border.Recorder.Components.Common
+@using Simargl.Border.Hardware
+@using Simargl.Border.Processing
+@using Simargl.Net
+@inject Program Program
+@implements IAsyncDisposable
+
+@rendermode InteractiveServer
+<PageTitle>Каналы</PageTitle>
+
+<h1>Каналы</h1>
+
+@if (_Processor is not null)
+{
+    <h3>Статистика</h3>
+    <table class="table table-sm table-hover"
+           style="table-layout: fixed; width: 100%;">
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Единица измерения</th>
+                <th>Наличие данных</th>
+                <th>Среднее значение</th>
+                <th>СКО</th>
+@*                 <th>Значение нуля</th>
+                <th>Время нуля</th>
+ *@            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in _Processor.SectionGroups.Sources)
+            {
+                <tr>
+                    <td>@s.Name</td>
+                    <td>@s.Unit</td>
+                    <td>@(s.IsLoaded? "есть": "нет")</td>
+                    <td>@(s.IsLoaded? (double.IsFinite(s.Average)?$"{s.Average:0.00}":"-"): "-")</td>
+                    <td>@(s.IsLoaded? (double.IsFinite(s.Deviation)?$"{s.Deviation:0.00}":"-"): "-")</td>
+@*                     <td>@(double.IsFinite(s.ZeroValue)?$"{s.ZeroValue:0.00}":"-")</td>
+                    <td>@(s.ZeroTime != default?$"{s.ZeroTime}":"-")</td>
+ *@                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@* 
+
+<NiceScatter Points="Kernel.Root.SensorCollectionNode.Sensors[_SelectedSensorIndex].Analyser.Points"
+                 ContainerStyle="width:100%; height:420px;"
+                 TargetXTicks="10"
+                 TargetYTicks="6" />
+
+<ProcessorView SensorBase="Kernel.Root.SensorCollectionNode.Sensors[_SelectedSensorIndex]" />
+ *@
+
+@code {
+    private Processor? _Processor;
+    private readonly CancellationTokenSource _CancellationTokenSource = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        //  Получение устройства обработки.
+        _Processor = await Program.GetProcessorAsync(default).ConfigureAwait(false);
+
+        CancellationToken cancellationToken = _CancellationTokenSource.Token;
+        _ = Task.Run(async delegate
+        {
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                await InvokeAsync(StateHasChanged);
+
+                await Task.Delay(500, cancellationToken).ConfigureAwait(false);
+            }
+        }, cancellationToken).ConfigureAwait(false);
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        _CancellationTokenSource.Dispose();
+    }
+}

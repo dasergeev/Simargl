@@ -1,0 +1,8 @@
+SELECT way as CurrentWay
+FROM planet_osm_roads
+WHERE ST_Equals(ST_StartPoint(way), ST_EndPoint(
+    (SELECT way                             
+    FROM public.planet_osm_roads
+    WHERE railway IN ('rail')
+    ORDER BY way <-> ST_Transform(ST_GeomFromText('POINT(37.19427 55.83952)',4326) ,3857)
+    LIMIT 1)));

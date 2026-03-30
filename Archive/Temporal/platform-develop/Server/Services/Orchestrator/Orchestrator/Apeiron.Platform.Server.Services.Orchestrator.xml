@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Orchestrator</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage">
+            <summary>
+            Представляет заголовок пакета, содержащий основную информацию для идентификации системы и пакета.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage.IdSequence">
+            <summary>
+            Последовательность идентифицирующая Host.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage.Format">
+            <summary>
+            Возвращает формат пакета.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage.HostId">
+            <summary>
+            Представляет идентификатор хоста в строковом формате.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage.Size">
+            <summary>
+            Возвращает размер пакета.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage.HostsList">
+            <summary>
+            Список хостов для консоли.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage.#ctor">
+            <summary>
+            Инициализирует класс.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage.#ctor(Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat,System.String)">
+            <summary>
+            Инициализирует класс.
+            </summary>
+            <param name="packageFormat">Формат пакета.</param>
+            <param name="hostsList"></param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage.PackageToStreamAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Ассинхронно сохраняет данные объекта в поток.
+            </summary>
+            <param name="stream">
+            Поток, в который необходимо сохранить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает запись.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+            <returns>Поток Stream</returns>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.Packages.GeneralPackage.PackageFromStreamAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно загружает данные объекта из потока.
+            </summary>
+            <param name="stream">
+            Поток, из которого необходимо загрузить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <returns>
+            Задача, представляющая асинхронную операцию чтения.
+            </returns>
+            <remarks>
+            Задача, должна возвращать объект, к которому обращаются.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает чтение.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+            <exception cref="T:System.FormatException">
+            Чтение пакета некорректного формата.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat">
+            <summary>
+            Перечисление форматов пакетов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.IdHostPackage">
+            <summary>
+            Идентификационный пакет от клиента(хоста) к серверу.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.GeneralConsolePackage">
+            <summary>
+            Представляет основной пакет от клиента(хоста) к серверу.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.GetHostListConsolePackage">
+            <summary>
+            Представляет основной пакет от клиента(хоста) к серверу.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.SendHostListConsolePackage">
+            <summary>
+            Представляет основной пакет от клиента(хоста) к серверу.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.StopServicesConsolePackage">
+            <summary>
+            Представляет пакет от консоли на сервер для остановки служб на хостах.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.StartServicesConsolePackage">
+            <summary>
+            Представляет пакет от консоли на сервер для запуска службы на хостах.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.CopyServicesConsolePackage">
+            <summary>
+            Представляет пакет от консоли на сервер для запуска копирования файлов служб на хосты.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.CopyServicesOnHostPackage">
+            <summary>
+            Представляет пакет для обновления файлов служб на хостах.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.SendStopServicesOnHostsPackage">
+            <summary>
+            Прдеставляет пакет для остановки служб на хостах.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.Packages.PackageFormat.SendStartServicesOnHostPackage">
+            <summary>
+            Представляет пакет для запуска служб на хостах.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,5 @@
+CREATE OR REPLACE FUNCTION public.hstore_has_key(IN "@hstore" hstore, IN "@key" text)
+    RETURNS boolean
+	AS $func$
+	SELECT EXIST("@hstore", "@key");
+$func$ LANGUAGE sql;

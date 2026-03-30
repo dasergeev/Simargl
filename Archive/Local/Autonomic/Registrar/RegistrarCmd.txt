@@ -1,0 +1,24 @@
+sc create QuantumX binpath= "C:\Programs\Release\Binary\RailTest.Satellite.Autonomic.Registrar.QuantumX.exe"
+sc delete QuantumX
+
+sc create Teltonika binpath= "C:\Programs\Release\Binary\RailTest.Satellite.Autonomic.Registrar.Teltonika.exe"
+sc delete Teltonika
+
+sc create Recorder binpath= "C:\Programs\Release\Binary\RailTest.Satellite.Autonomic.Registrar.Recorder.exe"
+sc delete Recorder
+
+
+
+
+
+Develop:
+
+
+sc create QuantumX binpath= "E:\Source Code\Compile\Binary\RailTest.Satellite.Autonomic.Registrar.QuantumX.exe"
+sc delete QuantumX
+
+sc create Teltonika binpath= "E:\Source Code\Compile\Binary\RailTest.Satellite.Autonomic.Registrar.Teltonika.exe"
+sc delete Teltonika
+
+sc create Recorder binpath= "E:\Source Code\Compile\Binary\RailTest.Satellite.Autonomic.Registrar.Recorder.exe"
+sc delete Recorder

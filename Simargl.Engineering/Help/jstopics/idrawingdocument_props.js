@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IDrawingDocument - свойства",
+hmDescription:"Подразделы: ChangeListDescriptions - Описания таблицы изменений  SpecRough - Неуказанная шероховатость  TechnicalDemand - Технические требования",
+hmPrevLink:"idrawingdocument.html",
+hmNextLink:"idrawingdocument_changelistdescriptions.html",
+hmParentLink:"idrawingdocument.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"ba1711015.html\">Базовые интерфейсы&nbsp;<\/a> &gt; <a href=\"ikompasdocument.html\">Интерфейс IKompasDocument&nbsp;<\/a> &gt; <a href=\"ikompasdocument_methods.html\">IKompasDocument - методы&nbsp;<\/a> &gt; <a href=\"ikompasdocument2d.html\">Интерфейс IKompasDocument2D&nbsp;<\/a> &gt; <a href=\"ikompasdocument2d_methods.html\">IKompasDocument2D - методы&nbsp;<\/a> &gt; <a href=\"idrawingdocument.html\">Интерфейс IDrawingDocument&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Базовые интерфейсы  > Интерфейс IKompasDocument  > IKompasDocument - методы  > Интерфейс IKompasDocument2D  > IKompasDocument2D - методы  > Интерфейс IDrawingDocument  > IDrawingDocument - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IDrawingDocument - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idrawingdocument_changelistdescriptions.html\" class=\"topiclink hmlinklistitem\">ChangeListDescriptions - Описания таблицы изменений <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idrawingdocument_specrough.html\" class=\"topiclink hmlinklistitem\">SpecRough - Неуказанная шероховатость <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idrawingdocument_technicaldemand.html\" class=\"topiclink hmlinklistitem\">TechnicalDemand - Технические требования <\/a><\/span><\/p>\n\r"
+})

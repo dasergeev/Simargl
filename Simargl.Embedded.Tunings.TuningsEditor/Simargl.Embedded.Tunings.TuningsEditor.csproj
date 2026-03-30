@@ -1,0 +1,127 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Simargl.Embedded.Tunings.TuningsEditor</RootNamespace>
+		<AssemblyName>Simargl.Embedded.Tunings.TuningsEditor</AssemblyName>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Simargl.Embedded.Tunings.TuningsEditor.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<WarningLevel>5</WarningLevel>
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ApplicationIcon>Application.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Images\Data\Add.ico" />
+	  <None Remove="Images\Data\BlankBlue.ico" />
+	  <None Remove="Images\Data\BlankGreen.ico" />
+	  <None Remove="Images\Data\BlankGrey.ico" />
+	  <None Remove="Images\Data\BlankOrange.ico" />
+	  <None Remove="Images\Data\BlankPurple.ico" />
+	  <None Remove="Images\Data\BlankRed.ico" />
+	  <None Remove="Images\Data\Check.ico" />
+	  <None Remove="Images\Data\Command.png" />
+	  <None Remove="Images\Data\Cpp.ico" />
+	  <None Remove="Images\Data\CSharp.ico" />
+	  <None Remove="Images\Data\Default.ico" />
+	  <None Remove="Images\Data\Delete.ico" />
+	  <None Remove="Images\Data\Enum.ico" />
+	  <None Remove="Images\Data\ErrorNode.ico" />
+	  <None Remove="Images\Data\ErrorValue.ico" />
+	  <None Remove="Images\Data\FlagBlue.png" />
+	  <None Remove="Images\Data\FlagGreen.png" />
+	  <None Remove="Images\Data\FlagRed.png" />
+	  <None Remove="Images\Data\FlagYellow.png" />
+	  <None Remove="Images\Data\Generator.ico" />
+	  <None Remove="Images\Data\Spec.ico" />
+	  <None Remove="Images\New.png" />
+	  <None Remove="Images\Open.png" />
+	  <None Remove="Images\Save.png" />
+	  <None Remove="Images\SaveAs.png" />
+	  <None Remove="Images\Start.png" />
+	  <None Remove="Images\Stop.png" />
+	  <None Remove="Sources\Tunings.hpp" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Application.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="5.3.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.4" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\Simargl\Simargl.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Resource Include="Images\Data\Add.ico" />
+	  <Resource Include="Images\Data\BlankBlue.ico" />
+	  <Resource Include="Images\Data\BlankGreen.ico" />
+	  <Resource Include="Images\Data\BlankGrey.ico" />
+	  <Resource Include="Images\Data\BlankOrange.ico" />
+	  <Resource Include="Images\Data\BlankPurple.ico" />
+	  <Resource Include="Images\Data\BlankRed.ico" />
+	  <Resource Include="Images\Data\Check.ico" />
+	  <Resource Include="Images\Data\Command.png" />
+	  <Resource Include="Images\Data\Cpp.ico" />
+	  <Resource Include="Images\Data\CSharp.ico" />
+	  <Resource Include="Images\Data\Default.ico" />
+	  <Resource Include="Images\Data\Delete.ico" />
+	  <Resource Include="Images\Data\Enum.ico" />
+	  <Resource Include="Images\Data\ErrorNode.ico" />
+	  <Resource Include="Images\Data\ErrorValue.ico" />
+	  <Resource Include="Images\Data\FlagBlue.png" />
+	  <Resource Include="Images\Data\FlagGreen.png" />
+	  <Resource Include="Images\Data\FlagRed.png" />
+	  <Resource Include="Images\Data\FlagYellow.png" />
+	  <Resource Include="Images\Data\Generator.ico" />
+	  <Resource Include="Images\Data\New.png" />
+	  <Resource Include="Images\Data\Open.png" />
+	  <Resource Include="Images\Data\Save.png" />
+	  <Resource Include="Images\Data\SaveAs.png" />
+	  <Resource Include="Images\Data\Spec.ico" />
+	  <Resource Include="Images\Data\Start.png" />
+	  <Resource Include="Images\Data\Stop.png" />
+	  <Resource Include="Sources\Cpp\Tunings.hpp" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Folder Include="Testing\" />
+	</ItemGroup>
+
+</Project>

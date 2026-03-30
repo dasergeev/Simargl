@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Параметры",
+hmDescription:"Подразделы: Интерфейс IAxisLineParam  Интерфейс IBreakViewParam  Интерфейс ICopyObjectParam1  Интерфейс ICutViewParam  Интерфейс IDimensionParams  Интерфейс IHatchParam  Инт",
+hmPrevLink:"idrawingobject1_newconstraint.html",
+hmNextLink:"iaxislineparam.html",
+hmParentLink:"bb2325661.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Параметры ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Параметры <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iaxislineparam.html\" class=\"topiclink hmlinklistitem\">Интерфейс IAxisLineParam <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ibreakviewparam.html\" class=\"topiclink hmlinklistitem\">Интерфейс IBreakViewParam <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icopyobjectparam1.html\" class=\"topiclink hmlinklistitem\">Интерфейс ICopyObjectParam1 <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icutviewparam.html\" class=\"topiclink hmlinklistitem\">Интерфейс ICutViewParam <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idimensionparams.html\" class=\"topiclink hmlinklistitem\">Интерфейс IDimensionParams <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ihatchparam.html\" class=\"topiclink hmlinklistitem\">Интерфейс IHatchParam <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iphantom2d.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPhantom2D <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iroughparams.html\" class=\"topiclink hmlinklistitem\">Интерфейс IRoughParams <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"itoleranceparam.html\" class=\"topiclink hmlinklistitem\">Интерфейс IToleranceParam <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icopyobjectparam.html\" class=\"topiclink hmlinklistitem\">Интерфейс ICopyObjectParam <\/a><\/span><\/p>\n\r"
+})

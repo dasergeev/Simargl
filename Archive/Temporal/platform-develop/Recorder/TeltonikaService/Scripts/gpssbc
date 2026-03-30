@@ -1,0 +1,20 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+STOP=45
+USE_PROCD=1
+
+GPSUDP_BIN="/usr/sbin/gpssbcscript"
+
+start_service() {
+		procd_open_instance gpsd
+		procd_set_param respawn
+		procd_set_param command sh "./etc/init.d/gpssbcscript"
+		procd_close_instance
+}
+
+stop_service() {
+	PID = $(ps | grep gpssbcscript | grep -v grep | awk '{print $1}')
+	kill -9 "$PID"
+}
+

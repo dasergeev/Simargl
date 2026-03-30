@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"INurbs3dParam - методы",
+hmDescription:"Подразделы: GetMinMaxParameters - Получить параметры кривой  GetNurbsPoints3DParams - Получить параметры точек для Nurbs 3D  NurbsKnotCollection - Получить указатель на интерфей",
+hmPrevLink:"ksnurbs3dparam_periodic.html",
+hmNextLink:"ksnurbs3dparam_getminmaxparameters.html",
+hmParentLink:"ksnurbs3dparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument3d.html\">Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )&nbsp;<\/a> &gt; <a href=\"kspart.html\">Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart&nbsp;<\/a> &gt; <a href=\"kscurve3d.html\">Математическая кривая в трехмерном пространстве (Интерфейсы ksCurve3D, ICurve3D)&nbsp;<\/a> &gt; <a href=\"ksnurbs3dparam.html\">Параметры трехмерных NURBS (Интерфейсы ksNurbs3dParam,INurbs3dParam)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )  > Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart  > Математическая кривая в трехмерном пространстве (Интерфейсы ksCurve3D, ICurve3D)  > Параметры трехмерных NURBS (Интерфейсы ksNurbs3dParam,INurbs3dParam)  > INurbs3dParam - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">INurbs3dParam - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksnurbs3dparam_getminmaxparameters.html\" class=\"topiclink hmlinklistitem\">GetMinMaxParameters - Получить параметры кривой <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksnurbs3dparam_getnurbspoints3dparams.html\" class=\"topiclink hmlinklistitem\">GetNurbsPoints3DParams - Получить параметры точек для Nurbs 3D <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksnurbs3dparam_nurbsknotcollection.html\" class=\"topiclink hmlinklistitem\">NurbsKnotCollection - Получить указатель на интерфейс массива узлов для трехмерного NURBS <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksnurbs3dparam_nurbspoint3dcollection.html\" class=\"topiclink hmlinklistitem\">NurbsPoint3DCollection - Получить указатель на интерфейс массива точек для трехмерного NURBS <\/a><\/span><\/p>\n\r"
+})

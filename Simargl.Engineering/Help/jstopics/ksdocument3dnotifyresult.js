@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс дополнительных параметров для событий документа-модели ksDocument3DNotifyResult\/IDocument3DNotifyResult",
+hmDescription:"Примечание: 1. Интерфейс позволяет получить указатель на объект для которого посылается данное событие. Например, выбор материала и обозначения доступны для верхнего компонента,",
+hmPrevLink:"ksspcobjectnotify_isnotifyprocess.html",
+hmNextLink:"ksdocument3dnotifyresult_methods.html",
+hmParentLink:"eventscommon.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"af1881424.html\">Интерфейсы событий API5&nbsp;<\/a> &gt; <a href=\"eventscommon.html\">События в КОМПАС Общие сведения&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Интерфейсы событий API5  > События в КОМПАС Общие сведения  > Интерфейс дополнительных параметров для событий документа-модели ksDocument3DNotifyResult\/IDocument3DNotifyResult ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс дополнительных параметров для событий документа-модели ksDocument3DNotifyResult\/IDocument3DNotifyResult <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xaf1860094\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Numbered\"><span class=\"f_Numbered\">1. Интерфейс позволяет получить указатель на объект для которого посылается данное событие. Например, выбор материала и обозначения доступны для верхнего компонента, вставки и тела.<\/span><\/p>\n\r<p class=\"p_Numbered\"><span class=\"f_Numbered\">2. Интерфейс можно получить с помощью метода <\/span><span class=\"f_Numbered\" style=\"text-decoration: underline;\"><a href=\"ksdocument3d_getdocument3dnotifyresult.html\" class=\"topiclink\">IDocument3D::GetDocument3DNotifyResult<\/a><\/span><span class=\"f_Numbered\"> или <\/span><span class=\"f_Numbered\" style=\"text-decoration: underline;\"><a href=\"ksdocument3d_getdocument3dnotifyresult.html\" class=\"topiclink\">ksDocument3D::GetDocument3DNotifyResult<\/a><\/span><span class=\"f_Numbered\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdocument3dnotifyresult_methods.html\" class=\"topiclink hmlinklistitem\">ksDocument3DNotifyResult - методы <\/a><\/span><\/p>\n\r"
+})

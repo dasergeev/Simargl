@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IExternalGDIObject - свойства",
+hmDescription:"Подразделы: AlwaysDrawInScreenPlane - Способ преобразования координат внешней триангуляции  NonScalableX - Не масштабировать по X  NonScalableY - Не масштабировать по Y  NonSca",
+hmPrevLink:"iexternalgdiobject.html",
+hmNextLink:"iexternalgdiobject_alwaysdrawinscreenplane.html",
+hmParentLink:"iexternalgdiobject.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"ba1782194.html\">Окна документа&nbsp;<\/a> &gt; <a href=\"ba1848735.html\">OpenGL&nbsp;<\/a> &gt; <a href=\"iexternalgdiobject.html\">Интерфейс IExternalGDIObject&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Окна документа  > OpenGL  > Интерфейс IExternalGDIObject  > IExternalGDIObject - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IExternalGDIObject - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_alwaysdrawinscreenplane.html\" class=\"topiclink hmlinklistitem\">AlwaysDrawInScreenPlane - Способ преобразования координат внешней триангуляции <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_nonscalablex.html\" class=\"topiclink hmlinklistitem\">NonScalableX - Не масштабировать по X <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_nonscalabley.html\" class=\"topiclink hmlinklistitem\">NonScalableY - Не масштабировать по Y <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_nonscalablez.html\" class=\"topiclink hmlinklistitem\">NonScalableZ - Не масштабировать по Z <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_objectid.html\" class=\"topiclink hmlinklistitem\">ObjectID - Идентификатор объекта <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_scalabletext.html\" class=\"topiclink hmlinklistitem\">ScalableText - Признак масштабирования текста <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_visible.html\" class=\"topiclink hmlinklistitem\">Visible - Показать\\скрыть объект <\/a><\/span><\/p>\n\r"
+})

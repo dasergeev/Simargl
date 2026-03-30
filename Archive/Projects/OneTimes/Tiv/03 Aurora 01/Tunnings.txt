@@ -1,0 +1,5 @@
+﻿BeginTime = 12.01.2025 00:00:00	;	Время сбора данных.
+RawDataPath = M:\Environs\Data\Simargl.Synergy.Transferring\Aurora\Aurora 01	;	Путь к исходным файлам.
+LogPath = D:\AuroraLog.txt	;	Путь к журналу.
+FramesPath = D:\Records	;	Путь к каталогу с кадрами.
+TivPath = D:\Tiv	; Путь к каталогу с файлами для ТИВа.

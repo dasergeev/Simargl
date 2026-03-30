@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IRough3D - методы",
+hmDescription:"Подразделы: BaseObject - Опорный объект  BasePosition - Установить точку начала выносной линии или привязки знака  GetBasePosition - Получить точку начала выносной линии или при",
+hmPrevLink:"irough3d_positionobject.html",
+hmNextLink:"irough3d_baseobject.html",
+hmParentLink:"irough3d.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2273863.html\">Оформление&nbsp;<\/a> &gt; <a href=\"bc2275772.html\">Обозначения&nbsp;<\/a> &gt; <a href=\"irough3d.html\">Интерфейс IRough3D&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Оформление  > Обозначения  > Интерфейс IRough3D  > IRough3D - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IRough3D - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough3d_baseobject.html\" class=\"topiclink hmlinklistitem\">BaseObject - Опорный объект <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough3d_setbaseposition.html\" class=\"topiclink hmlinklistitem\">BasePosition - Установить точку начала выносной линии или привязки знака <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough3d_getbaseposition.html\" class=\"topiclink hmlinklistitem\">GetBasePosition - Получить точку начала выносной линии или привязки знака <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough3d_getposition.html\" class=\"topiclink hmlinklistitem\">GetPosition - Получить точку, задающую положение плоскости объекта <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough3d_getshelfposition.html\" class=\"topiclink hmlinklistitem\">GetShelfPosition - Получить точку начала полки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough3d_setposition.html\" class=\"topiclink hmlinklistitem\">SetPosition - Установить точку, задающую положение плоскости объекта <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough3d_setshelfposition.html\" class=\"topiclink hmlinklistitem\">SetShelfPosition - Установить точку начала полки <\/a><\/span><\/p>\n\r"
+})

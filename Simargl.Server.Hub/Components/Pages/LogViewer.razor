@@ -1,0 +1,59 @@
+﻿@* Маршрут страницы *@
+@page "/LogViewer"
+
+@* Указываем, что страница рендерится в режиме Blazor Server (сигналы идут через SignalR) *@
+@rendermode InteractiveServer
+
+@* Заголовок вкладки браузера *@
+<PageTitle>Журналы</PageTitle>
+
+@* Основной заголовок страницы (видимый пользователю) *@
+<h1>Журналы</h1>
+
+@* Абзац со статусом: выводим текущее значение счётчика *@
+<p role="status">Текущее значение: @currentCount</p>
+
+@* Кнопка Bootstrap. При нажатии вызывается метод IncrementCount *@
+<button class="btn btn-primary" @onclick="IncrementCount">Нажми меня</button>
+
+@* Блок C#-кода для этой страницы *@
+@code {
+    private int currentCount = 0;
+    private CancellationTokenSource? _cts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _cts = new CancellationTokenSource();
+        var token = _cts.Token;
+
+        _ = Task.Run(async () =>
+        {
+            while (!token.IsCancellationRequested)
+            {
+                currentCount++;
+                await InvokeAsync(StateHasChanged);
+                try
+                {
+                    await Task.Delay(1000, token);
+                }
+                catch (TaskCanceledException)
+                {
+                    break; // корректный выход из цикла
+                }
+            }
+        }, token);
+
+        await Task.CompletedTask;
+    }
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    public void Dispose()
+    {
+        _cts?.Cancel();
+        _cts?.Dispose();
+    }
+}

@@ -1,0 +1,53 @@
+﻿@page
+@model Simargl.Web.Site.Pages.ContactsModel
+@{
+    ViewData["Title"] = "Контакты";
+}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">Контакты</h1>
+        <p class="text-muted fs-5">Свяжитесь с нами напрямую или посетите офис — мы всегда открыты к диалогу</p>
+    </div>
+    <div class="row gy-5">
+        <div class="col-lg-6">
+            <div class="bg-light rounded-4 shadow-sm p-4 h-100">
+                <h4 class="fw-semibold mb-4">Общие данные</h4>
+                <div class="mb-3">
+                    <div class="text-muted small">Генеральный директор</div>
+                    <div class="fw-semibold">Дмитриев Сергей Владимирович</div>
+                    <div class="text-muted">+7 (910) 647-37-47</div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="text-muted small">E-mail</div>
+                    <a href="mailto:info@mpt-it.ru" class="fw-semibold text-decoration-none">info@mpt-it.ru</a>
+                </div>
+
+                <div class="mb-3">
+                    <div class="text-muted small">Адрес офиса</div>
+                    <div class="fw-semibold">170034, г. Тверь, ул. Дарвина, д. 3А, помещ. 7</div>
+                </div>
+
+                <hr />
+
+                <h5 class="fw-semibold mb-3">Реквизиты</h5>
+                <ul class="list-unstyled text-muted small mb-0">
+                    <li><strong>ООО «МПТ»</strong></li>
+                    <li>ИНН: 6950266730</li>
+                    <li>КПП: 695001001</li>
+                    <li>ОГРН: 1236900000589</li>
+                    <li>Юридический адрес: 170034, Тверская область, г.о. город Тверь, г. Тверь, ул. Дарвина, д. 3А, помещ. 7</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="ratio ratio-4x3 rounded-4 shadow-sm overflow-hidden">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=35.896068%2C56.846444&z=17&pt=35.896068,56.846444,pm2rdm"
+                        allowfullscreen
+                        loading="lazy"
+                        style="border:0;"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

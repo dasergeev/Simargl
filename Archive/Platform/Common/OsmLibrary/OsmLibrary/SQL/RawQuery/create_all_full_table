@@ -1,0 +1,16 @@
+-- Создаём таблицу на основе данных полной таблицы point.
+CREATE TABLE planet_osm_point_railway AS (SELECT * FROM planet_osm_point);
+-- Создаём индекс.
+CREATE INDEX planet_osm_point_railway_way_idx ON planet_osm_point_railway USING gist(way) WITH (fillfactor = 100);
+
+
+-- Создаём таблицу на основе данных полной таблицы line.
+CREATE TABLE planet_osm_line_railway AS (SELECT * FROM planet_osm_line);
+-- Создаём индекс.
+CREATE INDEX planet_osm_line_railway_way_idx ON planet_osm_line_railway USING gist(way) WITH (fillfactor = 100);
+
+
+-- Создаём таблицу на основе данных полной таблицы polygon.
+CREATE TABLE planet_osm_polygon_railway AS (SELECT * FROM planet_osm_polygon);
+-- Создаём индекс.
+CREATE INDEX planet_osm_polygone_railway_way_idx ON planet_osm_polygon_railway USING gist(way) WITH (fillfactor = 100);

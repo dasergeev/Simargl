@@ -1,0 +1,822 @@
+﻿img {
+  border: none !important;
+  position: relative;
+  top: 5px;
+  max-width: 100% !important;
+  height: auto !important;
+  width: auto !important;
+  margin-right: 0.25rem !important;
+}
+
+/* Text Styles */
+p,
+span [class*=".p_"] {
+  max-width: 90ch;
+  line-height: 1.6;
+}
+
+table {
+  max-width: 100ch;
+  margin-left: 0.25rem !important;
+}
+
+hr {
+  color: #333333;
+}
+
+body, table, tr, th /* Normal */ {
+  /* font-size: 100%; */
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #333333;
+  text-decoration: none;
+}
+/* table,
+tr,
+th {
+  font-size: 100%;
+} */
+
+span.f_CodeExample /* Code Example */ {
+  font-size: 0.8rem;
+  font-family: "Courier New", Courier, monospace;
+  color: #000000;
+}
+span.f_Comment /* Comment */ {
+}
+span.f_Head4 /* Head4 */ {
+  font-size: 1.25rem;
+  /* font-weight: bold; */
+}
+span.f_Heading1 /* Heading1 */ {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+span.f_ImageCaption /* Image Caption */ {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+span.f_Image_Center /* Image_Center */ {
+  color: #000000;
+}
+span.f_Image_Left /* Image_Left */ {
+  color: #000000;
+}
+span.f_noNum /* noNum */ {
+}
+span.f_noNum2 /* noNum2 */ {
+  display: initial !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 0 !important;
+}
+span.f_Notes /* Notes */ {
+}
+
+span.f_Numbered2 /* Numbered2 */ {
+}
+span.f_Picture_Title /* Picture_Title */ {
+  /* font-size: 0.8rem; */
+}
+span.f_Procedure /* Procedure */ {
+  font-weight: bold;
+}
+span.f_rotation /* rotation */ {
+}
+span.f_Section_Title /* Section_Title */ {
+  /* font-style: italic; */
+  font-weight: bold;
+  margin-left: -0.75rem;
+}
+
+span.f_StartPage_Link /* StartPage_Link */ {
+}
+span.f_StartPage_Sect /* StartPage_Sect */ {
+  font-size: 1.1rem;
+}
+span.f_Table_Cell /* Table_Cell */ {
+}
+span.f_Table_Cell_Center /* Table_Cell_Center */ {
+}
+span.f_Table_Col_Name /* Table_Col_Name */ {
+  font-style: italic;
+}
+span.f_Table_Col_Name_Center /* Table_Col_Name_Center */ {
+  font-style: italic;
+}
+span.f_Table_List /* Table_List */ {
+}
+span.f_Table_Para_0 /* Table_Para_0 */ {
+}
+span.f_Table_Para_HEAD_4 /* Table_Para_HEAD_4 */ {
+}
+span.f_Table_Para_Image /* Table_Para_Image */ {
+}
+span.f_Table_Para_NWA /* Table_Para_NWA */ {
+}
+span.f_Table_Section /* Table_Section */ {
+}
+span.f_Table_Title /* Table_Title */ {
+  font-size: 1rem;
+  font-style: italic;
+}
+span.f_Term_Litera /* Term_Litera */ {
+  font-size: 1.1rem;
+}
+span.f_Term_Name /* Term_Name */ {
+  font-style: italic;
+  font-weight: bold;
+}
+span.f_underway /* underway */ {
+  background-color: #ffcc99;
+}
+
+span.f_Z_New /* Z_New */ {
+  color: #009797;
+}
+span.f_Z_SUB /* Z_SUB */ {
+  font-size: 0.8rem;
+  color: #000000;
+  vertical-align: sub;
+}
+span.f_Z_SUPER /* Z_SUPER */ {
+  font-size: 0.8rem;
+  color: #000000;
+  vertical-align: super;
+}
+span.f_Z_Symbol /* Z_Symbol */ {
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #000000;
+}
+/* Paragraph styles */
+p, p.p_Normal, div.p_Normal, li.p_Normal /* Normal */ {
+  text-align: left;
+  text-indent: 0;
+  line-height: 1.6;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.p_bodytext /* bodytext */ {
+  font-size: 1rem;
+  margin: 0.8125rem 0.75rem 0 4.125rem !important;
+}
+.p_bulleted /* bulleted */ {
+  font-size: 1rem;
+  text-indent: -0.5rem !important;
+  margin: 1rem 0.75rem 0 4rem !important;
+  padding: 0 !important;
+}
+.p_bulleted2 /* bulleted2 */ {
+  font-size: 1rem;
+  text-indent: -.5rem !important;
+  margin: 1rem 0.5rem 0 5rem !important;
+  padding: 0 !important;
+}
+
+.p_bulleted3 /* bulleted3 */ {
+  font-size: 1rem;
+  text-indent: 0 !important;
+  margin: 1rem 0 0 6rem !important;
+}
+
+span.f_bulleted:first-of-type {
+  margin-left: -0.25rem !important;
+  margin-right: 0.5rem !important;
+  width: 2rem !important;
+  text-align: right !important;
+  /* display: inline-block !important; */
+}
+
+span.f_bulleted /* bulleted */ {
+  display: initial !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 0 !important;
+}
+
+span.f_bulleted2 /* bulleted2 */ {
+  display: initial !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 0 !important;
+}
+
+span.f_bulleted2:first-of-type /* bulleted2 */ {
+  margin-left: -0.25rem !important;
+  margin-right: 0.5rem !important;
+  width: 2rem !important;
+  text-align: right !important;
+}
+
+span.f_bulleted3 /* bulleted3 */ {
+}
+
+.p_CodeExample /* Code Example */ {
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  page-break-inside: avoid;
+}
+.p_Comment /* Comment */ {
+  font-size: 1rem;
+}
+.p_Head4 /* Head4 */ {
+  margin: 3rem 0 -0.25rem 4rem;
+  color: black;
+}
+.p_Heading1 /* Heading1 */ {
+  /* font-size: 100%; */
+  font-weight: normal;
+  text-align: left;
+  text-indent: 0;
+  line-height: 1.6;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.p_ImageCaption /* Image Caption */ {
+  font-size: 0.8rem;
+}
+.p_Image_Center /* Image_Center */ {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.2;
+}
+.p_Image_Left /* Image_Left */ {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.p_noNum /* noNum */ {
+  font-size: 1rem;
+  margin: 1rem 0 0 4rem;
+  padding: 0 !important;
+}
+.p_noNum2 /* noNum2 */ {
+  font-size: 1rem;
+  margin: 0.125rem 0 0 5rem;
+}
+.p_Notes /* Notes */ {
+  font-size: 1rem;
+}
+.p_Numbered /* Numbered */ {
+  font-size: 1rem;
+  text-indent: -0.875rem !important;
+  margin: 0.625rem 0 0 0 !important;
+  padding: 0 0 0 4rem !important;
+}
+
+.f_Numbered:first-of-type {
+  margin-left: -0.125rem !important;
+  margin-right: 0.25rem !important;
+  width: 2rem !important;
+  text-align: right !important;
+  /* display: inline-block !important; */
+}
+
+span.f_Numbered /* Numbered */ {
+  display: unset !important;
+  padding: 0 !important;
+  margin-left: 0 !important;
+  text-align: right;
+}
+
+span.f_bodytext /* bodytext */ {
+  /* margin-left: 1rem; */
+}
+
+.p_Numbered2 /* Numbered2 */ {
+  font-size: 1rem;
+  text-indent: -1.6rem;
+  margin: 0.625rem 0 0 6.5rem;
+}
+
+.p_Picture_Title /* Picture_Title */ {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0 0 0.25rem 0;
+  font-style: italic;
+  color: #000000;
+  max-width: 110ch;
+}
+.p_Procedure /* Procedure */ {
+  font-size: 1rem;
+  margin: 1rem 0 -0.5rem 4rem;
+}
+.p_rotation /* rotation */ {
+  font-size: 1rem;
+  text-align: center;
+}
+.p_Section_Title /* Section_Title */ {
+  font-size: 1rem;
+  text-indent: -1.625rem;
+  margin: 0.5rem 0 0 5.75rem;
+}
+.p_SeeAlso /* SeeAlso */ {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border-color: #333333;
+  border-style: solid;
+  border-width: thin;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin: 2rem 0 0 4.125rem;
+}
+
+span.f_SeeAlso /* SeeAlso */ {
+  /* font-size: 1.1rem;
+  line-height: 1.6;
+  border-color: #333333;
+  border-style: solid;
+  border-width: thin;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin: 2rem 0 0 4.125rem; */
+}
+
+.p_StartPage_Link /* StartPage_Link */ {
+  margin: 0 0 0 4rem;
+  line-height: 2;
+}
+.p_StartPage_Sect /* StartPage_Sect */ {
+  font-size: 1.1rem;
+  margin: 1rem 0 0 4rem;
+}
+
+td {
+  padding: 0 !important;
+}
+
+.p_Table_Cell /* Table_Cell */ {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0rem 0.75rem 0.25rem 1rem;
+}
+
+.p_Table_Cell_Center /* Table_Cell_Center */ {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0.3125rem 0 0 0;
+}
+.p_Table_Col_Name /* Table_Col_Name */ {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-top: 0.5rem;
+  margin-left: 1rem;
+}
+.p_Table_Col_Name_Center /* Table_Col_Name_Center */ {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+  padding-top: 0.5rem;
+}
+.p_Table_List /* Table_List */ {
+  font-size: 1rem;
+  text-indent: -1rem;
+  line-height: 1.6;
+  margin: 0.25rem 0.75rem 0.25rem 0 !important;
+  padding-left: 1rem !important;
+}
+.p_Table_Para_0 /* Table_Para_0 */ {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.p_Table_Para_HEAD_4 /* Table_Para_HEAD_4 */ {
+  font-size: 1rem;
+  margin: 1.625rem 0 0 0;
+}
+.p_Table_Para_Image /* Table_Para_Image */ {
+  font-size: 1rem;
+  margin: 0.25rem 0 0 4.125rem;
+}
+.p_Table_Para_NWA /* Table_Para_NWA */ {
+  font-size: 1rem;
+  margin: 0.9375rem 0 0 0;
+}
+.p_Table_Section /* Table_Section */ {
+  font-size: 1rem;
+  margin: 0 0 0 4.125rem;
+}
+.p_Table_Title /* Table_Title */ {
+  font-size: 0.8rem;
+  margin: 1.0625rem 0 0 4.125rem;
+}
+.p_Term_Litera /* Term_Litera */ {
+  font-size: 1.1rem;
+  line-height: 1.57;
+  margin: 1.1875rem 0 0 0;
+}
+.p_Term_Name /* Term_Name */ {
+  font-size: 1rem;
+  margin: 0.9375rem 0 0 4.125rem;
+}
+.p_underway /* underway */ {
+  font-size: 1rem;
+}
+.p_Z_LOC_TOC /* Z_LOC_TOC */ {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: .25rem 0 0.5rem 4rem; /* 2.75 with left image see next class */
+}
+
+span.f_Z_LOC_TOC /* Z_LOC_TOC */ {
+  /* background-image: url(../images/toc_topic.svg);
+  display: block;
+  background-repeat: no-repeat;
+  padding-left: 27px;
+  background-position: left 2px; */
+}
+
+/* Table styles */
+div.hmrotate90 {
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+div.hmrotate270 {
+  display: inline-block;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+a.imagetogglelink {
+  position: relative;
+  display: inline-block;
+}
+svg.image-toggle-magnifier {
+  /* Magnifier icon for image toggles */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40pt;
+  height: 40pt;
+  max-width: 80%;
+  max-height: 80%;
+  fill: #ffffff;
+  stroke: #808080;
+  stroke-width: 0.5pt;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+img.image-toggle:hover + svg.image-toggle-magnifier,
+svg.image-toggle-magnifier:hover {
+  opacity: 1;
+}
+
+#hmlightbox /* image lightbox */ {
+  border: none;
+  padding: 8px;
+  background: #fff;
+  font-size: 110%;
+  font-weight: bold;
+  color: #777;
+  box-shadow: 5px 5px 5px #888;
+}
+
+a.dropdown-toggle /* dropdown toggle caption */ {
+  cursor: pointer;
+  color: #1440a0 !important;
+}
+
+a.dropdown-toggle:hover {
+  color: #2e8bc0 !important;
+}
+
+a.inline-toggle /* inline toggle caption */ {
+  cursor: pointer;
+}
+img.dropdown-toggle-icon /* toggle icon */ {
+  cursor: pointer;
+  padding-bottom: 3px;
+  left: -6px;
+}
+/* CSS for responsive image maps */
+
+.hmImageMap a.hmHotspotRect {
+  display: block;
+  position: absolute;
+  border: 1px solid transparent;
+  background: #000;
+  opacity: 0.01;
+}
+.hmImageMap a.hmHotspotEllipse {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: #000;
+  opacity: 0.01;
+}
+.hmImageMap:hover a.hmHotspotRect {
+  opacity: 0.3;
+}
+.hmImageMap:hover a.hmHotspotEllipse {
+  opacity: 0.3;
+}
+a.hmHotspotRect:hover {
+  border: 1px solid #000;
+  background: #fff;
+  opacity: 0.3;
+}
+a.hmHotspotEllipse:hover {
+  border: 1px solid #000;
+  background: #fff;
+  opacity: 0.3;
+}
+
+p.p_underway {
+  display: none;
+}
+
+span.f_underway {
+  display: none;
+}
+
+
+p.p_Z_New {
+  display: none;
+}
+
+span.f_Z_New {
+  display: none;
+}
+
+div.dropdown-toggle-body td {
+  /* background-color: #ffffff !important; */
+  padding: 0 0 1rem 0 !important;
+}
+
+div.dropdown-toggle-body .p_bulleted {
+  margin-left: 1.75rem !important;
+  padding: 0 !important;
+}
+
+div.dropdown-toggle-body .p_bulleted2 {
+  margin-left: 2.25rem !important;
+  padding: 0 !important;
+}
+
+div.dropdown-toggle-body .p_bulleted3 {
+  margin-left: 2.75rem !important;
+  padding: 0 !important;
+}
+
+div.dropdown-toggle-body table table {
+  max-width: 90ch !important;
+}
+
+div.dropdown-toggle-body table {
+  padding: 0 1rem 1rem 0.75rem !important;
+  max-width: 94ch;
+  margin-top: 0.25rem;
+}
+
+div.dropdown-toggle-body .p_bodytext {
+  margin-left: 1rem !important;
+}
+
+div.dropdown-toggle-body .p_noNum {
+  margin: 1rem 0 0 1.75rem;
+}
+
+p.p_Table_Cell img {
+  /* left: 15px !important; */
+  top: 3px !important;
+}
+
+.toggle {
+  margin-left: 4rem !important;
+}
+
+td .p_Normal {
+  margin-left: 0.75rem !important;
+}
+
+
+
+
+
+
+
+
+
+
+.p_Hier_0_BLANK /* Hier_0_BLANK */
+{
+ font-size: 1.00rem;
+ margin: 0.8125rem 0 0 4.1250rem;
+}
+.p_Hier_0_GREEN /* Hier_0_GREEN */
+{
+ font-size: 1.00rem;
+ margin: 0.8125rem 0 0 4.1250rem;
+}
+.p_Hier_1_BLUE /* Hier_1_BLUE */
+{
+ font-size: 1.00rem;
+ margin: 0.2500rem 0 0 4.7500rem;
+}
+.p_Hier_1_GREEN /* Hier_1_GREEN */
+{
+ font-size: 1.00rem;
+ margin: 0.2500rem 0 0 4.7500rem;
+}
+.p_Hier_2_BLUE /* Hier_2_BLUE */
+{
+ font-size: 1.00rem;
+ margin: 0.2500rem 0 0 5.3125rem;
+}
+.p_Hier_3_BLUE /* Hier_3_BLUE */
+{
+ font-size: 1.00rem;
+ margin: 0.2500rem 0 0 5.8750rem;
+}
+.p_Hier_4_BLUE /* Hier_4_BLUE */
+{
+ font-size: 1.00rem;
+ margin: 0.2500rem 0 0 6.5000rem;
+}
+.p_Hier_5_BLUE /* Hier_5_BLUE */
+{
+ font-size: 1.00rem;
+ margin: 0.2500rem 0 0 7.0625rem;
+}
+.p_Hier_6_BLUE /* Hier_6_BLUE */
+{
+ font-size: 1.00rem;
+ margin: 0.2500rem 0 0 8.8750rem;
+}
+.p_Hier_ADD /* Hier_ADD */
+{
+ font-size: 1.00rem;
+ margin: 0.2500rem 0 0 4.4375rem;
+}
+
+.p_Hier_0_BLANK,
+.p_Hier_0_GREEN,
+.p_Hier_1_BLUE,
+.p_Hier_1_GREEN,
+.p_Hier_2_BLUE,
+.p_Hier_3_BLUE,
+.p_Hier_4_BLUE,
+.p_Hier_5_BLUE,
+.p_Hier_6_BLUE,
+.p_Hier_ADD
+{
+  padding-bottom: .15rem;
+}
+
+
+.p_ImageCaption /* Image Caption */
+{
+ font-size: 0.80rem;
+}
+
+span.f_Hier_0_BLANK /* Hier_0_BLANK */
+{
+ letter-spacing: 0.1875rem;
+ /* background-color: #e1e1e1; */
+ border: 1px solid #000;
+ padding: .25rem .75rem .3rem .75rem;
+}
+span.f_Hier_0_GREEN /* Hier_0_GREEN */
+{
+ color: #000000;
+ letter-spacing: 0.1875rem;
+ background-color: #25b925;
+ padding: .25rem .75rem .3rem .75rem;
+}
+
+span.f_Hier_1_BLUE /* Hier_1_BLUE */
+{
+ color: #000000;
+ letter-spacing: 0.1875rem;
+ background-color: #3399ff;
+ padding: .25rem .75rem .3rem .75rem;
+}
+span.f_Hier_1_GREEN /* Hier_1_GREEN */
+{
+ color: #000000;
+ letter-spacing: 0.1875rem;
+ background-color: #25b925;
+ padding: .25rem .75rem .3rem .75rem;
+}
+
+span.f_Hier_0_GREEN > a,
+span.f_Hier_1_GREEN > a,
+span.f_Hier_1_BLUE > a,
+span.f_Hier_2_BLUE > a,
+span.f_Hier_3_BLUE > a,
+span.f_Hier_4_BLUE > a,
+span.f_Hier_5_BLUE > a,
+span.f_Hier_6_BLUE > a,
+span.f_Hier_ADD > a 
+{
+  color: #fff !important;
+}
+
+span.f_Hier_0_GREEN > a:hover,
+span.f_Hier_1_GREEN > a:hover,
+span.f_Hier_1_BLUE > a:hover,
+span.f_Hier_2_BLUE > a:hover,
+span.f_Hier_3_BLUE > a:hover,
+span.f_Hier_4_BLUE > a:hover,
+span.f_Hier_5_BLUE > a:hover,
+span.f_Hier_6_BLUE > a:hover,
+span.f_Hier_ADD > a:hover 
+{
+  color: #95e7fc !important;
+}
+
+
+span.f_Hier_2_BLUE /* Hier_2_BLUE */
+{
+ color: #000000;
+ letter-spacing: 0.1875rem;
+ background-color: #3399ff;
+ padding: .25rem .75rem .3rem .75rem;
+}
+span.f_Hier_3_BLUE /* Hier_3_BLUE */
+{
+ color: #000000;
+ letter-spacing: 0.1875rem;
+ background-color: #3399ff;
+ padding: .25rem .75rem .3rem .75rem;
+}
+span.f_Hier_4_BLUE /* Hier_4_BLUE */
+{
+ color: #000000;
+ letter-spacing: 0.1875rem;
+ background-color: #3399ff;
+ padding: .25rem .75rem .3rem .75rem;
+}
+span.f_Hier_5_BLUE /* Hier_5_BLUE */
+{
+ color: #000000;
+ letter-spacing: 0.1875rem;
+ background-color: #3399ff;
+ padding: .25rem .75rem .3rem .75rem;
+}
+span.f_Hier_6_BLUE /* Hier_6_BLUE */
+{
+ color: #000000;
+ letter-spacing: 0.1875rem;
+ background-color: #3399ff;
+ padding: .25rem .75rem .3rem .75rem;
+}
+span.f_Hier_ADD /* Hier_ADD */
+{
+ color: #000000;
+ letter-spacing: 0.1875rem;
+ background-color: #3399ff;
+ padding: .25rem .75rem .3rem .75rem;
+}
+
+
+
+
+
+span.f_Z_LOC_TOC_Title /* Z_LOC_TOC_Title */
+{
+  /* font-size: 1.1rem;
+  line-height: 1.6;
+  border-color: #333333;
+  border-style: solid;
+  border-width: thin;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin: 2rem 0 0 4.125rem; */
+}
+
+.p_Z_LOC_TOC_Title /* Z_LOC_TOC_Title */
+{
+  font-size: 1rem;
+  line-height: 1.75;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-top: thin solid #333333 !important;
+  margin: 2rem 0 0 4.125rem;
+  padding-top: .5rem;
+}
+
+
+span.f_Table_Para /* Table_Para */
+{
+}
+
+.p_Table_Para /* Table_Para */
+{
+  font-size: 1rem;
+  line-height: 1.2;
+}

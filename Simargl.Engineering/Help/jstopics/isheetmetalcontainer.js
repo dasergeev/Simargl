@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс ISheetMetalContainer",
+hmDescription:"Интерфейс контейнера объектов гибки. Иерархия: IDispatch ISheetMetalContainer Описание: ISheetMetalContainer является дополнительным к интерфейсу IPart7 и позволяет работать",
+hmPrevLink:"bc2753655.html",
+hmNextLink:"isheetmetalcontainer_props.html",
+hmParentLink:"bc2753655.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2753655.html\">Листовое тело&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Листовое тело  > Интерфейс ISheetMetalContainer ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс ISheetMetalContainer <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbc2086553\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс контейнера объектов гибки<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"isheetmetalcontainer.html\" class=\"topiclink\">ISheetMetalContainer<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Описание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">ISheetMetalContainer является дополнительным к интерфейсу <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ipart7.html\" class=\"topiclink\">IPart7<\/a><\/span><span class=\"f_bodytext\"> и позволяет работать с коллекциями объектов гибки (листовые тела, сгибы и т.д). Данный интерфейс можно получить от IPart7 посредством вызова метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"recomendation.html\" class=\"topiclink\">IUnknown::QueryInterface (const GUID far&amp; iid, void** pif)<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetalcontainer_props.html\" class=\"topiclink hmlinklistitem\">ISheetMetalContainer - свойства <\/a><\/span><\/p>\n\r"
+})

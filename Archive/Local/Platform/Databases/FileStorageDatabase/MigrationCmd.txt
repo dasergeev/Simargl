@@ -1,0 +1,4 @@
+﻿EntityFrameworkCore\Add-Migration -Project Databases\FileStorageDatabase -StartupProject Databases\FileStorageDatabase -Name
+EntityFrameworkCore\Update-Database -Project Databases\FileStorageDatabase -StartupProject Databases\FileStorageDatabase
+EntityFrameworkCore\Remove-Migration -Project Databases\FileStorageDatabase -StartupProject Databases\FileStorageDatabase
+EntityFrameworkCore\Remove-Migration -Project Databases\FileStorageDatabase -StartupProject Databases\FileStorageDatabase -Force

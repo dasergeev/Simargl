@@ -1,0 +1,123 @@
+Инструкция по настройке Teltonika для стабильного получения данных геолокации.
+
+Требования к программной части компьютера, с которого производится настройка:
+
+1.	Инсталлированная программа Putty или альтернативная для соединения по SSH.
+2.	Инсталлированная программа WinSCP или альтернативная для передачи файлов по SCP
+
+Алгоритм настройки:
+
+1)	Подключиться по SCP к Tetlonika, используя протокол подключения SCP и данные учетной записи данного устройства.
+2)	Перейти в каталок /etc/init.d/ 
+3)	Скопировать файлы скриптов в этот каталог или создать файлы в этом каталоге с именами: gpssbc, gpssbcscript, geolocation, geolocationscript (и заполнить содержимое файлов из приложения этого документа, c указанием IP сервера логирования)
+4)	Подключиться по SSH к Teltonika, используя данные учетной записи данного устройства.
+5)	Выполнить команду “opkg update”
+6)	Выполнить команду “opkg install netcat”
+7)	Выполнить команду “cd /etc/init.d”
+8)	Выполнить команду “./gpssbc enable”
+9)	Выполнить команду “./geolocation enable”
+10)	Выполнить команду “./gpssbc start”
+11)	Выполнить команду “./geolocation start”
+12)	Выполнить команду “reboot”
+13)	Дождаться перезапуска устройства
+14)	Проверить что данных получены службой логирования.
+
+Алгоритм выключения скриптов:
+
+1)	Подключиться по SSH к Teltonika, используя данные учетной записи данного устройства.
+2)	Выполнить команду “cd /etc/init.d”
+3)	Выполнить команду “./gpssbc disable”
+4)	Выполнить команду “./geolocation disable”
+5)	Выполнить команду “./gpssbc stop”
+6)	Выполнить команду “./geolocation stop”
+
+
+
+ 
+Приложение А: 
+
+Файл gpssbc:
+_____________
+
+#!/bin/sh /etc/rc.common
+
+START=99
+STOP=45
+USE_PROCD=1
+
+GPSUDP_BIN="/usr/sbin/gpssbcscript"
+
+start_service() {
+		procd_open_instance gpsd
+		procd_set_param respawn
+		procd_set_param command sh "./etc/init.d/gpssbcscript"
+		procd_close_instance
+}
+
+stop_service() {
+	PID = $(ps | grep gpssbcscript | grep -v grep | awk '{print $1}')
+	kill -9 "$PID"
+}
+_____________
+
+
+Файл gpssbcscript:
+_____________
+#!/bin/sh 
+while true 
+do
+resp=$(head -n 15 /dev/gps) 
+echo "$resp" | nc -uc 192.168.1.29 49049
+sleep 10
+done
+_____________
+
+IP и порт указываются согласно настройкам периферии.
+
+ 
+Файл geolocation:
+_____________
+
+#!/bin/sh /etc/rc.common
+
+START=99
+STOP=45
+USE_PROCD=1
+
+start_service() {
+		procd_open_instance gpsd
+		procd_set_param respawn
+		procd_set_param command sh "./etc/init.d/geolocationscript"
+		procd_close_instance
+}
+
+stop_service() {
+	PID = $(ps | grep geolocationscript | grep -v grep | awk '{print $1}')
+	kill -9 "$PID"
+}
+_____________
+
+
+
+Файл geolocationscript:
+_____________
+#!/bin/sh 
+while true
+do
+resp=$(echo -e "Apeiron" &&  gsmctl -iJ && gpsctl -ixaveup) 
+echo "$resp" | nc -uc 192.168.1.29 49050
+sleep 10
+done
+_____________
+
+IP и порт указываются согласно настройкам периферии.
+
+
+ 
+Приложение Б:
+gpssbc , geolocation – скрипты для менеджера служб procd. Используются для запуска и отслеживания скриптов после перезагрузки. 
+gpssbcscript , geolocationscript – выполняемые команды. Алгоритм одинаковый для обоих скриптов – запрос данных и отправка по udp с помощью утилиты netcat, и ожидание 10 секунд. 
+
+Примечания:
+gpssbcscript - забирает данные, которые предназначены сервису gpsd. Поэтому существуют задержки в отображении геолокации на карте с помощью веб интерфейса.
+Так же сервис gpsd сообщает об отсутствии данных в лог. 

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ICloudPointsSurface - методы",
+hmDescription:"Подразделы: AddPoint - Добавить точку  AddPoints - Добавить точки  ClearPoints - Очистить список рядов точек  DeletePoint - Удалить точку  GetPoint - Получить параметры точки",
+hmPrevLink:"icloudpointssurface_pointtype.html",
+hmNextLink:"icloudpointssurface_addpoint.html",
+hmParentLink:"icloudpointssurface.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2288197.html\">Поверхности&nbsp;<\/a> &gt; <a href=\"isurfacecontainer.html\">Интерфейс ISurfaceContainer&nbsp;<\/a> &gt; <a href=\"isurfacecontainer_props.html\">ISurfaceContainer - свойства&nbsp;<\/a> &gt; <a href=\"icloudpointssurface.html\">Интерфейс ICloudPointsSurface&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Поверхности  > Интерфейс ISurfaceContainer  > ISurfaceContainer - свойства  > Интерфейс ICloudPointsSurface  > ICloudPointsSurface - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ICloudPointsSurface - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icloudpointssurface_addpoint.html\" class=\"topiclink hmlinklistitem\">AddPoint - Добавить точку <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icloudpointssurface_addpoints.html\" class=\"topiclink hmlinklistitem\">AddPoints - Добавить точки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icloudpointssurface_clearpoints.html\" class=\"topiclink hmlinklistitem\">ClearPoints - Очистить список рядов точек <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icloudpointssurface_deletepoint.html\" class=\"topiclink hmlinklistitem\">DeletePoint - Удалить точку <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icloudpointssurface_getpoint.html\" class=\"topiclink hmlinklistitem\">GetPoint - Получить параметры точки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icloudpointssurface_setpoint.html\" class=\"topiclink hmlinklistitem\">SetPoint - Установить параметры точки <\/a><\/span><\/p>\n\r"
+})

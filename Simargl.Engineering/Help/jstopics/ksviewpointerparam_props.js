@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksViewPointerParam - свойства",
+hmDescription:"Подразделы: str - Текст на стрелке направления взгляда  style - Стиль текста  type - Способ задания надписи на стрелке направления взгляда  x1, y1 - Координаты вершины (\"острия",
+hmPrevLink:"ksviewpointerparam.html",
+hmNextLink:"ksviewpointerparam_str.html",
+hmParentLink:"ksviewpointerparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"ch1786244.html\">Интерфейсы параметров обозначений&nbsp;<\/a> &gt; <a href=\"ksviewpointerparam.html\">Стрелка направления взгляда (Интерфейс ksViewPointerParam)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров обозначений  > Стрелка направления взгляда (Интерфейс ksViewPointerParam)  > ksViewPointerParam - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksViewPointerParam - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksviewpointerparam_str.html\" class=\"topiclink hmlinklistitem\">str - Текст на стрелке направления взгляда <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksviewpointerparam_style.html\" class=\"topiclink hmlinklistitem\">style - Стиль текста <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksviewpointerparam_type.html\" class=\"topiclink hmlinklistitem\">type - Способ задания надписи на стрелке направления взгляда <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksviewpointerparam_x1.html\" class=\"topiclink hmlinklistitem\">x1, y1 - Координаты вершины (&quot;острия&quot;) стрелки направления взгляда <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksviewpointerparam_x2.html\" class=\"topiclink hmlinklistitem\">x2, y2 - Координаты конечной точки стрелки направления взгляда <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksviewpointerparam_xt.html\" class=\"topiclink hmlinklistitem\">хt, yt - Координаты точки привязки текста <\/a><\/span><\/p>\n\r"
+})

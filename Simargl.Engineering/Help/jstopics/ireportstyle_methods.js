@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IReportStyle - методы",
+hmDescription:"Подразделы: AddColumn - Добавить колонку  Clear - Очистить стиль  ClearSortParameters - Очистить параметры сортировки  DeleteColumn - Удалить колонку  GetSortParameters - Пара",
+hmPrevLink:"ireportstyle_titleheight.html",
+hmNextLink:"ireportstyle_addcolumn.html",
+hmParentLink:"ireportstyle.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"ba1858294.html\">Таблицы отчетов&nbsp;<\/a> &gt; <a href=\"ireportstyle.html\">Интерфейс IReportStyle&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Таблицы отчетов  > Интерфейс IReportStyle  > IReportStyle - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IReportStyle - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportstyle_addcolumn.html\" class=\"topiclink hmlinklistitem\">AddColumn - Добавить колонку <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportstyle_clear.html\" class=\"topiclink hmlinklistitem\">Clear - Очистить стиль <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportstyle_clearsortparameters.html\" class=\"topiclink hmlinklistitem\">ClearSortParameters - Очистить параметры сортировки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportstyle_deletecolumn.html\" class=\"topiclink hmlinklistitem\">DeleteColumn - Удалить колонку <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportstyle_getsortparameters.html\" class=\"topiclink hmlinklistitem\">GetSortParameters - Параметры сортировки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportstyle_init.html\" class=\"topiclink hmlinklistitem\">Init - Инициализация стиля параметрами по умолчанию <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportstyle_setsortparameters.html\" class=\"topiclink hmlinklistitem\">SetSortParameters - Параметры сортировки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ireportstyle_swapcolumn.html\" class=\"topiclink hmlinklistitem\">SwapColumn - Поменять колонки местами <\/a><\/span><\/p>\n\r"
+})

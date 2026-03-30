@@ -1,0 +1,408 @@
+﻿/* Reset Styles for Consistency */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #333333;
+  background-color: transparent;
+  overflow: hidden;
+  margin: 0;
+  padding: 0.313rem;
+  line-height: 1.1rem;
+}
+
+div#hmpageheader {
+  position: absolute;
+  top: 0.313rem;
+  left: 0.313rem;
+  right: 0.313rem;
+  background-color: transparent;
+}
+div#hmpagebody {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-style: solid;
+  border-color: #c5c5c5;
+  border-width: thin 0 0 0;
+  border-radius: 0 0 0 0;
+  padding: 0.313rem 0 0.313rem 0.313rem;
+  margin: 0;
+  color: auto;
+}
+
+/* General */
+.desktop {
+}
+.tablet {
+  display: none !important;
+}
+.phone {
+  display: none !important;
+}
+.noscript {
+  display: none !important;
+}
+.scripted {
+}
+.desk_tablet {
+}
+
+/*** KW Index Pane ***/
+
+div#idxheadwrapper {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  /* border-bottom: thin solid #c0c0c0; */
+  background-color: transparent;
+  /* padding: 0.1rem; */
+  margin: 0 0 0 0;
+}
+div#hmindextree {
+  position: absolute;
+  top: 9rem !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 0.2rem;
+  padding-right: 1rem;
+  background-color: #ffffff;
+  margin: 2.2rem 0 0 1rem;
+  overflow-y: scroll;
+}
+
+ul#idxheader {
+  list-style-type: none;
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+
+ul#idxheader li {
+  display: inline-block;
+}
+
+ul#idxheader li a {
+  display: inline-block;
+  font-size: 1rem;
+  /* font-weight: bold; */
+  width: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+/* Search Form */
+form#idxsearch {
+  position: relative;
+  display: block;
+  left: 0;
+  margin: 0.3rem 0 0 1rem;
+}
+
+table#searchtable {
+  width: 99%;
+}
+
+td#btn {
+  width: 60px;
+}
+td#arg {
+  padding: 0 0.2rem 0 0.1rem;
+}
+
+input#searcharg {
+  width: 100%;
+}
+
+input {
+  border: 2px solid #333333;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  /* width: 70%; */
+  /* height: 2em; */
+  /* margin-left: 1.25em; */
+  font-size: 1.15em;
+  padding: 3px 3px 5px 3px;
+  margin-bottom: 0.25em;
+}
+
+input:focus {
+  border: 2px solid #31c0e4;
+}
+
+input:is([type="button"], [type="submit"], [type="reset"]),
+input[type="file"]::file-selector-button,
+button {
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: #ffffff;
+  padding: 7px 7px 7px 8px;
+  border-radius: 4px;
+  border: 2px solid #000000;
+  background-color: #333333;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  letter-spacing: 2px;
+}
+
+.idxhilite {
+  background-color: #31c0e4;
+  padding: 0.1rem 0.25rem;
+}
+
+p.idxkeyword {
+  font-size: 1rem;
+  margin: 0.75rem 0.5rem 0.75rem 0.75rem;
+}
+p.idxkeyword.lv2 {
+  margin-left: 2.5rem;
+}
+
+/* p.idxmultiref {
+  padding-left: 1.286rem;
+  padding-bottom: 0.35rem;
+  background-image: url("../images/kw-page.gif");
+  background-repeat: no-repeat;
+  background-position: left -0.143rem;
+} */
+
+div#multiwrapper {
+  border: thin solid #444444;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px #676767;
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+  position: absolute;
+  display: block;
+  right: 8px;
+  visibility: hidden;
+  overflow: auto;
+  z-index: 1001;
+}
+
+div#popmessage {
+  border: thin solid #9a7b00;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px #676767;
+  padding: 0.5rem;
+  background-color: #fff0b3;
+  position: absolute;
+  display: block;
+  right: 8px;
+  visibility: hidden;
+  overflow: auto;
+  z-index: 1001;
+}
+
+/* p.popmessage {
+  font-size: 0.8rem;
+  color: #444444;
+  padding: 0.35rem;
+} */
+
+p.popmessage span {
+  font-weight: bold;
+}
+a.kw {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+}
+a.kw:visited {
+  color: #333333;
+}
+a.kw:hover {
+  /* text-decoration: underline; */
+  outline: 2px solid #37d0f9;
+}
+a.kw.off:hover {
+  text-decoration: none;
+}
+div#multiwrapper a.kw,
+div#idxheadwrapper a.kw {
+  color: #000000;
+}
+
+a.kw span {
+  display: block;
+  padding: 0.5rem;
+}
+
+/* Letter Groups */
+div.idxgroup-body {
+  display: none;
+  padding: 0;
+  background-color: #ffffff;
+}
+ul.idxgroup-header {
+  list-style-type: none;
+  margin: 1rem 0.5rem 1rem 0.75rem;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  /* border: thin solid #444444; */
+  border-radius: 2px;
+  background-color: #c5c5c5;
+  color: #333333;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+ul.idxgroup-header:hover {
+  outline: 2px solid #37d0f9;
+}
+
+ul.idxgroup-header li {
+  font-weight: bold;
+}
+
+input[type="checkbox"]#idxmode {
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]#idxmode {
+  height: 30px;
+  width: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  outline: none;
+  transition-duration: 0.3s;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked#idxmode + label::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 19px;
+  width: 6px;
+  height: 12px;
+  border: solid #333333;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+label#idxmodelabel {
+  color: #333333;
+  font-size: 1rem;
+  vertical-align: top;
+  line-height: 2.5;
+}

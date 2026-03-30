@@ -1,0 +1,171 @@
+﻿<Window x:Class="Apeiron.Platform.OrchestratorManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:vm="clr-namespace:Apeiron.Platform.OrchestratorManager.ViewModels"
+        mc:Ignorable="d"
+        Title="{Binding Path=Title}"
+        Name="OrchestratorManager"
+        Height="600" Width="850">
+
+    <!--Модель-Представление окна-->
+    <Window.DataContext>
+        <vm:MainWindowViewModel x:Name="MainWindowViewModel"/>
+    </Window.DataContext>
+
+    <!--ГЛОБАЛЬНЫЕ СТИЛИ, РЕСУРСЫ, КОНВЕРТЕРЫ-->
+    <Window.Resources>
+        <!--Стили-->
+        <!--Стили таблицы данных-->
+        <Style TargetType="DataGrid" x:Key="DataGridStyle">
+            <Setter Property="AlternatingRowBackground" Value="OldLace" />
+            <Setter Property="AutoGenerateColumns" Value="False" />
+            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+        </Style>
+        <!--Стили заголовков в таблице данных-->
+        <Style TargetType="DataGridColumnHeader" x:Key="DataGridHeaderStyle">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="5,3,5,3"/>
+            <Setter Property="MinWidth" Value="110" />
+            <Setter Property="Width" Value="auto" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+        </Style>
+        <!--Стили строк в таблице данных-->
+        <Style TargetType="DataGridRow" x:Key="DataGridRowStyle">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="MediumSeaGreen"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <DockPanel LastChildFill="True">
+        <!--ГЛАВНОЕ МЕНЮ-->
+        <Menu x:Name="HeaderMenu" DockPanel.Dock="Top">
+            <MenuItem Header="Закрыть" Command="{Binding CloseApplicationCommand}" Height="25"></MenuItem>
+        </Menu>
+
+        <!--ПАНЕЛЬ КНОПОК-->
+        <ToolBar x:Name="ToolBar" DockPanel.Dock="Top" Height="30" Width="auto" Background="#FFF0F0F0">
+            <Separator />
+        </ToolBar>
+
+        <!--ПАНЕЛЬ СОСТОЯНИЯ-->
+        <StatusBar x:Name="FooterStatusBar" DockPanel.Dock="Bottom" Height="25" VerticalAlignment="Center">
+            <StatusBarItem>
+                <TextBlock Name="WindowSizeHeight" Text="{Binding ActualHeight, ElementName=OrchestratorManager, Mode=OneWay}"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Name="WindowSizeWidth" Text="{Binding ActualWidth, ElementName=OrchestratorManager, Mode=OneWay}"/>
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem>
+                <TextBlock Name="ProgramVersion"/>
+            </StatusBarItem>
+        </StatusBar>
+
+        <!--Основная таблица разметки-->
+        <Grid x:Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="120" />
+            </Grid.RowDefinitions>
+
+
+            <DockPanel LastChildFill="True" Grid.ColumnSpan="3">
+                <!--Таблица управляемых хостов-->
+
+                <!--Таблица управляемых хостов-->
+                <DataGrid x:Name="HostDataGrid"
+                          DockPanel.Dock="Left"
+                          ItemsSource="{Binding HostCollection}"
+                          SelectedItem="{Binding HostRow}"
+                          Style="{StaticResource DataGridStyle}" Width="260">
+
+                    <!--Колонки-->
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="SystemNameColumn"
+                                    Header="Имя хоста"
+                                    HeaderStyle="{StaticResource DataGridHeaderStyle}"
+                                    Binding="{Binding Hostname}"/>
+                        <DataGridTextColumn x:Name="SystemRegTime"
+                                    Header="Время подключения"
+                                    HeaderStyle="{StaticResource DataGridHeaderStyle}"
+                                    Binding="{Binding RegTime, StringFormat=\{0:HH.mm.ss : dd.MM.yyyy\}}"/>
+
+                        <!--<DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Получить информацию" Command="{Binding GetHostInfo}" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>-->
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+                <DataGrid x:Name="HostInfo"
+                          DockPanel.Dock="Left"
+                          Style="{StaticResource DataGridStyle}" Width="230">>
+                    <!--Колонки-->
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="HostInfoParameter"
+                                    Header="Параметр"
+                                    HeaderStyle="{StaticResource DataGridHeaderStyle}"/>
+
+                        <DataGridTextColumn x:Name="HostinfoValue"
+                                    Header="Значение"
+                                    HeaderStyle="{StaticResource DataGridHeaderStyle}"/>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <StackPanel Orientation="Vertical">
+                    <Button x:Name="CheckConnectionToMediator" Content="Проверка соединения c Mediator" 
+                        Height="25" Width="220" Click="CheckConnectionToMediator_Click" Margin="5"/>
+
+                    <Button x:Name="CheckConnectionToOrchestratorServer" Content="Получить список хостов Orcherstrator" 
+                        Height="25" Width="220" Click="GetHostListFromMediatorServer_Click" Margin="5"/>
+
+                    <Button x:Name="Command1" Content="Command 1" 
+                        Height="25" Width="220" Margin="5" Click="Command1_Click"/>
+
+                    <Button x:Name="GetHostInfoButton" Content="Получить информацию о хосте"
+                        Command="{Binding GetHostInfo}"
+                        Height="25" Width="220" Margin="5" />
+                </StackPanel>
+
+            </DockPanel>
+
+            <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" ShowsPreview="False" Height="3"
+                HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+
+            <TextBox x:Name="CommandTextBox"
+                         Text="{Binding Path = CommandsLog}"
+                         Grid.Row="2" Grid.Column="0" 
+                         Background="LightGreen"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+
+            <GridSplitter Grid.Row="2" Grid.Column="1" ShowsPreview="False" Width="3"
+                HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+
+            <TextBox x:Name="OutputTextBox" 
+                         Text="{Binding Path =ResultsLog}"
+                         Grid.Row="2" Grid.Column="2" 
+                         Background="#dfffff"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        </Grid>
+
+    </DockPanel>
+
+</Window>

@@ -1,0 +1,183 @@
+# Apeiron gitlab-ci.yml for build, test and generate documentation with Sandcastle on Windows server and deploy documentation to Web Server
+
+variables:
+    # Path to folder destination on webserver
+    WEBSERVER_IP: 10.69.16.232
+    WEBSERVER_PATH: /opt/web/doc_platform
+    # Solution Name for build all projects. Solution file name .sln
+    SOLUTION_NAME: Platform
+    # Test-Projects
+    TEST_PROJECT_PATH: UnitTest\UnitTest.csproj
+    # Sandcastle project file name .shfbproj (dont' forget add this file to .gitignore too)
+    SANDCASTLE_PROJECT_FILE_NAME: "Platform.shfbproj"
+
+# Docker Image
+image: gitlab.railtest.ru:4567/general/artifacts/docker-images:alpine-3.14-coresdk6.0.101-git-ssh-wget-curl-tar-unzip
+
+# Output additional information
+before_script:
+  - echo $CI_RUNNER_DESCRIPTION
+  - echo $CI_PROJECT_PATH
+  - echo $SOLUTION_NAME
+  - echo $CI_PROJECT_DIR/$SOLUTION_NAME.sln
+  - echo $TEST_PROJECT_PATH
+  - echo $CI_COMMIT_SHORT_SHA
+  - dotnet --version
+  - dotnet nuget --version
+
+   # Build and compilation stages
+stages:
+  - test
+  - build
+  - pack
+  - generate
+  - deploy-doc
+
+###################### TEST MASTER BRANCH TASK ##########################
+solution-test-docker:
+
+  stage: test
+  tags:
+    - stage-docker-runner # choice Gitlab-Runner.
+  only:
+    - master # Run Job only branch master
+
+  script:
+    - echo "Restoring NuGet packages..."
+    # Add local Nuget source Apeiron
+    - dotnet nuget add source "$CI_SERVER_URL/api/v4/projects/105/packages/nuget/index.json" -n apeiron -u gitlab-ci-token -p $CI_JOB_TOKEN --store-password-in-clear-text
+    # List Nuget source
+    - dotnet nuget list source
+    # Restore Nuget dependencies
+    - dotnet restore $CI_PROJECT_DIR/$TEST_PROJECT_PATH
+    - echo "Run Tests"
+    - dotnet test $CI_PROJECT_DIR/$TEST_PROJECT_PATH -c Release --verbosity normal 
+
+
+###################### BUILD MASTER BRANCH TASKS ########################
+solution-build-docker:
+
+  stage: build
+  needs: [solution-test-docker]
+  tags:
+    - stage-docker-runner # choice Gitlab-Runner.
+  only:
+    - master # Run Job only branch master
+  when: on_success
+
+  script:
+    - ls -lah
+    # List Nuget source
+    - dotnet nuget list source
+    # Add local Nuget source
+    - dotnet nuget add source "$CI_SERVER_URL/api/v4/projects/105/packages/nuget/index.json" -n apeiron -u gitlab-ci-token -p $CI_JOB_TOKEN --store-password-in-clear-text
+    # List Nuget source
+    - dotnet nuget list source
+    # Restore Nuget dependencies
+    - echo "Restoring NuGet packages..."
+    - dotnet restore $CI_PROJECT_DIR/$SOLUTION_NAME.sln
+    # Build project
+    - echo "Building..."
+    - dotnet build $CI_PROJECT_DIR/$SOLUTION_NAME.sln -c Release -v minimal    
+
+  artifacts:
+    when: on_success # Create artifacts if job was build successfully
+    name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA-Build_From_Alpine-Docker"
+    untracked: true
+
+###################### CREATE NUGET PACKAGE ########################
+solution-pack-docker:
+
+  stage: pack
+  tags:
+    - stage-docker-runner # choice Gitlab-Runner.
+  only:
+    - master # Run Job only branch master
+  when: on_success
+  dependencies:
+    - solution-build-docker
+
+  script:
+    - ls -lah
+    - pwd
+    - ls -lah $CI_PROJECT_DIR/Platform/bin/Release/
+    # Create Nugets
+    - echo "Create Nugets Packages..."
+    - dotnet nuget add source "$CI_SERVER_URL/api/v4/projects/$CI_PROJECT_ID/packages/nuget/index.json" -n platform -u gitlab-ci-token -p $CI_JOB_TOKEN --store-password-in-clear-text
+    # List Nuget source
+    - dotnet nuget list source
+    # Find all create Nugets in Solution
+    - find $CI_PROJECT_DIR -name "*.nupkg" -not -path "*Debug*" -print
+    - 'find $CI_PROJECT_DIR -name "*.nupkg" -not -path "*Debug*" -exec dotnet nuget push {} --source platform --api-key az --skip-duplicate \;'
+
+
+###################### DOC GENERATE AFTER BUILD #########################
+solution-docs-generate:
+  stage: generate
+  needs: [solution-build-docker]
+  tags:
+    - testsrv-dotnet-shell-runner # hoice Gitlab-Runner
+  only:
+    - master # Run Job only branch master
+  when: on_success
+  dependencies:
+    - solution-build-docker
+  before_script:
+    - echo $CI_PROJECT_DIR
+
+  script:
+    - chcp 65001 # change encoding to display russian in console
+    - 'Get-Childitem -Path .'
+    - echo "Generate documentation with Sandcastle project..."
+    - echo $CI_PROJECT_DIR\$env:SANDCASTLE_PROJECT_FILE_NAME
+    - 'New-Item -Path ./Docs -ItemType Directory'
+    # List Project from Solution
+    - dotnet sln $CI_PROJECT_DIR\$env:SOLUTION_NAME.sln list
+    # Delete Project Net5.0-Windows from Solution
+    #- dotnet sln $CI_PROJECT_DIR\$env:SOLUTION_NAME.sln remove $CI_PROJECT_DIR\$env:WINDOWS_PROJECT1
+    # List Project from Solution
+    #- dotnet sln $CI_PROJECT_DIR\$env:SOLUTION_NAME.sln list
+    # Build Documentation
+    - 'msbuild $CI_PROJECT_DIR\$env:SANDCASTLE_PROJECT_FILE_NAME /p:Configuration=Release -maxcpucount:2 -verbosity:minimal'
+    - 'Get-Childitem -Path .\Docs'
+    # Before do zip file you need update PowerShell Arhive module in Runner server - Install-Module Microsoft.PowerShell.Archive -MinimumVersion 1.2.3.0 -Repository PSGallery -Force
+    - 'Compress-Archive -Path $CI_PROJECT_DIR\Docs\Help -DestinationPath $CI_PROJECT_DIR\Docs\docs.zip -CompressionLevel Optimal'
+    - 'Get-Childitem -Path .\Docs'
+    - 'Remove-Item -Path ".\Docs\Help\*.*" -Force -recurse'
+    - 'Get-Childitem -Path .\Docs\Help'
+  artifacts:
+    when: on_success # Create artifacts if job was build successfully
+    name: "Docs-$SOLUTION_NAME-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA-$BUILD_MASTER"
+    paths:
+      - .\Docs\docs.zip
+
+
+
+###################### DOC DEPLOY AFTER GENERATE #########################
+docs-deploy:
+
+  stage: deploy-doc
+  tags:
+    - stage-docker-runner # choice Gitlab-Runner.
+  only:
+    - master # choice branch
+  dependencies:
+    - solution-docs-generate
+  before_script:
+     # Add ssh acess
+    - 'which ssh-agent || ( apk add --no-cache openssh-client )'
+    - eval $(ssh-agent -s)
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa #$SSH_PRIVATE_KEY - private key from project settings Variables
+    - chmod 400 ~/.ssh/id_rsa
+    - ssh-add ~/.ssh/id_rsa
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  script:
+    - cd ./Docs && ls -lah .
+    - unzip -q ./docs.zip -d .
+    - ls -lah ./Help
+    # Deploy to Web Server
+    - ssh -o StrictHostKeyChecking=no gitlab-runner@"$WEBSERVER_IP" 'bash /opt/web/scripts/clear-doc-platform.sh'
+    - scp -o StrictHostKeyChecking=no -r $CI_PROJECT_DIR/Docs/Help/ gitlab-runner@"$WEBSERVER_IP":$WEBSERVER_PATH
+    - echo "Copy doc files from" $CI_PROJECT_DIR/Docs/Help/ "to webserver folder" $WEBSERVER_PATH "succeeded"

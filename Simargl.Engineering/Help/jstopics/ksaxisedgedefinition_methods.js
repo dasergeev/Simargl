@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksAxisEdgeDefinition - методы",
+hmDescription:"Подразделы: GetCurve3D - Получить указатель на интерфейс математической кривой  GetEdge - Получить указатель на интерфейс базового ребра  SetEdge - Изменить указатель на интерфе",
+hmPrevLink:"ksaxisedgedefinition.html",
+hmNextLink:"ksaxisedgedefinition_getcurve3d.html",
+hmParentLink:"ksaxisedgedefinition.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument3d.html\">Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )&nbsp;<\/a> &gt; <a href=\"kspart.html\">Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart&nbsp;<\/a> &gt; <a href=\"bw1897880.html\">Объект модели (Интерфейсы ksEntity и IEntity)&nbsp;<\/a> &gt; <a href=\"ksentity.html\">Интерфейсы ksEntity и iEntity - Интерфейс элемента модели (оси, плоскости, формообразующего элемента)&nbsp;<\/a> &gt; <a href=\"int_geometry.html\">Интерфейсы вспомогательной геометрии&nbsp;<\/a> &gt; <a href=\"ksaxisedgedefinition.html\">Ось через ребро (Интерфейсы ksAxisEdgeDefinition, IAxisEdgeDefinition)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )  > Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart  > Объект модели (Интерфейсы ksEntity и IEntity)  > Интерфейсы ksEntity и iEntity - Интерфейс элемента модели (оси, плоскости, формообразующего элемента)  > Интерфейсы вспомогательной геометрии  > Ось через ребро (Интерфейсы ksAxisEdgeDefinition, IAxisEdgeDefinition)  > ksAxisEdgeDefinition - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksAxisEdgeDefinition - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksaxisedgedefinition_getcurve3d.html\" class=\"topiclink hmlinklistitem\">GetCurve3D - Получить указатель на интерфейс математической кривой <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksaxisedgedefinition_getedge.html\" class=\"topiclink hmlinklistitem\">GetEdge - Получить указатель на интерфейс базового ребра <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksaxisedgedefinition_setedge.html\" class=\"topiclink hmlinklistitem\">SetEdge - Изменить указатель на интерфейс базового ребра <\/a><\/span><\/p>\n\r"
+})

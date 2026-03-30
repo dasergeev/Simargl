@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IPlanes3D",
+hmDescription:"Коллекция плоскостей. Иерархия: IDispatch IKompasAPIObject IKompasCollection IModelObjects IPlanes3D Подразделы: IPlanes3D - свойства  IPlanes3D - методы",
+hmPrevLink:"inurbssurfaces_add.html",
+hmNextLink:"iplanes3d_props.html",
+hmParentLink:"isurfacecontainer_props.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2288197.html\">Поверхности&nbsp;<\/a> &gt; <a href=\"isurfacecontainer.html\">Интерфейс ISurfaceContainer&nbsp;<\/a> &gt; <a href=\"isurfacecontainer_props.html\">ISurfaceContainer - свойства&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Поверхности  > Интерфейс ISurfaceContainer  > ISurfaceContainer - свойства  > Интерфейс IPlanes3D ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IPlanes3D <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbc2289097\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Коллекция плоскостей<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"ikompascollection.html\" class=\"topiclink\">IKompasCollection<\/a><\/span><\/p>\n\r<p class=\"p_Hier_3_BLUE\"><span class=\"f_Hier_3_BLUE\"><a href=\"imodelobjects.html\" class=\"topiclink\">IModelObjects<\/a><\/span><\/p>\n\r<p class=\"p_Hier_4_BLUE\"><span class=\"f_Hier_4_BLUE\"><a href=\"iplanes3d.html\" class=\"topiclink\">IPlanes3D<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iplanes3d_props.html\" class=\"topiclink hmlinklistitem\">IPlanes3D - свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iplanes3d_methods.html\" class=\"topiclink hmlinklistitem\">IPlanes3D - методы <\/a><\/span><\/p>\n\r"
+})

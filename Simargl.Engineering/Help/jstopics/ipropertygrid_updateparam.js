@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"UpdateParam - Обновить параметры сетки",
+hmDescription:"Интерфейс... Синтаксис Automation: void UpdateParam(); Синтаксис COM: HRESULT UpdateParam(); Примечание: Все изменения в сетке вступят в силу только после вызова этого мето",
+hmPrevLink:"ipropertygrid_bringintoview.html",
+hmNextLink:"ipropertylibexplorer.html",
+hmParentLink:"ipropertygrid_methods.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a> &gt; <a href=\"ap2037561.html\">Работа с Панелью свойств&nbsp;<\/a> &gt; <a href=\"ipropertycontrol.html\">Интерфейс IPropertyControl&nbsp;<\/a> &gt; <a href=\"ipropertycontrol_props.html\">IPropertyControl - свойства&nbsp;<\/a> &gt; <a href=\"ipropertygrid.html\">Интерфейс IPropertyGrid&nbsp;<\/a> &gt; <a href=\"ipropertygrid_methods.html\">IPropertyGrid - методы&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Работа с Панелью свойств  > Интерфейс IPropertyControl  > IPropertyControl - свойства  > Интерфейс IPropertyGrid  > IPropertyGrid - методы  > UpdateParam - Обновить параметры сетки ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">UpdateParam - Обновить параметры сетки <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xap1764199\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ipropertygrid.html\" class=\"topiclink\">Интерфейс...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис Automation<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">void UpdateParam();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис COM<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">HRESULT UpdateParam();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Все изменения в сетке вступят в силу только после вызова этого метода.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

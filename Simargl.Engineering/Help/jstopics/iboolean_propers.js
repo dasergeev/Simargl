@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IBoolean - свойства",
+hmDescription:"Подразделы: Bodies - Массив тел  BaseObject - Базовый объект  SaveCopyBaseObject - Сохранять копию базового объекта  ModifyObjects - Модифицирующие объекты  SaveCopyModifyObje",
+hmPrevLink:"iboolean.html",
+hmNextLink:"iboolean_bodies.html",
+hmParentLink:"iboolean.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc1711351.html\">Вспомогательные объекты, 3D-кривые и элементы тела&nbsp;<\/a> &gt; <a href=\"bc2014000.html\">3D-кривые и элементы тела&nbsp;<\/a> &gt; <a href=\"imodelobjects.html\">Интерфейс IModelObjects&nbsp;<\/a> &gt; <a href=\"imodelobjects_props.html\">IModelObjects - свойства&nbsp;<\/a> &gt; <a href=\"iboolean.html\">Интерфейс IBoolean&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Вспомогательные объекты, 3D-кривые и элементы тела  > 3D-кривые и элементы тела  > Интерфейс IModelObjects  > IModelObjects - свойства  > Интерфейс IBoolean  > IBoolean - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IBoolean - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iboolean_bodies.html\" class=\"topiclink hmlinklistitem\">Bodies - Массив тел <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iboolean_baseobject.html\" class=\"topiclink hmlinklistitem\">BaseObject - Базовый объект <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iboolean_savecopybaseobject.html\" class=\"topiclink hmlinklistitem\">SaveCopyBaseObject - Сохранять копию базового объекта <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iboolean_modifyobjects.html\" class=\"topiclink hmlinklistitem\">ModifyObjects - Модифицирующие объекты <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iboolean_savecopymodifyobjects.html\" class=\"topiclink hmlinklistitem\">SaveCopyModifyObjects - Сохранять копии модифицирующих объектов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iboolean_booleantype.html\" class=\"topiclink hmlinklistitem\">BooleanType - Тип операции над телами <\/a><\/span><\/p>\n\r"
+})

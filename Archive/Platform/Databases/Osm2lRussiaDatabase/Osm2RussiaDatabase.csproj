@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<PropertyGroup>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Version>1.0.0</Version>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+	</PropertyGroup>
+	<PropertyGroup>
+		<RootNamespace>Apeiron.Platform.Databases.Osm2RussiaDatabase</RootNamespace>
+		<AssemblyName>Apeiron.Platform.Databases.Osm2RussiaDatabase</AssemblyName>
+		<DocumentationFile>Apeiron.Platform.Databases.Osm2RussiaDatabase.xml</DocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Authors>ООО "ТИЦ ЖТ"</Authors>
+		<Company>ООО "ТИЦ ЖТ"</Company>
+		<Copyright>ООО "ТИЦ ЖТ"</Copyright>
+		<Description>Содержит основные типы, обеспечивающие работу с базой данных карт OSM Russia.</Description>
+	</PropertyGroup>
+	<PropertyGroup>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+		<NoWarn />
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+		<NoWarn />
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Apeiron" Version="3.0.4" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.4.27">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.1" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="7.0.1" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IMath2D",
+hmDescription:"Интерфейс 2D математики. Иерархия: IDispatch IKompasAPIObject IMath2D Описание: Интерфейс позволяет создавать математические кривые и осуществлять работу с точками. Примеч",
+hmPrevLink:"mathematick.html",
+hmNextLink:"imath2d_methods.html",
+hmParentLink:"mathematick.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"mathematick.html\">2D математика&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > 2D математика  > Интерфейс IMath2D ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IMath2D <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbi1712677\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс 2D математики<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"imath2d.html\" class=\"topiclink\">IMath2D<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Описание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс позволяет создавать математические кривые и осуществлять работу с точками.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс можно получить у интерфейса приложения КОМПАС с помощью свойства <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iapplication_math2d.html\" class=\"topiclink\">IApplication::Math2D<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imath2d_methods.html\" class=\"topiclink hmlinklistitem\">IMath2D - методы <\/a><\/span><\/p>\n\r"
+})

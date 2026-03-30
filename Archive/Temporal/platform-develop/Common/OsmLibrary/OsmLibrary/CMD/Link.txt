@@ -1,0 +1,4 @@
+﻿Сервер плиток.
+1) https://kurazhov.ru/tile-server-openstreetmap/
+2) https://www.linuxbabe.com/ubuntu/openstreetmap-tile-server-ubuntu-20-04-osm
+3) https://switch2osm.org/serving-tiles/manually-building-a-tile-server-20-04-lts/

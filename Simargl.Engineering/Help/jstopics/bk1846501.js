@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Константы отчетов",
+hmDescription:"Подразделы: ksReportTypeEnum - Тип отчета  ksRowsNumberingTypeEnum - Формат нумерации строк отчета  ksNumberingTypeEnum - Формат нумерации  ksReportStyleInitEnum - Способ иници",
+hmPrevLink:"ksstampenum.html",
+hmNextLink:"ksreporttypeenum.html",
+hmParentLink:"bk1803360.html",
+hmBreadCrumbs:"<a href=\"3d_define.html\">Структуры параметров и константы<\/a> &gt; <a href=\"bk1803360.html\">Константы&nbsp;<\/a>",
+hmTitlePath:"Структуры параметров и константы > Константы  > Константы отчетов ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Константы отчетов <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksreporttypeenum.html\" class=\"topiclink hmlinklistitem\">ksReportTypeEnum - Тип отчета <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrowsnumberingtypeenum.html\" class=\"topiclink hmlinklistitem\">ksRowsNumberingTypeEnum - Формат нумерации строк отчета <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksnumberingtypeenum.html\" class=\"topiclink hmlinklistitem\">ksNumberingTypeEnum - Формат нумерации <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksreportstyleinitenum.html\" class=\"topiclink hmlinklistitem\">ksReportStyleInitEnum - Способ инициализации стиля отчета <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksgroupetypeenum.html\" class=\"topiclink hmlinklistitem\">ksGroupeTypeEnum - Тип группировки колонки отчета <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksvalueformatenum.html\" class=\"topiclink hmlinklistitem\">ksValueFormatEnum - Формат формирования текста для свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksreportbuildingtypeenum.html\" class=\"topiclink hmlinklistitem\">ksReportBuildingTypeEnum - Способ выбора объектов для отчета <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kspagelayouttypeenum.html\" class=\"topiclink hmlinklistitem\">ksPageLayoutTypeEnum - Тип компоновки таблиц отчета <\/a><\/span><\/p>\n\r"
+})

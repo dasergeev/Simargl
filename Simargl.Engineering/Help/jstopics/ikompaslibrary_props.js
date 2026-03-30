@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IKompasLibrary - свойства",
+hmDescription:"Подразделы: DisplayLibraryName - Отображаемое имя приложения  IsFunctionEnable - Признак поддержки приложением функций  IsOnApplication7 - Получить тип версии API, используемого",
+hmPrevLink:"ikompaslibrary.html",
+hmNextLink:"ikompaslibrary_displaylibraryname.html",
+hmParentLink:"ikompaslibrary.html",
+hmBreadCrumbs:"<a href=\"libraries_create.html\">Создание прикладных библиотек&nbsp;<\/a> &gt; <a href=\"cr119224.html\">Оформление прикладных библиотек типа ActiveX&nbsp;<\/a> &gt; <a href=\"ikompaslibrary.html\">Интерфейс IKompasLibrary&nbsp;<\/a>",
+hmTitlePath:"Создание прикладных библиотек  > Оформление прикладных библиотек типа ActiveX  > Интерфейс IKompasLibrary  > IKompasLibrary - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IKompasLibrary - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompaslibrary_displaylibraryname.html\" class=\"topiclink hmlinklistitem\">DisplayLibraryName - Отображаемое имя приложения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompaslibrary_isfunctionenable.html\" class=\"topiclink hmlinklistitem\">IsFunctionEnable - Признак поддержки приложением функций <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompaslibrary_isonapplication7.html\" class=\"topiclink hmlinklistitem\">IsOnApplication7 - Получить тип версии API, используемого библиотекой <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompaslibrary_libraryhelpfile.html\" class=\"topiclink hmlinklistitem\">LibraryHelpFile - Файл справки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompaslibrary_libraryname.html\" class=\"topiclink hmlinklistitem\">LibraryName - Имя приложения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompaslibrary_protectnumber.html\" class=\"topiclink hmlinklistitem\">ProtectNumber - Номер ключа защиты <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompaslibrary_version.html\" class=\"topiclink hmlinklistitem\">Version - Версия интерфейса <\/a><\/span><\/p>\n\r"
+})

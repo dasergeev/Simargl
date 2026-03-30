@@ -1,0 +1,93 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <UseWindowsForms>True</UseWindowsForms>
+        <OutputType>WinExe</OutputType>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <RootNamespace>Apeiron.Platform.Demo</RootNamespace>
+        <AssemblyName>AdxlDemo</AssemblyName>
+        <DocumentationFile>AdxlDemo.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+        <AnalysisLevel>preview</AnalysisLevel>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <WarningLevel>5</WarningLevel>
+        <NoWarn />
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <ApplicationIcon>Application.ico</ApplicationIcon>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Images\Channel.png" />
+      <None Remove="Images\Channels.png" />
+      <None Remove="Images\FullScreen.png" />
+      <None Remove="Images\Home.png" />
+      <None Remove="Images\Image.png" />
+      <None Remove="Images\OrgChart.png" />
+      <None Remove="Images\RadialChart.png" />
+      <None Remove="Images\Record.png" />
+      <None Remove="Images\Repeat.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Application.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Apeiron" Version="3.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Include="App.xaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Images\FullScreen.png" />
+      <Resource Include="Images\Home.png" />
+      <Resource Include="Images\Image.png" />
+      <Resource Include="Images\OrgChart.png" />
+      <Resource Include="Images\RadialChart.png" />
+      <Resource Include="Images\Channels.png" />
+      <Resource Include="Images\Channel.png" />
+      <Resource Include="Images\Record.png" />
+      <Resource Include="Images\Repeat.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="AdxlDemo\UserInterface\Nodes\ChannelCollectionView.xaml.cs">
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
+</Project>

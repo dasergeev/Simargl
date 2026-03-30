@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Simargl.Highway</RootNamespace>
+		<AssemblyName>Simargl.Highway</AssemblyName>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Simargl.Highway.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<WarningLevel>5</WarningLevel>
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="5.3.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\..\Simargl\Simargl.csproj" />
+	</ItemGroup>
+
+</Project>

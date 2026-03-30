@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IRotated1",
+hmDescription:"Интерфейс операции вращения. Иерархия: IDispatch IRotated1 Интерфейс является дополнительным к интерфейсу IRotated. Данный интерфейс можно получить посредством вызова методаI",
+hmPrevLink:"irotatedsurface_closedshell.html",
+hmNextLink:"irotated1_propers.html",
+hmParentLink:"bc2279073.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2278808.html\">Операции, массивы, эскизы, точки&nbsp;<\/a> &gt; <a href=\"bc2279073.html\">Операции&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Операции, массивы, эскизы, точки  > Операции  > Интерфейс IRotated1 ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IRotated1 <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbc2899791\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс операции вращения<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"irotated1.html\" class=\"topiclink\">IRotated1<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс является дополнительным к интерфейсу <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"irotated.html\" class=\"topiclink\">IRotated<\/a><\/span><span class=\"f_bodytext\">. Данный интерфейс можно получить посредством вызова метода<\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"recomendation.html\" class=\"topiclink\">IUnknown::QueryInterface<\/a><\/span><span class=\"f_bodytext\"> (const GUID far&amp; iid, void** pif).<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">КОМПАС версия v18<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irotated1_propers.html\" class=\"topiclink hmlinklistitem\">IRotated1 - Cвойства <\/a><\/span><\/p>\n\r"
+})

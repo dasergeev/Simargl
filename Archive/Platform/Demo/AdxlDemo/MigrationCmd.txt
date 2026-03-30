@@ -1,0 +1,4 @@
+﻿EntityFrameworkCore\Add-Migration -Project Demo\AdxlDemo -StartupProject Demo\AdxlDemo -Name
+EntityFrameworkCore\Update-Database -Project Demo\AdxlDemo -StartupProject Demo\AdxlDemo
+EntityFrameworkCore\Remove-Migration -Project Demo\AdxlDemo -StartupProject Demo\AdxlDemo
+EntityFrameworkCore\Remove-Migration -Project Demo\AdxlDemo -StartupProject Demo\AdxlDemo -Force

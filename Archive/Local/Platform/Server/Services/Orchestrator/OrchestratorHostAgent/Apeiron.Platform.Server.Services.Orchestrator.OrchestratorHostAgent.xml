@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchestratorHostAgent</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker">
+            <summary>
+            Представляет микрослужбу управления службами на локальных хостах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker._WorkerOptions">
+            <summary>
+            Вовращает или устанавливает настройки службы.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker._Logger">
+            <summary>
+            Логгер.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker._TcpClient">
+            <summary>
+            Поле представляющее Tcp подключение.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker},Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.WorkerOptions)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал.
+            </param>
+            <param name="options"></param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет основную фоновую работу микрослужбы.
+            </summary>
+            <param name="stoppingToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая основную фоновую работу микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker.IdentificationPackageSendAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Периодически отправляет идентификационный пакет.
+            </summary>
+            <param name="sendDelay">Задержка между отправкой.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker.ReceivePackageAsync(System.Threading.CancellationToken)">
+            <summary>
+            Получение пакетов от сервера.
+            </summary>
+            <param name="cancellationToken">Токен отмены.</param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.HostAgentWorker.TcpDestroyer">
+            <summary>
+            Разрушает объект TcpClient.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceCopy">
+            <summary>
+            Представляет класс, реализующий копирование файлов по сети.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceCopy.FilesCopyService(System.String,System.String)">
+            <summary>
+            Копирует файлы с общедоступного ресурс на локальный хост.
+            </summary>
+            <param name="localPath">Локальный путь к файлам служб.</param>
+            <param name="serverPath">Путь к файлам служб на сервере.</param>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator">
+            <summary>
+            Обработчик служб на хосте.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.ServiceAction">
+            <summary>
+            Перечисление содержит варианты действия со службой.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.ServiceAction.Start">
+            <summary>
+            Действие запуска службы.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.ServiceAction.Stop">
+            <summary>
+            Дествие остановки службы.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.ServiceAction.Restart">
+            <summary>
+            Действие перезапуска службы.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.ServiceAction.Status">
+            <summary>
+            Действие возврата статуса службы.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.ServiceRunningStatus(System.Collections.Generic.List{System.String})">
+            <summary>
+            Возвращает 
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.StopService(System.Collections.Generic.List{System.String})">
+            <summary>
+            Остановка службы.
+            </summary>
+            <param name="serviceNames">Список служб.</param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.StartService(System.Collections.Generic.List{System.String})">
+            <summary>
+            Остановка службы.
+            </summary>
+            <param name="serviceNames">Список служб.</param>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.RestartService(System.Collections.Generic.List{System.String})">
+            <summary>
+            Перезапускает службы.
+            </summary>
+            <param name="serviceNames">Список служб.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.ActionOperator(System.Collections.Generic.List{System.String},Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.ServiceOperator.ServiceAction)">
+            <summary>
+            Останавливает переданные службы.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.WorkerOptions">
+            <summary>
+            Содержит опции для OrchestratorHostAgent
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.WorkerOptions.ServerIpAdress">
+            <summary>
+            Возвращает или устанавливает IP адрес сервера.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.WorkerOptions.ServerPortAdress">
+            <summary>
+            Возвращает или устанавливает Port сервера.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.WorkerOptions.TcpReconnectDelay">
+            <summary>
+            Возвращает или устанавливает время между попытками повторного установление соединения с сервером в мс.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.WorkerOptions.IdentificationPackageSendDelay">
+            <summary>
+            Возвращает или устанавливает время между попытками повторной отправки идентификационного пакета.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.WorkerOptions.SourceDeploymentPath">
+            <summary>
+            Возвращает или устанавливает путь к директории, которая содержит файлы служб для распространения и обновления.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.WorkerOptions.LocalPath">
+            <summary>
+            Возвращает или устанавливает путь к диерктории, которая содержит файлы служб на локальном хосте.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Services.Orchestrator.OrchestratorHostAgent.WorkerOptions.ListOfService">
+            <summary>
+            Содержит список служб для управления на локальном хосте.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,69 @@
+﻿<ui:Control
+    x:Class="Simargl.Hardware.Strain.Demo.UI.Primitives.SensorAttributeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:Simargl.Hardware.Strain.Demo.UI.Primitives"
+    xmlns:ui="clr-namespace:Simargl.Hardware.Strain.Demo.UI"
+    xmlns:att="clr-namespace:Simargl.Hardware.Strain.Demo.Main.Attributes"
+    xmlns:core="clr-namespace:Simargl.Hardware.Strain.Demo.Core"
+    d:DataContext="{d:DesignInstance Type=att:SensorAttribute}"
+    mc:Ignorable="d"
+    d:DesignHeight="450" d:DesignWidth="800">
+    <ui:Control.Resources>
+        <GridLength x:Key="ImageWidth">30</GridLength>
+        <GridLength x:Key="NameWidth">180</GridLength>
+        <GridLength x:Key="ResetWidth">120</GridLength>
+        <GridLength x:Key="OriginalWidth">120</GridLength>
+        <DataTemplate x:Key="ReadableTemplate">
+            <TextBlock Text="{Binding Value}" TextWrapping="Wrap"/>
+        </DataTemplate>
+        <DataTemplate x:Key="ResettableTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="{StaticResource ResetWidth}" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{Binding Value}" TextWrapping="Wrap"/>
+                <Button Grid.Column="1" Click="Reset_Click" IsEnabled="{Binding HasValue}">
+                    <TextBlock Text="Сбросить"/>
+                </Button>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="WritableTemplate">
+            <TextBox Text="{Binding Value, ValidatesOnExceptions=True}" TextWrapping="Wrap" IsEnabled="{Binding HasValue}"/>
+        </DataTemplate>
+        <DataTemplate x:Key="SelectableTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{StaticResource OriginalWidth}" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{Binding Value}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="1" ItemsSource="{Binding Values}" IsEditable="False"
+                          SelectedIndex="{Binding SelectedItemIndex, Mode=TwoWay}"
+                          IsEnabled="{Binding HasValue}"/>
+            </Grid>
+        </DataTemplate>
+        <core:SensorAttributeFormatTemplateSelector
+            x:Key="FormatSelector"
+            StaticTemplate="{StaticResource ReadableTemplate}"
+            ReadableTemplate="{StaticResource ReadableTemplate}"
+            ResettableTemplate="{StaticResource ResettableTemplate}"
+            WritableTemplate="{StaticResource WritableTemplate}"
+            SelectableTemplate="{StaticResource SelectableTemplate}"/>
+    </ui:Control.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{StaticResource ImageWidth}" />
+            <ColumnDefinition Width="{StaticResource NameWidth}" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding Image}" Width="16" Height="16" Margin="2"/>
+        <TextBlock Grid.Column="1" Text="{Binding Name}" TextWrapping="Wrap" Margin="0,0,5,0"  VerticalAlignment="Center"/>
+        <ContentControl Grid.Column="2" Content="{Binding}"
+                        ContentTemplateSelector="{StaticResource FormatSelector}"
+                         IsEnabled="{Binding IsAvailable}"/>
+    </Grid>
+</ui:Control>

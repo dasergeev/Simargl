@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IRough - свойства",
+hmDescription:"Подразделы: BaseObject - Опорный объект  ShelfX - Координата начала полки по Х  ShelfY - Координата начала полки по Y  BranchX0 - Координата начала выносной линии или положение",
+hmPrevLink:"irough.html",
+hmNextLink:"irough_baseobject.html",
+hmParentLink:"irough.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"obozn_razm.html\">Обозначения и размеры&nbsp;<\/a> &gt; <a href=\"bb3219840.html\">Обозначения&nbsp;<\/a> &gt; <a href=\"irough.html\">Интерфейс IRough&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Обозначения и размеры  > Обозначения  > Интерфейс IRough  > IRough - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IRough - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough_baseobject.html\" class=\"topiclink hmlinklistitem\">BaseObject - Опорный объект <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough_shelfx.html\" class=\"topiclink hmlinklistitem\">ShelfX - Координата начала полки по Х <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough_shelfy.html\" class=\"topiclink hmlinklistitem\">ShelfY - Координата начала полки по Y <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough_branchx0.html\" class=\"topiclink hmlinklistitem\">BranchX0 - Координата начала выносной линии или положение знака по Х <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough_branchy0.html\" class=\"topiclink hmlinklistitem\">BranchY0 - Координата начала выносной линии или положение знака по Y <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough_brancharrowtype.html\" class=\"topiclink hmlinklistitem\">BranchArrowType - Тип значка на ответвлении <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"irough_brancharrowinside.html\" class=\"topiclink hmlinklistitem\">BranchArrowInside - Расположение стрелки линии-выноски (TRUE- внутри, FALSE- снаружи) <\/a><\/span><\/p>\n\r"
+})

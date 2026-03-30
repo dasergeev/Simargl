@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Параметры узла дерева библиотеки (Интерфейс ksTreeNodeParam)",
+hmDescription:"Интерфейс параметров узла дерева библиотеки документов, библиотеки атрибутов.",
+hmPrevLink:"ksfragmentlibrary_ksfragmentlibraryoperation.html",
+hmNextLink:"kstreenodeparam_props.html",
+hmParentLink:"ck1750127.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ck1750127.html\">Интерфейсы работы с библиотеками&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Интерфейсы работы с библиотеками  > Параметры узла дерева библиотеки (Интерфейс ksTreeNodeParam) ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Параметры узла дерева библиотеки (Интерфейс ksTreeNodeParam) <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xck1901584\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс параметров узла дерева библиотеки документов, библиотеки атрибутов<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Аналог данных параметров при использовании API экспортных функций - <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"structtreenodeparam.html\" class=\"topiclink\">ksTreeNodeParam<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Данный интерфейс может быть получен с использованием метода интерфейса <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kompasobject_ksgetlibrarytreestruct.html\" class=\"topiclink\">KompasObject::ksGetLibraryTreeStruct<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kstreenodeparam_props.html\" class=\"topiclink hmlinklistitem\">ksTreeNodeParam - свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kstreenodeparam_methods.html\" class=\"topiclink hmlinklistitem\">ksTreeNodeParam - методы <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apeiron.Platform.Server.Expanse</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Platform.Server.Expanse.Essences.Essence">
+            <summary>
+            Представляет сущность.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Expanse.Essences.Essence.#ctor(Apeiron.Platform.Server.Expanse.Essences.EssenceFormat,System.Int64)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="format">
+            Формат сущности.
+            </param>
+            <param name="id">
+            Идентификатор сущности.
+            </param>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Expanse.Essences.Essence.Format">
+            <summary>
+            Возвращает формат сущности.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Expanse.Essences.Essence.Id">
+            <summary>
+            Возвращает идентификатор сущности.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Expanse.Essences.EssenceFormat">
+            <summary>
+            Представляет значение, определяющее формат сущности.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Expanse.Essences.EssenceFormat.FileStorage">
+            <summary>
+            Файловое хранилище.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Expanse.Essences.EssenceFormat.GeneralDirectory">
+            <summary>
+            Общий каталог.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Expanse.FileStorages.FileStorage">
+            <summary>
+            Представляет файловое хранилище.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Expanse.FileStorages.FileStorage.#ctor(System.Int64,System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="id">
+            Идентификатор файлового хранилища.
+            </param>
+            <param name="name">
+            Имя файлового хранилища.
+            </param>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Expanse.FileStorages.FileStorage.Name">
+            <summary>
+            Возвращает имя файлового хранилища.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Expanse.FileStorages.FileStorage.FromIdAsync(System.Int64,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно возвращает файловое хранилище с заданным идентификатором.
+            </summary>
+            <param name="id">
+            Идентификатор файлового хранилища.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, возвращающая файловое хранилище.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="id"/> передано отрицательное значение.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="id"/> передано нулевое значение.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Expanse.FileStorages.FileStorage.FromNameAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно возвращает файловое хранилище с заданным именем.
+            </summary>
+            <param name="name">
+            Имя файлового хранилища.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, возвращающая файловое хранилище.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Expanse.FileStorages.FileStorage.GetAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно возвращает коллекцию всех файловых хранилищ.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, возвращающая коллекцию всех файловых хранилищ.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Expanse.FileStorages.GeneralDirectory">
+            <summary>
+            Представляет общий каталог.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Expanse.FileStorages.GeneralDirectory.#ctor(System.Int64,System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="id">
+            Идентификатор общего каталога.
+            </param>
+            <param name="name">
+            Имя общего каталога.
+            </param>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Expanse.FileStorages.GeneralDirectory.Name">
+            <summary>
+            Возвращает имя общего каталога.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Expanse.FileStorages.InternalFile">
+            <summary>
+            Представляет внутренний файл.
+            </summary>
+        </member>
+    </members>
+</doc>

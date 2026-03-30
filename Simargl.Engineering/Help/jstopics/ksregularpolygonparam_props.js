@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"RegularPolygonParam - свойства",
+hmDescription:"Подразделы: ang - Угол радиус-вектора, направленного от центра к первой вершине  count - Количество вершин многоугольника  describe - Признак описанного или вписанного многоугол",
+hmPrevLink:"ksregularpolygonparam.html",
+hmNextLink:"ksregularpolygonparam_ang.html",
+hmParentLink:"ksregularpolygonparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"cd1743949.html\">Интерфейсы параметров графических примитивов&nbsp;<\/a> &gt; <a href=\"ksregularpolygonparam.html\">Правильный многоугольник (Интерфейс ksRegularPolygonParam&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров графических примитивов  > Правильный многоугольник (Интерфейс ksRegularPolygonParam  > RegularPolygonParam - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">RegularPolygonParam - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksregularpolygonparam_ang.html\" class=\"topiclink hmlinklistitem\">ang - Угол радиус-вектора, направленного от центра к первой вершине <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksregularpolygonparam_count.html\" class=\"topiclink hmlinklistitem\">count - Количество вершин многоугольника <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksregularpolygonparam_describe.html\" class=\"topiclink hmlinklistitem\">describe - Признак описанного или вписанного многоугольника <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksregularpolygonparam_radius.html\" class=\"topiclink hmlinklistitem\">radius - Радиус вписанной или описанной окружности <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksregularpolygonparam_style.html\" class=\"topiclink hmlinklistitem\">style - Cтиль линии <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksregularpolygonparam_xc.html\" class=\"topiclink hmlinklistitem\">xc, yc - Координаты центра вписанной или описанной окружности <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,330 @@
+﻿@using Simargl.Border.Storage
+@using Simargl.Border.Storage.Entities
+@using Simargl.Border.Recorder
+@using Microsoft.EntityFrameworkCore
+@page "/forces"
+@inject Program Program
+@rendermode InteractiveServer
+
+<PageTitle>Рубеж</PageTitle>
+
+<h3>@($"Версия ПО: {Program.Verion}")</h3>
+
+<div class="row g-3 align-items-end">
+
+    <!-- Дата: ширина по содержимому -->
+    <div class="col-auto">
+        <label class="form-label mb-1">Дата</label>
+        <InputDate @bind-Value="_SelectedDate"
+                   @bind-Value:after="OnDateChangedAsync"
+                   class="form-control" />
+    </div>
+
+    @if (_Passages.Count > 0)
+    {
+        <!-- Проезд: занимает всё доступное место -->
+        <div class="col">
+            <label class="form-label mb-1">Проезд</label>
+            <InputSelect @bind-Value="_SelectedPassageKey"
+                         @bind-Value:after="OnPassageChanged"
+                         class="form-select">
+                @foreach (var passage in _Passages)
+                {
+                    <option value="@passage.Key">
+                        @(new DateTime(passage.StartTimestamp)
+                            .ToString("dd.MM.yyyy HH:mm:ss"))
+                    </option>
+                }
+            </InputSelect>
+        </div>
+    }
+
+</div>
+
+@if (_SelectedPassage is not null)
+{
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Параметр</th>
+                <th>Значение</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Время начала проезда</td>
+                <td>
+                    @(new DateTime(_SelectedPassage.StartTimestamp))
+                </td>
+            </tr>
+            <tr>
+                <td>Время завершения проезда</td>
+                <td>
+                    @(new DateTime(_SelectedPassage.EndTimestamp))
+                </td>
+            </tr>
+            <tr>
+                <td>Средняя скорость</td>
+                <td>
+                    @($"{_SpeedAverage * 3.6:0.00} км/ч")
+                </td>
+            </tr>
+            <tr>
+                <td>Максимальная скорость</td>
+                <td>
+                    @($"{_SpeedMax * 3.6:0.00} км/ч")
+                </td>
+            </tr>
+            <tr>
+                <td>Минимальная скорость</td>
+                <td>
+                    @($"{_SpeedMin * 3.6:0.00} км/ч")
+                </td>
+            </tr>
+            <tr>
+                <td>Количество колёсных пар</td>
+                <td>
+                    @(_SelectedPassage.AxesCount)
+                </td>
+            </tr>
+            <tr>
+                <td>Количество активных сечений</td>
+                <td>
+                    @(_SelectedPassage.AxesCommits)
+                </td>
+            </tr>
+            <tr>
+                <td>Идентификатор проезда</td>
+                <td>
+                    @($"0x{_SelectedPassage.Key:X16}")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+@if (_Axes.Count > 0)
+{
+    <div class="row g-3 align-items-end mt-2">
+
+        <div class="col-auto">
+            <label class="form-label mb-1">Колёсная пара</label>
+            <InputSelect @bind-Value="_SelectedAxisKey"
+                         @bind-Value:after="OnAxisChanged"
+                         class="form-select">
+
+                @foreach (var axis in _Axes)
+                {
+                    <option value="@axis.Key">
+                        @($"Колёсная пара №{axis.Index + 1}")
+                    </option>
+                }
+
+            </InputSelect>
+        </div>
+    </div>
+}
+
+@if (_Interactions.Count > 0)
+{
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Параметр</th>
+                <th>Значение</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var interaction in _Interactions.Where(x => x is not null))
+            {
+                <!-- Заголовок сечения -->
+                <tr>
+                    <td colspan="2" class="pt-4 pb-2 fw-bold border-top">
+                        @($"Сечение №{interaction.Section:00}")
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Скорость проезда</td>
+                    <td>@($"{(interaction.SpeedAverage > 0 ? interaction.SpeedAverage : interaction.Speed) * 3.6:0.00} км/ч")</td>
+                </tr>
+
+                <!-- Левая сторона -->
+                <tr>
+                    <td colspan="2" class="pt-3 fw-semibold text-muted">
+                        Левая сторона
+                    </td>
+                </tr>
+                <tr>
+                    <td>Максимальное значение</td>
+                    <td>@($"{interaction.LeftMax:0.00} кН")</td>
+                </tr>
+                <tr>
+                    <td>Среднее значение</td>
+                    <td>@($"{interaction.LeftAverage:0.00} кН")</td>
+                </tr>
+                <tr>
+                    <td>СКО</td>
+                    <td>@($"{interaction.LeftDeviation:0.00} кН")</td>
+                </tr>
+
+                <!-- Правая сторона -->
+                <tr>
+                    <td colspan="2" class="pt-3 fw-semibold text-muted">
+                        Правая сторона
+                    </td>
+                </tr>
+                <tr>
+                    <td>Максимальное значение</td>
+                    <td>@($"{interaction.RightMax:0.00} кН")</td>
+                </tr>
+                <tr>
+                    <td>Среднее значение</td>
+                    <td>@($"{interaction.RightAverage:0.00} кН")</td>
+                </tr>
+                <tr>
+                    <td>СКО</td>
+                    <td>@($"{interaction.RightDeviation:0.00} кН")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private DateTime _SelectedDate = DateTime.Today;
+    private List<PassageData> _Passages = [];
+    private long? _SelectedPassageKey;
+    private PassageData? _SelectedPassage;
+    private double _SpeedAverage;
+    private double _SpeedMax;
+    private double _SpeedMin;
+    private List<AxisData> _Axes = [];
+    private long? _SelectedAxisKey;
+    private AxisData? _SelectedAxis;
+    private List<AxisInteractionData> _Interactions = [];
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAsync();
+    }
+
+    private async Task OnDateChangedAsync()
+    {
+        await LoadAsync();
+    }
+
+    private async Task LoadAsync()
+    {
+        //  Получение начального ключа.
+        DateTime time = new DateTime(_SelectedDate.Year, _SelectedDate.Month, _SelectedDate.Day);
+        long begin = time.Ticks;
+        long end = time.AddDays(1).Ticks;
+
+        //  Создание контекста для работы с базой данных.
+        await using BorderStorageContext context = new(BasisConstants.Storage);
+
+        //  Получение проездов.
+        _Passages = (await context.Passages
+            .Where(x => x.State != PassageState.Registered && begin <= x.StartTimestamp && x.StartTimestamp < end)
+            .AsNoTracking()
+            .Include(x => x.Axes)
+            .ThenInclude(x => x.Interactions)
+            .ToListAsync())
+            .Where(BasisConstants.PassageFilter)
+            .ToList();
+
+        // Если список не пуст — выбрать первый
+        if (_Passages.Count > 0)
+        {
+            SetSelectedPassage(_Passages[0].Key);
+            OnPassageChanged();
+        }
+        else
+        {
+            SetSelectedPassage(null);
+        }
+    }
+
+    private void OnPassageChanged()
+    {
+        SetSelectedPassage(_SelectedPassageKey);
+    }
+
+    private void OnAxisChanged()
+    {
+        SetSelectedAxis(_SelectedAxisKey);
+    }
+
+    private void SetSelectedPassage(long? passageKey)
+    {
+        _SelectedPassageKey = passageKey;
+        if (passageKey is null)
+        {
+            _SelectedPassage = null;
+        }
+        else
+        {
+            _SelectedPassage = _Passages.FirstOrDefault(x => x.Key == passageKey);
+        }
+
+        if (_SelectedPassage is not null)
+        {
+            try
+            {
+                var speeds = _SelectedPassage.Axes.SelectMany(x => x.Interactions)
+                    .Select(x => x.SpeedAverage > 0 ? x.SpeedAverage : x.Speed);
+
+                _SpeedAverage = speeds.Average();
+                _SpeedMax = speeds.Max();
+                _SpeedMin = speeds.Min();
+            }
+            catch
+            {
+                _SpeedAverage = 0;
+                _SpeedMax = 0;
+                _SpeedMin = 0;
+            }
+
+            _Axes = [.. _SelectedPassage.Axes];
+
+            if (_Axes.Count > 0)
+            {
+                SetSelectedAxis(_Axes[0].Key);
+                OnAxisChanged();
+            }
+            else
+            {
+                SetSelectedAxis(null);
+            }
+        }
+        else
+        {
+            _Axes = [];
+            SetSelectedAxis(null);
+        }
+    }
+
+    private void SetSelectedAxis(long? axisKey)
+    {
+        _SelectedAxisKey = axisKey;
+        if (axisKey is null)
+        {
+            _SelectedAxis = null;
+        }
+        else
+        {
+            _SelectedAxis = _Axes.FirstOrDefault(x => x.Key == axisKey);
+        }
+
+        if (_SelectedAxis is not null)
+        {
+            _Interactions = [.. _SelectedAxis.Interactions];
+        }
+        else
+        {
+            _Interactions = [];
+        }
+    }
+}

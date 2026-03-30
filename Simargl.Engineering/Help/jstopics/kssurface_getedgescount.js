@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"GetEdgesCount - Количество ребер в цикле",
+hmDescription:"Интерфейс... Количество ребер в цикле. Синтаксис Automation: long GetEdgesCount( long loopIndex ); Синтаксис COM: long GetEdgesCount( long loopIndex ); Подразделы: (отсутс",
+hmPrevLink:"kssurface_getderivativeuuv.html",
+hmNextLink:"kssurface_getgabarit.html",
+hmParentLink:"kssurface_methods.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument3d.html\">Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )&nbsp;<\/a> &gt; <a href=\"kspart.html\">Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart&nbsp;<\/a> &gt; <a href=\"bz1748754.html\">Математическая поверхность в трехмерном пространстве&nbsp;<\/a> &gt; <a href=\"kssurface.html\">Интерфейсы ksSurface, ISurface&nbsp;<\/a> &gt; <a href=\"kssurface_methods.html\">ISurface - методы&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )  > Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart  > Математическая поверхность в трехмерном пространстве  > Интерфейсы ksSurface, ISurface  > ISurface - методы  > GetEdgesCount - Количество ребер в цикле ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">GetEdgesCount - Количество ребер в цикле <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbz1952315\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kssurface.html\" class=\"topiclink\">Интерфейс...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Количество ребер в цикле.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис Automation<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">long GetEdgesCount( long loopIndex );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис COM<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">long GetEdgesCount( long loopIndex );<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

@@ -1,0 +1,60 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PointerDataViewer"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <!--xmlns:WPF="clr-namespace:Steema.TeeChart.WPF;assembly=TeeChart.WPF"
+        xmlns:Drawing="clr-namespace:Steema.TeeChart.Drawing;assembly=TeeChart" xmlns:PointerDataViewer="clr-namespace:PointerDataViewer;assembly=ParserSensorsFiles" x:Class="PointerDataViewer.MainWindow"-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Height="20" VerticalAlignment="Top">
+            <MenuItem Header="Server" Grid.Row="0">
+                <MenuItem  Header="Start"  /> <!--Click="MenuItem_Click_2"-->
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--<WPF:TChart x:Name="_TensoChannel1" VerticalAlignment="Center"/>-->
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--<WPF:TChart x:Name="_TensoChannel2" VerticalAlignment="Center"/>-->
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--<WPF:TChart x:Name="_TensoChannel3" VerticalAlignment="Center"/>-->
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--<WPF:TChart x:Name="_TensoChannel4"  VerticalAlignment="Center" />-->
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

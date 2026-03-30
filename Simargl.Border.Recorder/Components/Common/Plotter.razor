@@ -1,0 +1,233 @@
+﻿@using System.Globalization
+@using System.Drawing
+
+<div class="@ContainerClass" style="@ContainerStyle">
+    <svg class="@SvgClass" viewBox="0 0 @ViewW @ViewH" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Background + plot frame -->
+        <rect x="0" y="0" width="@ViewW" height="@ViewH" fill="@Background" />
+        <rect x="@P.Left" y="@P.Top" width="@PlotW" height="@PlotH"
+              fill="@PlotBackground" stroke="rgba(0,0,0,0.15)" />
+
+        @* X grid + ticks + labels *@
+        @foreach (double xv in _x.Ticks)
+        {
+            double x = MapX(xv);
+
+            <line x1="@F(x)" y1="@F(P.Top)" x2="@F(x)" y2="@F(P.Top + PlotH)" stroke="rgba(0,0,0,0.08)" />
+
+            <line x1="@F(x)" y1="@F(P.Top + PlotH)" x2="@F(x)" y2="@F(P.Top + PlotH + 6)"
+                  stroke="rgba(0,0,0,0.35)" />
+
+            @LabelMarkup(x, P.Top + PlotH + 20, "middle", FormatTick(xv, _x.Step))
+        }
+
+        @* Y grid + ticks + labels *@
+        @foreach (double yv in _y.Ticks)
+        {
+            double y = MapY(yv);
+
+            <line x1="@P.Left" y1="@y" x2="@(P.Left + PlotW)" y2="@y"
+                  stroke="rgba(0,0,0,0.08)" />
+
+            <line x1="@(P.Left - 6)" y1="@y" x2="@P.Left" y2="@y"
+                  stroke="rgba(0,0,0,0.35)" />
+
+            @LabelMarkup(P.Left - 10, y + 4, "end", FormatTick(yv, _y.Step))
+        }
+
+        @* Points *@
+        @if (_draw.Count > 0)
+        {
+            @foreach (var p in _draw)
+            {
+                <circle cx="@F(p.Cx)" cy="@F(p.Cy)" r="@F(PointRadius)"
+                        fill="@PointFill"
+                        stroke="@PointStroke"
+                        stroke-width="@F(PointStrokeWidth)" />
+            }
+        }
+    </svg>
+</div>
+
+@code
+{
+    private static string F(double v) => v.ToString("0.###", CultureInfo.InvariantCulture);
+    // -------------------------
+    // INPUT
+    // -------------------------
+    [Parameter] public IReadOnlyList<PointF> Points { get; set; } = Array.Empty<PointF>();
+    [Parameter] public bool SortByX { get; set; } = false;
+
+    // -------------------------
+    // RESPONSIVE
+    // -------------------------
+    [Parameter] public int ViewW { get; set; } = 1000;
+    [Parameter] public int ViewH { get; set; } = 360;
+
+    [Parameter] public string ContainerClass { get; set; } = "";
+    [Parameter] public string ContainerStyle { get; set; } = "width:100%; height:320px;";
+    [Parameter] public string SvgClass { get; set; } = "niceplot-svg";
+
+    // -------------------------
+    // STYLE
+    // -------------------------
+    [Parameter] public string Background { get; set; } = "transparent";
+    [Parameter] public string PlotBackground { get; set; } = "white";
+
+    [Parameter] public double PointRadius { get; set; } = 2.5;
+    [Parameter] public string PointFill { get; set; } = "rgba(0,120,255,0.85)";
+    [Parameter] public string PointStroke { get; set; } = "rgba(0,120,255,1)";
+    [Parameter] public double PointStrokeWidth { get; set; } = 0.25;
+
+    [Parameter] public int LabelFontSize { get; set; } = 12;
+
+    // -------------------------
+    // AXIS
+    // -------------------------
+    [Parameter] public int TargetXTicks { get; set; } = 10;
+    [Parameter] public int TargetYTicks { get; set; } = 6;
+
+    [Parameter] public double PadXRatio { get; set; } = 0.02;
+    [Parameter] public double PadYRatio { get; set; } = 0.05;
+
+    // -------------------------
+    // INTERNAL
+    // -------------------------
+    private readonly Padding P = new(Left: 70, Top: 14, Right: 16, Bottom: 36);
+
+    private double PlotW => Math.Max(1, ViewW - P.Left - P.Right);
+    private double PlotH => Math.Max(1, ViewH - P.Top - P.Bottom);
+
+    private AxisTicks _x = new(0, 1, 1, new[] { 0.0, 1.0 });
+    private AxisTicks _y = new(0, 1, 1, new[] { 0.0, 1.0 });
+
+    private double _sx = 1, _sy = 1;
+    private readonly List<DrawPoint> _draw = new();
+
+    protected override void OnParametersSet()
+    {
+        _draw.Clear();
+
+        if (Points is null || Points.Count == 0)
+        {
+            _x = new AxisTicks(0, 1, 1, new[] { 0.0, 1.0 });
+            _y = new AxisTicks(0, 1, 1, new[] { 0.0, 1.0 });
+            _sx = PlotW / (_x.Max - _x.Min);
+            _sy = PlotH / (_y.Max - _y.Min);
+            return;
+        }
+
+        IEnumerable<PointF> src = Points;
+        if (SortByX) src = src.OrderBy(p => p.X);
+
+        double rawXMin = src.Min(p => p.X);
+        double rawXMax = src.Max(p => p.X);
+        double rawYMin = src.Min(p => p.Y);
+        double rawYMax = src.Max(p => p.Y);
+
+        if (Math.Abs(rawXMax - rawXMin) < 1e-12) rawXMax = rawXMin + 1;
+        if (Math.Abs(rawYMax - rawYMin) < 1e-12) rawYMax = rawYMin + 1;
+
+        double rx = rawXMax - rawXMin;
+        double ry = rawYMax - rawYMin;
+
+        rawXMin -= PadXRatio * rx;
+        rawXMax += PadXRatio * rx;
+        rawYMin -= PadYRatio * ry;
+        rawYMax += PadYRatio * ry;
+
+        _x = BuildTicks(BasisConstants.PointsXMin, 0, TargetXTicks);
+        //_x = BuildTicks(rawXMin, rawXMax, TargetXTicks);
+        _y = BuildTicks(rawYMin, rawYMax, TargetYTicks);
+
+        _sx = PlotW / (_x.Max - _x.Min);
+        _sy = PlotH / (_y.Max - _y.Min);
+
+        foreach (var p in src)
+            _draw.Add(new DrawPoint(MapX(p.X), MapY(p.Y)));
+    }
+
+    private double MapX(double x) => P.Left + (x - _x.Min) * _sx;
+    private double MapY(double y) => P.Top + PlotH - (y - _y.Min) * _sy;
+
+    // -------------------------
+    // MARKUP LABEL (NO <text> TAG IN RAZOR)
+    // -------------------------
+    private MarkupString LabelMarkup(double x, double y, string anchor, string text)
+    {
+        // escaping для текста
+        string safe = System.Net.WebUtility.HtmlEncode(text);
+        string s = string.Create(CultureInfo.InvariantCulture,
+            $"<text x=\"{x:0.###}\" y=\"{y:0.###}\" text-anchor=\"{anchor}\" " +
+            $"font-size=\"{LabelFontSize}\" fill=\"rgba(0,0,0,0.65)\">{safe}</text>");
+        return new MarkupString(s);
+    }
+
+    // -------------------------
+    // NICE TICKS
+    // -------------------------
+    private static AxisTicks BuildTicks(double rawMin, double rawMax, int targetTicks)
+    {
+        if (double.IsNaN(rawMin) || double.IsNaN(rawMax) || double.IsInfinity(rawMin) || double.IsInfinity(rawMax))
+            return new AxisTicks(0, 1, 1, new[] { 0.0, 1.0 });
+
+        if (rawMin > rawMax) (rawMin, rawMax) = (rawMax, rawMin);
+
+        double range = rawMax - rawMin;
+        if (Math.Abs(range) < 1e-12)
+        {
+            rawMax = rawMin + 1;
+            range = 1;
+        }
+
+        int t = Math.Max(2, targetTicks);
+        double roughStep = range / (t - 1);
+
+        double step = NiceStep(roughStep);
+
+        double niceMin = Math.Floor(rawMin / step) * step;
+        double niceMax = Math.Ceiling(rawMax / step) * step;
+
+        int n = (int)Math.Round((niceMax - niceMin) / step);
+        n = Math.Max(1, Math.Min(n, 2000));
+
+        var ticks = new double[n + 1];
+        for (int i = 0; i <= n; i++)
+            ticks[i] = niceMin + i * step;
+
+        return new AxisTicks(niceMin, niceMax, step, ticks);
+    }
+
+    private static double NiceStep(double x)
+    {
+        if (x <= 0) return 1;
+
+        double exp = Math.Floor(Math.Log10(x));
+        double f = x / Math.Pow(10, exp);
+
+        double nf = f switch
+        {
+            <= 1.0 => 1.0,
+            <= 2.0 => 2.0,
+            <= 5.0 => 5.0,
+            _ => 10.0
+        };
+
+        return nf * Math.Pow(10, exp);
+    }
+
+    private static string FormatTick(double v, double step)
+    {
+        int decimals = step >= 1 ? 0 : Math.Min(6, Math.Max(0, (int)Math.Ceiling(-Math.Log10(step))));
+        if (Math.Abs(v) < step * 0.5) v = 0;
+        return v.ToString("F" + decimals, CultureInfo.InvariantCulture);
+    }
+
+    // -------------------------
+    // TYPES
+    // -------------------------
+    private readonly record struct AxisTicks(double Min, double Max, double Step, double[] Ticks);
+    private readonly record struct DrawPoint(double Cx, double Cy);
+    private readonly record struct Padding(int Left, int Top, int Right, int Bottom);
+}

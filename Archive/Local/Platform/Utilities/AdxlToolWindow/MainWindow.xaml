@@ -1,0 +1,145 @@
+﻿<Window x:Class="AdxlToolWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdxlToolWindow"
+        mc:Ignorable="d"
+        Title="AdxlToolWindow" Height="650" Width="650"
+        x:Name="_MainWindow">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="400*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="600*"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <!-- ОТСЛЕЖИВАЕМЫЙ СПИСОК СИСТЕМ -->
+            <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Список доступных систем:</TextBlock>
+            <ListBox x:Name="_AdxlDevicesListBox" Grid.Column="0"  Grid.Row="1" ItemsSource= "{Binding Mode=OneWay}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <RadioButton x:Name="_RadioButton" GroupName="ADXL" Grid.Column="0" Content="{Binding Address}" Click="RadioButton_Click"></RadioButton>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">Маска сканирования:</TextBlock>
+            <Grid Grid.Column="2" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="83"/>
+                    <ColumnDefinition Width="83"/>
+                    <ColumnDefinition Width="84"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="_Mask1TextBox"  Text="{Binding IPMask1, Mode=TwoWay}" Grid.Column="0" TextAlignment="Center" VerticalContentAlignment="Center" MaxLines="1" PreviewTextInput="PreviewTextInput" MaxLength="3" TextChanged="NumberValidationTextBox"/>
+                <TextBox x:Name="_Mask2TextBox"  Text="{Binding IPMask2, Mode=TwoWay}" Grid.Column="1" TextAlignment="Center" VerticalContentAlignment="Center" MaxLines="1" PreviewTextInput="PreviewTextInput" MaxLength="3" TextChanged="NumberValidationTextBox"/>
+                <TextBox x:Name="_Mask3TextBox"  Text="{Binding IPMask3, Mode=TwoWay}" Grid.Column="2" TextAlignment="Center" VerticalContentAlignment="Center" MaxLines="1" PreviewTextInput="PreviewTextInput" MaxLength="3" TextChanged="NumberValidationTextBox"/>
+            </Grid>
+            <Button x:Name="_ScanButton" Content="Scan"  Grid.Row="4" HorizontalAlignment="Center" Width="250"  Height="25"  Click="RefreshButton_Click"/>
+        </Grid>
+        <GridSplitter ShowsPreview="False" Width="3" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+
+        <Grid Grid.Column="2" Grid.Row="1">
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="310"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="350"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Параметры и настройка:</TextBlock>
+
+
+                <ListBox x:Name="_ParamsListBox" Grid.Column="1" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="150" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding PropertyName, Mode=OneWay}"/>
+                                <TextBox x:Name ="_ParamValue" MaxLength="16" Text="{Binding Value, Mode=TwoWay}"  Grid.Column="1"  HorizontalAlignment="Stretch" TextAlignment="Center"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <Grid Grid.Row="3" Grid.Column="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="140"/>
+                    </Grid.ColumnDefinitions>
+                    <Label>Серийный номер:</Label>
+                    <TextBox x:Name="_SerialNumberTextBox" Grid.Column="2"  Text="{Binding SerialNumber, Mode=OneWay,StringFormat=X}" TextAlignment="Center" VerticalContentAlignment="Center" MaxLines="1" IsReadOnly="True"/>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="140"/>
+                    </Grid.ColumnDefinitions>
+                    <Label>Дата производства:</Label>
+                    <TextBox x:Name="_DateTextBox" Grid.Column="2"  Text="{Binding FirmwareDate, Mode=OneWay,StringFormat=X}" TextAlignment="Center" VerticalContentAlignment="Center" MaxLines="1" IsReadOnly="True"/>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="140"/>
+                    </Grid.ColumnDefinitions>
+                    <Label>Версия прошивки:</Label>
+                    <TextBox x:Name="_VersionTextBox" Grid.Column="2"  Text="{Binding FirmwareVersion, Mode=OneWay,StringFormat=X}" TextAlignment="Center" VerticalContentAlignment="Center" MaxLines="1" IsReadOnly="True"/>
+                </Grid>
+
+                <Grid Grid.Row="9" Grid.Column="1" >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="140"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="_WriteButton" Grid.Column="0" Content="Write" HorizontalAlignment="Center" Width="140"  Click="WriteButton_Click"/>
+                    <Button x:Name="_ReadButton" Grid.Column="2" Content="Read" HorizontalAlignment="Center" Width="140"  Click="ReadButton_Click" />
+                </Grid>
+                <Grid Grid.Row="11" Grid.Column="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="140"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="_StartButton" Grid.Column="0" Content="Start" HorizontalAlignment="Center" Width="140" Click="StartButton_Click"/>
+                    <Button x:Name="_StopButton" Grid.Column="2" Content="Stop" HorizontalAlignment="Center" Width="140" Click="StopButton_Click" />
+                </Grid>
+
+                <Grid Grid.Row="13" Grid.Column="1" >
+                    <Button x:Name="_ClearButton" Grid.Column="2" Content="Clear" HorizontalAlignment="Center" Width="310" Click="ClearButton_Click"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

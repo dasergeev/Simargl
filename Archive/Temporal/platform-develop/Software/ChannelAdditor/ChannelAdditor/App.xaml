@@ -1,0 +1,9 @@
+﻿<Application x:Class="Apeiron.Platform.Software.ChannelAdditor.UserInterface.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Apeiron.Platform.Software.ChannelAdditor.UserInterface"
+             StartupUri="pack://application:,,,/ChannelAdditor/UserInterface/ChannelAdditorWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

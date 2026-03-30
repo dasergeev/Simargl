@@ -1,0 +1,31 @@
+﻿Службы
+
+Ape90SearchRawFiles 
+	сканирует каталоги и заносит в базу пути к файлам.
+
+Ape90DefinitionRawFileMetrics
+	определяет метрики файлов.
+
+Ape90NormalizationRawFrameTime
+	нормализует время для выстраивания последовательности кадров.
+
+Ape90AnalysisGeolocationFiles
+	анализирует файлы NMEA и загружает в базу NMEA-сообщения.
+
+Ape90GeolocationCollector
+	собирает данные геолокации с шагом 1 секунда.
+
+Ape90FrameCollector
+	собирает кадры.
+
+Ape90Preprocessing
+	выполняет предобработку: помещает результаты в базу данных с шагом 1 секунда.
+
+Логический порядок вызова служб:
+1. Ape90SearchRawFiles
+2. Ape90DefinitionRawFileMetrics
+3. Ape90NormalizationRawFrameTime - запускать службу только в одном экземпляре только когда загружены все файлы в БД.
+4. Ape90AnalysisGeolocationFiles
+5. Ape90GeolocationCollector
+6. Ape90FrameCollector
+7. Ape90Preprocessing

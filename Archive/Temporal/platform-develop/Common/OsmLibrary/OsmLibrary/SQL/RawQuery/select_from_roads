@@ -1,0 +1,3 @@
+SELECT * 
+FROM public.planet_osm_point
+WHERE ST_Distance(way, ST_Transform(ST_GeomFromText('POINT(35.84608 56.85884)',4326) ,3857)) <= 50;

@@ -1,0 +1,89 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UserSecretsId>dotnet-Placing-665DCFE3-A8EF-4AB7-8810-F84CC4ABA2B1</UserSecretsId>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="Cab.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="Apeiron.Support" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<Version>1.0.0</Version>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Apeiron.Oriole.Server</RootNamespace>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+		<DocumentationFile>$(MSBuildProjectName).xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Authors>ООО "ТИЦ ЖТ"</Authors>
+		<Company>ООО "ТИЦ ЖТ"</Company>
+		<Copyright>ООО "ТИЦ ЖТ"</Copyright>
+		<Description>Служба регистрации данных, полученных от поездов "Иволга".</Description>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+		<ApplicationIcon>Cab.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+		<NoWarn />
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+		<NoWarn />
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.ProjectSystem.Analyzers" Version="15.8.243" />
+		<PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.4.27">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\..\Common\Platform\Platform.csproj" />
+		<ProjectReference Include="..\..\..\..\Databases\CentralDatabase\CentralDatabase.csproj" />
+		<ProjectReference Include="..\..\..\..\Databases\OrioleDatabase\OrioleDatabase.csproj" />
+		<ProjectReference Include="..\..\..\..\Performers\OriolePerformers\OriolePerformers.csproj" />
+	</ItemGroup>
+
+</Project>

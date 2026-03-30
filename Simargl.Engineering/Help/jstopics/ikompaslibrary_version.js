@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Version - Версия интерфейса",
+hmDescription:"Интерфейс... Тип данных: long Синтаксис: HRESULT Version( long * Result ); Примечание: Свойство позволяет получить версию интерфейса, реализованного в библиотеке. При дораб",
+hmPrevLink:"ikompaslibrary_protectnumber.html",
+hmNextLink:"ikompaslibrary_methods.html",
+hmParentLink:"ikompaslibrary_props.html",
+hmBreadCrumbs:"<a href=\"libraries_create.html\">Создание прикладных библиотек&nbsp;<\/a> &gt; <a href=\"cr119224.html\">Оформление прикладных библиотек типа ActiveX&nbsp;<\/a> &gt; <a href=\"ikompaslibrary.html\">Интерфейс IKompasLibrary&nbsp;<\/a> &gt; <a href=\"ikompaslibrary_props.html\">IKompasLibrary - свойства&nbsp;<\/a>",
+hmTitlePath:"Создание прикладных библиотек  > Оформление прикладных библиотек типа ActiveX  > Интерфейс IKompasLibrary  > IKompasLibrary - свойства  > Version - Версия интерфейса ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Version - Версия интерфейса <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcr146430\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ikompaslibrary.html\" class=\"topiclink\">Интерфейс...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Тип данных: long<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">HRESULT Version( long * Result );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Свойство позволяет получить версию интерфейса, реализованного в библиотеке.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">При доработках интерфейса в Компас версия интерфейса будет увеличиваться.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Новые методы для библиотек со старой версией вызываться не будут.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

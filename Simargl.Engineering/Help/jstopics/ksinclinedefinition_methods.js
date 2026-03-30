@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksInclineDefinition - методы",
+hmDescription:"Подразделы: FaceArray - Получить указатель на интерфейс массива уклоняемых граней  GetPlane - Получить указатель на интерфейс плоскости основания уклона  SetPlane - Установить у",
+hmPrevLink:"ksinclinedefinition_direction.html",
+hmNextLink:"ksinclinedefinition_facearray.html",
+hmParentLink:"ksinclinedefinition.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument3d.html\">Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )&nbsp;<\/a> &gt; <a href=\"kspart.html\">Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart&nbsp;<\/a> &gt; <a href=\"bw1897880.html\">Объект модели (Интерфейсы ksEntity и IEntity)&nbsp;<\/a> &gt; <a href=\"ksentity.html\">Интерфейсы ksEntity и iEntity - Интерфейс элемента модели (оси, плоскости, формообразующего элемента)&nbsp;<\/a> &gt; <a href=\"int_operation.html\">Интерфейсы формообразующих операций&nbsp;<\/a> &gt; <a href=\"ksinclinedefinition.html\">Уклон (Интерфейсы ksInclineDefinition, IInclineDefinition)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )  > Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart  > Объект модели (Интерфейсы ksEntity и IEntity)  > Интерфейсы ksEntity и iEntity - Интерфейс элемента модели (оси, плоскости, формообразующего элемента)  > Интерфейсы формообразующих операций  > Уклон (Интерфейсы ksInclineDefinition, IInclineDefinition)  > ksInclineDefinition - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksInclineDefinition - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksinclinedefinition_facearray.html\" class=\"topiclink hmlinklistitem\">FaceArray - Получить указатель на интерфейс массива уклоняемых граней <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksinclinedefinition_getplane.html\" class=\"topiclink hmlinklistitem\">GetPlane - Получить указатель на интерфейс плоскости основания уклона <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksinclinedefinition_setplane.html\" class=\"topiclink hmlinklistitem\">SetPlane - Установить указатель на интерфейс плоскости основания уклона <\/a><\/span><\/p>\n\r"
+})

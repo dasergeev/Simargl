@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommutatorMaui.MessagePage"
+             Title="{Binding HeaderDialog}"
+             xmlns:converters="clr-namespace:CommutatorMaui"
+             LayoutChanged="Appearing_MessagePage"
+             x:Name="_MessagePage"
+             >
+
+    <ContentPage.Resources>
+        <converters:TextAlignmentConverter x:Key="TextAlignmentConverter"/>
+        <converters:HorizontalOptionsConverter x:Key="HorizontalOptionsConverter"/>
+        <converters:BackGroundConverter x:Key="BackGroundConverter"/>
+        <converters:DateTimeStringConverter x:Key="DateTimeStringConverter"/>
+    </ContentPage.Resources>
+
+    <Grid RowSpacing="5"
+          ColumnSpacing="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="_ColumnMessage" Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <CollectionView x:Name="_ListMessages"
+                      Grid.Column="0" Grid.ColumnSpan="2"
+                      Grid.Row="0"
+                      ItemsSource="{Binding Dialog.Messages}"
+                      ItemsUpdatingScrollMode="KeepLastItemInView"
+                       >
+
+            <CollectionView.ItemTemplate >
+                <DataTemplate >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Frame BackgroundColor="{Binding IsMine, Converter={StaticResource BackGroundConverter}}"
+                                   HorizontalOptions="{Binding IsMine, Converter={StaticResource HorizontalOptionsConverter}}"
+                                   CornerRadius="25"
+                                   BorderColor="Black"
+                                   HasShadow="True"
+                                >
+
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Sender.Name, StringFormat='{0:F0}:'}"
+                                   FontSize="10"
+                                   TextColor="DimGray"
+                                   HorizontalTextAlignment="Start"
+                                       />
+                                <Label Text="{Binding Text}"
+                                   FontSize="16"  
+
+                                   HorizontalTextAlignment="Start"
+                                   />
+                                <Label Text="{Binding RegistrationTime, Converter={StaticResource DateTimeStringConverter}}"
+                                   FontSize="10"
+                                   HorizontalTextAlignment="End"
+                                   TextColor="DarkGreen"
+
+                                   />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Editor x:Name="inputFieldEditor"
+                    AutoSize="TextChanges"
+                    BackgroundColor="CornflowerBlue"
+                    VerticalTextAlignment="Center"
+                    FontSize="20"
+                    Grid.Row="1"/>
+
+        <Button x:Name="sendButton"
+                    Text="Отправить" Clicked="SendButton_Click"
+                    BackgroundColor="Bisque"
+                    TextColor="Black"
+                    BorderColor="Bisque"
+                    Grid.Column="1"
+                    Grid.Row="1"/>
+    </Grid>
+    
+
+</ContentPage>

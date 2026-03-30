@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IProductDataManager",
+hmDescription:"Менеджер Дерева СЧИ. Иерархия: IDispatch IProductDataManager Интерфейс является дополнительным к интерфейсу IKompasDocument. Данный интерфейс можно получить посредством вызова",
+hmPrevLink:"ct1473974.html",
+hmNextLink:"iproductdatamanager_propers.html",
+hmParentLink:"ct1473974.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ct1473974.html\">Дерево СЧИ&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Дерево СЧИ  > Интерфейс IProductDataManager ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IProductDataManager <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xct1720764\" class=\"hmanchor\"><\/a><span class=\"f_bodytext\" style=\"font-weight: bold;\">Менеджер Дерева СЧИ<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"iproductdatamanager.html\" class=\"topiclink\">IProductDataManager<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс является дополнительным к интерфейсу <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ikompasdocument.html\" class=\"topiclink\">IKompasDocument<\/a><\/span><span class=\"f_bodytext\">. Данный интерфейс можно получить посредством вызова метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"recomendation.html\" class=\"topiclink\">IUnknown::QueryInterface<\/a><\/span><span class=\"f_bodytext\"> (const GUID far&amp; iid, void** pif).<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">КОМПАС версия v18<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iproductdatamanager_propers.html\" class=\"topiclink hmlinklistitem\">IProductDataManager - свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iproductdatamanager_methods.html\" class=\"topiclink hmlinklistitem\">IProductDataManager - методы <\/a><\/span><\/p>\n\r"
+})

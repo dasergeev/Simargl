@@ -1,0 +1,48 @@
+﻿@* Объявляем тип документа: HTML5 *@
+<!DOCTYPE html>
+
+@* Корневой тег HTML; lang="ru" указывает, что язык страницы — русский *@
+<html lang="ru">
+
+@* Заголовочная часть документа: метаданные, стили, скрипты *@
+<head>
+
+    @* Кодировка документа: UTF-8 *@
+    <meta charset="utf-8" />
+
+    @* Адаптивная верстка: ширина равна ширине устройства, масштаб 1 *@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    @* Базовый адрес для всех относительных ссылок на ресурсы *@
+    <base href="/" />
+
+    @* Подключение стилей Bootstrap из assets *@
+    <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
+
+    @* Подключение пользовательских стилей приложения *@
+    <link rel="stylesheet" href="@Assets["app.css"]" />
+
+    @* Подключение автоматически сгенерированных стилей Blazor-компонентов *@
+    <link rel="stylesheet" href="@Assets["Simargl.Server.Hub.styles.css"]" />
+
+    @* Razor-директива: вставляет import map (карта импортов модулей JS) *@
+    <ImportMap />
+
+    @* Иконка сайта (favicon), отображается на вкладке браузера *@
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    @* Специальный Blazor-компонент: сюда можно добавлять теги в <head> из других компонентов *@
+    <HeadOutlet />
+</head>
+
+@* Тело страницы — сюда будет рендериться содержимое *@
+<body>
+
+    @* Компонент Blazor, отвечающий за маршрутизацию: подставляет нужную страницу по URL *@
+    <Routes />
+
+    @* Скрипт Blazor: подключает клиентскую часть фреймворка *@
+    <script src="_framework/blazor.web.js"></script>
+</body>
+
+</html>

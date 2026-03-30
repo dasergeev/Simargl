@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"FullFileName, GetRightFileName - пример использования",
+hmDescription:"void FileName_Example (void) {   char *s2;   \/\/выделим буфер s2 = new char [6]; strcpy(s2, \"1.cdw\"); unsigned int size2,size1 ;   \/\/получим полное имя и поместим его в s",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">FullFileName, GetRightFileName - пример использования <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcg1727778\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">void FileName_Example (void) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">char *s2;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/выделим буфер<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">s2 = new char [6];<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">strcpy(s2, &quot;1.cdw&quot;);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">unsigned int size2,size1 ;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/получим полное имя и поместим его в s2<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">size1=strlen(s2) 1;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if ((size2=FullFileName(s2, s2, size1)) &gt; size1) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/требуемая длина size2 &gt; size1, которую мы предоставили<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">delete [] s2;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">s2 = new char[size2];<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">GetRightFileName(s2, size2);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}; \/* FileName_Example *\/<\/span><\/p>\n\r"
+})

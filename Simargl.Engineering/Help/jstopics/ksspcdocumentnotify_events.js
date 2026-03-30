@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ISpcDocumentNotify - события",
+hmDescription:"Подразделы: DocumentAdd - Добавлен документ сборочного чертежа  DocumentBeginAdd - Начало добавления документа сборочного чертежа  DocumentBeginRemove - Начало удаления документ",
+hmPrevLink:"ksspcdocumentnotify.html",
+hmNextLink:"ksspcdocumentnotify_documentadd.html",
+hmParentLink:"ksspcdocumentnotify.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"af1881424.html\">Интерфейсы событий API5&nbsp;<\/a> &gt; <a href=\"eventscommon.html\">События в КОМПАС Общие сведения&nbsp;<\/a> &gt; <a href=\"ksspcdocumentnotify.html\">Интерфейс событий документа-спецификации ksSpcDocumentNotify\/ISpcDocumentNotify&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Интерфейсы событий API5  > События в КОМПАС Общие сведения  > Интерфейс событий документа-спецификации ksSpcDocumentNotify\/ISpcDocumentNotify  > ISpcDocumentNotify - события ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ISpcDocumentNotify - события <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksspcdocumentnotify_documentadd.html\" class=\"topiclink hmlinklistitem\">DocumentAdd - Добавлен документ сборочного чертежа <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksspcdocumentnotify_documentbeginadd.html\" class=\"topiclink hmlinklistitem\">DocumentBeginAdd - Начало добавления документа сборочного чертежа <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksspcdocumentnotify_documentbeginremove.html\" class=\"topiclink hmlinklistitem\">DocumentBeginRemove - Начало удаления документа сборочного чертежа <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksspcdocumentnotify_documentremove.html\" class=\"topiclink hmlinklistitem\">DocumentRemove - Документ удален <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksspcdocumentnotify_spcstylebeginchange.html\" class=\"topiclink hmlinklistitem\">SpcStyleBeginChange - Начало изменения стиля спецификации <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksspcdocumentnotify_spcstylechange.html\" class=\"topiclink hmlinklistitem\">SpcStyleChange - Стиль спецификации изменен <\/a><\/span><\/p>\n\r"
+})

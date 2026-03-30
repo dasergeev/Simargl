@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ISheetMetalLinearRuledShell - методы",
+hmDescription:"Подразделы: AddNewEdge - Добавление ребра после указанного индексом  DeleteEdge - Удаление ребра  GetEdgePointParam - Получение параметров точки ребра  GetEdgePointParams - Пол",
+hmPrevLink:"isheetmetallinearruledshell_usecommonsegmentationparameters.html",
+hmNextLink:"isheetmetallinearruledshell_addnewedge.html",
+hmParentLink:"isheetmetallinearruledshell.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2753655.html\">Листовое тело&nbsp;<\/a> &gt; <a href=\"isheetmetalcontainer.html\">Интерфейс ISheetMetalContainer&nbsp;<\/a> &gt; <a href=\"isheetmetalcontainer_props.html\">ISheetMetalContainer - свойства&nbsp;<\/a> &gt; <a href=\"isheetmetallinearruledshell.html\">Интерфейс ISheetMetalLinearRuledShell&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Листовое тело  > Интерфейс ISheetMetalContainer  > ISheetMetalContainer - свойства  > Интерфейс ISheetMetalLinearRuledShell  > ISheetMetalLinearRuledShell - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ISheetMetalLinearRuledShell - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetallinearruledshell_addnewedge.html\" class=\"topiclink hmlinklistitem\">AddNewEdge - Добавление ребра после указанного индексом <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetallinearruledshell_deleteedge.html\" class=\"topiclink hmlinklistitem\">DeleteEdge - Удаление ребра <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetallinearruledshell_getedgepointparam.html\" class=\"topiclink hmlinklistitem\">GetEdgePointParam - Получение параметров точки ребра <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetallinearruledshell_getedgepointparams.html\" class=\"topiclink hmlinklistitem\">GetEdgePointParams - Получение параметров ребер <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetallinearruledshell_setedgepointparam.html\" class=\"topiclink hmlinklistitem\">SetEdgePointParam - Изменение положения точки ребра <\/a><\/span><\/p>\n\r"
+})

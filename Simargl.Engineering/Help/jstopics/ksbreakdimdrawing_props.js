@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksBreakDimDrawing - свойства",
+hmDescription:"Подразделы: angle - Угол наклона \"ножки\" полки  length- Длина “ножки” полки  pl - Признак отрисовки выносной линии  pt - Тип стрелки у первой выносной линии  shelfDir - Призна",
+hmPrevLink:"ksbreakdimdrawing.html",
+hmNextLink:"ksbreakdimdrawing_angle.html",
+hmParentLink:"ksbreakdimdrawing.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"cf1713887.html\">Интерфейсы параметров размеров&nbsp;<\/a> &gt; <a href=\"cf1715343.html\">Линейные и угловые размеры&nbsp;<\/a> &gt; <a href=\"ksbreakdimdrawing.html\">Отрисовка линейных и угловых размеров с обрывом (Интерфейс ksBreakDimDrawing)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров размеров  > Линейные и угловые размеры  > Отрисовка линейных и угловых размеров с обрывом (Интерфейс ksBreakDimDrawing)  > ksBreakDimDrawing - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksBreakDimDrawing - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksbreakdimdrawing_angle.html\" class=\"topiclink hmlinklistitem\">angle - Угол наклона &quot;ножки&quot; полки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksbreakdimdrawing_length.html\" class=\"topiclink hmlinklistitem\">length- Длина “ножки” полки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksbreakdimdrawing_pl.html\" class=\"topiclink hmlinklistitem\">pl - Признак отрисовки выносной линии <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksbreakdimdrawing_pt.html\" class=\"topiclink hmlinklistitem\">pt - Тип стрелки у первой выносной линии <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksbreakdimdrawing_shelfdir.html\" class=\"topiclink hmlinklistitem\">shelfDir - Признак отрисовки полки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksbreakdimdrawing_textpos.html\" class=\"topiclink hmlinklistitem\">textPos - Положение текста <\/a><\/span><\/p>\n\r"
+})

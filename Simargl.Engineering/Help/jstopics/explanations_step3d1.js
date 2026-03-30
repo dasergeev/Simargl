@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Step3d1",
+hmDescription:"Для операций: Базовая операция выдавливания. Операции вращения. Операции по сечениям. Создание фаски и скругления. Операции оболочка, уклон, сечение плоскостью, сечение эски",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Step3d1 <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcq1925390\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Для операций:<\/span><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Базовая операция выдавливания.<\/span><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Операции вращения.<\/span><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Операции по сечениям.<\/span><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Создание фаски и скругления.<\/span><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Операции оболочка, уклон, сечение плоскостью, сечение эскизом.<\/span><\/p>"
+})

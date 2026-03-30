@@ -1,0 +1,35 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Рубеж</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="nav flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                @* <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> *@ Дефекты
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="forces" Match="NavLinkMatch.All">
+                @* <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> *@ Силы
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="sensors">
+                @* <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> *@ Датчики
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="channels">
+                @* <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> *@ Каналы
+            </NavLink>
+        </div>
+    </nav>
+</div>

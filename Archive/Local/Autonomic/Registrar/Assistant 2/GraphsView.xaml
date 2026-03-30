@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="RailTest.Satellite.Autonomic.Registrar.GraphsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="clr-namespace:System.Windows.Interop;assembly=PresentationCore"
+             mc:Ignorable="d" Height="373.571" Width="492.253">
+    <Grid>
+        <WindowsFormsHost x:Name="_Host"/>
+    </Grid>
+</UserControl>

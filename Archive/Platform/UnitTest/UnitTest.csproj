@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <AssemblyName>UnitTest</AssemblyName>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+	    <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<DocumentationFile>UnitTest.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<DocumentationFile>UnitTest.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove=".gitignore" />
+		<None Remove="UnitTest.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+        <PackageReference Include="Apeiron" Version="3.0.4" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+        <PackageReference Include="Moq" Version="4.18.3" />
+        <PackageReference Include="MSTest.TestAdapter" Version="3.0.1" />
+        <PackageReference Include="MSTest.TestFramework" Version="3.0.1" />
+		<PackageReference Include="coverlet.collector" Version="3.2.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Common\OsmLibrary\OsmLibrary\OsmLibrary.csproj" />
+	  <ProjectReference Include="..\Common\Platform\Platform.csproj" />
+	</ItemGroup>
+
+</Project>

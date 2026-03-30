@@ -1,0 +1,4 @@
+SELECT * 
+FROM public.planet_osm_polygon
+WHERE
+ST_contains(way, ST_Transform(ST_GeomFromText('POINT(35.78837 56.86058)',4326) ,3857));

@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apeiron.Platform.Server</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Platform.Server.Entities.Entity">
+            <summary>
+            Представляет сущность базы данных.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Microservices.ServerMicroservice`1">
+            <summary>
+            Представляет серверную микрослужбу.
+            </summary>
+            <typeparam name="TMicroservice">
+            Тип микрослужбы.
+            </typeparam>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Microservices.ServerMicroservice`1._InitializationDelay">
+            <summary>
+            Постоянная, определяющая задержку в милисекундах запуска службы
+            для инициализации консоли и выдачи служебных сообщений.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Microservices.ServerMicroservice`1._NextStepDelay">
+            <summary>
+            Поле для хранения времени задержки перед выполнением следующего шага в миллисекундах.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.Server.Microservices.ServerMicroservice`1._MicroserviceInfoId">
+            <summary>
+            Поле для хранения идентификатора информации о микрослужбе в базе данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Microservices.ServerMicroservice`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство ведения журнала микрослужбы.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Microservices.ServerMicroservice`1.StartAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет запуск микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая запуск микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Microservices.ServerMicroservice`1.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет основную фоновую работу микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая основную фоновую работу микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Microservices.ServerMicroservice`1.MakeStepAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет шаг работы микрослужбы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая шаг работы микрослужбы.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Microservices.ServerMicroservice`1.GetMicroserviceInfoAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно возвращает информацию о микрослужбе.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, возвращающую информацию о микрослужбе.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Microservices.ServerMicroservice`1.UpdateNextStepDelayAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно обновляет время задержки перед выполнением следующего шага в миллисекундах.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая обноеление.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Sql.SqlDatabase">
+            <summary>
+            Представляет базу данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Sql.SqlDatabase.#ctor(System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="name">
+            Имя базы данных.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Sql.SqlDatabase.Name">
+            <summary>
+            Возвращает имя базы данных.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Sql.SqlServer">
+            <summary>
+            Представляет сервер.
+            </summary>
+        </member>
+    </members>
+</doc>

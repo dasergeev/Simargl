@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"EndRelation - Завершить описание отношения",
+hmDescription:"Пример... Аналог данной функции при использовании Automation - метод ksDataBaseObject::ksEndRelation. Синтаксис: void EndRelation(); Примечание: Функция завершает описание о",
+hmPrevLink:"dostatementw.html",
+hmNextLink:"freestatement.html",
+hmParentLink:"db_obj_fncts_common.html",
+hmBreadCrumbs:"<a href=\"export_function.html\">API экспортных функций<\/a> &gt; <a href=\"cn1731963.html\">Функции работы с прикладной библиотекой&nbsp;<\/a> &gt; <a href=\"db_obj_fncts_common.html\">Функции работы с базами данных&nbsp;<\/a>",
+hmTitlePath:"API экспортных функций > Функции работы с прикладной библиотекой  > Функции работы с базами данных  > EndRelation - Завершить описание отношения ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">EndRelation - Завершить описание отношения <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcn2036525\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"func_rab_s_bases_example.html\" class=\"topiclink\">Пример...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Аналог данной функции при использовании Automation - метод <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ksdatabaseobject_ksendrelation.html\" class=\"topiclink\">ksDataBaseObject::ksEndRelation<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">void EndRelation();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Функция завершает описание отношения, начатое функцией <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"relation.html\" class=\"topiclink\">Relation<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

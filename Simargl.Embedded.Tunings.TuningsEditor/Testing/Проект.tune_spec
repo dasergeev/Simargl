@@ -1,0 +1,661 @@
+{
+  "spec": {
+    "attributes": [
+      {
+        "format": 0,
+        "value": "\u0421\u043F\u0435\u0446\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F"
+      },
+      {
+        "format": 6,
+        "value": ""
+      },
+      {
+        "format": 1,
+        "value": "Identifier"
+      },
+      {
+        "format": 2,
+        "value": ""
+      },
+      {
+        "format": 3,
+        "value": "0.0.0"
+      }
+    ],
+    "nodes": [
+      {
+        "__node_format": 2,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0420\u0430\u0437\u0434\u0435\u043B \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438"
+          },
+          {
+            "format": 6,
+            "value": ""
+          },
+          {
+            "format": 1,
+            "value": "Identifier"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 8,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u0435\u0440\u0435\u0447\u0438\u0441\u043B\u0435\u043D\u0438\u0435"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt16"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 12,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": ""
+                  },
+                  {
+                    "format": 1,
+                    "value": "Identifier"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 12,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": ""
+                  },
+                  {
+                    "format": 1,
+                    "value": "Identifier"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 12,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": ""
+                  },
+                  {
+                    "format": 1,
+                    "value": "Identifier"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt64"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 10,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041C\u0430\u0441\u0441\u0438\u0432"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "Binary"
+              },
+              {
+                "format": 5,
+                "value": "1"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 9,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0411\u0438\u0442\u043E\u0432\u043E\u0435 \u043F\u043E\u043B\u0435"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt16"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": ""
+                  },
+                  {
+                    "format": 1,
+                    "value": "Identifier"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": ""
+                  },
+                  {
+                    "format": 1,
+                    "value": "Identifier"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "DeviceType"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 8,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u0435\u0440\u0435\u0447\u0438\u0441\u043B\u0435\u043D\u0438\u0435"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "__node_format": 3,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0420\u0430\u0437\u0434\u0435\u043B \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u043B\u044C\u043D\u043E\u0433\u043E \u0434\u043E\u0441\u0442\u0443\u043F\u0430"
+          },
+          {
+            "format": 6,
+            "value": ""
+          },
+          {
+            "format": 1,
+            "value": "Identifier"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 8,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u0435\u0440\u0435\u0447\u0438\u0441\u043B\u0435\u043D\u0438\u0435"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 9,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0411\u0438\u0442\u043E\u0432\u043E\u0435 \u043F\u043E\u043B\u0435"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 10,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041C\u0430\u0441\u0441\u0438\u0432"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "Binary"
+              },
+              {
+                "format": 5,
+                "value": "1"
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "__node_format": 4,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u041A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u0440\u0430\u0437\u0434\u0435\u043B"
+          },
+          {
+            "format": 6,
+            "value": ""
+          },
+          {
+            "format": 1,
+            "value": "Identifier"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 8,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u0435\u0440\u0435\u0447\u0438\u0441\u043B\u0435\u043D\u0438\u0435"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 9,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0411\u0438\u0442\u043E\u0432\u043E\u0435 \u043F\u043E\u043B\u0435"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 10,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041C\u0430\u0441\u0441\u0438\u0432"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "Binary"
+              },
+              {
+                "format": 5,
+                "value": "1"
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "__node_format": 5,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0420\u0430\u0437\u0434\u0435\u043B \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F"
+          },
+          {
+            "format": 6,
+            "value": ""
+          },
+          {
+            "format": 1,
+            "value": "Identifier"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 11,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041A\u043E\u043C\u0430\u043D\u0434\u0430"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 11,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041A\u043E\u043C\u0430\u043D\u0434\u0430"
+              },
+              {
+                "format": 6,
+                "value": ""
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": ""
+                  },
+                  {
+                    "format": 1,
+                    "value": "Identifier"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__node_format": 6,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0420\u0430\u0437\u0434\u0435\u043B \u043E\u0442\u043B\u0430\u0434\u043A\u0438"
+          },
+          {
+            "format": 6,
+            "value": ""
+          },
+          {
+            "format": 1,
+            "value": "Identifier"
+          },
+          {
+            "format": 8,
+            "value": "16"
+          },
+          {
+            "format": 9,
+            "value": "64"
+          }
+        ],
+        "nodes": []
+      }
+    ]
+  },
+  "error": {
+    "attributes": [
+      {
+        "format": 0,
+        "value": "\u041A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A"
+      },
+      {
+        "format": 6,
+        "value": ""
+      },
+      {
+        "format": 1,
+        "value": "Identifier"
+      }
+    ],
+    "nodes": [
+      {
+        "__node_format": 16,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435"
+          },
+          {
+            "format": 6,
+            "value": ""
+          },
+          {
+            "format": 1,
+            "value": "Identifier"
+          },
+          {
+            "format": 4,
+            "value": "1"
+          }
+        ],
+        "nodes": []
+      }
+    ]
+  }
+}

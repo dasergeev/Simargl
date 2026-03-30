@@ -1,0 +1,14 @@
+﻿<Window
+    x:Class="Simargl.Engineering.Utilities.StampWriter.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Simargl.Engineering.Utilities.StampWriter"
+    xmlns:ui="clr-namespace:Simargl.Engineering.Utilities.StampWriter.UI"
+    mc:Ignorable="d"
+    Title="МПТ: КБ: Штампы"
+    Height="450"
+    Width="800">
+    <ui:MainControl/>
+</Window>

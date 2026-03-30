@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Документ спецификация (Интерфейс ksSpcDocument)",
+hmDescription:"События... Интерфейс документа-спецификации. Примечание: Указатель на интерфейс можно получить при помощи метода KompasObject::SpcDocument, KompasObject::SpcActiveDocument С",
+hmPrevLink:"kstextitemparam_setitemfont.html",
+hmNextLink:"ksspcdocument_props.html",
+hmParentLink:"ag57940.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Документ спецификация (Интерфейс ksSpcDocument) ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Документ спецификация (Интерфейс ksSpcDocument) <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xck1893977\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ksdocumentfilenotify_events.html\" class=\"topiclink\">События...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс документа-спецификации<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Указатель на интерфейс можно получить при помощи метода<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kompasobject_spcdocument.html\" class=\"topiclink\">KompasObject::SpcDocument<\/a><\/span><span class=\"f_bodytext\">, <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kompasobject_spcactivedocument.html\" class=\"topiclink\">KompasObject::SpcActiveDocument<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Смотрите также <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kompasobject.html\" class=\"topiclink\">KompasObject<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksspcdocument_props.html\" class=\"topiclink hmlinklistitem\">ksSpcDocument - свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ck1881939.html\" class=\"topiclink hmlinklistitem\">ksSpcDocument - методы <\/a><\/span><\/p>\n\r"
+})

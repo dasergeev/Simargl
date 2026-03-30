@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IOrientedEdge7 - свойства",
+hmDescription:"Подразделы: AdjacentFace - Получить грань, в которой ребро входит в цикл  Edge - Получить интерфейс базового ребра  Next - Получить следующее ориентированное ребро  Orientation",
+hmPrevLink:"iorientededge7.html",
+hmNextLink:"iorientededge7_adjacentface.html",
+hmParentLink:"iorientededge7.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc1711351.html\">Вспомогательные объекты, 3D-кривые и элементы тела&nbsp;<\/a> &gt; <a href=\"bc2014000.html\">3D-кривые и элементы тела&nbsp;<\/a> &gt; <a href=\"imodelobjects.html\">Интерфейс IModelObjects&nbsp;<\/a> &gt; <a href=\"imodelobjects_props.html\">IModelObjects - свойства&nbsp;<\/a> &gt; <a href=\"iorientededge7.html\">Интерфейс IOrientedEdge7&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Вспомогательные объекты, 3D-кривые и элементы тела  > 3D-кривые и элементы тела  > Интерфейс IModelObjects  > IModelObjects - свойства  > Интерфейс IOrientedEdge7  > IOrientedEdge7 - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IOrientedEdge7 - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iorientededge7_adjacentface.html\" class=\"topiclink hmlinklistitem\">AdjacentFace - Получить грань, в которой ребро входит в цикл <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iorientededge7_edge.html\" class=\"topiclink hmlinklistitem\">Edge - Получить интерфейс базового ребра <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iorientededge7_next.html\" class=\"topiclink hmlinklistitem\">Next - Получить следующее ориентированное ребро <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iorientededge7_orientation.html\" class=\"topiclink hmlinklistitem\">Orientation - Получить направление относительно базового ребра <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iorientededge7_samesense.html\" class=\"topiclink hmlinklistitem\">SameSense - Получить направление относительно кривой <\/a><\/span><\/p>\n\r"
+})

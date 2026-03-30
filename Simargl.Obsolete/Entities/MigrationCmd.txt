@@ -1,0 +1,4 @@
+﻿EntityFrameworkCore\Add-Migration -Project PROJECT_NAME -StartupProject PROJECT_NAME -Name
+EntityFrameworkCore\Update-Database -Project PROJECT_NAME -StartupProject PROJECT_NAME
+EntityFrameworkCore\Remove-Migration -Project PROJECT_NAME -StartupProject PROJECT_NAME
+EntityFrameworkCore\Remove-Migration -Project PROJECT_NAME -StartupProject PROJECT_NAME -Force

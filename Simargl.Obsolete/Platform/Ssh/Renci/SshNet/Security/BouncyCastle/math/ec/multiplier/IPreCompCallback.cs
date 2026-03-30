@@ -1,0 +1,6 @@
+﻿namespace Simargl.Zero.Ssh.Renci.SshNet.Security.Org.BouncyCastle.Math.EC.Multiplier;
+
+internal interface IPreCompCallback
+{
+    PreCompInfo Precompute(PreCompInfo existing);
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apeiron.Platform.Server.Schemes</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Platform.Server.Schemes.Scheme">
+            <summary>
+            Представляет схему.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Schemes.Scheme.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Schemes.Scheme`1">
+            <summary>
+            Представляет схему.
+            </summary>
+            <typeparam name="TScheme">
+            Тип схемы.
+            </typeparam>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Schemes.Scheme`1.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Schemes.SchemeCollection">
+            <summary>
+            Представляет коллекцию схем.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Schemes.SchemeCollection.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Schemes.SchemeCollection`1">
+            <summary>
+            Представляет коллекцию схем.
+            </summary>
+            <typeparam name="TScheme">
+            Тип схемы.
+            </typeparam>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Schemes.SchemeCollection`1.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.Server.Schemes.ValueCheckScheme">
+            <summary>
+            Представляет схему проверки значения.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.Server.Schemes.ValueCheckScheme.#ctor(System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="schemeName">
+            Название схемы проверки.
+            </param>
+        </member>
+        <member name="P:Apeiron.Platform.Server.Schemes.ValueCheckScheme.SchemeName">
+            <summary>
+            Возвращает название схемы проверки.
+            </summary>
+        </member>
+    </members>
+</doc>

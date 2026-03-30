@@ -1,0 +1,17 @@
+﻿<local:СommutatorControl x:Class="Apeiron.Platform.Communication.СommutatorDesktop.UserInterface.MessageSender"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Apeiron.Platform.Communication.СommutatorDesktop.UserInterface"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="64"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="_TextBox" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+        <Button x:Name="_Button" Grid.Column="1" Content="Отправить" Click="Button_Click" />
+    </Grid>
+</local:СommutatorControl>

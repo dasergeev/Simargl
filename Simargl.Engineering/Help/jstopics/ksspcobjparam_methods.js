@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksSpcObjParam - методы",
+hmDescription:"Подразделы: Init - Инициализировать параметры  SetDocArr - Установить указатель на интерфейс динамического массива структур параметров документов, подключенных к объекту...",
+hmPrevLink:"ksspcobjparam_typeobj.html",
+hmNextLink:"ksspcobjparam_init.html",
+hmParentLink:"ksspcobjparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksspcdocument.html\">Документ спецификация (Интерфейс ksSpcDocument)&nbsp;<\/a> &gt; <a href=\"ck1881939.html\">ksSpcDocument - методы&nbsp;<\/a> &gt; <a href=\"ck1727663.html\">Параметры объектов спецификации&nbsp;<\/a> &gt; <a href=\"ksspcobjparam.html\">Объект спецификации (Интерфейс ksSpcObjParam)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Документ спецификация (Интерфейс ksSpcDocument)  > ksSpcDocument - методы  > Параметры объектов спецификации  > Объект спецификации (Интерфейс ksSpcObjParam)  > ksSpcObjParam - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksSpcObjParam - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksspcobjparam_init.html\" class=\"topiclink hmlinklistitem\">Init - Инициализировать параметры <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksspcobjparam_setdocarr.html\" class=\"topiclink hmlinklistitem\">SetDocArr - Установить указатель на интерфейс динамического массива структур параметров документов, подключенных к объекту спецификации <\/a><\/span><\/p>\n\r"
+})

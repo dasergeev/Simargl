@@ -1,0 +1,3 @@
+SELECT round(CAST(ST_DistanceSphere(ST_Transform(way, 4326), ST_Transform((SELECT way FROM public.planet_osm_point WHERE (railway = 'station') AND (name = 'Нахабино')),4326)) As numeric))
+FROM public.planet_osm_point
+LIMIT 100;

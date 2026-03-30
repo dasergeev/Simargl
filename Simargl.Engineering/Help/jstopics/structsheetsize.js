@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"SheetSize - Структура параметров нестандартного листа",
+hmDescription:"Аналог данных параметров при использовании Automation - интерфейс ksSheetSize.",
+hmPrevLink:"structsheetparw.html",
+hmNextLink:"snapoptions.html",
+hmParentLink:"bk1829760.html",
+hmBreadCrumbs:"<a href=\"3d_define.html\">Структуры параметров и константы<\/a> &gt; <a href=\"bk1829760.html\">Структуры параметров документов&nbsp;<\/a>",
+hmTitlePath:"Структуры параметров и константы > Структуры параметров документов  > SheetSize - Структура параметров нестандартного листа ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">SheetSize - Структура параметров нестандартного листа <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbk1902977\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Аналог данных параметров при использовании Automation - интерфейс <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kssheetsize.html\" class=\"topiclink\">ksSheetSize<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<div style=\"text-align: left; text-indent: 0; line-height: 1.48; padding: 0 0 0 0; margin: 0.2500rem 0 0 4.1250rem;\"><table style=\"border:none; border-spacing:0;\">\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">double<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">width<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">длина листа,<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">double<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">height<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">высота листа.<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<\/table>\n\r<\/div>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

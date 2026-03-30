@@ -1,0 +1,4 @@
+﻿EntityFrameworkCore\Add-Migration -Project Communication\CommunicationDatabase -StartupProject Communication\CommunicationDatabase -Name
+EntityFrameworkCore\Update-Database -Project Communication\CommunicationDatabase -StartupProject Communication\CommunicationDatabase
+EntityFrameworkCore\Remove-Migration -Project Communication\CommunicationDatabase -StartupProject Communication\CommunicationDatabase
+EntityFrameworkCore\Remove-Migration -Project Communication\CommunicationDatabase -StartupProject Communication\CommunicationDatabase -Force

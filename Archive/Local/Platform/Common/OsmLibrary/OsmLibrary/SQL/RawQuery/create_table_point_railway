@@ -1,0 +1,4 @@
+-- Создаём таблицу на основе данных полной таблицы.
+CREATE TABLE planet_osm_point_railway AS (SELECT * FROM planet_osm_point WHERE railway <> '');
+-- Создаём индекс.
+CREATE INDEX planet_osm_point_railway_way_idx ON planet_osm_point_railway USING gist(way) WITH (fillfactor = 100);

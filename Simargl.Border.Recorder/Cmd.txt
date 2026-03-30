@@ -1,0 +1,2 @@
+﻿sc.exe create "Simargl.Border.Recorder" binpath= "D:\Environs\Programs\Simargl.Border.Recorder\Simargl.Border.Recorder.exe"
+sc delete "Simargl.Border.Recorder"

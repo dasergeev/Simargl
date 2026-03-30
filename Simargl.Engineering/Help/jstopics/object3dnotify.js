@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Источник событий объектов документа - модели Object3DNotify",
+hmDescription:"Интерфейс событий объектов документа-модели... Источник событий для объектов документа-модели. В Automation источник событий Object3DNotify можно получить при помощи метода ksP",
+hmPrevLink:"ksobject3dnotifyresult_getprocesstype.html",
+hmNextLink:"ca1747705.html",
+hmParentLink:"kspart.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument3d.html\">Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )&nbsp;<\/a> &gt; <a href=\"kspart.html\">Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )  > Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart  > Источник событий объектов документа - модели Object3DNotify ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Источник событий объектов документа - модели Object3DNotify <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xca1763874\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ksobject3dnotify.html\" class=\"topiclink\">Интерфейс событий объектов документа-модели...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Источник событий для объектов документа-модели<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">В Automation источник событий Object3DNotify можно получить при помощи метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kspart_getobject3dnotify.html\" class=\"topiclink\">ksPart::GetObject3DNotify<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс позволяет следить и управлять редактированием объектов документа-модели.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

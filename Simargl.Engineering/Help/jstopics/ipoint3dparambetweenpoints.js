@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IPoint3DParamBetweenPoints",
+hmDescription:"Интерфейс параметров пространственной точки между точками.",
+hmPrevLink:"ilocalcoordinatesystem_writetofile.html",
+hmNextLink:"ipoint3dparambetweenpoints_propers.html",
+hmParentLink:"bc2284065.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2278808.html\">Операции, массивы, эскизы, точки&nbsp;<\/a> &gt; <a href=\"bc2284065.html\">Точки&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Операции, массивы, эскизы, точки  > Точки  > Интерфейс IPoint3DParamBetweenPoints",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IPoint3DParamBetweenPoints<\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"ipoint3dparambetweenpoints\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс параметров пространственной точки между точками.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"ipoint3dparambetweenpoints.html\" class=\"topiclink\">IPoint3DParamBetweenPoints<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс можно получить с помощью свойства интерфейса пространственной точки <a href=\"ipoint3d_parameters.html\" class=\"topiclink\">IPoint3D::Parameters<\/a>.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Версия КОМПАС v22<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipoint3dparambetweenpoints_propers.html\" class=\"topiclink hmlinklistitem\">IPoint3DParamBetweenPoints - свойства<\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Виды и слои",
+hmDescription:"Подразделы: Интерфейс IViewsAndLayersManager  Интерфейс ILayerGroup  Интерфейс ILayerFilterCondition  Интерфейс ILayerGroups  Интерфейс ILayerFilterConditions  IDrawingObject",
+hmPrevLink:"bb2325661.html",
+hmNextLink:"iviewsandlayersmanager.html",
+hmParentLink:"bb2325661.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Виды и слои ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Виды и слои <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iviewsandlayersmanager.html\" class=\"topiclink hmlinklistitem\">Интерфейс IViewsAndLayersManager <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroup.html\" class=\"topiclink hmlinklistitem\">Интерфейс ILayerGroup <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayerfiltercondition.html\" class=\"topiclink hmlinklistitem\">Интерфейс ILayerFilterCondition <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayergroups.html\" class=\"topiclink hmlinklistitem\">Интерфейс ILayerGroups <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilayerfilterconditions.html\" class=\"topiclink hmlinklistitem\">Интерфейс ILayerFilterConditions <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idrawingobjects.html\" class=\"topiclink hmlinklistitem\">IDrawingObjects <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"idrawingobject.html\" class=\"topiclink hmlinklistitem\">Интерфейс IDrawingObject <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iassociationviewelements.html\" class=\"topiclink hmlinklistitem\">Интерфейс IAssociationViewElements <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iview1.html\" class=\"topiclink hmlinklistitem\">Интерфейс IView1 <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iviewdesignation.html\" class=\"topiclink hmlinklistitem\">Интерфейс IViewDesignation <\/a><\/span><\/p>\n\r"
+})

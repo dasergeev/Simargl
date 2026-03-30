@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IMark - свойства",
+hmDescription:"Подразделы: AutoNumber - Автонумерация марок и позиционных обозначений  Comment - Текст комментария  Name - Имя марки  Number - Номер марки  TextAfter - Текст после  TextBefo",
+hmPrevLink:"imark.html",
+hmNextLink:"imark_autonumber.html",
+hmParentLink:"imark.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb2362006.html\">Обозначения для строительства&nbsp;<\/a> &gt; <a href=\"imark.html\">Интерфейс IMark&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Обозначения для строительства  > Интерфейс IMark  > IMark - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IMark - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imark_autonumber.html\" class=\"topiclink hmlinklistitem\">AutoNumber - Автонумерация марок и позиционных обозначений <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imark_comment.html\" class=\"topiclink hmlinklistitem\">Comment - Текст комментария <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imark_name.html\" class=\"topiclink hmlinklistitem\">Name - Имя марки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imark_number.html\" class=\"topiclink hmlinklistitem\">Number - Номер марки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imark_textafter.html\" class=\"topiclink hmlinklistitem\">TextAfter - Текст после <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imark_textbefore.html\" class=\"topiclink hmlinklistitem\">TextBefore - Текст до <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imark_textunder.html\" class=\"topiclink hmlinklistitem\">TextUnder - Текст под <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imark_x.html\" class=\"topiclink hmlinklistitem\">X - Координата точки привязки по Х <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imark_y.html\" class=\"topiclink hmlinklistitem\">Y - Координата точки привязки марки по Y <\/a><\/span><\/p>\n\r"
+})

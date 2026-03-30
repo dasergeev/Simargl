@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IInsertionObjects - свойства",
+hmDescription:"Подразделы: InsertionObject - Вставка фрагмента, заданная по индексу",
+hmPrevLink:"iinsertionobjects.html",
+hmNextLink:"iinsertionobjects_insertionobject.html",
+hmParentLink:"iinsertionobjects.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb2331024.html\">Вставки видов, фрагментов, OLE объектов&nbsp;<\/a> &gt; <a href=\"iinsertionobjects.html\">Интерфейс IInsertionObjects&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Вставки видов, фрагментов, OLE объектов  > Интерфейс IInsertionObjects  > IInsertionObjects - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IInsertionObjects - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iinsertionobjects_insertionobject.html\" class=\"topiclink hmlinklistitem\">InsertionObject - Вставка фрагмента, заданная по индексу <\/a><\/span><\/p>\n\r"
+})

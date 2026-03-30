@@ -1,0 +1,19 @@
+﻿<UserControl
+    x:Class="Simargl.Engineering.Utilities.StampWriter.UI.JournalView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:Simargl.Engineering.Utilities.StampWriter.UI"
+    xmlns:stampwriter="clr-namespace:Simargl.Engineering.Utilities.StampWriter"
+    d:DataContext="{d:DesignInstance Type=stampwriter:Heart}"
+    mc:Ignorable="d" 
+    d:DesignHeight="450" d:DesignWidth="800">
+    <ListView ItemsSource="{Binding Messages}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</UserControl>

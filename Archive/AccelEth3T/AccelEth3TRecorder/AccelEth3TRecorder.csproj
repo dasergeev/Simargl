@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-AccelEth3TRecorder-d495b727-062f-47be-b4fc-65b393117536</UserSecretsId>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="10.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="10.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Simargl\Simargl.csproj" />
+	</ItemGroup>
+	
+</Project>

@@ -1,0 +1,13 @@
+CREATE TABLE cafes(id SERIAL PRIMARY KEY, NAME TEXT);
+
+-- Добавляет столбец
+SELECT AddGeometryColumn('cafes', 'point', 4326, 'POINT', 2);
+
+-- сразу создаем индекс
+CREATE INDEX cafes_idx ON cafes USING gist(point);
+
+-- заполняем данными из OSM
+INSERT INTO cafes (NAME, point)
+  SELECT NAME, ST_Transform(way, 4326)
+  FROM planet_osm_point
+  WHERE amenity = 'cafe' AND NAME <> '';

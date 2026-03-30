@@ -1,0 +1,3116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RailTest.Frames</name>
+    </assembly>
+    <members>
+        <member name="T:RailTest.Frames.Channel">
+            <summary>
+            Представляет канал кадра регистрации.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.Channel._Vector">
+            <summary>
+            Поле для хранения вектора данных.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.Channel.#ctor(System.String,System.String,System.Double,System.Double,System.Int32)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="name">
+            Имя канала.
+            </param>
+            <param name="unit">
+            Единица измерения.
+            </param>
+            <param name="sampling">
+            Частота дискретизации.
+            </param>
+            <param name="cutoff">
+            Частота среза фильтра.
+            </param>
+            <param name="length">
+            Длина массива данных.
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если значение параметра <paramref name="sampling"/> меньше нуля
+            - или -
+            значение параметра <paramref name="length"/> меньше нуля.
+            </exception>
+            <exception cref="T:System.OutOfMemoryException">
+            Происходит в случае, если недостаточно памяти для выполнения запроса.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.#ctor(RailTest.Frames.ChannelHeader,RailTest.Algebra.RealVector)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="header">
+            Заголовок канала.
+            </param>
+            <param name="vector">
+            Вектор данных.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Происходит в случае, если в параметре <paramref name="header"/> была передана пустая ссылка
+            - или -
+            если в параметре <paramref name="vector"/> была передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Header">
+            <summary>
+            Возвращает заголовок канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Vector">
+            <summary>
+            Возвращает или задаёт вектор данных.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            Происходит в случае, если в новом значении параметра была передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Format">
+            <summary>
+            Возвращает формат кадра.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Name">
+            <summary>
+            Возвращает или задаёт имя канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Unit">
+            <summary>
+            Возвращает или задаёт единицу измерения.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Sampling">
+            <summary>
+            Возвращает или задаёт частоту дискретизации.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если новое значение параметра меньше нуля.
+            </exception>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Cutoff">
+            <summary>
+            Возвращает или задаёт частоту среза фильтра.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Length">
+            <summary>
+            Возвращает или задаёт длину массива данных.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если новое значение параметра отрицательное.
+            </exception>
+            <exception cref="T:System.OutOfMemoryException">
+            Происходит в случае, если недостаточно памяти для выполнения запроса.
+            </exception>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Item(System.Int32)">
+            <summary>
+            Возвращает или задаёт значение по указанному индексу.
+            </summary>
+            <param name="index">
+            Индекс значения.
+            </param>
+            <returns>
+            Значение.
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если значение параметра <paramref name="index"/> меньше нуля
+            - или -
+            больше значения <see cref="P:RailTest.Frames.Channel.Length"/>.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.AtTimeSafe(System.Double)">
+            <summary>
+            Возвращает значение, в указанное время.
+            </summary>
+            <param name="time">
+            Время.
+            </param>
+            <returns>
+            Значение.
+            </returns>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Average">
+            <summary>
+            Возвращает среднее значение канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Max">
+            <summary>
+            Возвращает максимальное значение канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.Min">
+            <summary>
+            Возвращает минимальное значение канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.MaxPoint">
+            <summary>
+            Возвращает первую точку, в которой найдено максимальное значение канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.MinPoint">
+            <summary>
+            Возвращает первую точку, в которой найдено минимальное значение канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Channel.StandardDeviation">
+            <summary>
+            Возвращает стандартное отклонение.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.Channel.GetStandardMaxProbable(System.Double)">
+            <summary>
+            Возвращает максимально вероятное значение выборки по теоретическому квантилю.
+            </summary>
+            <param name="probability">
+            Вероятность.
+            </param>
+            <returns>
+            Максимально вероятное значение.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            Происходит в случае, если неуправляемая библиотека выдала исключение.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.GetStandardMinimumProbable(System.Double)">
+            <summary>
+            Возвращает минимально вероятное значение выборки по теоретическому квантилю.
+            </summary>
+            <param name="probability">
+            Вероятность.
+            </param>
+            <returns>
+            Максимально вероятное значение.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            Происходит в случае, если неуправляемая библиотека выдала исключение.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.GetEmpiricalMaxProbable(System.Double)">
+            <summary>
+            Возвращает максимально вероятное значение выборки по эмпирическому квантилю.
+            </summary>
+            <param name="probability">
+            Вероятность.
+            </param>
+            <returns>
+            Максимально вероятное значение.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            Происходит в случае, если неуправляемая библиотека выдала исключение.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.GetEmpiricalMinProbable(System.Double)">
+            <summary>
+            Возвращает минимально вероятное значение выборки по эмпирическому квантилю.
+            </summary>
+            <param name="probability">
+            Вероятность.
+            </param>
+            <returns>
+            Максимально вероятное значение.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            Происходит в случае, если неуправляемая библиотека выдала исключение.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.Scale(System.Double)">
+            <summary>
+            Масштабирует значения.
+            </summary>
+            <param name="factor">
+            Масштабный множитель.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.Channel.Move(System.Double)">
+            <summary>
+            Смещает значения.
+            </summary>
+            <param name="offset">
+            Смещение.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.Channel.SetZeroAtStart(System.Double)">
+            <summary>
+            Смещает значения канала так, чтобы среднее значение
+            за первые <paramref name="startTime"/> секунд было равно нулю.
+            </summary>
+            <param name="startTime">
+            Время в секундах.
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="startTime"/> передано отрицательное значение.
+            </exception>
+        </member>
+        <member name="T:RailTest.Frames.Channel.AmplitudeReformer">
+            <summary>
+            Представляет преобразователь амплитуд.
+            </summary>
+            <param name="frequency">
+            Частота.
+            </param>
+            <param name="amplitude">
+            Амплитуда.
+            </param>
+            <returns>
+            Преобразованная амплитуда.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.Channel.FourierFiltering(RailTest.Frames.Channel.AmplitudeReformer)">
+            <summary>
+            Выполняет фильтрацию с помощью преобразования Фурье.
+            </summary>
+            <param name="reformer">
+            Преобразователь амплитуд.
+            </param>
+            <exception cref="T:System.InvalidOperationException">
+            Происходит в случае, если неуправляемая библиотека выдала исключение.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.FourierFiltering(System.Double,System.Double,System.Boolean)">
+            <summary>
+            Выполняет фильтрацию с помощью преобразования Фурье.
+            </summary>
+            <param name="lowerFrequency">
+            Нижняя частота.
+            </param>
+            <param name="highFrequency">
+            Верхняя частота.
+            </param>
+            <param name="isInversion">
+            Значение, определяющее требуется ли выполнить инверсию частот:
+            false - после фильтрации остаются частоты большие или равные <paramref name="lowerFrequency"/>,
+                    но меньшие или равные <paramref name="highFrequency"/>
+            - или -
+            true -  после фильтрации остаются частоты меньшие <paramref name="lowerFrequency"/> или
+                    большие <paramref name="highFrequency"/>.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.Channel.MovingAverage(System.Double[],System.Int32)">
+            <summary>
+            Вычисляет скользящее среднее.
+            </summary>
+            <param name="weights">
+            Массив, содержащий весовые коэффициенты для скользящего среднего.
+            </param>
+            <param name="weightsOffset">
+            Смещение в массиве <paramref name="weights"/>,
+            соответствующее центральному весовому коэффициенту.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Происходит в случае, если в параметре <paramref name="weights"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если в параметре <paramref name="weightsOffset"/> передано отрицательное значение
+            - или -
+            <paramref name="weightsOffset"/> >= <paramref name="weights.Length.Length"/>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Происходит в случае, если неуправляемая библиотека выдала исключение.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.Resampling(System.Double)">
+            <summary>
+            Изменяет частоту дискретизации.
+            </summary>
+            <param name="sampling">
+            Новая частота дискретизации.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.Channel.Resampling(System.Double,System.Int32)">
+            <summary>
+            Изменяет частоту дискретизации.
+            </summary>
+            <param name="sampling">
+            Новая частота дискретизации.
+            </param>
+            <param name="length">
+            Новая длина канала.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.Channel.GetSubChannel(System.Int32,System.Int32)">
+            <summary>
+            Возвращает подканал.
+            </summary>
+            <param name="index">
+            Индекс, с которого начинается подканал.
+            </param>
+            <param name="length">
+            Длина подканала.
+            </param>
+            <returns>
+            Подканал.
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если значение параметра <paramref name="index"/> меньше нуля
+            - или -
+            значение параметра <paramref name="length"/> меньше нуля
+            - или -
+            сумма значений параметров <paramref name="index"/> и <paramref name="length"/> больше свойства <see cref="P:RailTest.Frames.Channel.Length"/>.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.Clone">
+            <summary>
+            Создаёт копию канала.
+            </summary>
+            <returns>
+            Копия канала.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.Channel.MovingAverage(System.Double*,System.Int32,System.Double[],System.Int32)">
+            <summary>
+            Вычисляет скользящее среднее.
+            </summary>
+            <param name="series">
+            Указатель на область памяти, в котором содержится последовательность.
+            Размер области памяти должен быть достаточно большим,
+            чтобы уместить <paramref name="length"/> значений типа <see cref="T:System.Double"/>.
+            </param>
+            <param name="length">
+            Количество элементов типа <see cref="T:System.Double"/> в последовательности <paramref name="series"/>.
+            </param>
+            <param name="weights">
+            Массив, содержащий весовые коэффициенты для скользящего среднего.
+            </param>
+            <param name="weightsOffset">
+            Смещение в массиве <paramref name="weights"/>,
+            соответствующее центральному весовому коэффициенту.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Происходит в случае, если в параметре <paramref name="series"/> передан нулевой указатель
+            - или -
+            в параметре <paramref name="weights"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если в параметре <paramref name="length"/> передано отрицательное значение
+            - или -
+            в параметре <paramref name="weightsOffset"/> передано отрицательное значение
+            - или -
+            <paramref name="weightsOffset"/> >= <paramref name="weights.Length.Length"/>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Происходит в случае, если неуправляемая библиотека выдала исключение.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.Channel.MovingAverage(System.Double*,System.Double*,System.Int32,System.Double*,System.Int32,System.Int32)">
+            <summary>
+            Вычисляет скользящее среднее.
+            </summary>
+            <param name="targetSeries">
+            Целевой указатель на область памяти, в которую необходимо поместить результат вычислений.
+            Размер области памяти должен быть достаточно большим,
+            чтобы уместить <paramref name="length"/> значений типа <see cref="T:System.Double"/>.
+            Значение может совпадать с <paramref name="sourceSeries"/>.
+            </param>
+            <param name="sourceSeries">
+            Исходный указатель на область памяти, из которой необходимо взять исходные данные.
+            Размер области памяти должен быть достаточно большим,
+            чтобы уместить <paramref name="length"/> значений типа <see cref="T:System.Double"/>.
+            Значение может совпадать с <paramref name="targetSeries"/>.
+            </param>
+            <param name="length">
+            Количество элементов типа <see cref="T:System.Double"/>
+            в последовательностях <paramref name="targetSeries"/> и <paramref name="sourceSeries"/>.
+            </param>
+            <param name="weights">
+            Указатель на область памяти, содержащую весовые коэффициенты для скользящего среднего.
+            Размер области памяти должен быть достаточно большим,
+            чтобы уместить <paramref name="weightsCount"/> значений типа <see cref="T:System.Double"/>.
+            </param>
+            <param name="weightsCount">
+            Количество элементов типа <see cref="T:System.Double"/> в массиве <paramref name="weights"/>.
+            </param>
+            <param name="weightsOffset">
+            Смещение в массиве <paramref name="weights"/>,
+            соответствующее центральному весовому коэффициенту.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Происходит в случае, если в параметре <paramref name="targetSeries"/> передан нулевой указатель
+            - или -
+            в параметре <paramref name="sourceSeries"/> передан нулевой указатель
+            - или -
+            в параметре <paramref name="weights"/> передан нулевой указатель
+            и значение <paramref name="weightsCount"/> больше нуля.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если <paramref name="weightsOffset"/> >= <paramref name="weightsCount"/>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Происходит в случае, если неуправляемая библиотека выдала исключение.
+            </exception>
+        </member>
+        <member name="T:RailTest.Frames.ChannelCollection">
+            <summary>
+            Представляет коллекцию каналов.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.ChannelCollection.Add(RailTest.Frames.Channel)">
+            <summary>
+            Добавляет канал в конец коллекции.
+            </summary>
+            <param name="channel">
+            Канал, который добавляется в конец коллекции.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.ChannelCollection.AddRange(System.Collections.Generic.IEnumerable{RailTest.Frames.Channel})">
+            <summary>
+            Добавляет каналы в конец коллекции.
+            </summary>
+            <param name="collection">
+            Коллекция добавляемых каналов.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.ChannelCollection.Remove(RailTest.Frames.Channel)">
+            <summary>
+            Удаляет канал из коллекции.
+            </summary>
+            <param name="channel">
+            Канал, удаляемый из коллекции.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.ChannelCollection.Clear">
+            <summary>
+            Удаляет все каналы из коллекции.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.ChannelCollection.Count">
+            <summary>
+            Возвращает количество каналов.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.ChannelCollection.Item(System.Int32)">
+            <summary>
+            Возвращает канал с указанным индексом.
+            </summary>
+            <param name="index">
+            Индекс канала.
+            </param>
+            <returns>
+            Канал с указанным индексом.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.ChannelCollection.Contains(System.String)">
+            <summary>
+            Проверяет, содержится ли канал с указанным именем в коллеции.
+            </summary>
+            <param name="name">
+            Имя канала.
+            </param>
+            <returns>
+            Результат проверки.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.ChannelCollection.GetEnumerator">
+            <summary>
+            Возвращает перечислитель коллекции.
+            </summary>
+            <returns>
+            Перечислитель коллекции.
+            </returns>
+        </member>
+        <member name="P:RailTest.Frames.ChannelCollection.Item(System.String)">
+            <summary>
+            Возвращает перый канал с указанным именем.
+            </summary>
+            <param name="name">
+            Имя канала.
+            </param>
+            <returns>
+            Первый канал с указанным именем.
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Коллекция не содержит ни одного канала с указанным именем.
+            </exception>
+        </member>
+        <member name="T:RailTest.Frames.ChannelHeader">
+            <summary>
+            Представляет заголовок канала.
+            </summary>
+        </member>
+        <member name="E:RailTest.Frames.ChannelHeader.SamplingChanged">
+            <summary>
+            Происходит при изменении свойства <see cref="P:RailTest.Frames.ChannelHeader.Sampling"/>.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.ChannelHeader._Name">
+            <summary>
+            Поле для хранения имени канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.ChannelHeader._Unit">
+            <summary>
+            Поле для хранения единицы измерения.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.ChannelHeader._Sampling">
+            <summary>
+            Поле для хранения частоты дискретизации.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.ChannelHeader._Cutoff">
+            <summary>
+            Поле для хранения частоты среза фильтра.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.ChannelHeader.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.ChannelHeader.#ctor(System.String,System.String,System.Double,System.Double)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="name">
+            Имя канала.
+            </param>
+            <param name="unit">
+            Единица измерения.
+            </param>
+            <param name="sampling">
+            Частота дискретизации.
+            </param>
+            <param name="cutoff">
+            Частота среза фильтра.
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если значение параметра <paramref name="sampling"/> меньше нуля.
+            </exception>
+        </member>
+        <member name="M:RailTest.Frames.ChannelHeader.#ctor(RailTest.Frames.StorageFormat)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="format">
+            Формат кадра.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.ChannelHeader.#ctor(RailTest.Frames.StorageFormat,System.String,System.String,System.Double,System.Double)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="format">
+            Формат кадра.
+            </param>
+            <param name="name">
+            Имя канала.
+            </param>
+            <param name="unit">
+            Единица измерения.
+            </param>
+            <param name="sampling">
+            Частота дискретизации.
+            </param>
+            <param name="cutoff">
+            Частота среза фильтра.
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если значение параметра <paramref name="sampling"/> меньше нуля.
+            </exception>
+        </member>
+        <member name="P:RailTest.Frames.ChannelHeader.Format">
+            <summary>
+            Возвращает формат кадра.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.ChannelHeader.Name">
+            <summary>
+            Возвращает или задаёт имя канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.ChannelHeader.Unit">
+            <summary>
+            Возвращает или задаёт единицу измерения.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.ChannelHeader.Sampling">
+            <summary>
+            Возвращает или задаёт частоту дискретизации.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Происходит в случае, если новое значение параметра меньше нуля.
+            </exception>
+        </member>
+        <member name="P:RailTest.Frames.ChannelHeader.Cutoff">
+            <summary>
+            Возвращает или задаёт частоту среза фильтра.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.ChannelHeader.Clone">
+            <summary>
+            Создаёт копию объекта.
+            </summary>
+            <returns>
+            Копия объекта.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.ChannelHeader.Convert(RailTest.Frames.StorageFormat)">
+            <summary>
+            Возвращает заголовок кадра в другом формате.
+            </summary>
+            <param name="format">
+            Формат заголовка канала, в который необходимо преобразовать текущий объект.
+            </param>
+            <returns>
+            Преобразованный объект.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.ChannelHeader.OnSamplingChanged(System.EventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:RailTest.Frames.ChannelHeader.SamplingChanged"/>.
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="T:RailTest.Frames.ChannelPoint">
+            <summary>
+            Представляет точку канала.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.ChannelPoint.#ctor(System.Int32,System.Double)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="index">
+            Индекс точки.
+            </param>
+            <param name="value">
+            Значение точки.
+            </param>
+        </member>
+        <member name="P:RailTest.Frames.ChannelPoint.Index">
+            <summary>
+            Возвращает или задаёт индекс точки.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.ChannelPoint.Value">
+            <summary>
+            Возвращает или задаёт значение точки.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.FileReadMode">
+            <summary>
+            Представляет значение, определяющее режим чтения файла кадра регистрации.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.FileReadMode.Default">
+            <summary>
+            Режим чтения по умолчанию.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.FileReadMode.DisableCheckExceedingFileSize">
+            <summary>
+            Отключить проверку превышения размера файла.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.Frame">
+            <summary>
+            Представляет кадр регистрации.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.Frame.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.Frame.#ctor(System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="path">
+            Путь к файлу.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.Frame.#ctor(System.String,RailTest.Frames.FileReadMode)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="path">
+            Путь к файлу.
+            </param>
+            <param name="readMode">
+            Значение, определяющее режим чтения файла кадра регистрации.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.Frame.#ctor(RailTest.Frames.FrameHeader)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="header">
+            Заголовок кадра.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Происходит в случае, если в параметре <paramref name="header"/> была передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:RailTest.Frames.Frame.Header">
+            <summary>
+            Возвращает заголовок кадра.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Frame.Channels">
+            <summary>
+            Возвращает коллекцию каналов.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.Frame.Format">
+            <summary>
+            Возвращает формат кадра.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.Frame.Save(System.String)">
+            <summary>
+            Сохраняет кадр в файл.
+            </summary>
+            <param name="path">
+            Путь к файлу.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.Frame.Save(System.String,RailTest.Frames.StorageFormat)">
+            <summary>
+            Сохраняет кадр в файл.
+            </summary>
+            <param name="path">
+            Путь к файлу.
+            </param>
+            <param name="format">
+            Формат хранения элементов кадра регистрации.
+            </param>
+        </member>
+        <member name="T:RailTest.Frames.FrameHeader">
+            <summary>
+            Представляет базовый класс для всех заголовков кадров.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.FrameHeader.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.FrameHeader.#ctor(RailTest.Frames.StorageFormat)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="format">
+            Формат кадра.
+            </param>
+        </member>
+        <member name="P:RailTest.Frames.FrameHeader.Format">
+            <summary>
+            Возвращает формат кадра.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.FrameHeader.Clone">
+            <summary>
+            Создаёт копию объекта.
+            </summary>
+            <returns>
+            Копия объекта.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FrameHeader.Convert(RailTest.Frames.StorageFormat)">
+            <summary>
+            Возвращает заголовок кадра в другом формате.
+            </summary>
+            <param name="format">
+            Формат заголовка канала, в который необходимо преобразовать текущий объект.
+            </param>
+            <returns>
+            Преобразованный объект.
+            </returns>
+        </member>
+        <member name="T:RailTest.Frames.StorageFormat">
+            <summary>
+            Представляет значение, определяющее формат хранения элементов кадра регистрации.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.StorageFormat.Simple">
+            <summary>
+            Простой формат.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.StorageFormat.TestLab">
+            <summary>
+            Формат TestLab.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.StorageFormat.Catman">
+            <summary>
+            Формат Catman.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.StorageFormat.Mera">
+            <summary>
+            Формат Mera.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.CatmanChannelHeader">
+            <summary>
+            Представляет заголовок канала в формате <see cref="F:RailTest.Frames.StorageFormat.Catman"/>.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._LocationInDatabase">
+            <summary>
+            Поле для хранения положения канала в базе данных Catman.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._Comment">
+            <summary>
+            Поле для хранения коментария к каналу.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._DataFormat">
+            <summary>
+            Поле для хранения формата данных канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._DataWidth">
+            <summary>
+            Поле для хранения ширины данных в байтах.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._Time">
+            <summary>
+            Поле для хранения даты и времени измерения.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._SizeOfExtendedHeader">
+            <summary>
+            Поле для хранения размера дополнительного заголовка канала в байтах.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._StartTime">
+            <summary>
+            Поле для хранения времени начала измерений.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._SamplingTimeStep">
+            <summary>
+            Поле для хранения шага времени выборки.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfSensorType">
+            <summary>
+            Поле для хранения кода типа датчика.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfSupplyVoltage">
+            <summary>
+            Поле для хранения кода напряжения питания.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfFilterCharacteristics">
+            <summary>
+            Поле для хранения кода характеристик фильтра.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfFilterFrequency">
+            <summary>
+            Поле для хранения кода частоты фильтра.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._TareValue">
+            <summary>
+            Поле для хранения значения тары.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._ZeroValue">
+            <summary>
+            Поле для хранения нулевого значения.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfMeasuringRange">
+            <summary>
+            Поле для хранения кода измерительного диапазона.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._InputCharacteristics">
+            <summary>
+            Поле для хранения входных характеристик.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._AmplifierSerialNumber">
+            <summary>
+            Поле для хранения серийного номера усилителя.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._PhysicalUnit">
+            <summary>
+            Поле для хранения физической единицы измерения.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._NativeUnit">
+            <summary>
+            Поле для хранения исходной единицы измерения.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._HardwareSlotNumber">
+            <summary>
+            Поле для хранения номера слота оборудования.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._HardwareSubSlotNumber">
+            <summary>
+            Поле для хранения номера подканала или 0, если одноканальный слот.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfAmplifierType">
+            <summary>
+            Поле для хранения кода усилителя.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfAPConnectorType">
+            <summary>
+            Поле для хранения кода типа соединителя AP.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._GageFactor">
+            <summary>
+            Поле для хранения коэффициента заполнения, используемого в измерениях тензодатчиков.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._BridgeFactor">
+            <summary>
+            Поле для хранения мостового коэффициента, используемого в измерениях тензодатчиков.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfMeasurementSignal">
+            <summary>
+            Поле для хранения кода измерительного сигнала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfAmplifierInput">
+            <summary>
+            Поле для хранения кода входного усилителя.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfHighpassFilter">
+            <summary>
+            Поле для хранения кода фильтра высоких частот.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._OnlineImportInfo">
+            <summary>
+            Поле для хранения специальной информации, используемой в заголовках файлов онлайн-экспорта.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CodeOfScaleType">
+            <summary>
+            Поле для хранения кода типа шкалы.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._SoftwareZeroValue">
+            <summary>
+            Поле для хранения программного нуля (тары) для каналов, имеющих пользовательскую шкалу.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._WriteProtected">
+            <summary>
+            Поле для хранения защиты от записи. Если не ноль, то доступ на запись запрещен.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._Alignment">
+            <summary>
+            Поле для хранения данных для выравнивания структуры данных.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._NominalRange">
+            <summary>
+            Поле для хранения номинального диапазона.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._CableLengthCompensation">
+            <summary>
+            Поле для хранения коэффициента компенсации длины кабеля.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._ExportFormat">
+            <summary>
+            Поле для хранения формата экспортируемых данных.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._ChannelType">
+            <summary>
+            Поле для хранения типа канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._EDaqConnectorOnLayer">
+            <summary>
+            Поле для хранения соединителя на слое системы сбора данных.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._EDaqLayer">
+            <summary>
+            Поле для хранения слоя системы сбора данных.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._ContentType">
+            <summary>
+            Поле для хранения типа содержимого.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._Reserved">
+            <summary>
+            Поле для хранения зарезервированных данных.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._LinearisationMode">
+            <summary>
+            Поле для хранения режима линеаризации.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._UserScaleType">
+            <summary>
+            Поле для хранения типа пользовательского масштаба.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._NumberOfPointsScaleTable">
+            <summary>
+            Поле для хранения количества точек для таблицы пользовательского масштаба.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._PointsScaleTable">
+            <summary>
+            Поле для хранения серии значений таблицы пользовательского масштаба.
+            Значения зависят от типа масштабирования.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._ThermoType">
+            <summary>
+            Поле для хранения термо-типа.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._Formula">
+            <summary>
+            Поле для хранения формулы.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._SensorInfo">
+            <summary>
+            Поле для хранения информации о сенсоре.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanChannelHeader._FormatString">
+            <summary>
+            Поле для хранения формата строки.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.CatmanChannelHeader.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.LocationInDatabase">
+            <summary>
+            Возвращает или задаёт положение канала в базе данных Catman.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.Comment">
+            <summary>
+            Возвращает или задаёт коментарий к каналу.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.DataFormat">
+            <summary>
+            Возвращает или задаёт формат данных канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.DataWidth">
+            <summary>
+            Возвращает или задаёт ширину данных в байтах.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.Time">
+            <summary>
+            Возвращает или задаёт дату и время измерения.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.SizeOfExtendedHeader">
+            <summary>
+            Возвращает или задаёт размер дополнительного заголовка канала в байтах.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.StartTime">
+            <summary>
+            Возвращает или задаёт время начала измерений.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.SamplingTimeStep">
+            <summary>
+            Возвращает или задаёт шаг времени выборки.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfSensorType">
+            <summary>
+            Возвращает или задаёт код типа датчика.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfSupplyVoltage">
+            <summary>
+            Возвращает или задаёт код напряжения питания.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfFilterCharacteristics">
+            <summary>
+            Возвращает или задаёт код характеристик фильтра.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfFilterFrequency">
+            <summary>
+            Возвращает или задаёт код частоты фильтра.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.TareValue">
+            <summary>
+            Возвращает или задаёт значение тары.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.ZeroValue">
+            <summary>
+            Возвращает или задаёт нулевое значение.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfMeasuringRange">
+            <summary>
+            Возвращает или задаёт код измерительного диапазона.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.InputCharacteristics">
+            <summary>
+            Возвращает или задаёт входные характеристики.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.AmplifierSerialNumber">
+            <summary>
+            Возвращает или задаёт серийный номер усилителя.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.PhysicalUnit">
+            <summary>
+            Возвращает или задаёт физическую единицу измерения.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.NativeUnit">
+            <summary>
+            Возвращает или задаёт исходную единицу измерения.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.HardwareSlotNumber">
+            <summary>
+            Возвращает или задаёт номер слота оборудования.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.HardwareSubSlotNumber">
+            <summary>
+            Возвращает или задаёт номер подканала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfAmplifierType">
+            <summary>
+            Возвращает или задаёт код усилителя.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfAPConnectorType">
+            <summary>
+            Возвращает или задаёт код типа соединителя AP.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.GageFactor">
+            <summary>
+            Возвращает или задаёт коэффициент заполнения, используемый в измерениях тензодатчиков.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.BridgeFactor">
+            <summary>
+            Возвращает или задаёт мостовой коэффициент, используемый в измерениях тензодатчиков.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfMeasurementSignal">
+            <summary>
+            Возвращает или задаёт код измерительного сигнала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfAmplifierInput">
+            <summary>
+            Возвращает или задаёт код входного усилителя.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfHighpassFilter">
+            <summary>
+            Возвращает или задаёт код фильтра высоких частот.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.OnlineImportInfo">
+            <summary>
+            Возвращает или задаёт специальную информацию, используемую в заголовках файлов онлайн-экспорта.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CodeOfScaleType">
+            <summary>
+            Возвращает или задаёт код типа шкалы.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.SoftwareZeroValue">
+            <summary>
+            Возвращает или задаёт программный нуль (тару) для каналов, имеющих пользовательскую шкалу.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.WriteProtected">
+            <summary>
+            Возвращает или задаёт защиту от записи. Если не ноль, то доступ на запись запрещен.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.Alignment">
+            <summary>
+            Возвращает или задаёт данные для выравнивания структуры данных.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.NominalRange">
+            <summary>
+            Возвращает или задаёт номинальный диапазон.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.CableLengthCompensation">
+            <summary>
+            Возвращает или задаёт коэффициент компенсации длины кабеля.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.ExportFormat">
+            <summary>
+            Возвращает или задаёт формат экспортируемых данных.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.ChannelType">
+            <summary>
+            Возвращает или задаёт тип канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.EDaqConnectorOnLayer">
+            <summary>
+            Возвращает или задаёт соединитель на слое системы сбора данных.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.EDaqLayer">
+            <summary>
+            Возвращает или задаёт слой системы сбора данных.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.ContentType">
+            <summary>
+            Возвращает или задаёт тип содержимого.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.Reserved">
+            <summary>
+            Возвращает или задаёт зарезервированные данные.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.LinearisationMode">
+            <summary>
+            Возвращает или задаёт режим линеаризации.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.UserScaleType">
+            <summary>
+            Возвращает или задаёт тип пользовательского масштаба.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.NumberOfPointsScaleTable">
+            <summary>
+            Возвращает или задаёт количество точек для таблицы пользовательского масштаба.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.PointsScaleTable">
+            <summary>
+            Возвращает или задаёт серию значений таблицы пользовательского масштаба.
+            Значения зависят от типа масштабирования.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.ThermoType">
+            <summary>
+            Возвращает или задаёт термо-тип.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.Formula">
+            <summary>
+            Возвращает или задаёт формулу.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.SensorInfo">
+            <summary>
+            Возвращает или задаёт информацию о сенсоре.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.FormatString">
+            <summary>
+            Возвращает формат строки.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.MinValueFactor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanChannelHeader.MaxValueFactor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.CatmanChannelHeader.Clone">
+            <summary>
+            Создаёт копию объекта.
+            </summary>
+            <returns>
+            Копия объекта.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.CatmanChannelHeader.OnSamplingChanged(System.EventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:RailTest.Frames.ChannelHeader.SamplingChanged"/>.
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="T:RailTest.Frames.CatmanFrameHeader">
+            <summary>
+            Представляет заголовок кадра в формате <see cref="F:RailTest.Frames.StorageFormat.Catman"/>.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanFrameHeader.Comment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanFrameHeader.Reserve">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanFrameHeader.MaximumChannelLength">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.CatmanFrameHeader.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.CatmanFrameHeader.Clone">
+            <summary>
+            Создаёт копию объекта.
+            </summary>
+            <returns>
+            Копия объекта.
+            </returns>
+        </member>
+        <member name="T:RailTest.Frames.CatmanSensorInfo">
+            <summary>
+            Представляет информацию о сенсоре.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanSensorInfo._InUse">
+            <summary>
+            Поле для хранения значения, определяющего учитываются ли свойства датчика в процессе инициализации.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanSensorInfo._Description">
+            <summary>
+            Поле для хранения описания.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanSensorInfo._Tid">
+            <summary>
+            Поле для хранения идентификатора.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.CatmanSensorInfo.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.CatmanSensorInfo.#ctor(System.Boolean,System.String,System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="inUse">
+            Значение, определяющее учитываются ли свойства датчика в процессе инициализации.
+            </param>
+            <param name="description">
+            Описание.
+            </param>
+            <param name="tid">
+            Идентификатор.
+            </param>
+        </member>
+        <member name="P:RailTest.Frames.CatmanSensorInfo.InUse">
+            <summary>
+            Возвращает или задаёт значение, определяющее учитываются ли свойства датчика в процессе инициализации.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanSensorInfo.Description">
+            <summary>
+            Возвращает или задаёт описание.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.CatmanSensorInfo.Tid">
+            <summary>
+            Возвращает или задаёт идентификатор.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.CatmanCodeOfFilterCharacteristics">
+            <summary>
+            Представляет значение, определяющее код характеристик фильтра.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterCharacteristics.Butterworth">
+            <summary>
+            Butterworth.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterCharacteristics.Bessel">
+            <summary>
+            Bessel.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterCharacteristics.Butterworth4thOrder">
+            <summary>
+            Butterworth 4-ого порядка (ML801 only).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterCharacteristics.Bessel4thOrder">
+            <summary>
+            Bessel 4-ого порядка (ML801 only).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterCharacteristics.NoFilter">
+            <summary>
+            Без фильтра (Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterCharacteristics.AperiodicFilter">
+            <summary>
+            Апериодический фильтр (Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterCharacteristics.FixedFilter1Hz">
+            <summary>
+            Фиксированный фильтр 1Гц -3 дБ (Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterCharacteristics.VariableFilter">
+            <summary>
+            Переменный фильтр (Spider8).
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.CatmanCodeOfFilterFrequency">
+            <summary>
+            Представляет знечение, определяющее код частоты фильтра.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_01Hz">
+            <summary>
+            Частота фильтра 0.01 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_012Hz">
+            <summary>
+            Частота фильтра 0.012 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_015Hz">
+            <summary>
+            Частота фильтра 0.015 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_02Hz">
+            <summary>
+            Частота фильтра 0.02 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_025Hz">
+            <summary>
+            Частота фильтра 0.025 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_03Hz">
+            <summary>
+            Частота фильтра 0.03 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_04Hz">
+            <summary>
+            Частота фильтра 0.04 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_05Hz">
+            <summary>
+            Частота фильтра 0.05 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_06Hz">
+            <summary>
+            Частота фильтра 0.06 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_07Hz">
+            <summary>
+            Частота фильтра 0.07 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_075Hz">
+            <summary>
+            Частота фильтра 0.075 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_08Hz">
+            <summary>
+            Частота фильтра 0.08 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_09Hz">
+            <summary>
+            Частота фильтра 0.09 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_1Hz">
+            <summary>
+            Частота фильтра 0.1 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_12Hz">
+            <summary>
+            Частота фильтра 0.12 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_15Hz">
+            <summary>
+            Частота фильтра 0.15 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_2Hz">
+            <summary>
+            Частота фильтра 0.2 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_25Hz">
+            <summary>
+            Частота фильтра 0.25 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_3Hz">
+            <summary>
+            Частота фильтра 0.3 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_4Hz">
+            <summary>
+            Частота фильтра 0.4 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_5Hz">
+            <summary>
+            Частота фильтра 0.5 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_6Hz">
+            <summary>
+            Частота фильтра 0.6 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_7Hz">
+            <summary>
+            Частота фильтра 0.7 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_75Hz">
+            <summary>
+            Частота фильтра 0.75 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_8Hz">
+            <summary>
+            Частота фильтра 0.8 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency0_9Hz">
+            <summary>
+            Частота фильтра 0.9 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency1Hz">
+            <summary>
+            Частота фильтра 1 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency1_2Hz">
+            <summary>
+            Частота фильтра 1.2 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency1_25Hz">
+            <summary>
+            Частота фильтра 1.25 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency1_5Hz">
+            <summary>
+            Частота фильтра 1.5 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency2Hz">
+            <summary>
+            Частота фильтра 2 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency2_5Hz">
+            <summary>
+            Частота фильтра 2.5 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency3Hz">
+            <summary>
+            Частота фильтра 3 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency4Hz">
+            <summary>
+            Частота фильтра 4 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency5Hz">
+            <summary>
+            Частота фильтра 5 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency6Hz">
+            <summary>
+            Частота фильтра 6 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency7Hz">
+            <summary>
+            Частота фильтра 7 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency7_5Hz">
+            <summary>
+            Частота фильтра 7.5 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency8Hz">
+            <summary>
+            Частота фильтра 8 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency9Hz">
+            <summary>
+            Частота фильтра 9 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency10Hz">
+            <summary>
+            Частота фильтра 10 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency12Hz">
+            <summary>
+            Частота фильтра 12 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency15Hz">
+            <summary>
+            Частота фильтра 15 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency17_5Hz">
+            <summary>
+            Частота фильтра 17.5 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency20Hz">
+            <summary>
+            Частота фильтра 20 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency25Hz">
+            <summary>
+            Частота фильтра 25 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency30Hz">
+            <summary>
+            Частота фильтра 30 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency40Hz">
+            <summary>
+            Частота фильтра 40 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency50Hz">
+            <summary>
+            Частота фильтра 50 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency60Hz">
+            <summary>
+            Частота фильтра 60 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency70Hz">
+            <summary>
+            Частота фильтра 70 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency75Hz">
+            <summary>
+            Частота фильтра 75 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency80Hz">
+            <summary>
+            Частота фильтра 80 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency90Hz">
+            <summary>
+            Частота фильтра 90 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency100Hz">
+            <summary>
+            Частота фильтра 100 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency120Hz">
+            <summary>
+            Частота фильтра 120 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency150Hz">
+            <summary>
+            Частота фильтра 150 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency200Hz">
+            <summary>
+            Частота фильтра 200 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency250Hz">
+            <summary>
+            Частота фильтра 250 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency300Hz">
+            <summary>
+            Частота фильтра 300 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency400Hz">
+            <summary>
+            Частота фильтра 400 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency500Hz">
+            <summary>
+            Частота фильтра 500 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency550Hz">
+            <summary>
+            Частота фильтра 550 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency600Hz">
+            <summary>
+            Частота фильтра 600 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency700Hz">
+            <summary>
+            Частота фильтра 700 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency750Hz">
+            <summary>
+            Частота фильтра 750 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency800Hz">
+            <summary>
+            Частота фильтра 800 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency900Hz">
+            <summary>
+            Частота фильтра 900 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency1kHz">
+            <summary>
+            Частота фильтра 1 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency1_1kHz">
+            <summary>
+            Частота фильтра 1.1 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency1_2kHz">
+            <summary>
+            Частота фильтра 1.2 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency1_5kHz">
+            <summary>
+            Частота фильтра 1.5 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency2kHz">
+            <summary>
+            Частота фильтра 2 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency2_4kHz">
+            <summary>
+            Частота фильтра 2.4 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency2_5kHz">
+            <summary>
+            Частота фильтра 2.5 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency3kHz">
+            <summary>
+            Частота фильтра 3 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency4kHz">
+            <summary>
+            Частота фильтра 4 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency5kHz">
+            <summary>
+            Частота фильтра 5 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency6kHz">
+            <summary>
+            Частота фильтра 6 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency7kHz">
+            <summary>
+            Частота фильтра 7 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency7_5kHz">
+            <summary>
+            Частота фильтра 7.5 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency8kHz">
+            <summary>
+            Частота фильтра 8 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency9kHz">
+            <summary>
+            Частота фильтра 9 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency10kHz">
+            <summary>
+            Частота фильтра 10 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency50kHz">
+            <summary>
+            Частота фильтра 50 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.Frequency100kHz">
+            <summary>
+            Частота фильтра 100 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfFilterFrequency.FrequencyNone">
+            <summary>
+            Без фильтра.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.CatmanCodeOfMeasuringRange">
+            <summary>
+            Представляет значение, определяющее код измерительного диапазона.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range3mV_V">
+            <summary>
+            Измерительный диапазон: 3 мВ/В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range12mV_V">
+            <summary>
+            Измерительный диапазон: 12 мВ/В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range125mV_V">
+            <summary>
+            Измерительный диапазон: 125 мВ/В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range500mV_V">
+            <summary>
+            Измерительный диапазон: 500 мВ/В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range0_1V">
+            <summary>
+            Измерительный диапазон: 0.1 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range1V">
+            <summary>
+            Измерительный диапазон: 1 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range10V">
+            <summary>
+            Измерительный диапазон: 10 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range20mA">
+            <summary>
+            Измерительный диапазон: 20 мА.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range200mA">
+            <summary>
+            Измерительный диапазон: 200 мА.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range0_4kOhm">
+            <summary>
+            Измерительный диапазон: 0.4 кОм.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range4kOhm">
+            <summary>
+            Измерительный диапазон: 4 кОм.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range1MHz">
+            <summary>
+            Измерительный диапазон: 1 МГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range100kHz">
+            <summary>
+            Измерительный диапазон: 100 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range10kHz">
+            <summary>
+            Измерительный диапазон: 10 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range1kHz">
+            <summary>
+            Измерительный диапазон: 1 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range100Hz">
+            <summary>
+            Измерительный диапазон: 100 Гц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range10ms">
+            <summary>
+            Измерительный диапазон: 10 мс.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range100ms">
+            <summary>
+            Измерительный диапазон: 100 мс.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range1s">
+            <summary>
+            Измерительный диапазон: 1 с.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range10s">
+            <summary>
+            Измерительный диапазон: 10 с.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range100s">
+            <summary>
+            Измерительный диапазон: 100 с.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.RangeCounter">
+            <summary>
+            Счётчик.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.RangeCounter2x">
+            <summary>
+            Счётчик 2x.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range6mV">
+            <summary>
+            Измерительный диапазон: 6 мВ.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range15mV">
+            <summary>
+            Измерительный диапазон: 15 мВ.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range50mV">
+            <summary>
+            Измерительный диапазон: 50 мВ.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range100mV">
+            <summary>
+            Измерительный диапазон: 100 мВ.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range250mV">
+            <summary>
+            Измерительный диапазон: 250 мВ.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range1000mV">
+            <summary>
+            Измерительный диапазон: 1000 мВ.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfMeasuringRange.Range2500mV">
+            <summary>
+            Измерительный диапазон: 2500 мВ.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.CatmanCodeOfSensorType">
+            <summary>
+            Представляет значение, определяющее код типа датчика.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageInductiveFullBridge">
+            <summary>
+            Тензометрический датчик/индуктивный полный мост (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageInductiveHalfBridge">
+            <summary>
+            Тензометрический датчик/индуктивный полумост (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.QuarterBridge">
+            <summary>
+            Четвертьмост (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageFullBridge">
+            <summary>
+            Полный тензометрический мост.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageHalfBridge">
+            <summary>
+            Тензометрический полумост.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge">
+            <summary>
+            Тензометрический четвертьмост.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.InductiveFullBridge">
+            <summary>
+            Индуктивнй полный мост.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.InductiveHalfBridge">
+            <summary>
+            Индуктивнй полумост.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.FullBridgeLowRange">
+            <summary>
+            Полный мост (ML10, низкий диапазон).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.HalfBridgeLowRange">
+            <summary>
+            Полумост (ML10, низкий диапазон).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.FullBridgeHighRange">
+            <summary>
+            Полный мост (ML10, высокий диапазон).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.HalfBridgeHighRange">
+            <summary>
+            Полумост (ML10, высокий диапазон).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageFullBridge120Ohms">
+            <summary>
+            Тензометрический полный мост 120 Ом (AP14).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageFullBridge350Ohms">
+            <summary>
+            Тензометрический полный мост 350 Ом (AP14).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageFullBridge700Ohms">
+            <summary>
+            Тензометрический полный мост 700 Ом (AP14).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageHalfBridge120Ohms">
+            <summary>
+            Тензометрический полумост 120 Ом (AP14).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageHalfBridge350Ohms">
+            <summary>
+            Тензометрический полумост 350 Ом (AP14).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageHalfBridge700Ohms">
+            <summary>
+            Тензометрический полумост 700 Ом (AP14).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge120Ohms4Wire">
+            <summary>
+            Тензометрический четвертьмост 120 Ом 4-проводной (AP14, AP814).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge350Ohms4Wire">
+            <summary>
+            Тензометрический четвертьмост 350 Ом 4-проводной (AP14, AP814).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge700Ohms4Wire">
+            <summary>
+            Тензометрический четвертьмост 700 Ом 4-проводной (AP14, AP814).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge120Ohms3Wire">
+            <summary>
+            Тензометрический четвертьмост 120 Ом 3-проводной (AP14, AP814).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge350Ohms3Wire">
+            <summary>
+            Тензометрический четвертьмост 350 Ом 3-проводной (AP14, AP814).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge700Ohms3Wire">
+            <summary>
+            Тензометрический четвертьмост 700 Ом 3-проводной (AP14, AP814).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge1000Ohms3Wire">
+            <summary>
+            Тензометрический четвертьмост 1000 Ом 3-проводной (AP814 опционально).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge3WireUserSpecificResistor">
+            <summary>
+            Тензометрический четвертьмост 3-проводной, пользовательский специальный резистор (AP814 опционально).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge1000Ohms4wire">
+            <summary>
+            Тензометрический четвертьмост 1000 Ом 4-проводной (AP815 опционально).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.StrainGageQuarterBridge4WireUserSpecificResistor">
+            <summary>
+            Тензометрический четвертьмост 4-проводной, пользовательский специальный резистор (AP815 опционально).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.LVDT">
+            <summary>
+            Индуктивный датчик линейных перемещений.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Potentiometer">
+            <summary>
+            Потенциометр (AP836).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.DCVolt">
+            <summary>
+            Напряжение постоянного тока (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.DCAmpere">
+            <summary>
+            Сила постоянного тока (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.DC75mV">
+            <summary>
+            Постоянный ток 75 мВ.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.DC10V">
+            <summary>
+            Постоянный ток 10 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.DC20mA">
+            <summary>
+            Постоянный ток 20 мА.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.ThermocoupleTypeJ">
+            <summary>
+            Термопара типа J.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.ThermocoupleTypeK">
+            <summary>
+            Термопара типа K.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.ThermocoupleTypeT">
+            <summary>
+            Термопара типа T.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.ThermocoupleTypeS">
+            <summary>
+            Термопара типа S.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.ThermocoupleTypeB">
+            <summary>
+            Термопара типа B (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.ThermocoupleTypeE">
+            <summary>
+            Термопара типа E (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.ThermocoupleTypeR">
+            <summary>
+            Термопара типа R (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.ThermocoupleTypeN">
+            <summary>
+            Термопара типа N (только для ML801).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.ThermocoupleTypeI">
+            <summary>
+            Термопара типа I.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Resistor500Ohms">
+            <summary>
+            Резистор 500 Ом.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Resistor5000Ohms">
+            <summary>
+            Резистор 5000 Ом.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Resistor2500Ohms">
+            <summary>
+            Резистор 2500 Ом.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Resistor50Ohms">
+            <summary>
+            Резистор 50 Ом.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Pt10">
+            <summary>
+            Потенциометр Pt10.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Pt100">
+            <summary>
+            Потенциометр Pt100.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Pt500">
+            <summary>
+            Потенциометр Pt500.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Pt1000">
+            <summary>
+            Потенциометр Pt1000.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency">
+            <summary>
+            Частота (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.TwoPhases1x">
+            <summary>
+            Двухфазный 1x (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.TwoPhases2x">
+            <summary>
+            Двухфазный 2x (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Counter">
+            <summary>
+            Счетчик (только для Spider8).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Counter1000">
+            <summary>
+            Счетчик x 1000 (только для ML60B).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.PulseWidthModulation">
+            <summary>
+            Широтно-импульсная модуляция (только для ML460).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency1kHz">
+            <summary>
+            Частота 1 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency2kHz">
+            <summary>
+            Частота 2 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency10kHz">
+            <summary>
+            Частота 10 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency20kHz">
+            <summary>
+            Частота 20 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency100kHz">
+            <summary>
+            Частота 100 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency200kHz">
+            <summary>
+            Частота 200 кГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency500kHz">
+            <summary>
+            Частота 500 кГц (только для ML460).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency1MHz">
+            <summary>
+            Частота 1 МГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Frequency2MHz">
+            <summary>
+            Частота 2 МГц.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Deltatron0_1V">
+            <summary>
+            Акселерометр 0.1 В (AP18).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Deltatron1V">
+            <summary>
+            Акселерометр 1 В (AP18).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.Deltatron10V">
+            <summary>
+            Акселерометр 10 В (AP18).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.NC0_1">
+            <summary>
+            0.1 nC (AP08).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.NC1">
+            <summary>
+            1 nC (AP08).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.NC10">
+            <summary>
+            10 nC (AP08).
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSensorType.NC100">
+            <summary>
+            100 nC (AP08).
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.CatmanCodeOfSupplyVoltage">
+            <summary>
+            Представляет код напряжения питания.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.VoltageNo">
+            <summary>
+            Нет.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.Voltage1">
+            <summary>
+            1 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.Voltage1_25">
+            <summary>
+            1.25 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.Voltage2_5">
+            <summary>
+            2.5 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.Voltage">
+            <summary>
+            5 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.Voltage10">
+            <summary>
+            10 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.Voltage0_2">
+            <summary>
+            0.2 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.Voltage0_5">
+            <summary>
+            0.5 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.Voltage3">
+            <summary>
+            3 В.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanCodeOfSupplyVoltage.Voltage6">
+            <summary>
+            6 В.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.CatmanDataFormat">
+            <summary>
+            Значение, определяющее формат данных канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanDataFormat.DoubleNumeric">
+            <summary>
+            Числовой формат с плавающей точкой двойной точности.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanDataFormat.String">
+            <summary>
+            Формат текстовых данных.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanDataFormat.BinaryObject">
+            <summary>
+            Формат бинарного объекта.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.CatmanDataFormat.SingleNumeric">
+            <summary>
+            Числовой формат с плавающей точкой одинарной точности.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.TestLabChannelType">
+            <summary>
+            Значение, определяющее тип канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabChannelType.Normal">
+            <summary>
+            Обычный канал.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabChannelType.Service">
+            <summary>
+            Служебный канал.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.TestLabDataFormat">
+            <summary>
+            Значение, определяющее формат канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabDataFormat.UInt8">
+            <summary>
+            Беззнаковое целое число размером 8 бит.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabDataFormat.UInt16">
+            <summary>
+            Беззнаковое целое число размером 16 бит.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabDataFormat.UInt32">
+            <summary>
+            Беззнаковое целое число размером 32 бита.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabDataFormat.Int8">
+            <summary>
+            Знаковое целое число размером 8 бит.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabDataFormat.Int16">
+            <summary>
+            Знаковое целое число размером 16 бит.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabDataFormat.Int32">
+            <summary>
+            Знаковое целое число размером 32 бита.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabDataFormat.Float32">
+            <summary>
+            Число с плавающей точкой размером 32 бита.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabDataFormat.Float64">
+            <summary>
+            Число с плавающей точкой размером 64 бита.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.TestLabChannelHeader">
+            <summary>
+            Представляет заголовок канала в формате <see cref="F:RailTest.Frames.StorageFormat.TestLab"/>.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabChannelHeader._Description">
+            <summary>
+            Поле для хранения описания канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabChannelHeader._Offset">
+            <summary>
+            Поле для хранения смещения значений канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabChannelHeader._Scale">
+            <summary>
+            Поле для хранения масштаба значений канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabChannelHeader._Type">
+            <summary>
+            Поле для хранения типа канала.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabChannelHeader._DataFormat">
+            <summary>
+            Поле для хранения формата данных канала.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.TestLabChannelHeader.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.TestLabChannelHeader.Description">
+            <summary>
+            Возвращает или задаёт описание канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.TestLabChannelHeader.Offset">
+            <summary>
+            Возвращает или задаёт смещение значений канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.TestLabChannelHeader.Scale">
+            <summary>
+            Возвращает или задаёт масштаб значений канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.TestLabChannelHeader.Type">
+            <summary>
+            Возвращает или задаёт тип канала.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.TestLabChannelHeader.DataFormat">
+            <summary>
+            Возвращает или задаёт формат данных канала.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.TestLabChannelHeader.Clone">
+            <summary>
+            Создает новый объект, являющийся копией текущего экземпляра.
+            </summary>
+            <returns>
+            Новый объект, являющийся копией этого экземпляра.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.TestLabChannelHeader.Convert(RailTest.Frames.StorageFormat)">
+            <summary>
+            Возвращает заголовок канала в другом формате.
+            </summary>
+            <param name="format">
+            Формат заголовка канала, в который необходимо преобразовать текущий объект.
+            </param>
+            <returns>
+            Преобразованный объект.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.TestLabChannelHeader.Validation(RailTest.Frames.TestLabChannelType)">
+            <summary>
+            Выполняет проверку и нормализацию значения типа <see cref="T:RailTest.Frames.TestLabChannelType"/>.
+            </summary>
+            <param name="value">
+            Исходное значение.
+            </param>
+            <returns>
+            Нормализованное значение.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.TestLabChannelHeader.Validation(RailTest.Frames.TestLabDataFormat)">
+            <summary>
+            Выполняет проверку и нормализацию значения типа <see cref="T:RailTest.Frames.TestLabDataFormat"/>.
+            </summary>
+            <param name="value">
+            Исходное значение.
+            </param>
+            <returns>
+            Нормализованное значение.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.TestLabChannelHeader.GetItemSize(RailTest.Frames.TestLabDataFormat)">
+            <summary>
+            Возвращает размер элемента массива данных канала в байтах.
+            </summary>
+            <param name="format">
+            Формат данных.
+            </param>
+            <returns>
+            Размер элемента массива данных канала в байтах.
+            </returns>
+        </member>
+        <member name="T:RailTest.Frames.TestLabFrameHeader">
+            <summary>
+            Представляет заголовок кадра в формате <see cref="F:RailTest.Frames.StorageFormat.TestLab"/>.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabFrameHeader._Title">
+            <summary>
+            Поле для хранения название испытаний.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabFrameHeader._Character">
+            <summary>
+            Поле для хранения названия типа испытаний.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabFrameHeader._Region">
+            <summary>
+            Поле для хранения названия места проведения испытаний.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.TestLabFrameHeader._Time">
+            <summary>
+            Поле для хранения времени проведения испытаний.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.TestLabFrameHeader.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.TestLabFrameHeader.Title">
+            <summary>
+            Возвращает или задаёт название испытаний.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.TestLabFrameHeader.Character">
+            <summary>
+            Возвращает или задаёт название типа испытаний.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.TestLabFrameHeader.Region">
+            <summary>
+            Возвращает или задаёт название места проведения испытаний.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.TestLabFrameHeader.Time">
+            <summary>
+            Возвращает или задаёт время проведения испытаний.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.TestLabFrameHeader.Clone">
+            <summary>
+            Создаёт копию объекта.
+            </summary>
+            <returns>
+            Копия объекта.
+            </returns>
+        </member>
+        <member name="T:RailTest.Frames.FileReader">
+            <summary>
+            Представляет средство чтения файлов регистрации.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.FileReader._Stream">
+            <summary>
+            Поле для хранения потока.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.FileReader._Reader">
+            <summary>
+            Поле для хранения средства чтения файла.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.#ctor(System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="path">
+            Пусть к файлу.
+            </param>
+        </member>
+        <member name="P:RailTest.Frames.FileReader.FileSize">
+            <summary>
+            Возвращает размер файла в байтах.
+            </summary>
+        </member>
+        <member name="P:RailTest.Frames.FileReader.Position">
+            <summary>
+            Получает или задает текущую позицию в файле.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Считывает указанное количество байтов из потока, начиная с заданной точки в массиве байтов.
+            </summary>
+            <param name="buffer">
+            Буфер, в который необходимо считать данные.
+            </param>
+            <param name="index">
+            Стартовая точка в буфере, начиная с которой считываемые данные записываются в буфер.
+            </param>
+            <param name="count">
+            Количество байтов, чтение которых необходимо выполнить.
+            </param>
+            <returns>
+            Количество считанных байтов.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadBytes(System.Int32)">
+            <summary>
+            Считывает указанное количество байтов из текущего потока в массив байтов и перемещает
+            текущую позицию на это количество байтов.
+            </summary>
+            <param name="count">
+            Количество байтов, чтение которых необходимо выполнить.
+            </param>
+            <returns>
+            Массив байтов, в котором содержатся данные, считанные из базового потока.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadUInt8">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Byte"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Byte"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadInt8">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.SByte"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.SByte"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadUInt16">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.UInt16"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.UInt16"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadInt16">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Int16"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Int16"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadUInt32">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.UInt32"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.UInt32"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadInt32">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Int32"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Int32"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadUInt64">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.UInt64"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.UInt64"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadInt64">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Int64"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Int64"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadFloat32">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Single"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Single"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadFloat64">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Double"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Double"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReverseBytes(System.Byte[])">
+            <summary>
+            Иеняет порядок байтов в последовательности на обратный.
+            </summary>
+            <param name="buffer">
+            Буффер, содержащий байты.
+            </param>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadUInt16(System.Boolean)">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.UInt16"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.UInt16"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadInt16(System.Boolean)">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Int16"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Int16"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadUInt32(System.Boolean)">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.UInt32"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.UInt32"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadInt32(System.Boolean)">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Int32"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Int32"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadUInt64(System.Boolean)">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.UInt64"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.UInt64"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadInt64(System.Boolean)">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Int64"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Int64"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadFloat32(System.Boolean)">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Single"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Single"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.ReadFloat64(System.Boolean)">
+            <summary>
+            Считывает из текущего потока значение типа <see cref="T:System.Double"/>.
+            </summary>
+            <returns>
+            Значение типа <see cref="T:System.Double"/>.
+            </returns>
+        </member>
+        <member name="M:RailTest.Frames.FileReader.Close">
+            <summary>
+            Закрывает файл.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.FileWriter">
+            <summary>
+            Представляет средство записи файлов регистрации.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.FileWriter._Stream">
+            <summary>
+            Поле для хранения потока.
+            </summary>
+        </member>
+        <member name="F:RailTest.Frames.FileWriter._Writer">
+            <summary>
+            Поле для хранения средства записи в файл.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.FileWriter.#ctor(System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="path">
+            Пусть к файлу.
+            </param>
+        </member>
+        <member name="P:RailTest.Frames.FileWriter.Position">
+            <summary>
+            Получает или задает текущую позицию в файле.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.FileWriter.Close">
+            <summary>
+            Закрывает файл.
+            </summary>
+        </member>
+        <member name="T:RailTest.Frames.Kernel">
+            <summary>
+            Предоставляет механизмы для чтения и записи файлов кадров регистрации.
+            </summary>
+        </member>
+        <member name="M:RailTest.Frames.Kernel.LoadFrame(System.String,RailTest.Frames.FileReadMode)">
+            <summary>
+            Загружает данные из файла.
+            </summary>
+            <param name="path">
+            Путь к файлу.
+            </param>
+            <param name="readMode">
+            Значение, определяющее режим чтения файла кадра регистрации.
+            </param>
+            <returns>
+            Данные, загруженные из файла.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Параметр <paramref name="path"/> имеет значение пустой ссылки.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Параметр <paramref name="path"/> является пустой строкой (""),
+            содержит только пробелы или содержит один или несколько недопустимых знаков.
+            -или-
+            <paramref name="path"/> ссылается на устройство,
+            которое не является файловым, например "con:", "com1:", "lpt1:" и т. д., в среде NTFS.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Параметр path является пустой строкой (""), содержит только пробелы или содержит
+            один или несколько недопустимых знаков.
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            path ссылается на устройство, которое не является файловым, например "con:", "com1:", "lpt1:" и т. д., в среде, отличной от NTFS.
+            </exception>
+            <exception cref="T:System.IO.FileNotFoundException">
+            Невозможно найти файл, например, когда mode содержит FileMode.Truncate или FileMode.Open,
+            а файл, заданный в path, не существует.Файл должен уже существовать в этих режимах.
+            </exception>
+            <exception cref="T:System.IO.IOException">
+            Произошла ошибка ввода-вывода, например, задано FileMode.CreateNew, когда файл,
+            указанный в path, уже существует. – или –Компьютер работает под управлением операционной
+            системы Windows 98 или Windows 98 Second Edition, и для параметра share задано
+            значение FileShare.Delete.– или –Поток закрыт.
+            </exception>
+            <exception cref="T:System.Security.SecurityException">
+            У вызывающего объекта отсутствует необходимое разрешение.
+            </exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">
+            Указанный путь недопустим; возможно, он соответствует неподключенному диску.
+            </exception>
+            <exception cref="T:System.UnauthorizedAccessException">
+            Запрошенный параметр access не разрешен операционной системой для заданного path,
+            например, когда параметр access равен Write или ReadWrite, а файл или каталог
+            установлены на доступ только для чтения.
+            </exception>
+            <exception cref="T:System.IO.PathTooLongException">
+            Длина указанного пути, имени файла или обоих параметров превышает установленное
+            в системе максимальное значение.Например, для платформ на основе Windows длина
+            пути не должна превышать 248 символов, а имена файлов не должны содержать более
+            260 символов.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Параметр mode содержит недопустимое значение.
+            </exception>
+        </member>
+    </members>
+</doc>

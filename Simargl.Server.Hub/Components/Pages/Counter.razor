@@ -1,0 +1,31 @@
+﻿@* Маршрут страницы: /counter *@
+@page "/counter"
+
+@* Указываем, что страница рендерится в режиме Blazor Server (сигналы идут через SignalR) *@
+@rendermode InteractiveServer
+
+@* Заголовок вкладки браузера (title в <head>) *@
+<PageTitle>Счётчик</PageTitle>
+
+@* Основной заголовок страницы (видимый пользователю) *@
+<h1>Счётчик</h1>
+
+@* Абзац со статусом: выводим текущее значение счётчика *@
+<p role="status">Текущее значение: @currentCount</p>
+
+@* Кнопка Bootstrap. При нажатии вызывается метод IncrementCount *@
+<button class="btn btn-primary" @onclick="IncrementCount">Нажми меня</button>
+
+@* Блок C#-кода для этой страницы *@
+@code {
+
+    @* Поле для хранения текущего значения счётчика. Стартует с нуля *@
+    private int currentCount = 0;
+
+    @* Метод, который вызывается при клике на кнопку *@
+    private void IncrementCount()
+    {
+        @* Увеличиваем значение счётчика на 1 *@
+        currentCount++;
+    }
+}

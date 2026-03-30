@@ -1,0 +1,9 @@
+﻿Клиент
+
+sc.exe create "Apeiron.GlobalIdentityClient" binpath= "C:\Foundation\Services\GlobalIdentityClient\GlobalIdentityClient.exe"
+sc.exe delete "Apeiron.GlobalIdentityClient"
+
+Сервер
+
+sc.exe create "Apeiron.GlobalIdentityServer" binpath= "C:\Foundation\Services\GlobalIdentityServer\GlobalIdentityServer.exe"
+sc.exe delete "Apeiron.GlobalIdentityServer"

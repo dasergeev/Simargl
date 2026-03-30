@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Step3d3",
+hmDescription:"Конструктивная ось операции. Конструктивная ось по двум точкам. Конструктивная ось, проходящая через ребро. Смещенная плоскость, ось по двум плоскостям, плоскость под углом к",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Step3d3 <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcq1925283\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Конструктивная ось операции.<\/span><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Конструктивная ось по двум точкам.<\/span><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Конструктивная ось, проходящая через ребро.<\/span><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Смещенная плоскость, ось по двум плоскостям, плоскость под углом к другой плоскости .<\/span><\/p>\n\r<p class=\"p_bulleted\" style=\"text-indent: 0; padding-left: 0.8125rem; margin-left: 4.5625rem;\"><span class=\"f_bulleted\" style=\"font-family: Arial,\'Lucida Sans Unicode\',\'Lucida Grande\',\'Lucida Sans\';display:inline-block;width:0.8125rem;margin-left:-0.8125rem\">&#8226;<\/span><span class=\"f_bulleted\">Плоскость через три вершины.<\/span><\/p>"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksCalculate, ksCalculateReset - пример использования",
+hmDescription:"\/\/очистить массив переменных ksCalculateReset (); char buf [128]; double resD;   \/\/добавить переменную A1 = 100 int rezI = ksCalculate (\"A1 = 100\", &resD); sprintf (buf,\"res",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksCalculate, ksCalculateReset - пример использования <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/очистить массив переменных<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">ksCalculateReset ();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">char buf [128];<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">double resD;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/добавить переменную A1 = 100<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">int rezI = ksCalculate (&quot;A1 = 100&quot;, &amp;resD);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">sprintf (buf,&quot;resD = %f rezI = %d&quot;, resD, rezI);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Message (buf);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/добавить переменную A2 = 200<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">rezI = ksCalculate (&quot;A2 = 200&quot;, &amp;resD);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">sprintf (buf,&quot;resD = %f rezI = %d&quot;, resD, rezI);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Message (buf);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/подсчитать результат выражения<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">rezI = ksCalculate (&quot;(A1 A2) * sqrt(4)&quot;, &amp;resD);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">sprintf (buf,&quot;resD = %f rezI = %d&quot;, resD, rezI);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Message (buf);<\/span><\/p>\n\r"
+})

@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Apeiron.Platform.Demo.AdxlDemo.UserInterface.MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Apeiron.Platform.Demo.AdxlDemo.UserInterface"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <local:ChannelView x:Name="_ChannelView"/>
+        <local:ChannelCollectionView x:Name="_ChannelCollectionView"/>
+        <local:DeviceView x:Name="_DeviceView"/>
+        <local:DeviceCollectionView x:Name="_DeviceCollectionView"/>
+    </Grid>
+</UserControl>

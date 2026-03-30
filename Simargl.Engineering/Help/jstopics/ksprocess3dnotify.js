@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс ksProcess3DNotify\\IProcess3DNotify",
+hmDescription:"Интерфейс событий для процесса 3D. Иерархия: IDispatch ksProcess3DNotify События позволяют контролировать события процесса 3D. Источником событий для подписки на данный инте",
+hmPrevLink:"ksprocess2dnotify_stop.html",
+hmNextLink:"ksprocess3dnotify_methods.html",
+hmParentLink:"sobutiy.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"sobutiy.html\">Интерфейсы событий&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Интерфейсы событий  > Интерфейс ksProcess3DNotify\\IProcess3DNotify ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс ksProcess3DNotify\\IProcess3DNotify <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbo1916216\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс событий для процесса 3D<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"ksprocess3dnotify.html\" class=\"topiclink\">ksProcess3DNotify<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">События позволяют контролировать события процесса 3D.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Источником событий для подписки на данный интерфейс является:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iprocess3d.html\" class=\"topiclink\">IProcess3D<\/a><\/span><span class=\"f_bodytext\"> - интерфейс процесса 3D.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksprocess3dnotify_methods.html\" class=\"topiclink hmlinklistitem\">ksProcess3DNotify - методы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksprocess3dnotify_events.html\" class=\"topiclink hmlinklistitem\">ksProcess3DNotify - события <\/a><\/span><\/p>\n\r"
+})

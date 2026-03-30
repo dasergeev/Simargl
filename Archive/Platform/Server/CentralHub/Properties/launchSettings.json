@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "CentralHub": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "remoteDebugEnabled": true,
+      "remoteDebugMachine": "Prod-01:4026"
+    }
+  }
+}

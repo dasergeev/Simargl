@@ -1,0 +1,9 @@
+﻿EntityFrameworkCore\Add-Migration -Context Ape90DatabaseContext -Project Databases\Ape90Database -StartupProject Databases\Ape90Database -Name
+EntityFrameworkCore\Update-Database -Context Ape90DatabaseContext -Project Databases\Ape90Database -StartupProject Databases\Ape90Database
+EntityFrameworkCore\Remove-Migration -Context Ape90DatabaseContext -Project Databases\Ape90Database -StartupProject Databases\Ape90Database
+EntityFrameworkCore\Remove-Migration -Context Ape90DatabaseContext -Project Databases\Ape90Database -StartupProject Databases\Ape90Database -Force
+
+EntityFrameworkCore\Add-Migration -Context Ape90DatabasePostgresContext -Project Databases\Ape90Database -StartupProject Databases\Ape90Database -Name
+EntityFrameworkCore\Update-Database -Context Ape90DatabasePostgresContext -Project Databases\Ape90Database -StartupProject Databases\Ape90Database
+EntityFrameworkCore\Remove-Migration -Context Ape90DatabasePostgresContext -Project Databases\Ape90Database -StartupProject Databases\Ape90Database
+EntityFrameworkCore\Remove-Migration -Context Ape90DatabasePostgresContext -Project Databases\Ape90Database -StartupProject Databases\Ape90Database -Force

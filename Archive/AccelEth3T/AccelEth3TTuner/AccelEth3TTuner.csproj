@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<StartupObject>Simargl.AccelEth3T.Program</StartupObject>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Simargl.AccelEth3T</RootNamespace>
+		<AssemblyName>AccelEth3TTuner</AssemblyName>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\AccelEth3TTuner.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<WarningLevel>5</WarningLevel>
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+		<ApplicationIcon>Application.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Main\Record.png" />
+	  <None Remove="Main\Repeat.png" />
+	  <None Remove="Main\Start.png" />
+	  <None Remove="Main\StopHS.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Application.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="5.3.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Simargl\Simargl.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Main\Record.png" />
+	  <Resource Include="Main\Repeat.png" />
+	  <Resource Include="Main\Start.png" />
+	  <Resource Include="Main\StopHS.png" />
+	</ItemGroup>
+	
+</Project>

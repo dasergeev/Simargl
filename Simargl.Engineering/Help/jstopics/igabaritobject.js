@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IGabaritObject",
+hmDescription:"Вспомогательные данные для изменения габарита документа.",
+hmPrevLink:"iexternaltessellationobject_settexturepoints.html",
+hmNextLink:"igabaritobject_methods.html",
+hmParentLink:"ba1848735.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"ba1782194.html\">Окна документа&nbsp;<\/a> &gt; <a href=\"ba1848735.html\">OpenGL&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Окна документа  > OpenGL  > Интерфейс IGabaritObject ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IGabaritObject <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xba1886673\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Вспомогательные данные для изменения габарита документа<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"igabaritobject.html\" class=\"topiclink\">IGabaritObject<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Данный интерфейс может быть получен в событиях интерфейса событий окна документа <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ksdocumentframenotify.html\" class=\"topiclink\">ksDocumentFrameNotify<\/a><\/span><span class=\"f_bodytext\">, <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ksdocumentframenotify_addgabarit.html\" class=\"topiclink\">ksDocumentFrameNotify::AddGabarit<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"igabaritobject_methods.html\" class=\"topiclink hmlinklistitem\">IGabaritObject - методы <\/a><\/span><\/p>\n\r"
+})

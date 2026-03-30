@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IViewProjectionManager",
+hmDescription:"Менеджер проекций отображения модели в окне. Иерархия: IDispatch IKompasAPIObject IViewProjectionManager Примечание: Интерфейс можно получить используя свойство IKompasDocu",
+hmPrevLink:"view_managment.html",
+hmNextLink:"iviewprojectionmanager_propers.html",
+hmParentLink:"view_managment.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"view_managment.html\">Управление изображением модели<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Управление изображением модели > Интерфейс IViewProjectionManager",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IViewProjectionManager<\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"iviewprojectionmanager\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Менеджер проекций отображения модели в окне.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"iviewprojectionmanager.html\" class=\"topiclink\">IViewProjectionManager<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс можно получить используя свойство <a href=\"ikompasdocument3d1_viewprojectionmanager.html\" class=\"topiclink\">IKompasDocument3D1::ViewProjectionManager<\/a>.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Версия КОМПАС v22<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iviewprojectionmanager_propers.html\" class=\"topiclink hmlinklistitem\">IViewProjectionManager - свойства<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iviewprojectionmanager_methods.html\" class=\"topiclink hmlinklistitem\">IViewProjectionManager - методы<\/a><\/span><\/p>\n\r"
+})

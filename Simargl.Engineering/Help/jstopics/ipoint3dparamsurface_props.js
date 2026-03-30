@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IPoint3DParamSurface - свойства",
+hmDescription:"Подразделы: AllowBoundaries - TRUE - Учитывать границы  Object1- Получить объект1  Object2 - Получить объект2  OffsetType - Тип задания смещения  Offset1 - Величина смещения1",
+hmPrevLink:"ipoint3dparamsurface.html",
+hmNextLink:"ipoint3dparamsurface_allowboundaries.html",
+hmParentLink:"ipoint3dparamsurface.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2278808.html\">Операции, массивы, эскизы, точки&nbsp;<\/a> &gt; <a href=\"bc2284065.html\">Точки&nbsp;<\/a> &gt; <a href=\"ipoint3dparamsurface.html\">Интерфейс IPoint3DParamSurface&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Операции, массивы, эскизы, точки  > Точки  > Интерфейс IPoint3DParamSurface  > IPoint3DParamSurface - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IPoint3DParamSurface - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipoint3dparamsurface_allowboundaries.html\" class=\"topiclink hmlinklistitem\">AllowBoundaries - TRUE - Учитывать границы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipoint3dparamsurface_object1.html\" class=\"topiclink hmlinklistitem\">Object1- Получить объект1 <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipoint3dparamsurface_object2.html\" class=\"topiclink hmlinklistitem\">Object2 - Получить объект2 <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipoint3dparamsurface_offsettype.html\" class=\"topiclink hmlinklistitem\">OffsetType - Тип задания смещения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipoint3dparamsurface_offset1.html\" class=\"topiclink hmlinklistitem\">Offset1 - Величина смещения1 <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipoint3dparamsurface_offset2.html\" class=\"topiclink hmlinklistitem\">Offset2 - Величина смещения2 <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipoint3dparamsurface_surfaceobject.html\" class=\"topiclink hmlinklistitem\">SurfaceObject - Получить поверхность <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksColumnInfoParam - методы",
+hmDescription:"Подразделы: GetColumns - Получить указатель на динамический массив информации о колонках типа ATTR_COLUMN_ARR - ksDynamicArray  GetFieldEnum - Получить указатель на интерфейс...",
+hmPrevLink:"kscolumninfoparam_type.html",
+hmNextLink:"kscolumninfoparam_getcolumns.html",
+hmParentLink:"kscolumninfoparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ck1761772.html\">Интерфейсы работы с атрибутами&nbsp;<\/a> &gt; <a href=\"ck1769035.html\">Интерфейсы параметров атрибутов&nbsp;<\/a> &gt; <a href=\"kscolumninfoparam.html\">Колонка табличного атрибута (Интерфейс ksColumnInfoParam)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Интерфейсы работы с атрибутами  > Интерфейсы параметров атрибутов  > Колонка табличного атрибута (Интерфейс ksColumnInfoParam)  > ksColumnInfoParam - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksColumnInfoParam - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscolumninfoparam_getcolumns.html\" class=\"topiclink hmlinklistitem\">GetColumns - Получить указатель на динамический массив информации о колонках типа ATTR_COLUMN_ARR - ksDynamicArray <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscolumninfoparam_getfieldenum.html\" class=\"topiclink hmlinklistitem\">GetFieldEnum - Получить указатель на интерфейс динамического массива перечислений (строки) типа CHAR_STR_ARR - ksDynamicArray <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscolumninfoparam_init.html\" class=\"topiclink hmlinklistitem\">Init - Инициализировать параметры <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscolumninfoparam_setcolumns.html\" class=\"topiclink hmlinklistitem\">SetColumns - Установить указатель на динамический массив информации о колонках типа ATTR_COLUMN_ARR - ksDynamicArray <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscolumninfoparam_setfieldenum.html\" class=\"topiclink hmlinklistitem\">SetFieldEnum - Установить указатель на интерфейс динамического массива перечислений (строки) типа CHAR_STR_ARR - ksDynamicArray <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Пример передачи в список массива",
+hmDescription:"long varsCount = 100;   \/\/ Массив для наполнения комбобокса SAFEARRAYBOUND sabNewArray; sabNewArray.cElements = varsCount; sabNewArray.lLbound = 0; SAFEARRAY * pSafe = ::Safe",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Пример передачи в список массива <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><span class=\"f_bodytext\">long varsCount = 100;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ Массив для наполнения комбобокса<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">SAFEARRAYBOUND sabNewArray;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">sabNewArray.cElements = varsCount;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">sabNewArray.lLbound = 0;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">SAFEARRAY * pSafe = ::SafeArrayCreate( VT_R8, 1, &amp;sabNewArray );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if( pSafe )<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">{<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">for ( long j = 0; j &lt; varsCount; j++ )<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">{<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">double val = j * 0.5;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::SafeArrayPutElement( pSafe, &amp;j, &amp;val);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">_variant_t varArr;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">varArr.vt = VT_ARRAY | VT_R8;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">varArr.parray = pSafe;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ Передадим массив значений в контрол<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">dt-&gt;Add( varArr );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">---<\/span><\/p>\n\r"
+})

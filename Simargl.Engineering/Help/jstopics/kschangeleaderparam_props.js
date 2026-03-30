@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksChangeLeaderParam - свойства",
+hmDescription:"Подразделы: leaderLength - Длина ответвлений  signHeight - Высота или диаметр значка  signType - Тип значка  style - Стиль текста  x - Координата X базовой точки обозначения",
+hmPrevLink:"kschangeleaderparam.html",
+hmNextLink:"kschangeleaderparam_leaderlength.html",
+hmParentLink:"kschangeleaderparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"ch1786244.html\">Интерфейсы параметров обозначений&nbsp;<\/a> &gt; <a href=\"kschangeleaderparam.html\">Знак изменения (Интерфейс ksChangeLeaderParam)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров обозначений  > Знак изменения (Интерфейс ksChangeLeaderParam)  > ksChangeLeaderParam - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksChangeLeaderParam - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xch1789341\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kschangeleaderparam_leaderlength.html\" class=\"topiclink hmlinklistitem\">leaderLength - Длина ответвлений <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kschangeleaderparam_signheight.html\" class=\"topiclink hmlinklistitem\">signHeight - Высота или диаметр значка <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kschangeleaderparam_signtype.html\" class=\"topiclink hmlinklistitem\">signType - Тип значка <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kschangeleaderparam_style.html\" class=\"topiclink hmlinklistitem\">style - Стиль текста <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kschangeleaderparam_x.html\" class=\"topiclink hmlinklistitem\">x - Координата X базовой точки обозначения изменения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kschangeleaderparam_y.html\" class=\"topiclink hmlinklistitem\">y - Координата Y базовой точки обозначения изменения <\/a><\/span><\/p>\n\r"
+})

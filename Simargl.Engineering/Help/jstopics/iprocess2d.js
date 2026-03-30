@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IProcess2D",
+hmDescription:"Интерфейс процесса 2D. Иерархия: IDispatch IProcess IProcess2D Примечание: Интерфейс является дополнительным для IProcess. Интерфейс можно получить с помощью метода: IKomp",
+hmPrevLink:"iprocess_update.html",
+hmNextLink:"iprocess2d_propers.html",
+hmParentLink:"ap1803662.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a> &gt; <a href=\"ap1803662.html\">Параметры процесса&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Параметры процесса  > Интерфейс IProcess2D ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IProcess2D <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xap1828177\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс процесса 2D.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"iprocess.html\" class=\"topiclink\">IProcess<\/a><\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"iprocess2d.html\" class=\"topiclink\">IProcess2D<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс является дополнительным для <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iprocess.html\" class=\"topiclink\">IProcess<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс можно получить с помощью метода: <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ikompasdocument2d1_libprocess.html\" class=\"topiclink\">IKompasDocument2D1::LibProcess<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocess2d_propers.html\" class=\"topiclink hmlinklistitem\">IProcess2D - свойства <\/a><\/span><\/p>\n\r"
+})

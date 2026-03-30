@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Version>1.0.2</Version>
+		<AssemblyVersion>1.0.2.0</AssemblyVersion>
+		<FileVersion>1.0.2.0</FileVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Apeiron.Platform.Databases</RootNamespace>
+		<AssemblyName>Apeiron.Platform.Databases.Ape90Database</AssemblyName>
+		<DocumentationFile>Apeiron.Platform.Databases.Ape90Database.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Authors>ООО "ТИЦ ЖТ"</Authors>
+		<Company>ООО "ТИЦ ЖТ"</Company>
+		<Copyright>ООО "ТИЦ ЖТ"</Copyright>
+		<Description>Содержит службы, выполняющие обработку данных по проекту АПЭ-90.</Description>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<WarningLevel>5</WarningLevel>
+		<NoWarn />
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.4.27">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Common\Platform\Platform.csproj" />
+	</ItemGroup>
+
+</Project>

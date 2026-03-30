@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IContextPanel",
+hmDescription:"Интерфейс всплывающей контекстной панели. Иерархия: IDispatch IContextPanel Описание: Интерфейс используется для создания всплывающей панели для библиотечных элементов. Для",
+hmPrevLink:"ap2038597.html",
+hmNextLink:"icontextpanel_methods.html",
+hmParentLink:"ap2038597.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a> &gt; <a href=\"ap2038597.html\">Работа с контекстной панелью и меню&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Работа с контекстной панелью и меню  > Интерфейс IContextPanel ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IContextPanel <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xap2039214\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс всплывающей контекстной панели<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"icontextpanel.html\" class=\"topiclink\">IContextPanel<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Описание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс используется для создания всплывающей панели для библиотечных элементов.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Для использования всплывающих панелей в библиотеке требуется реализовать функцию:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">int WINAPI FillContextPanel( LPUNKNOWN contextPanel );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Версия: Компас v20<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icontextpanel_methods.html\" class=\"topiclink hmlinklistitem\">IContextPanel - методы <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,21 @@
+﻿<local:СommutatorControl x:Class="Apeiron.Platform.Communication.СommutatorDesktop.UserInterface.DialogLabel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Apeiron.Platform.Communication.СommutatorDesktop.UserInterface" xmlns:communication="clr-namespace:Apeiron.Platform.Communication;assembly=Apeiron.Platform.Communication" d:DataContext="{d:DesignInstance Type=communication:Dialog}"
+                         mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Orientation="Horizontal">
+        <Border VerticalAlignment="Center" BorderThickness="3">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightGray"/>
+                    <GradientStop Color="Gainsboro" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Image Source="/Images/DefaultAvatar.jpg" Width="64" Height="64"/>
+        </Border>
+        <TextBlock Text="{Binding Companion.Name}" Margin="10" VerticalAlignment="Center" FontSize="22"/>
+    </StackPanel>
+</local:СommutatorControl>

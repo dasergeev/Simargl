@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>3a220d00-1ae2-4854-9c80-c148e31df45e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Simargl.Synergy.Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Block.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Criticalling\AsyncDestroyer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Criticalling\Critical.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Criticalling\CriticalExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Criticalling\CriticalQueue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dispenser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Portions\Portion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Watcher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\Block.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\Bonds\Bond.PortionInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\Bonds\Bond.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\Bonds\BondOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Connection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\Portal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\Portions\Authorization\NamedEntryPortion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\Portions\ConfirmPortion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\Portions\EmptyPortion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\Portions\PortionFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\StreamReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_ReWrite\StreamSender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Blocks\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_ReWrite\" />
+  </ItemGroup>
+</Project>

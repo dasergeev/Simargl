@@ -1,0 +1,5 @@
+﻿Server=10.69.16.236\MSSQL;
+Database=Oriole;
+User Id=sa;
+Password=!TTCRTdbsa;
+MultipleActiveResultSets=true;

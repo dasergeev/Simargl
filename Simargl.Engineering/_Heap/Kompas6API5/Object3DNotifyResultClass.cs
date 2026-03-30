@@ -1,0 +1,47 @@
+﻿//// Decompiled with JetBrains decompiler
+//// Type: Kompas6API5.Object3DNotifyResultClass
+//// Assembly: Kompas6API5, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+//// MVID: 7DC79A90-5904-4611-83C4-D5C1F1F81B44
+//// Assembly location: D:\Shared\SDK\Samples\CSharp\Common\Kompas6API5.dll
+
+//using System.Runtime.CompilerServices;
+//using System.Runtime.InteropServices;
+
+//#nullable disable
+//namespace Kompas6API5;
+
+//[Guid("600F12DF-D8B8-4CA8-A476-D2A7E425C740")]
+//[TypeLibType(TypeLibTypeFlags.FCanCreate)]
+//[ClassInterface(ClassInterfaceType.None)]
+//[ComImport]
+//public class Object3DNotifyResultClass : ksObject3DNotifyResult, Object3DNotifyResult
+//{
+//  [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+//  public extern Object3DNotifyResultClass();
+
+//  [DispId(1)]
+//  [MethodImpl(MethodImplOptions.PreserveSig | MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+//  public virtual extern int GetNotifyType();
+
+//  [DispId(2)]
+//  [MethodImpl(MethodImplOptions.PreserveSig | MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+//  [return: MarshalAs(UnmanagedType.Interface)]
+//  public virtual extern FeatureCollection GetFeatureCollection();
+
+//  [DispId(3)]
+//  [MethodImpl(MethodImplOptions.PreserveSig | MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+//  [return: MarshalAs(UnmanagedType.Interface)]
+//  public virtual extern placement GetPlacement();
+
+//  [DispId(4)]
+//  [MethodImpl(MethodImplOptions.PreserveSig | MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+//  public virtual extern int GetProcessType();
+
+//  [DispId(5)]
+//  [MethodImpl(MethodImplOptions.PreserveSig | MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+//  public virtual extern bool IsUndoMode();
+
+//  [DispId(6)]
+//  [MethodImpl(MethodImplOptions.PreserveSig | MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+//  public virtual extern bool IsRedoMode();
+//}

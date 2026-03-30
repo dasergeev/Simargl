@@ -1,0 +1,4 @@
+﻿EntityFrameworkCore\Add-Migration -Project Simargl.Storaging.CentralStorage -StartupProject Simargl.Storaging.CentralStorage -Name
+EntityFrameworkCore\Update-Database -Project Simargl.Storaging.CentralStorage -StartupProject Simargl.Storaging.CentralStorage
+EntityFrameworkCore\Remove-Migration -Project Simargl.Storaging.CentralStorage -StartupProject Simargl.Storaging.CentralStorage
+EntityFrameworkCore\Remove-Migration -Project Simargl.Storaging.CentralStorage -StartupProject Simargl.Storaging.CentralStorage -Force

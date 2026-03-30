@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IPropertySlideBox - свойства",
+hmDescription:"Подразделы: CheckBoxVisibility - Видимость опции, управляющей отрисовкой изображения  DrawingSlide - Отображаемый слайд  Height - Высота элемента управления  ResModule - Модуль",
+hmPrevLink:"ipropertyslidebox.html",
+hmNextLink:"ipropertyslidebox_checkboxvisibility.html",
+hmParentLink:"ipropertyslidebox.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a> &gt; <a href=\"ap2037561.html\">Работа с Панелью свойств&nbsp;<\/a> &gt; <a href=\"ipropertycontrol.html\">Интерфейс IPropertyControl&nbsp;<\/a> &gt; <a href=\"ipropertycontrol_props.html\">IPropertyControl - свойства&nbsp;<\/a> &gt; <a href=\"ipropertyslidebox.html\">Интерфейс IPropertySlideBox&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Работа с Панелью свойств  > Интерфейс IPropertyControl  > IPropertyControl - свойства  > Интерфейс IPropertySlideBox  > IPropertySlideBox - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IPropertySlideBox - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertyslidebox_checkboxvisibility.html\" class=\"topiclink hmlinklistitem\">CheckBoxVisibility - Видимость опции, управляющей отрисовкой изображения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertyslidebox_drawingslide.html\" class=\"topiclink hmlinklistitem\">DrawingSlide - Отображаемый слайд <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertyslidebox_height.html\" class=\"topiclink hmlinklistitem\">Height - Высота элемента управления <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertyslidebox_resmodule.html\" class=\"topiclink hmlinklistitem\">ResModule - Модуль с ресурсами <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertyslidebox_slidetype.html\" class=\"topiclink hmlinklistitem\">SlideType - Тип отображения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertyslidebox_width.html\" class=\"topiclink hmlinklistitem\">Width - Ширина элемента управления <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IKompasDocument - методы",
+hmDescription:"Подразделы: Close - Закрыть документ  Save - Сохранить документ на диске  SaveAs- Сохранить документ под другим именем  UserDataStoragesMng - Интерфейс Менеджера пользовательск",
+hmPrevLink:"ikompasdocument_visible.html",
+hmNextLink:"ikompasdocument_close.html",
+hmParentLink:"ikompasdocument.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"ba1711015.html\">Базовые интерфейсы&nbsp;<\/a> &gt; <a href=\"ikompasdocument.html\">Интерфейс IKompasDocument&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Базовые интерфейсы  > Интерфейс IKompasDocument  > IKompasDocument - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IKompasDocument - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompasdocument_close.html\" class=\"topiclink hmlinklistitem\">Close - Закрыть документ <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompasdocument_save.html\" class=\"topiclink hmlinklistitem\">Save - Сохранить документ на диске <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompasdocument_saveas.html\" class=\"topiclink hmlinklistitem\">SaveAs- Сохранить документ под другим именем <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompasdocument_userdatastoragesmng.html\" class=\"topiclink hmlinklistitem\">UserDataStoragesMng - Интерфейс Менеджера пользовательских хранилищ <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompasdocument2d.html\" class=\"topiclink hmlinklistitem\">Интерфейс IKompasDocument2D <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ikompasdocument3d.html\" class=\"topiclink hmlinklistitem\">Интерфейс IKompasDocument3D <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"itextdocument.html\" class=\"topiclink hmlinklistitem\">Интерфейс ITextDocument <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ispecificationdocument.html\" class=\"topiclink hmlinklistitem\">Интерфейс ISpecificationDocument <\/a><\/span><\/p>\n\r"
+})

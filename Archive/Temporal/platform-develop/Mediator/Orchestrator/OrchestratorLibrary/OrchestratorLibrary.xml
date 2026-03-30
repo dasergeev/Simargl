@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrchestratorLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Platform.OrchestratorLibrary.OrchestratorMethodId">
+            <summary>
+            Предоставляет идентификатор метода, выполняемого в серверном пространстве.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.OrchestratorMethodId.TestConnection">
+            <summary>
+            Тестирование подключения к серверу.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.OrchestratorMethodId.GetServiceInfoFromServer">
+            <summary>
+            Опрос сервера на получение команды.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.OrchestratorMethodId.GetHostAgentListFromServer">
+            <summary>
+            Метод возвращает информацию о сервисах на хосте.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.OrchestratorLibrary.OrchestratorMethodResult">
+            <summary>
+            Представляет значение определяющее формат результата вызова.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.OrchestratorMethodResult.Void">
+            <summary>
+            Пустые данные.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.OrchestratorMethodResult.Data">
+            <summary>
+            Данные.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.OrchestratorMethodResult.Error">
+            <summary>
+            Ошибка.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.OrchestratorLibrary.OrchestratorSettings">
+            <summary>
+            Представляет класс с настройками для Orchestrator.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.OrchestratorSettings.OrchestratorServerPort">
+            <summary>
+            Возвращает порт для подключения к серверному пространству.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.OrchestratorSettings.OrchestratorServerAddress">
+            <summary>
+            Возвращает адрес для подключения к серверному пространству.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.OrchestratorLibrary.OrchestratorTcpClient">
+            <summary>
+            Представляет класс для TCP клиента.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.OrchestratorTcpClient.RemoteMethodCallAsync``1(System.Net.IPEndPoint,Apeiron.Platform.OrchestratorLibrary.OrchestratorMethodId,System.Func{Apeiron.IO.AsyncBinaryWriter,System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Func{Apeiron.IO.AsyncBinaryReader,System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)">
+            <summary>
+            Создаёт подключение к серверу и выполняет команду.
+            </summary>
+            <param name="iPEndPoint">Представляет сетевую конечную точку в виде IP-адреса и номер порта.</param>
+            <param name="method">ID метода.</param>
+            <param name="argumentsWriter">Функция записи аргументов метода.</param>
+            <param name="resultReader">Функция чтения результата выполнения метода на удаленном сервере.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+        </member>
+        <member name="T:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo">
+            <summary>
+            Класс содержит информацию о службе установленной на хосте.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo.Hostname">
+            <summary>
+            Содержит имя хоста.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo.RegTime">
+            <summary>
+            Время создания информационного сообщения хоста.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo.HostServiceStatus">
+            <summary>
+            Содержит статус службы на хосте.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo.MicroserviceStatusResultCollection">
+            <summary>
+            Содержит коллекцию микросервисов работающих на целевом хосте.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo.Size">
+            <summary>
+            Возвращает размер.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo.#ctor">
+            <summary>
+            Конструктор класса.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo.SaveAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно сохраняет данные объекта в поток.
+            </summary>
+            <param name="stream">
+            Поток, в который необходимо сохранить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <returns>
+            Задача, представляющая асинхронную операцию записи.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает запись.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo.LoadAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно загружает данные объекта из потока.
+            </summary>
+            <param name="stream">
+            Поток, из которого необходимо загрузить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <returns>
+            Задача, представляющая асинхронную операцию чтения.
+            </returns>
+            <remarks>
+            Задача, должна возвращать объект, к которому обращаются.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает чтение.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfoCollection">
+            <summary>
+            Представляет коллекцию информации о хостах.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfoCollection._Items">
+            <summary>
+            Поле для хранения списка элементов коллекции.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfoCollection.Size">
+            <summary>
+            Возвращает размер коллекции.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfoCollection.#ctor">
+            <summary>
+            Конструктор класса.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfoCollection.#ctor(System.Collections.Generic.IEnumerable{Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfo})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="collection">
+            Коллекция элементов.
+            </param>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfoCollection.GetEnumerator">
+            <summary>
+            Возвращает перечислитель коллекции.
+            </summary>
+            <returns>
+            Перечислитель коллекции.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfoCollection.LoadAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно загружает данные объекта из потока.
+            </summary>
+            <param name="stream">
+            Поток, из которого необходимо загрузить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <returns>
+            Задача, представляющая асинхронную операцию чтения.
+            </returns>
+            <remarks>
+            Задача, должна возвращать объект, к которому обращаются.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает чтение.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfoCollection.SaveAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно сохраняет данные объекта в поток.
+            </summary>
+            <param name="stream">
+            Поток, в который необходимо сохранить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <returns>
+            Задача, представляющая асинхронную операцию записи.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает запись.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.HostServiceInfoCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Возвращает перечислитель коллекции.
+            </summary>
+            <returns>
+            Перечислитель коллекции.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.MicroserviceStatusResultCollection">
+            <summary>
+            Представляет коллекцию результатов статусов сервисов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.MicroserviceStatusResultCollection._Items">
+            <summary>
+            Поле для хранения списка элементов коллекции.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.MicroserviceStatusResultCollection.#ctor">
+            <summary>
+            Конструктор по умолчанию.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.MicroserviceStatusResultCollection.#ctor(System.Collections.Generic.IEnumerable{Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatusResult})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="collection">
+            Коллекция элементов.
+            </param>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.MicroserviceStatusResultCollection.Size">
+            <summary>
+            Возвращает размер коллекции.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.MicroserviceStatusResultCollection.GetEnumerator">
+            <summary>
+            Возвращает перечислитель коллекции.
+            </summary>
+            <returns>
+            Перечислитель коллекции.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.MicroserviceStatusResultCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Возвращает перечислитель коллекции.
+            </summary>
+            <returns>
+            Перечислитель коллекции.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.MicroserviceStatusResultCollection.LoadAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно загружает данные объекта из потока.
+            </summary>
+            <param name="stream">
+            Поток, из которого необходимо загрузить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <returns>
+            Задача, представляющая асинхронную операцию чтения.
+            </returns>
+            <remarks>
+            Задача, должна возвращать объект, к которому обращаются.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает чтение.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.MicroserviceStatusResultCollection.SaveAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно сохраняет данные объекта в поток.
+            </summary>
+            <param name="stream">
+            Поток, в который необходимо сохранить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <returns>
+            Задача, представляющая асинхронную операцию записи.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает запись.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatus">
+            <summary>
+            Представляет перечисление статусов сервисов.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatus.Run">
+            <summary>
+            Сервис запущен.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatus.Restart">
+            <summary>
+            Сервис перезапущен.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatus.Stop">
+            <summary>
+            Сервис остановлен.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatus.Upgrade">
+            <summary>
+            Обновление сервиса.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatusResult">
+            <summary>
+            Представяет информацию об сервисах.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatusResult.ServiceId">
+            <summary>
+            Id сервиса.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatusResult.ServiceStatus">
+            <summary>
+            Статус сервиса.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatusResult.Size">
+            <summary>
+            Возвращает размер объекта.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatusResult.LoadAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно загружает данные объекта из потока.
+            </summary>
+            <param name="stream">
+            Поток, из которого необходимо загрузить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <returns>
+            Задача, представляющая асинхронную операцию чтения.
+            </returns>
+            <remarks>
+            Задача, должна возвращать объект, к которому обращаются.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает чтение.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Platform.OrchestratorLibrary.ServerDataResults.ServiceStatusResult.SaveAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно сохраняет данные объекта в поток.
+            </summary>
+            <param name="stream">
+            Поток, в который необходимо сохранить данные.
+            </param>
+            <param name="cancellationToken">
+            Токен для отслеживания запросов отмены.
+            </param>
+            <returns>
+            Задача, представляющая асинхронную операцию записи.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="stream"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Поток не поддерживает запись.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+    </members>
+</doc>

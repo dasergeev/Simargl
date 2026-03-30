@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IProcess - свойства",
+hmDescription:"Подразделы: Caption - Заголовок процесса  Critical - Признак критического процесса  CursorId - Строка с именем стандартного курсора или идентификатор  Dynamic - Признак динамич",
+hmPrevLink:"iprocess.html",
+hmNextLink:"iprocess_caption.html",
+hmParentLink:"iprocess.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a> &gt; <a href=\"ap1803662.html\">Параметры процесса&nbsp;<\/a> &gt; <a href=\"iprocess.html\">Интерфейс IProcess&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Параметры процесса  > Интерфейс IProcess  > IProcess - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IProcess - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocess_caption.html\" class=\"topiclink hmlinklistitem\">Caption - Заголовок процесса <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocess_critical.html\" class=\"topiclink hmlinklistitem\">Critical - Признак критического процесса <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocess_cursorid.html\" class=\"topiclink hmlinklistitem\">CursorId - Строка с именем стандартного курсора или идентификатор <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocess_dynamic.html\" class=\"topiclink hmlinklistitem\">Dynamic - Признак динамического запроса <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocess_menu.html\" class=\"topiclink hmlinklistitem\">Menu - Меню <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocess_processparam.html\" class=\"topiclink hmlinklistitem\">ProcessParam - Параметры процесса <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocess_prompt.html\" class=\"topiclink hmlinklistitem\">Prompt - Строка приглашения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iprocess_resmodule.html\" class=\"topiclink hmlinklistitem\">ResModule - Модуль с описанием пользовательской спецпанели <\/a><\/span><\/p>\n\r"
+})

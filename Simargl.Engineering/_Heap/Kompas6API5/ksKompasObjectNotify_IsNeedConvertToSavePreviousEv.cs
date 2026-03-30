@@ -1,0 +1,19 @@
+﻿//// Decompiled with JetBrains decompiler
+//// Type: Kompas6API5.ksKompasObjectNotify_IsNeedConvertToSavePreviousEventHandler
+//// Assembly: Kompas6API5, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+//// MVID: 7DC79A90-5904-4611-83C4-D5C1F1F81B44
+//// Assembly location: D:\Shared\SDK\Samples\CSharp\Common\Kompas6API5.dll
+
+//using System.Runtime.InteropServices;
+
+//#nullable disable
+//namespace Kompas6API5;
+
+//[TypeLibType(TypeLibTypeFlags.FHidden)]
+//[ComVisible(false)]
+//public delegate bool ksKompasObjectNotify_IsNeedConvertToSavePreviousEventHandler(
+//  [MarshalAs(UnmanagedType.IDispatch), In] object pDoc,
+//  [In] int docType,
+//  [In] int saveVersion,
+//  [MarshalAs(UnmanagedType.IDispatch), In] object saveToPreviusParam,
+//  [In, Out] ref bool needConvert);

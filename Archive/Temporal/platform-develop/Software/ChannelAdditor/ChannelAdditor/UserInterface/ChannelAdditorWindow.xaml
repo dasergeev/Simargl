@@ -1,0 +1,45 @@
+﻿<Window x:Class="Apeiron.Platform.Software.ChannelAdditor.UserInterface.ChannelAdditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Apeiron.Platform.Software.ChannelAdditor.UserInterface"
+        mc:Ignorable="d"
+        Title="Добавление каналов в кадр" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="16"/>
+        </Grid.RowDefinitions>
+        <local:Editor x:Name="_Editor" Margin="0,22,0,29" Grid.Row="1"/>
+        <ToolBar>
+            <Button x:Name="_AddButton" Click="AddButton_Click">
+                <Image Source="pack://application:,,,/Images/Add.png" />
+                <Button.ToolTip>
+                    <ToolTip Content="Добавить канал"/>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="_RemoveButton" Visibility="Collapsed" Click="RemoveButton_Click">
+                <Image Source="pack://application:,,,/Images/Remove.png" />
+                <Button.ToolTip>
+                    <ToolTip Content="Удалить канал"/>
+                </Button.ToolTip>
+            </Button>
+            <Separator />
+            <Button x:Name="_StartButton" Click="StartButton_Click">
+                <Image Source="pack://application:,,,/Images/Start.png" />
+                <Button.ToolTip>
+                    <ToolTip Content="Начать запись файлов"/>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="_StopButton" Visibility="Collapsed" Click="StopButton_Click">
+                <Image Source="pack://application:,,,/Images/Stop.png" />
+                <Button.ToolTip>
+                    <ToolTip Content="Остановить запись файлов"/>
+                </Button.ToolTip>
+            </Button>
+        </ToolBar>
+        <ProgressBar x:Name="_ProgressBar" Grid.Row="2"/>
+    </Grid>
+</Window>

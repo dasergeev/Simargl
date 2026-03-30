@@ -1,0 +1,17 @@
+﻿@* Компонент Router: отвечает за навигацию по приложению Blazor.
+       AppAssembly="typeof(Program).Assembly" говорит искать страницы (@page) в сборке Program *@
+<Router AppAssembly="typeof(Program).Assembly">
+
+    @* Блок, который выполняется, если маршрут найден.
+           routeData — объект с данными о текущем маршруте *@
+    <Found Context="routeData">
+
+        @* Компонент RouteView: рендерит страницу (компонент) по указанному маршруту.
+           DefaultLayout="typeof(Layout.MainLayout)" — если страница не указала layout, используется MainLayout *@
+        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+
+        @* Компонент FocusOnNavigate: после перехода по маршруту устанавливает фокус на элемент <h1>.
+           Это улучшает доступность (screen reader сразу попадает в заголовок страницы) *@
+        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    </Found>
+</Router>

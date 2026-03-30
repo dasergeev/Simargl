@@ -1,0 +1,15 @@
+﻿<Application x:Class="Apeiron.Platform.Demo.AdxlDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Apeiron.Platform.Demo.AdxlDemo"
+             StartupUri="AdxlDemo/UserInterface/Common/MainWindow.xaml">
+    <Application.Resources>
+        <BitmapImage x:Key="Image" UriSource="pack://application:,,,/Images/Image.png"/>
+        <BitmapImage x:Key="Home" UriSource="pack://application:,,,/Images/Home.png"/>
+        <BitmapImage x:Key="OrgChart" UriSource="pack://application:,,,/Images/OrgChart.png"/>
+        <BitmapImage x:Key="RadialChart" UriSource="pack://application:,,,/Images/RadialChart.png"/>
+        <BitmapImage x:Key="FullScreen" UriSource="pack://application:,,,/Images/FullScreen.png"/>
+        <BitmapImage x:Key="Channel" UriSource="pack://application:,,,/Images/Channel.png"/>
+        <BitmapImage x:Key="Channels" UriSource="pack://application:,,,/Images/Channels.png"/>
+    </Application.Resources>
+</Application>

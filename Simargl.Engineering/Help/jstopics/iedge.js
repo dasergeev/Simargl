@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IEdge",
+hmDescription:"Интерфейс Ребро 3D. Иерархия: IDispatch IKompasAPIObject IModelObject IEdge КОМПАС версия v18 Подразделы: IEdge - свойства  IEdge - методы",
+hmPrevLink:"iuserobject3d_clearassociationobject.html",
+hmNextLink:"iedge_propers.html",
+hmParentLink:"imodelobjects_props.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc1711351.html\">Вспомогательные объекты, 3D-кривые и элементы тела&nbsp;<\/a> &gt; <a href=\"bc2014000.html\">3D-кривые и элементы тела&nbsp;<\/a> &gt; <a href=\"imodelobjects.html\">Интерфейс IModelObjects&nbsp;<\/a> &gt; <a href=\"imodelobjects_props.html\">IModelObjects - свойства&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Вспомогательные объекты, 3D-кривые и элементы тела  > 3D-кривые и элементы тела  > Интерфейс IModelObjects  > IModelObjects - свойства  > Интерфейс IEdge ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IEdge <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbc2902522\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс Ребро 3D<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"imodelobject.html\" class=\"topiclink\">IModelObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_3_BLUE\"><span class=\"f_Hier_3_BLUE\"><a href=\"iedge.html\" class=\"topiclink\">IEdge<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">КОМПАС версия v18<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iedge_propers.html\" class=\"topiclink hmlinklistitem\">IEdge - свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iedge_methods.html\" class=\"topiclink hmlinklistitem\">IEdge - методы <\/a><\/span><\/p>\n\r"
+})

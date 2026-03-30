@@ -1,0 +1,7 @@
+#!/bin/sh 
+while true
+do
+resp=$(echo -e "Apeiron" &&  gsmctl -iJ && gpsctl -ixaveup) 
+echo "$resp" | nc -uc 192.168.1.29 49050
+sleep 10
+done

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksIntersectCurvCurv - пример использования",
+hmDescription:"reference line = ::LineSeg(-100, -100, 100, 100, 1); \/\/ отрезок",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksIntersectCurvCurv - пример использования <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcg1717822\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">reference line = ::LineSeg(-100, -100, 100, 100, 1); \/\/ отрезок<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">reference cir = ::Circle (20, 20, 35, 1); \/\/ окружность<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">reference array = ::CreateArray(POINT_ARR, 0); \/\/ создать пустой массив точек пересечения<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if (::ksIntersectCurvCurv(line, cir, array) &gt; 0) { \/\/ найти точки пересечения кривых<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">int count = ::GetArrayCount(array); \/\/ количество элементов в массиве<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">char buf[128];<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::sprintf(buf, &quot;кол-во элементов = %i&quot;, ::GetArrayCount(arr));<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::Message(buf);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">MathPointParam par;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">for (int i = 0; i &lt; count; i) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">if (::GetArrayItem(array, i, &amp;par, sizeof(MathPointParam))) {<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::sprintf(buf, &quot;координаты %i-й точки : %g ; %g&quot;, i, par.x, par.y);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">::Message(buf);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">}<\/span><\/p>\n\r"
+})

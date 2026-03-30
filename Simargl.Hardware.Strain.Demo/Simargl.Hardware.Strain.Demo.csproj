@@ -1,0 +1,101 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Simargl.Hardware.Strain.Demo</RootNamespace>
+		<AssemblyName>Simargl.Hardware.Strain.Demo</AssemblyName>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Simargl.Hardware.Strain.Demo.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<WarningLevel>5</WarningLevel>
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ApplicationIcon>Application.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Images\BallGreen.ico" />
+	  <None Remove="Images\BallRed.ico" />
+	  <None Remove="Images\BallYellow.ico" />
+	  <None Remove="Images\Copy.png" />
+	  <None Remove="Images\Equipment.ico" />
+	  <None Remove="Images\FlagBlue.png" />
+	  <None Remove="Images\FlagGreen.png" />
+	  <None Remove="Images\FlagRed.png" />
+	  <None Remove="Images\FlagYellow.png" />
+	  <None Remove="Images\Node.png" />
+	  <None Remove="Images\Reboot.png" />
+	  <None Remove="Images\Recorder.ico" />
+	  <None Remove="Nodes\ekryyh0e.jtn~" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Application.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="5.3.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Threading" Version="17.14.15" />
+		<PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="WinForms.DataVisualization" Version="1.10.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Simargl\Simargl.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Images\BallGreen.ico" />
+	  <Resource Include="Images\BallRed.ico" />
+	  <Resource Include="Images\BallYellow.ico" />
+	  <Resource Include="Images\Copy.png" />
+	  <Resource Include="Images\Critical.png" />
+	  <Resource Include="Images\Debug.png" />
+	  <Resource Include="Images\Equipment-2.ico" />
+	  <Resource Include="Images\Equipment-3.ico" />
+	  <Resource Include="Images\Equipment.ico" />
+	  <Resource Include="Images\Error.png" />
+	  <Resource Include="Images\FlagBlue.png" />
+	  <Resource Include="Images\FlagGreen.png" />
+	  <Resource Include="Images\FlagRed.png" />
+	  <Resource Include="Images\FlagYellow.png" />
+	  <Resource Include="Images\Information.png" />
+	  <Resource Include="Images\Node.png" />
+	  <Resource Include="Images\Reboot.png" />
+	  <Resource Include="Images\Recorder.ico" />
+	  <Resource Include="Images\Warning.png" />
+	</ItemGroup>
+
+</Project>

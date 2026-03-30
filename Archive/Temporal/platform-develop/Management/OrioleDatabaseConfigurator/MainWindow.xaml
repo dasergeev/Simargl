@@ -1,0 +1,250 @@
+﻿<Window x:Class="Apeiron.Oriole.DatabaseConfigurator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Apeiron.Oriole.DatabaseConfigurator"
+        xmlns:Converters="clr-namespace:Apeiron.Oriole.DatabaseConfigurator.Converters" 
+        mc:Ignorable="d"
+        Title="DatabaseConfigurator" Height="600" Width="800"
+        x:Name="DatabaseConfigurator" Loaded="DatabaseConfigurator_Loaded" Closed="DatabaseConfigurator_Closed">
+    
+    <!--ГЛОБАЛЬНЫЕ СТИЛИ, РЕСУРСЫ, КОНВЕРТЕРЫ-->
+    <Window.Resources>
+        <!--<vm:DatabaseConfigViewModel x:Key="DatabaseConfigViewModel" />-->
+
+        <Converters:DateConverter x:Key="DateConverter" />
+    </Window.Resources>
+
+    <Grid x:Name="LayoutGrid">
+
+        <DockPanel LastChildFill="True">
+            <!--ГЛАВНОЕ МЕНЮ-->
+            <Menu x:Name="HeaderMenu" DockPanel.Dock="Top">
+                <MenuItem Header="Загрузить данные" Height="25" Click="LoadMenuItem_Click"/>
+                <MenuItem Header="Сохранить данные" Height="25" Click="SaveMenuItem_Click" />
+                <MenuItem Header="Закрыть" Height="25" Click="CloseMenuItem_Click" />
+            </Menu>
+        
+            <!--ПАНЕЛЬ КНОПОК-->
+            <ToolBar x:Name="ToolBar" DockPanel.Dock="Top" Height="30" Width="auto" Background="#FFF0F0F0">
+                <!--<Button x:Name="ToolBarButtonTuning" Click="ToolBarButtonTuning_Click">
+                    <Image Source="./Resources/Icons/Tuning.ico" Height="19" Width="19"/>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            Настройки.
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>-->
+                <Separator />
+            </ToolBar>
+
+            <!--ПАНЕЛЬ СОСТОЯНИЯ-->
+            <StatusBar x:Name="FooterStatusBar" DockPanel.Dock="Bottom" Height="25" VerticalAlignment="Center" Loaded="FooterStatusBar_Loaded">
+                <StatusBarItem>
+                    <TextBlock Name="WindowSizeHeight" Text="{Binding ActualHeight, ElementName=DatabaseConfigurator, Mode=OneWay}"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock Name="WindowSizeWidth" Text="{Binding ActualWidth, ElementName=DatabaseConfigurator, Mode=OneWay}"/>
+                </StatusBarItem>
+                <Separator />
+                <StatusBarItem>
+                    <TextBlock Name="ProgramVersion"/>
+                </StatusBarItem>
+                <Separator />
+                <StatusBarItem>
+                    <TextBlock Name="DBOnline"/>
+                </StatusBarItem>
+            </StatusBar>
+
+            <!--ПАНЕЛЬ ОСНОВНЫХ ВКЛАДОК-->
+            <Grid x:Name="TabControlGrid">
+                <TabControl x:Name="MainTabControl">
+                    
+                    <TabItem x:Name="SensorsTabItem" Header="Sensors">
+                        <DataGrid x:Name="SensorsDataGrid"
+                                  DataContext="{Binding UpdateSourceTrigger=Explicit, IsAsync=True}"
+                                  AutoGenerateColumns="False">
+                            <!--Колонки-->
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn x:Name="SensorsSerialNumberColumn"
+                                                    Header="SerialNumber"
+                                                    Binding="{Binding Path = SerialNumber}"
+                                                    IsReadOnly="False" MinWidth="110" Width="auto">
+                                </DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </TabItem>
+
+                    <TabItem Header="Registrars">
+                        <DataGrid x:Name="RegistrarsDataGrid"
+                                  DataContext="{Binding UpdateSourceTrigger=Explicit, IsAsync=True}"
+                                  AutoGenerateColumns="False">
+                            <!--Колонки-->
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn x:Name="RegistrarNameColumn"
+                                                    Header="Name"
+                                                    Binding="{Binding Path = Name}"
+                                                    IsReadOnly="False" MinWidth="110" Width="auto">
+                                </DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </TabItem>
+
+                    <TabItem Header="RawDirectories">
+                        <DataGrid x:Name="RawDirectoriesDataGrid"
+                                  DataContext="{Binding UpdateSourceTrigger=Explicit, IsAsync=True}"
+                                  AutoGenerateColumns="False">
+                            <!--Колонки-->
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn x:Name="RawDirectoriesRegistrarIdColumn"
+                                                    Header="RegistrarId"
+                                                    Binding="{Binding Path = RegistrarId}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="RawDirectoriesPathColumn"
+                                                    Header="Path"
+                                                    Binding="{Binding Path = Path}"
+                                                    IsReadOnly="False" MinWidth="110" Width="auto">
+                                </DataGridTextColumn>
+
+                            </DataGrid.Columns>
+
+                        </DataGrid>
+                    </TabItem>
+
+                    <TabItem Header="RecordDirectories">
+                        <DataGrid x:Name="RecordDirectoriesDataGrid"
+                                  DataContext="{Binding UpdateSourceTrigger=Explicit, IsAsync=True}"
+                                  AutoGenerateColumns="False">
+                            <!--Колонки-->
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn x:Name="RecordDirectoriesRegistrarIdColumnRecord"
+                                                    Header="RegistrarId"
+                                                    Binding="{Binding Path = RegistrarId}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="RecordDirectoriesPathColumn"
+                                                    Header="Path"
+                                                    Binding="{Binding Path = Path}"
+                                                    IsReadOnly="False" MinWidth="110" Width="auto">
+                                </DataGridTextColumn>
+
+                            </DataGrid.Columns>
+
+                        </DataGrid>
+                    </TabItem>
+
+                    <TabItem Header="Channels">
+                        <DataGrid x:Name="ChannelsDataGrid"
+                                  DataContext="{Binding UpdateSourceTrigger=Explicit, IsAsync=True}"
+                                  AutoGenerateColumns="False">
+                            <!--Колонки-->
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn x:Name="ChannelsRegistrarIdColumnRecord"
+                                                    Header="RegistrarId"
+                                                    Binding="{Binding Path = RegistrarId}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="ChannelsNameColumn"
+                                                    Header="Name"
+                                                    Binding="{Binding Path = Name}"
+                                                    IsReadOnly="False" MinWidth="110" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="DescriptionColumn"
+                                                    Header="Description"
+                                                    Binding="{Binding Path = Description}"
+                                                    IsReadOnly="False" MinWidth="110" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="SamplingColumn"
+                                                    Header="Sampling"
+                                                    Binding="{Binding Path = Sampling}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+
+                                <DataGridTextColumn x:Name="CutoffColumn"
+                                                    Header="Cutoff"
+                                                    Binding="{Binding Path = Cutoff}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </TabItem>
+
+                    <TabItem Header="Sources">
+                        <DataGrid x:Name="SourcesDataGrid"
+                                  DataContext="{Binding UpdateSourceTrigger=Explicit, IsAsync=True}"
+                                  AutoGenerateColumns="False">
+                            <!--Колонки-->
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn x:Name="SourcesSensorIdColumn"
+                                                    Header="SensorId"
+                                                    Binding="{Binding Path = SensorId}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="SourcesChannelIdColumn"
+                                                    Header="ChannelId"
+                                                    Binding="{Binding Path = ChannelId}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="SourcesBeginTimeColumn"
+                                                    Header="BeginTime"
+                                                    Binding="{Binding Path = BeginTime, Converter={StaticResource DateConverter}}"
+                                                    IsReadOnly="False" MinWidth="120" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="SourcesEndTimeColumn"
+                                                    Header="BeginTime"
+                                                    Binding="{Binding Path = EndTime, Converter={StaticResource DateConverter}}"
+                                                    IsReadOnly="False" MinWidth="120" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="SourcesFormatColumn"
+                                                    Header="Format"
+                                                    Binding="{Binding Path = Format}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="SourcesSignalColumn"
+                                                    Header="Signal"
+                                                    Binding="{Binding Path = Signal}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="SourcesSamplingColumn"
+                                                    Header="Sampling"
+                                                    Binding="{Binding Path = Sampling}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                                <DataGridTextColumn x:Name="SourcesCutoffColumn"
+                                                    Header="Cutoff"
+                                                    Binding="{Binding Path = Cutoff}"
+                                                    IsReadOnly="False" MinWidth="80" Width="auto">
+                                </DataGridTextColumn>
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </TabItem>
+
+                </TabControl>
+            </Grid>
+            
+        </DockPanel>
+    </Grid>
+</Window>

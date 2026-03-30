@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Работа с Панелью свойств",
+hmDescription:"Подразделы: Интерфейс IPropertyControl  Интерфейс IPropertyManager  Интерфейс IPropertyTab  Интерфейс IPropertyControl1  Интерфейс IPropertyPoint3D  Интерфейс IPropertyEditCh",
+hmPrevLink:"isavetopreviusparam7_getcurrentoptionvalue.html",
+hmNextLink:"ipropertycontrol.html",
+hmParentLink:"ap1782828.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Работа с Панелью свойств ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Работа с Панелью свойств <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertycontrol.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPropertyControl <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertymanager.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPropertyManager <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertytab.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPropertyTab <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertycontrol1.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPropertyControl1 <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertypoint3d.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPropertyPoint3D <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertyeditcheckbox.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPropertyEditCheckBox <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertypreviewtext.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPropertyPreviewText <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertyreplacelist.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPropertyReplaceList <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ipropertytoolbar.html\" class=\"topiclink hmlinklistitem\">Интерфейс IPropertyToolBar <\/a><\/span><\/p>\n\r"
+})

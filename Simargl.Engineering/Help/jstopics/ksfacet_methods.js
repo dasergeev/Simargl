@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IFacet - методы",
+hmDescription:"Подразделы: GetPoint - Получить координаты вершины  GetPointsCount - Получить количество вершин пластины  GetNormal - Получить координаты нормали  GetTessellationIndex - Получи",
+hmPrevLink:"ksfacet.html",
+hmNextLink:"ksfacet_getpoint.html",
+hmParentLink:"ksfacet.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument3d.html\">Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )&nbsp;<\/a> &gt; <a href=\"kspart.html\">Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart&nbsp;<\/a> &gt; <a href=\"bz1748754.html\">Математическая поверхность в трехмерном пространстве&nbsp;<\/a> &gt; <a href=\"kssurface.html\">Интерфейсы ksSurface, ISurface&nbsp;<\/a> &gt; <a href=\"kstessellation.html\">Триангуляция (аппроксимирующая поверхность грани), Интерфейсы ksTessellation, ITessellation&nbsp;<\/a> &gt; <a href=\"ksfacet.html\">Триангуляционная пластина (Интерфейсы ksFacet, IFacet)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Документ - модель (Интерфейсы - ksDocument3D, IDocument3D )  > Компонент сборки (деталь или подсборка). Интерфейсы ksPart и IPart  > Математическая поверхность в трехмерном пространстве  > Интерфейсы ksSurface, ISurface  > Триангуляция (аппроксимирующая поверхность грани), Интерфейсы ksTessellation, ITessellation  > Триангуляционная пластина (Интерфейсы ksFacet, IFacet)  > IFacet - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IFacet - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksfacet_getpoint.html\" class=\"topiclink hmlinklistitem\">GetPoint - Получить координаты вершины <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksfacet_getpointscount.html\" class=\"topiclink hmlinklistitem\">GetPointsCount - Получить количество вершин пластины <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksfacet_getnormal.html\" class=\"topiclink hmlinklistitem\">GetNormal - Получить координаты нормали <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksfacet_gettessellationindex.html\" class=\"topiclink hmlinklistitem\">GetTessellationIndex - Получить индекс вершины в массиве вершин триангуляционной сетки <\/a><\/span><\/p>\n\r"
+})

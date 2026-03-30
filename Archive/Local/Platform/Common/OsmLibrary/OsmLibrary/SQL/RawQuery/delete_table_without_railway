@@ -1,0 +1,8 @@
+DELETE FROM planet_osm_line_railway WHERE coalesce(TRIM(railway), '') = '';
+SELECT COUNT(*) FROM planet_osm_line_railway;
+
+DELETE FROM planet_osm_point_railway WHERE coalesce(TRIM(railway), '') = '';
+SELECT COUNT(*) FROM planet_osm_point_railway;
+
+DELETE FROM planet_osm_polygon_railway WHERE coalesce(TRIM(railway), '') = '';
+SELECT COUNT(*) FROM planet_osm_polygon_railway;

@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Using Include="Apeiron.Support" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Version>1.0.2</Version>
+		<AssemblyVersion>1.0.2.0</AssemblyVersion>
+		<FileVersion>1.0.2.0</FileVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace>Apeiron.Platform.Utilities</RootNamespace>
+		<AssemblyName>Generation</AssemblyName>
+		<DocumentationFile>Generation.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Authors>ООО "ТИЦ ЖТ"</Authors>
+		<Company>ООО "ТИЦ ЖТ"</Company>
+		<Copyright>ООО "ТИЦ ЖТ"</Copyright>
+		<Description>Приложение для генерации кода для платформой Apeiron.</Description>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+		<NoWarn />
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+		<NoWarn />
+		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Apeiron" Version="3.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.4.27">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+</Project>

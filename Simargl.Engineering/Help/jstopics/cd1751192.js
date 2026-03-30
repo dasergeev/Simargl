@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"NURBS",
+hmDescription:"Подразделы: Точка NURBS (Интерфейс ksNurbsPointParam)  Кривая NURBS (Интерфейс ksNurbsParam)",
+hmPrevLink:"kspolylineparam_setpmathpoint.html",
+hmNextLink:"ksnurbspointparam.html",
+hmParentLink:"cd1743949.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"cd1743949.html\">Интерфейсы параметров графических примитивов&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров графических примитивов  > NURBS ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">NURBS <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksnurbspointparam.html\" class=\"topiclink hmlinklistitem\">Точка NURBS (Интерфейс ksNurbsPointParam) <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksnurbsparam.html\" class=\"topiclink hmlinklistitem\">Кривая NURBS (Интерфейс ksNurbsParam) <\/a><\/span><\/p>\n\r"
+})

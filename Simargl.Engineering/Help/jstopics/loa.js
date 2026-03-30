@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"База данных текстового формата",
+hmDescription:"База данных (БД) текстового формата представляет собой текстовый файл, содержащий таблицу значений.",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">База данных текстового формата <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcg1732122\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">База данных (БД) текстового формата представляет собой текстовый файл, содержащий таблицу значений.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Строки таблицы являются записями БД. В качестве разделителей значений в строке можно использовать пробел или , (запятую). Данные в столбцах должны иметь одинаковый тип.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">В системе КОМПАС такие базы данных могут быть использованы, например, для хранения значений свойств параметризованных объектов. По умолчанию файлам БД тестового формата системы КОМПАС присваивается расширение loa.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Синтаксис БД текстового формата.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Файл БД содержит комментарии и таблицу значений. Комментариями являются следующие элементы текста:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">- фрагмент, заключенный между символами \/* и *\/.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">- строки, начинающиеся с \/\/.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Остальные строки образуют таблицу текстовой базы данных, например:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/* a диаметр оси<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">b длина оси<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">c ширина проточки<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">*\/<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ a b c<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">25 55 1.5<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">30 55 2<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">45 80 2.5<\/span><\/p>\n\r"
+})

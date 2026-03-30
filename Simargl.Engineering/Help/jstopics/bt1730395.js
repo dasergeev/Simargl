@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Создание видов",
+hmDescription:"Подразделы: ksCreateSheetArbitraryView - Создать произвольный ассоциативный вид  ksCreateSheetArrowView - Создать ассоциативный вид по стрелке  ksCreateSheetProjectionView - Соз",
+hmPrevLink:"ksdocument2d_ksundocontainer.html",
+hmNextLink:"ksdocument2d_kscreatesheetarbitraryview.html",
+hmParentLink:"ksdocument2d_methods.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"ksdocument2d_methods.html\">ksDocument2D - методы&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > ksDocument2D - методы  > Создание видов ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Создание видов <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdocument2d_kscreatesheetarbitraryview.html\" class=\"topiclink hmlinklistitem\">ksCreateSheetArbitraryView - Создать произвольный ассоциативный вид <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdocument2d_kscreatesheetarrowview.html\" class=\"topiclink hmlinklistitem\">ksCreateSheetArrowView - Создать ассоциативный вид по стрелке <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdocument2d_kscreatesheetprojectionview.html\" class=\"topiclink hmlinklistitem\">ksCreateSheetProjectionView - Создать проекционный ассоциативный вид <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdocument2d_kscreatesheetremoteview.html\" class=\"topiclink hmlinklistitem\">ksCreateSheetRemoteView - Создать ассоциативный вид выносного элемента <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdocument2d_kscreatesheetsectionview.html\" class=\"topiclink hmlinklistitem\">ksCreateSheetSectionView - Создать ассоциативный вид разреза\/сечения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksdocument2d_kscreatesheetstandartviews.html\" class=\"topiclink hmlinklistitem\">ksCreateSheetStandartViews - Создать стандартные ассоциативные виды <\/a><\/span><\/p>\n\r"
+})

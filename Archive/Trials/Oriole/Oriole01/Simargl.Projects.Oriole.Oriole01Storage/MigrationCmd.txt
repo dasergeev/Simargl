@@ -1,0 +1,4 @@
+﻿EntityFrameworkCore\Add-Migration -Project Simargl.Projects.Oriole.Oriole01Storage -StartupProject Simargl.Projects.Oriole.Oriole01Storage -Name
+EntityFrameworkCore\Update-Database -Project Simargl.Projects.Oriole.Oriole01Storage -StartupProject Simargl.Projects.Oriole.Oriole01Storage
+EntityFrameworkCore\Remove-Migration -Project Simargl.Projects.Oriole.Oriole01Storage -StartupProject Simargl.Projects.Oriole.Oriole01Storage
+EntityFrameworkCore\Remove-Migration -Project Simargl.Projects.Oriole.Oriole01Storage -StartupProject Simargl.Projects.Oriole.Oriole01Storage -Force

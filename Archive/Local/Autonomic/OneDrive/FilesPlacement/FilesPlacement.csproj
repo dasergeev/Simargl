@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <UserSecretsId>dotnet-FilesPlacement-2E9C4C12-1A05-4A35-BA1C-1C42A174BAE7</UserSecretsId>
+    <AssemblyName>RailTest.Satellite.Autonomic.FilesPlacement</AssemblyName>
+    <RootNamespace>RailTest.Satellite.Autonomic</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>RailTest.Satellite.Autonomic.FilesPlacement.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>RailTest.Satellite.Autonomic.FilesPlacement.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="RailTest.Satellite.Autonomic.FilesPlacement.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.4" />
+  </ItemGroup>
+
+</Project>

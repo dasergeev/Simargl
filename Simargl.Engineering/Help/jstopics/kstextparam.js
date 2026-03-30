@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс ksTextParam",
+hmDescription:"Интерфейс параметров текста. Аналог данных параметров при использовании API экспортных функций - TextParam. Примечание: Указатель на интерфейс можно получить при помощи метода",
+hmPrevLink:"ck1918891.html",
+hmNextLink:"kstextparam_methods.html",
+hmParentLink:"ck1918891.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocumenttxt.html\">Текстовый документ (Интерфейс ksDocumentTxt)&nbsp;<\/a> &gt; <a href=\"ksdocumenttxt_methods.html\">ksDocumentTxt - методы&nbsp;<\/a> &gt; <a href=\"ck1918891.html\">Интерфейсы параметров элементов текста&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Текстовый документ (Интерфейс ksDocumentTxt)  > ksDocumentTxt - методы  > Интерфейсы параметров элементов текста  > Интерфейс ksTextParam ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс ksTextParam <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xck1892375\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс параметров текста<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Аналог данных параметров при использовании API экспортных функций - <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"structtextparam.html\" class=\"topiclink\">TextParam<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Указатель на интерфейс можно получить при помощи метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kompasobject_getparamstruct.html\" class=\"topiclink\">KompasObject::GetParamStruct<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Смотрите также <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kompasobject.html\" class=\"topiclink\">KompasObject<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kstextparam_methods.html\" class=\"topiclink hmlinklistitem\">ksTextParam - методы <\/a><\/span><\/p>\n\r"
+})

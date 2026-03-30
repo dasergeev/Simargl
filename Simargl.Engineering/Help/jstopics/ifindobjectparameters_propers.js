@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IFindObjectParameters - свойства",
+hmDescription:"Подразделы: DisabledObjects - Игнорируемые объекты  DisabledViews - Игнорируемые виды  DrawingObjectType - Фильтрация по типу графического объекта  FindInBackgroundViewsAndLaye",
+hmPrevLink:"ifindobjectparameters.html",
+hmNextLink:"ifindobjectparameters_disabledobjects.html",
+hmParentLink:"ifindobjectparameters.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb2838772.html\">Поиск объектов&nbsp;<\/a> &gt; <a href=\"ifindobjectparameters.html\">Интерфейс IFindObjectParameters&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Поиск объектов  > Интерфейс IFindObjectParameters  > IFindObjectParameters - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IFindObjectParameters - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ifindobjectparameters_disabledobjects.html\" class=\"topiclink hmlinklistitem\">DisabledObjects - Игнорируемые объекты <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ifindobjectparameters_disabledviews.html\" class=\"topiclink hmlinklistitem\">DisabledViews - Игнорируемые виды <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ifindobjectparameters_drawingobjecttype.html\" class=\"topiclink hmlinklistitem\">DrawingObjectType - Фильтрация по типу графического объекта <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ifindobjectparameters_findinbackgroundviewsandlayers.html\" class=\"topiclink hmlinklistitem\">FindInBackgroundViewsAndLayers - Искать в фоновых видах и слоях <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ifindobjectparameters_findobjectstype.html\" class=\"topiclink hmlinklistitem\">FindObjectsType - Тип поиска объектов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ifindobjectparameters_geometryonly.html\" class=\"topiclink hmlinklistitem\">GeometryOnly - Искать только среди геометрических объектов <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IVariableTable - методы",
+hmDescription:"Подразделы: AddColumn - Добавить колонку в таблицу переменных  AddRow - Добавить строку в таблицу переменных  ApplyVars - Применить параметры строки к компоненту  Clear - Очист",
+hmPrevLink:"ivariabletable_visualtable.html",
+hmNextLink:"ivariabletable_addcolumn.html",
+hmParentLink:"ivariabletable.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"ba1859837.html\">Переменные&nbsp;<\/a> &gt; <a href=\"ivariabletable.html\">Интерфейс IVariableTable&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Переменные  > Интерфейс IVariableTable  > IVariableTable - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IVariableTable - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ivariabletable_addcolumn.html\" class=\"topiclink hmlinklistitem\">AddColumn - Добавить колонку в таблицу переменных <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ivariabletable_addrow.html\" class=\"topiclink hmlinklistitem\">AddRow - Добавить строку в таблицу переменных <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ivariabletable_applyvars.html\" class=\"topiclink hmlinklistitem\">ApplyVars - Применить параметры строки к компоненту <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ivariabletable_clear.html\" class=\"topiclink hmlinklistitem\">Clear - Очистить всю таблицу - удалить все строки и колонки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ivariabletable_deletecolumn.html\" class=\"topiclink hmlinklistitem\">DeleteColumn - Удалить колонку из таблицы переменных <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ivariabletable_deleterow.html\" class=\"topiclink hmlinklistitem\">DeleteRow - Удалить строку из таблицы переменных <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ivariabletable_findcolumnindex.html\" class=\"topiclink hmlinklistitem\">FindColumnIndex - Найти индекс колонки по имени переменной <\/a><\/span><\/p>\n\r"
+})

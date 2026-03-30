@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ISheetMetalBendUnfoldParameters - свойства",
+hmDescription:"Подразделы: ExcludedBendObjects - Исключенные сгибы. Массив объектов в виде SAFEARRAY DISPATCH - VT_ARRAY | VT_DISPATCH  FixedFaces - Неподвижные грани  IsCreated - Заданы ли па",
+hmPrevLink:"isheetmetalbendunfoldparameters.html",
+hmNextLink:"isheetmetalbendunfoldparameters_excludedbendobjects.html",
+hmParentLink:"isheetmetalbendunfoldparameters.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2753655.html\">Листовое тело&nbsp;<\/a> &gt; <a href=\"isheetmetalcontainer.html\">Интерфейс ISheetMetalContainer&nbsp;<\/a> &gt; <a href=\"isheetmetalcontainer_props.html\">ISheetMetalContainer - свойства&nbsp;<\/a> &gt; <a href=\"isheetmetalbendunfoldparameters.html\">Интерфейс ISheetMetalBendUnfoldParameters&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Листовое тело  > Интерфейс ISheetMetalContainer  > ISheetMetalContainer - свойства  > Интерфейс ISheetMetalBendUnfoldParameters  > ISheetMetalBendUnfoldParameters - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ISheetMetalBendUnfoldParameters - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetalbendunfoldparameters_excludedbendobjects.html\" class=\"topiclink hmlinklistitem\">ExcludedBendObjects - Исключенные сгибы. Массив объектов в виде SAFEARRAY DISPATCH - VT_ARRAY | VT_DISPATCH <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetalbendunfoldparameters_fixedfaces.html\" class=\"topiclink hmlinklistitem\">FixedFaces - Неподвижные грани <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetalbendunfoldparameters_iscreated.html\" class=\"topiclink hmlinklistitem\">IsCreated - Заданы ли параметры развертки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetalbendunfoldparameters_unfold.html\" class=\"topiclink hmlinklistitem\">Unfold - Развернуть <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"isheetmetalbendunfoldparameters_unfoldplane.html\" class=\"topiclink hmlinklistitem\">UnfoldPlane - Плоскость развертки <\/a><\/span><\/p>\n\r"
+})

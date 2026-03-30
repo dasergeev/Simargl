@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MainService</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Oriole.MainServiceProgram">
+            <summary>
+            Служба регистрации данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.MainServiceProgram.Main(System.String[])">
+            <summary>
+            Точка входа в службу.
+            </summary>
+            <param name="args">Аргументы.</param>
+        </member>
+        <member name="M:Apeiron.Oriole.MainServiceProgram.CreateHostBuilder(System.String[])">
+            <summary>
+            Конфигурация HostBuilder
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.MainServiceWorker">
+            <summary>
+            Представляет основной класс службы.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.MainServiceWorker.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Oriole.MainServiceWorker})">
+            <summary>
+            Представляет конструктор объекта.
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.MainServiceWorker.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="stoppingToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Apeiron.Oriole.MainServiceWorker.InvokeAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет основную работу службы.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая основную работу службы.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.MainServiceWorker.WorkAdxlClientAsync(System.Net.Sockets.TcpClient,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет работу с подключением датчика.
+            </summary>
+            <param name="tcpClient">
+            TCP-клиент датчика.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая работу с подключением датчика.
+            </returns>
+        </member>
+        <member name="T:Apeiron.Oriole.Saver.StreamSaver">
+            <summary>
+            Представляет класс для сохранения данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Saver.StreamSaver.CreateFolderIfNotExist(System.String)">
+            <summary>
+            Представляет функцию создания директории, если она отсутствует.
+            </summary>
+            <param name="path"></param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="path"/> переданна пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="path"/> переданна пустая строка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Saver.StreamSaver.SaveSensorPackage(System.DateTime,System.Int32,System.Byte[])">
+            <summary>
+            Сохраняет пакет от датчика.
+            </summary>
+            <param name="time">Время получения пакета.</param>
+            <param name="number">Последний байт IP датчика.</param>
+            <param name="data">Массив данных пакета.</param>
+            <exception cref="T:System.UnauthorizedAccessException">У вызывающего объекта отсутствует необходимое разрешение.</exception>
+            <exception cref="T:System.IO.IOException">Каталог, заданный параметром path, является файлом.</exception>
+            <exception cref="T:System.IO.PathTooLongException">Указанный путь, имя файла или оба значения превышают максимальную длину, заданную в системе.</exception>
+            <exception cref="T:System.Security.SecurityException">У вызывающего объекта отсутствует необходимое разрешение.</exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Saver.StreamSaver.SaveTeltonikaPackage(System.DateTime,System.String)">
+            <summary>
+            Сохраняет пакет от тельтоники.
+            </summary>
+            <param name="time">Время получения пакета.</param>
+            <param name="data">Строка данных пакета.</param>
+            <exception cref="T:System.UnauthorizedAccessException">У вызывающего объекта отсутствует необходимое разрешение.</exception>
+            <exception cref="T:System.IO.IOException">Каталог, заданный параметром path, является файлом.</exception>
+            <exception cref="T:System.IO.PathTooLongException">Указанный путь, имя файла или оба значения превышают максимальную длину, заданную в системе.</exception>
+            <exception cref="T:System.Security.SecurityException">У вызывающего объекта отсутствует необходимое разрешение.</exception>
+        </member>
+        <member name="T:Apeiron.Oriole.Settings">
+            <summary>
+            Предоставляет настройки.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.AdxlStreamPort">
+            <summary>
+            Постоянная, определяющая номер порта для подключения датчиков.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.TeltonikaStreamPort">
+            <summary>
+            Постоянная, определяющая номер порта для подключения тельтоники.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.WorkerTimeout">
+            <summary>
+            Постоянная, определяющая тайм-аут ожидания основной службы.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.AdxlPackageSize">
+            <summary>
+            Постоянная, определяющая размер пакета данных от датчика.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.AdxlFileSize">
+            <summary>
+            Постоянная, определяющая размер файла данных от датчика.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.RootPath">
+            <summary>
+            Постоянная, определяющая корневой каталог для записи данных.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.AdxlPrefixDirectory">
+            <summary>
+            Постоянная, определяющая префикс имени директории, в которой хранятся данные датчиков.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.TeltonikaPrefixFolder">
+            <summary>
+            Постоянная, определяющая префикс имени директории, в которой хранятся данные gps.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.AdxlWaitingTimeout">
+            <summary>
+            Постоянная, определяющая время ожидания данных от датчика в милисекундах.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Settings.TeltonikaIterationCount">
+            <summary>
+            Количество итераций получения данных для записи данных от тельтоники.
+            </summary>
+        </member>
+    </members>
+</doc>

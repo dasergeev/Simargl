@@ -1,0 +1,12 @@
+﻿prod-01			-	Informing, PackageFileNormalization
+prod-db			-	PackageFileSearch
+snickers		-	
+mars			-	
+twix			-	PackageSearch
+bounty			-	NmeaMessageSearch
+rt-pc-007		-	GeolocationCollector
+rt-pc-014		-	FrameCollector
+rt-pc-015		-	SpectrumAnalysis
+rt-pc-017		-	ExtremumAnalysis
+rt-pc-022		-	NmeaFileSearch
+rail-nto-tst-01	-	

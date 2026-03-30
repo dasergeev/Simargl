@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс ILibraryHoleParameters",
+hmDescription:"Интерфейс параметров отверстия из библиотеки. Иерархия: IDispatch IKompasAPIObject ILibraryHoleParameters Данный интерфейс можно получить с помощью метода IHole3D::HoleParamet",
+hmPrevLink:"ispotfacingholeparameters_spotfacingdepth.html",
+hmNextLink:"ilibraryholeparameters_props.html",
+hmParentLink:"bc2279073.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2278808.html\">Операции, массивы, эскизы, точки&nbsp;<\/a> &gt; <a href=\"bc2279073.html\">Операции&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Операции, массивы, эскизы, точки  > Операции  > Интерфейс ILibraryHoleParameters ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс ILibraryHoleParameters <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbc3059771\" class=\"hmanchor\"><\/a><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс параметров отверстия из библиотеки<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"ilibraryholeparameters.html\" class=\"topiclink\">ILibraryHoleParameters<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Данный интерфейс можно получить с помощью метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ihole3d_holeparameters.html\" class=\"topiclink\">IHole3D::HoleParameters<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Версия Компас v18.1<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ilibraryholeparameters_props.html\" class=\"topiclink hmlinklistitem\">ILibraryHoleParameters - свойства <\/a><\/span><\/p>\n\r"
+})

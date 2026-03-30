@@ -1,0 +1,5 @@
+// Команда для генерации DTO классов и DbContext из существующей базы.
+Scaffold-DbContext "Host=10.69.16.239;Port=5432;Database=Osm2Russia;Username=postgres;Password=!TTCRTdbsa2"
+
+// Provaider
+Npgsql.EntityFrameworkCore.PostgreSQL

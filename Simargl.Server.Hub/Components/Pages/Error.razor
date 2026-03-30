@@ -1,0 +1,68 @@
+﻿@* Определяем маршрут страницы: /Error *@
+@page "/Error"
+
+@* Подключаем пространство имён System.Diagnostics (для Activity и TraceIdentifier) *@
+@using System.Diagnostics
+
+@* Заголовок вкладки браузера (title) — «Ошибка» *@
+<PageTitle>Ошибка</PageTitle>
+
+@* Основной заголовок страницы — красным цветом выводится «Ошибка» *@
+<h1 class="text-danger">Ошибка.</h1>
+
+@* Подзаголовок — описание ошибки для пользователя *@
+<h2 class="text-danger">Во время обработки запроса произошла ошибка.</h2>
+
+@* Если ShowRequestId == true (т.е. есть идентификатор запроса), то показываем блок ниже *@
+@if (ShowRequestId)
+{
+    @* Открывающий тег абзаца для строки с ID запроса *@
+    <p>
+
+        @* Метка "ID запроса" жирным + само значение ID в теге <code> *@
+        <strong>Request ID:</strong> <code>@RequestId</code>
+    </p>
+}
+
+@* Заголовок секции с подсказками по режиму Development *@
+<h3>Режим разработки</h3>
+
+<p>
+    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
+</p>
+
+@* Абзац с объяснением, зачем нужен режим разработки *@
+<p>
+
+    @* Важное предупреждение жирным *@
+    <strong>Режим разработки нельзя включать на опубликованных приложениях.</strong>
+    
+    @* Причина запрета: утечка чувствительных данных *@
+    Это может привести к отображению конфиденциальной информации из исключений конечным пользователям.
+    
+    @* Инструкция: какую переменную окружения установить и во что *@
+    Для локальной отладки включите <strong>режим разработки</strong>, задав переменную окружения <strong>ASPNETCORE_ENVIRONMENT</strong> значение <strong>Development</strong>
+
+    @* Завершающая часть инструкции: нужно перезапустить *@
+    и перезапустив приложение.
+</p>
+
+@* Начало блока C# *@
+@code{
+
+    @* Атрибут: свойство будет передано как каскадный параметр *@
+    @* Свойство для доступа к текущему HttpContext (может быть null) *@
+    [CascadingParameter]
+    private HttpContext? HttpContext { get; set; }
+
+    @* Поле для хранения идентификатора запроса *@
+    private string? RequestId { get; set; }
+
+    @* True, если RequestId задан — тогда отображаем блок с ним *@
+    private bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
+    @* В момент инициализации: если есть Activity.Current?.Id — используем его,
+       иначе берём HttpContext?.TraceIdentifier *@
+    protected override void OnInitialized() =>
+        RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
+}

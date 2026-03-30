@@ -1,0 +1,17 @@
+﻿//// Decompiled with JetBrains decompiler
+//// Type: KompasAPI7.SpecificationColumnStyle
+//// Assembly: KompasAPI7, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+//// MVID: F94F641F-15B9-43AE-BE0A-DA3530B2CFA7
+//// Assembly location: D:\Shared\SDK\Samples\CSharp\Common\KompasAPI7.dll
+
+//using System.Runtime.InteropServices;
+
+//#nullable disable
+//namespace KompasAPI7;
+
+//[Guid("16839CAA-3AFB-49A4-A19A-C61963967649")]
+//[CoClass(typeof (SpecificationColumnStyleClass))]
+//[ComImport]
+//public interface SpecificationColumnStyle : ISpecificationColumnStyle
+//{
+//}

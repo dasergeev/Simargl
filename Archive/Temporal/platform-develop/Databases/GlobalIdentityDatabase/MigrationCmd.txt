@@ -1,0 +1,5 @@
+﻿EntityFrameworkCore\Add-Migration -Project Databases\GlobalIdentityDatabase -StartupProject Databases\GlobalIdentityDatabase -Name
+EntityFrameworkCore\Update-Database -Project Databases\GlobalIdentityDatabase -StartupProject Databases\GlobalIdentityDatabase
+EntityFrameworkCore\Remove-Migration -Project Databases\GlobalIdentityDatabase -StartupProject Databases\GlobalIdentityDatabase
+EntityFrameworkCore\Remove-Migration -Project Databases\GlobalIdentityDatabase -StartupProject Databases\GlobalIdentityDatabase -Force
+

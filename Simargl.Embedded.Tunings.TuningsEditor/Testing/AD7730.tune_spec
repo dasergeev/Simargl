@@ -1,0 +1,1635 @@
+{
+  "spec": {
+    "attributes": [
+      {
+        "format": 0,
+        "value": "AD7730"
+      },
+      {
+        "format": 6,
+        "value": "\u0421\u043F\u0435\u0446\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u043D\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u043C\u044B\u0445 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u043E\u0432 \u0434\u0430\u0442\u0447\u0438\u043A\u0430 AD7730."
+      },
+      {
+        "format": 1,
+        "value": "AD7730"
+      },
+      {
+        "format": 3,
+        "value": "1.0.0.D"
+      }
+    ],
+    "nodes": [
+      {
+        "__node_format": 2,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F"
+          },
+          {
+            "format": 6,
+            "value": "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u0434\u043B\u044F \u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430"
+          },
+          {
+            "format": 1,
+            "value": "Identity"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0422\u0438\u043F"
+              },
+              {
+                "format": 6,
+                "value": "\u0422\u0438\u043F \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430."
+              },
+              {
+                "format": 1,
+                "value": "DeviceType"
+              },
+              {
+                "format": 4,
+                "value": "DeviceType"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0421\u0435\u0440\u0438\u0439\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440"
+              },
+              {
+                "format": 6,
+                "value": "\u0421\u0435\u0440\u0438\u0439\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430."
+              },
+              {
+                "format": 1,
+                "value": "SerialNumber"
+              },
+              {
+                "format": 4,
+                "value": "SerialNumber"
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "__node_format": 2,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u041F\u0440\u043E\u0448\u0438\u0432\u043A\u0430"
+          },
+          {
+            "format": 6,
+            "value": "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u043E \u0442\u0435\u043A\u0443\u0449\u0435\u0439 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0435 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430"
+          },
+          {
+            "format": 1,
+            "value": "Firmware"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0412\u0435\u0440\u0441\u0438\u044F"
+              },
+              {
+                "format": 6,
+                "value": "\u0412\u0435\u0440\u0441\u0438\u044F \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438."
+              },
+              {
+                "format": 1,
+                "value": "Version"
+              },
+              {
+                "format": 4,
+                "value": "Version"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0414\u0430\u0442\u0430"
+              },
+              {
+                "format": 6,
+                "value": "\u0414\u0430\u0442\u0430 \u0438\u0437\u0433\u043E\u0442\u043E\u0432\u043B\u0435\u043D\u0438\u044F \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438."
+              },
+              {
+                "format": 1,
+                "value": "Date"
+              },
+              {
+                "format": 4,
+                "value": "DateOnly"
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "__node_format": 4,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0410\u043F\u043F\u0430\u0440\u0430\u0442\u043D\u044B\u0435"
+          },
+          {
+            "format": 6,
+            "value": "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u0430\u043F\u043F\u0430\u0440\u0430\u0442\u043D\u044B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+          },
+          {
+            "format": 1,
+            "value": "Hardware"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "MAC-\u0430\u0434\u0440\u0435\u0441"
+              },
+              {
+                "format": 6,
+                "value": "MAC-\u0430\u0434\u0440\u0435\u0441 \u0441\u0435\u0442\u0435\u0432\u043E\u0433\u043E \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430."
+              },
+              {
+                "format": 1,
+                "value": "Identifier"
+              },
+              {
+                "format": 4,
+                "value": "MacAddress"
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "__node_format": 3,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u041F\u043E\u0440\u0442\u044B"
+          },
+          {
+            "format": 6,
+            "value": "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u043E \u043D\u043E\u043C\u0435\u0440\u0430\u0445 \u043F\u043E\u0440\u0442\u043E\u0432 \u0434\u043B\u044F \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F."
+          },
+          {
+            "format": 1,
+            "value": "Ports"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "UDP"
+              },
+              {
+                "format": 6,
+                "value": "\u041D\u043E\u043C\u0435\u0440 \u043F\u043E\u0440\u0442\u0430 \u0434\u043B\u044F \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u043F\u043E \u043F\u0440\u043E\u0442\u043E\u043A\u043E\u043B\u0443 UDP."
+              },
+              {
+                "format": 1,
+                "value": "UdpPort"
+              },
+              {
+                "format": 4,
+                "value": "UInt16"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "TCP"
+              },
+              {
+                "format": 6,
+                "value": "\u041D\u043E\u043C\u0435\u0440 \u043F\u043E\u0440\u0442\u0430 \u0434\u043B\u044F \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u043F\u043E \u043F\u0440\u043E\u0442\u043E\u043A\u043E\u043B\u0443 TCP."
+              },
+              {
+                "format": 1,
+                "value": "TcpPort"
+              },
+              {
+                "format": 4,
+                "value": "UInt16"
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "__node_format": 4,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0421\u0435\u0442\u044C"
+          },
+          {
+            "format": 6,
+            "value": "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0441\u0435\u0442\u0438."
+          },
+          {
+            "format": 1,
+            "value": "Network"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "DHCP"
+              },
+              {
+                "format": 6,
+                "value": "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435 DHCP."
+              },
+              {
+                "format": 1,
+                "value": "UseDhcp"
+              },
+              {
+                "format": 4,
+                "value": "Boolean"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "IP-\u0430\u0434\u0440\u0435\u0441"
+              },
+              {
+                "format": 6,
+                "value": "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439 \u0441\u0435\u0442\u0435\u0432\u043E\u0439 \u0438\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430."
+              },
+              {
+                "format": 1,
+                "value": "IPAddress"
+              },
+              {
+                "format": 4,
+                "value": "IPv4Address"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041C\u0430\u0441\u043A\u0430 \u043F\u043E\u0434\u0441\u0435\u0442\u0438"
+              },
+              {
+                "format": 6,
+                "value": "\u0414\u0438\u0430\u043F\u0430\u0437\u043E\u043D \u0430\u0434\u0440\u0435\u0441\u043E\u0432 \u0432 \u043F\u043E\u0434\u0441\u0435\u0442\u0438."
+              },
+              {
+                "format": 1,
+                "value": "SubnetMask"
+              },
+              {
+                "format": 4,
+                "value": "IPv4Address"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439 \u0448\u043B\u044E\u0437"
+              },
+              {
+                "format": 6,
+                "value": "\u0410\u0434\u0440\u0435\u0441 \u043C\u0430\u0440\u0448\u0440\u0443\u0442\u0438\u0437\u0430\u0442\u043E\u0440\u0430 \u0434\u043B\u044F \u0432\u044B\u0445\u043E\u0434\u0430 \u0432 \u0434\u0440\u0443\u0433\u0438\u0435 \u0441\u0435\u0442\u0438."
+              },
+              {
+                "format": 1,
+                "value": "DefaultGateway"
+              },
+              {
+                "format": 4,
+                "value": "IPv4Address"
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "__node_format": 3,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0417\u0430\u043F\u0438\u0441\u044C"
+          },
+          {
+            "format": 6,
+            "value": "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438 \u0434\u0430\u043D\u043D\u044B\u0445."
+          },
+          {
+            "format": 1,
+            "value": "Recording"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0421\u0435\u0440\u0432\u0435\u0440"
+              },
+              {
+                "format": 6,
+                "value": "IP-\u0430\u0434\u0440\u0435\u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u0430."
+              },
+              {
+                "format": 1,
+                "value": "Server"
+              },
+              {
+                "format": 4,
+                "value": "IPv4Address"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0427\u0430\u0441\u0442\u043E\u0442\u0430"
+              },
+              {
+                "format": 6,
+                "value": "\u0416\u0435\u043B\u0430\u0435\u043C\u0430\u044F \u0447\u0430\u0441\u0442\u043E\u0442\u0430 \u0434\u0438\u0441\u043A\u0440\u0435\u0442\u0438\u0437\u0430\u0446\u0438\u0438, \u0413\u0446"
+              },
+              {
+                "format": 1,
+                "value": "Sampling"
+              },
+              {
+                "format": 4,
+                "value": "Float32"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 8,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0424\u0438\u043B\u044C\u0442\u0440"
+              },
+              {
+                "format": 6,
+                "value": "\u0420\u0435\u0436\u0438\u043C \u0444\u0438\u043B\u044C\u0442\u0440\u0430\u0446\u0438\u0438."
+              },
+              {
+                "format": 1,
+                "value": "Filter"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 12,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0411\u044B\u0441\u0442\u0440\u044B\u0439"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u0411\u044B\u0441\u0442\u0440\u043E \u043C\u0435\u043D\u044F\u044E\u0449\u0438\u0435\u0441\u044F \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u044B."
+                  },
+                  {
+                    "format": 1,
+                    "value": "Fast"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 12,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041C\u0435\u0434\u043B\u0435\u043D\u043D\u044B\u0439"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041C\u0435\u0434\u043B\u0435\u043D\u043D\u043E \u043C\u0435\u043D\u044F\u044E\u0449\u0438\u0435\u0441\u044F \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u044B."
+                  },
+                  {
+                    "format": 1,
+                    "value": "Slow"
+                  },
+                  {
+                    "format": 4,
+                    "value": "1"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041D\u0443\u043B\u0438"
+              },
+              {
+                "format": 6,
+                "value": "\u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435, \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u044F\u044E\u0449\u0435\u0435 \u0441\u043B\u0435\u0434\u0443\u0435\u0442 \u043B\u0438 \u0437\u0430\u043F\u0438\u0441\u044B\u0432\u0430\u0442\u044C \u043D\u0443\u043B\u0438 \u043F\u0440\u0438 \u0441\u0442\u0430\u0440\u0442\u0435."
+              },
+              {
+                "format": 1,
+                "value": "AutoZero"
+              },
+              {
+                "format": 4,
+                "value": "Boolean"
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "__node_format": 2,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0421\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435"
+          },
+          {
+            "format": 6,
+            "value": "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u043E\u0431 \u043E\u0431\u0449\u0435\u043C \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0438 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430."
+          },
+          {
+            "format": 1,
+            "value": "State"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+              },
+              {
+                "format": 6,
+                "value": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u044B."
+              },
+              {
+                "format": 1,
+                "value": "MaxTemp"
+              },
+              {
+                "format": 4,
+                "value": "Float32"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+              },
+              {
+                "format": 6,
+                "value": "\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u044B."
+              },
+              {
+                "format": 1,
+                "value": "MinTemp"
+              },
+              {
+                "format": 4,
+                "value": "Float32"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435"
+              },
+              {
+                "format": 6,
+                "value": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u044F \u043F\u0438\u0442\u0430\u043D\u0438\u044F."
+              },
+              {
+                "format": 1,
+                "value": "MaxVoltage"
+              },
+              {
+                "format": 4,
+                "value": "Float32"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435"
+              },
+              {
+                "format": 6,
+                "value": "\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u044F \u043F\u0438\u0442\u0430\u043D\u0438\u044F."
+              },
+              {
+                "format": 1,
+                "value": "MinVoltage"
+              },
+              {
+                "format": 4,
+                "value": "Float32"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0421\u043C\u0435\u0449\u0435\u043D\u0438\u0435 \u0432\u0440\u0435\u043C\u0435\u043D\u0438"
+              },
+              {
+                "format": 6,
+                "value": "\u0421\u043C\u0435\u0449\u0435\u043D\u0438\u0435 \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u0434\u0430\u0442\u0447\u0438\u043A\u0430 \u043E\u0442\u043D\u043E\u0441\u0438\u0442\u0435\u043B\u044C\u043D\u043E NTP \u0441\u0435\u0440\u0432\u0435\u0440\u0430."
+              },
+              {
+                "format": 1,
+                "value": "TimeOffset"
+              },
+              {
+                "format": 4,
+                "value": "TimeSpan"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0427\u0430\u0441\u0442\u043E\u0442\u0430"
+              },
+              {
+                "format": 6,
+                "value": "\u0420\u0435\u0430\u043B\u044C\u043D\u0430\u044F \u0447\u0430\u0441\u0442\u043E\u0442\u0430 \u0434\u0438\u0441\u043A\u0440\u0435\u0442\u0438\u0437\u0430\u0446\u0438\u0438, \u0413\u0446"
+              },
+              {
+                "format": 1,
+                "value": "Sampling"
+              },
+              {
+                "format": 4,
+                "value": "Float32"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u043E\u043B\u043E\u0441\u0430"
+              },
+              {
+                "format": 6,
+                "value": "\u0420\u0435\u0430\u043B\u044C\u043D\u0430\u044F \u043F\u043E\u043B\u043E\u0441\u0430 \u043F\u0440\u043E\u043F\u0443\u0441\u043A\u0430\u043D\u0438\u044F, \u0413\u0446"
+              },
+              {
+                "format": 1,
+                "value": "Bandwidth"
+              },
+              {
+                "format": 4,
+                "value": "Float32"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 7,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041A\u0430\u043D\u0430\u043B\u044B"
+              },
+              {
+                "format": 6,
+                "value": "\u0427\u0438\u0441\u043B\u043E \u043A\u0430\u043D\u0430\u043B\u043E\u0432 AD7730"
+              },
+              {
+                "format": 1,
+                "value": "Channels"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "__node_format": 9,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0427\u0438\u043F 0"
+              },
+              {
+                "format": 6,
+                "value": "\u041A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A \u0447\u0438\u043F AD7730#0."
+              },
+              {
+                "format": 1,
+                "value": "Chip0"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0421\u0438\u0433\u043D\u0430\u043B"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u0438\u0442\u0430\u043D\u0438\u0435 \u0438\u043B\u0438 \u0441\u0438\u0433\u043D\u0430\u043B \u0441\u0435\u043D\u0441\u043E\u0440\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "NoRef"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041E\u0431\u0440\u044B\u0432"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0431\u0440\u044B\u0432 \u0441\u0438\u0433\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "OpenCircuit"
+                  },
+                  {
+                    "format": 4,
+                    "value": "1"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041A\u043E\u0440\u043E\u0442\u043A\u043E\u0435 \u0437\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u0435 \u0441\u0438\u0433\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "ShortCircuit"
+                  },
+                  {
+                    "format": 4,
+                    "value": "2"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041E\u0431\u043C\u0435\u043D"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0448\u0438\u0431\u043A\u0430 \u043E\u0431\u043C\u0435\u043D\u0430 \u0441 \u0447\u0438\u043F\u043E\u043C."
+                  },
+                  {
+                    "format": 1,
+                    "value": "CommError"
+                  },
+                  {
+                    "format": 4,
+                    "value": "3"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u0427\u0438\u043F \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D."
+                  },
+                  {
+                    "format": 1,
+                    "value": "NotFound"
+                  },
+                  {
+                    "format": 4,
+                    "value": "4"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "__node_format": 9,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0427\u0438\u043F 1"
+              },
+              {
+                "format": 6,
+                "value": "\u041A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A \u0447\u0438\u043F AD7730#1."
+              },
+              {
+                "format": 1,
+                "value": "Chip1"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0421\u0438\u0433\u043D\u0430\u043B"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u0438\u0442\u0430\u043D\u0438\u0435 \u0438\u043B\u0438 \u0441\u0438\u0433\u043D\u0430\u043B \u0441\u0435\u043D\u0441\u043E\u0440\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "NoRef"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041E\u0431\u0440\u044B\u0432"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0431\u0440\u044B\u0432 \u0441\u0438\u0433\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "OpenCircuit"
+                  },
+                  {
+                    "format": 4,
+                    "value": "1"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041A\u043E\u0440\u043E\u0442\u043A\u043E\u0435 \u0437\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u0435 \u0441\u0438\u0433\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "ShortCircuit"
+                  },
+                  {
+                    "format": 4,
+                    "value": "2"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041E\u0431\u043C\u0435\u043D"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0448\u0438\u0431\u043A\u0430 \u043E\u0431\u043C\u0435\u043D\u0430 \u0441 \u0447\u0438\u043F\u043E\u043C."
+                  },
+                  {
+                    "format": 1,
+                    "value": "CommError"
+                  },
+                  {
+                    "format": 4,
+                    "value": "3"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u0427\u0438\u043F \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D."
+                  },
+                  {
+                    "format": 1,
+                    "value": "NotFound"
+                  },
+                  {
+                    "format": 4,
+                    "value": "4"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "__node_format": 9,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0427\u0438\u043F 2"
+              },
+              {
+                "format": 6,
+                "value": "\u041A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A \u0447\u0438\u043F AD7730#2."
+              },
+              {
+                "format": 1,
+                "value": "Chip2"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0421\u0438\u0433\u043D\u0430\u043B"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u0438\u0442\u0430\u043D\u0438\u0435 \u0438\u043B\u0438 \u0441\u0438\u0433\u043D\u0430\u043B \u0441\u0435\u043D\u0441\u043E\u0440\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "NoRef"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041E\u0431\u0440\u044B\u0432"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0431\u0440\u044B\u0432 \u0441\u0438\u0433\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "OpenCircuit"
+                  },
+                  {
+                    "format": 4,
+                    "value": "1"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041A\u043E\u0440\u043E\u0442\u043A\u043E\u0435 \u0437\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u0435 \u0441\u0438\u0433\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "ShortCircuit"
+                  },
+                  {
+                    "format": 4,
+                    "value": "2"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041E\u0431\u043C\u0435\u043D"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0448\u0438\u0431\u043A\u0430 \u043E\u0431\u043C\u0435\u043D\u0430 \u0441 \u0447\u0438\u043F\u043E\u043C."
+                  },
+                  {
+                    "format": 1,
+                    "value": "CommError"
+                  },
+                  {
+                    "format": 4,
+                    "value": "3"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u0427\u0438\u043F \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D."
+                  },
+                  {
+                    "format": 1,
+                    "value": "NotFound"
+                  },
+                  {
+                    "format": 4,
+                    "value": "4"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "__node_format": 9,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0427\u0438\u043F 3"
+              },
+              {
+                "format": 6,
+                "value": "\u041A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A \u0447\u0438\u043F AD7730#3."
+              },
+              {
+                "format": 1,
+                "value": "Chip3"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0421\u0438\u0433\u043D\u0430\u043B"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u0438\u0442\u0430\u043D\u0438\u0435 \u0438\u043B\u0438 \u0441\u0438\u0433\u043D\u0430\u043B \u0441\u0435\u043D\u0441\u043E\u0440\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "NoRef"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041E\u0431\u0440\u044B\u0432"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0431\u0440\u044B\u0432 \u0441\u0438\u0433\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "OpenCircuit"
+                  },
+                  {
+                    "format": 4,
+                    "value": "1"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0417\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041A\u043E\u0440\u043E\u0442\u043A\u043E\u0435 \u0437\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u0435 \u0441\u0438\u0433\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u043B\u0438\u043D\u0438\u0439."
+                  },
+                  {
+                    "format": 1,
+                    "value": "ShortCircuit"
+                  },
+                  {
+                    "format": 4,
+                    "value": "2"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041E\u0431\u043C\u0435\u043D"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0448\u0438\u0431\u043A\u0430 \u043E\u0431\u043C\u0435\u043D\u0430 \u0441 \u0447\u0438\u043F\u043E\u043C."
+                  },
+                  {
+                    "format": 1,
+                    "value": "CommError"
+                  },
+                  {
+                    "format": 4,
+                    "value": "3"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 13,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u0427\u0438\u043F \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D."
+                  },
+                  {
+                    "format": 1,
+                    "value": "NotFound"
+                  },
+                  {
+                    "format": 4,
+                    "value": "4"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "__node_format": 8,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u0414\u0430\u0442\u0447\u0438\u043A"
+              },
+              {
+                "format": 6,
+                "value": "\u0421\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 \u0434\u0430\u0442\u0447\u0438\u043A\u0430."
+              },
+              {
+                "format": 1,
+                "value": "Sensor"
+              },
+              {
+                "format": 4,
+                "value": "UInt8"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 12,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041F\u0440\u043E\u0441\u0442\u043E\u0439"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041F\u0440\u043E\u0441\u0442\u0430\u0438\u0432\u0430\u0435\u0442 (\u043D\u0435\u0442 \u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F \u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u043E\u043C)."
+                  },
+                  {
+                    "format": 1,
+                    "value": "Idle"
+                  },
+                  {
+                    "format": 4,
+                    "value": "0"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 12,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u0418\u0434\u0435\u0442 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F \u0438 \u043F\u0435\u0440\u0435\u0434\u0430\u0447\u0430 \u043D\u0430 \u0441\u0435\u0440\u0432\u0435\u0440."
+                  },
+                  {
+                    "format": 1,
+                    "value": "Recording"
+                  },
+                  {
+                    "format": 4,
+                    "value": "1"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__node_format": 5,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435"
+          },
+          {
+            "format": 6,
+            "value": "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u043A\u043E\u043C\u0430\u043D\u0434\u044B \u0434\u043B\u044F \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E\u043C."
+          },
+          {
+            "format": 1,
+            "value": "Control"
+          }
+        ],
+        "nodes": [
+          {
+            "__node_format": 11,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041E\u0447\u0438\u0441\u0442\u043A\u0430"
+              },
+              {
+                "format": 6,
+                "value": "\u041A\u043E\u043C\u0430\u043D\u0434\u0430 \u043E\u0447\u0438\u0441\u0442\u043A\u0438 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0445 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0439"
+              },
+              {
+                "format": 1,
+                "value": "Clear"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0447\u0438\u0449\u0430\u0435\u0442 \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u044B."
+                  },
+                  {
+                    "format": 1,
+                    "value": "MaxTemp"
+                  },
+                  {
+                    "format": 4,
+                    "value": "1"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0447\u0438\u0449\u0430\u0435\u0442 \u043C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u044B."
+                  },
+                  {
+                    "format": 1,
+                    "value": "MinTemp"
+                  },
+                  {
+                    "format": 4,
+                    "value": "2"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0447\u0438\u0449\u0430\u0435\u0442 \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u044F \u043F\u0438\u0442\u0430\u043D\u0438\u044F."
+                  },
+                  {
+                    "format": 1,
+                    "value": "MaxVoltage"
+                  },
+                  {
+                    "format": 4,
+                    "value": "3"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0447\u0438\u0449\u0430\u0435\u0442 \u043C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u044F \u043F\u0438\u0442\u0430\u043D\u0438\u044F."
+                  },
+                  {
+                    "format": 1,
+                    "value": "MinVoltage"
+                  },
+                  {
+                    "format": 4,
+                    "value": "4"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0427\u0438\u043F 0"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0447\u0438\u0449\u0430\u0435\u0442 \u043A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A \u0447\u0438\u043F AD7730#0."
+                  },
+                  {
+                    "format": 1,
+                    "value": "Chip0"
+                  },
+                  {
+                    "format": 4,
+                    "value": "5"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0427\u0438\u043F 1"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0447\u0438\u0449\u0430\u0435\u0442 \u043A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A \u0447\u0438\u043F AD7730#1."
+                  },
+                  {
+                    "format": 1,
+                    "value": "Chip1"
+                  },
+                  {
+                    "format": 4,
+                    "value": "6"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0427\u0438\u043F 2"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0447\u0438\u0449\u0430\u0435\u0442 \u043A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A \u0447\u0438\u043F AD7730#2."
+                  },
+                  {
+                    "format": 1,
+                    "value": "Chip2"
+                  },
+                  {
+                    "format": 4,
+                    "value": "7"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u0427\u0438\u043F 3"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041E\u0447\u0438\u0449\u0430\u0435\u0442 \u043A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A \u0447\u0438\u043F AD7730#3."
+                  },
+                  {
+                    "format": 1,
+                    "value": "Chip3"
+                  },
+                  {
+                    "format": 4,
+                    "value": "8"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "__node_format": 11,
+            "attributes": [
+              {
+                "format": 0,
+                "value": "\u041F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
+              },
+              {
+                "format": 6,
+                "value": "\u041A\u043E\u043C\u0430\u043D\u0434\u0430 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0438 \u0434\u0430\u0442\u0447\u0438\u043A\u0430."
+              },
+              {
+                "format": 1,
+                "value": "Reboot"
+              }
+            ],
+            "nodes": [
+              {
+                "__node_format": 14,
+                "attributes": [
+                  {
+                    "format": 0,
+                    "value": "\u041F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
+                  },
+                  {
+                    "format": 6,
+                    "value": "\u041F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0434\u0430\u0442\u0447\u0438\u043A."
+                  },
+                  {
+                    "format": 1,
+                    "value": "Reboot"
+                  },
+                  {
+                    "format": 4,
+                    "value": "160"
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "error": {
+    "attributes": [
+      {
+        "format": 0,
+        "value": "\u041A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A"
+      },
+      {
+        "format": 6,
+        "value": ""
+      },
+      {
+        "format": 1,
+        "value": "Identifier"
+      }
+    ],
+    "nodes": [
+      {
+        "__node_format": 16,
+        "attributes": [
+          {
+            "format": 0,
+            "value": "\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0439"
+          },
+          {
+            "format": 6,
+            "value": "\u041F\u0435\u0440\u0435\u0434\u0430\u043D\u043E \u043D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435."
+          },
+          {
+            "format": 1,
+            "value": "Incorrect"
+          },
+          {
+            "format": 4,
+            "value": "1"
+          }
+        ],
+        "nodes": []
+      }
+    ]
+  },
+  "generator": {
+    "attributes": [
+      {
+        "format": 0,
+        "value": "\u0413\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440"
+      },
+      {
+        "format": 6,
+        "value": "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0434\u043B\u044F \u0433\u0435\u043D\u0435\u0440\u0430\u0446\u0438\u0438 \u0438\u0441\u0445\u043E\u0434\u043D\u043E\u0433\u043E \u043A\u043E\u0434\u0430."
+      },
+      {
+        "format": 1,
+        "value": "Generator"
+      },
+      {
+        "format": 2,
+        "value": "Simargl::Embedded::Tunings"
+      },
+      {
+        "format": 10,
+        "value": "D:\\Code\\Simargl\\Simargl.Embedded.Tunings.UdpServer\\Tunings.g.hpp"
+      },
+      {
+        "format": 11,
+        "value": "D:\\Code\\Simargl\\Simargl.Embedded.Tunings.TuningsEditor\\Testing\\Tunings.g.cs"
+      },
+      {
+        "format": 12,
+        "value": "Knot"
+      }
+    ],
+    "nodes": []
+  }
+}

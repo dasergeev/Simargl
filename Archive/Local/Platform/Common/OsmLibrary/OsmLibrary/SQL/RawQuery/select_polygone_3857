@@ -1,0 +1,5 @@
+SELECT * 
+FROM public.planet_osm_polygon
+WHERE
+ST_contains(way, ST_GeomFromText('POINT(4140447.1968275318 7526534.7327126535)', 3857))
+ORDER BY ST_Area(way);

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IColorParam7 - свойства",
+hmDescription:"Подразделы: Ambient - Общий свет  Color - Цвет  Diffuse - Диффузия  Emission - Излучение  Shininess - Блеск  Specularity - Зеркальность  Transparency - Прозрачность  UseCol",
+hmPrevLink:"icolorparam7.html",
+hmNextLink:"icolorparam7_ambient.html",
+hmParentLink:"icolorparam7.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bc1473974.html\">Документ 3D&nbsp;<\/a> &gt; <a href=\"bc2297422.html\">Свойства цвета объекта&nbsp;<\/a> &gt; <a href=\"icolorparam7.html\">Интерфейс IColorParam7&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 3D  > Свойства цвета объекта  > Интерфейс IColorParam7  > IColorParam7 - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IColorParam7 - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icolorparam7_ambient.html\" class=\"topiclink hmlinklistitem\">Ambient - Общий свет <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icolorparam7_color.html\" class=\"topiclink hmlinklistitem\">Color - Цвет <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icolorparam7_diffuse.html\" class=\"topiclink hmlinklistitem\">Diffuse - Диффузия <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icolorparam7_emission.html\" class=\"topiclink hmlinklistitem\">Emission - Излучение <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icolorparam7_shininess.html\" class=\"topiclink hmlinklistitem\">Shininess - Блеск <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icolorparam7_specularity.html\" class=\"topiclink hmlinklistitem\">Specularity - Зеркальность <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icolorparam7_transparency.html\" class=\"topiclink hmlinklistitem\">Transparency - Прозрачность <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icolorparam7_usecolor.html\" class=\"topiclink hmlinklistitem\">UseColor - Используемый цвет <\/a><\/span><\/p>\n\r"
+})

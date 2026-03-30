@@ -1,0 +1,383 @@
+﻿<UserControl
+    x:Class="Simargl.Embedded.Tunings.TuningsEditor.UI.NodeItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:nodes="clr-namespace:Simargl.Embedded.Tunings.TuningsEditor.Main.Nodes"
+    xmlns:sections="clr-namespace:Simargl.Embedded.Tunings.TuningsEditor.Main.Nodes.Sections"
+    xmlns:params="clr-namespace:Simargl.Embedded.Tunings.TuningsEditor.Main.Nodes.Params"
+    xmlns:values="clr-namespace:Simargl.Embedded.Tunings.TuningsEditor.Main.Nodes.Values"
+    xmlns:errors="clr-namespace:Simargl.Embedded.Tunings.TuningsEditor.Main.Nodes.Errors"
+    mc:Ignorable="d" 
+    d:DesignHeight="450" d:DesignWidth="800"
+    d:DataContext="{d:DesignInstance Type=nodes:Node}">
+    <UserControl.Resources>
+        <ContextMenu x:Key="SpecNodeMenu" d:DataContext="{d:DesignInstance Type=nodes:SpecNode}">
+            <MenuItem
+                Header="Добавить раздел"
+                ToolTip="Добавляет новый раздел в спецификацию">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Add.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+                <MenuItem
+                    Header="Раздел информации"
+                    ToolTip="Добавляет новый раздел информации в спецификацию"
+                    Command="{Binding AddInfoSectionCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Data/BlankGreen.ico" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Header="Раздел произвольного доступа"
+                    ToolTip="Добавляет новый раздел произвольного доступа в спецификацию"
+                    Command="{Binding AddSeparateSectionCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Data/BlankBlue.ico" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Header="Критический раздел"
+                    ToolTip="Добавляет новый критический раздел в спецификацию"
+                    Command="{Binding AddCriticalSectionCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Data/BlankRed.ico" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Header="Раздел управления"
+                    ToolTip="Добавляет новый раздел управления в спецификацию"
+                    Command="{Binding AddControlSectionCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Data/BlankPurple.ico" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Header="Раздел отладки"
+                    ToolTip="Добавляет новый раздел отладки в спецификацию"
+                    Command="{Binding AddDebugSectionCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Data/BlankOrange.ico" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="CommonSectionNodeMenu" d:DataContext="{d:DesignInstance Type=sections:CommonSectionNode}">
+            <MenuItem
+                Header="Добавить параметр"
+                ToolTip="Добавляет новый параметр в раздел спецификации">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Add.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+                <MenuItem
+                    Header="Простой параметр"
+                    ToolTip="Добавляет новый простой параметр в раздел спецификации"
+                    Command="{Binding AddSimpleParamCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Data/FlagGreen.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Header="Параметр-перечисление"
+                    ToolTip="Добавляет новый параметр-перечисление в раздел спецификации"
+                    Command="{Binding EnumParamCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Data/FlagBlue.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Header="Битовый параметр"
+                    ToolTip="Добавляет новый битовый параметр в раздел спецификации"
+                    Command="{Binding BitFieldParamCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Data/FlagYellow.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Header="Параметр-массив"
+                    ToolTip="Добавляет новый параметр-массив в раздел спецификации"
+                    Command="{Binding ArrayParamCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Data/FlagRed.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem
+                    Header="Удалить раздел"
+                    ToolTip="Удаляет раздел из спецификации"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="ControlSectionNodeMenu" d:DataContext="{d:DesignInstance Type=sections:ControlSectionNode}">
+            <MenuItem
+                    Header="Добавить команду"
+                    ToolTip="Добавляет новый параметр-команду в раздел спецификации"
+                    Command="{Binding AddCommandParamCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Command.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem
+                    Header="Удалить раздел"
+                    ToolTip="Удаляет раздел из спецификации"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="DebugSectionNodeMenu" d:DataContext="{d:DesignInstance Type=sections:DebugSectionNode}">
+            <MenuItem
+                    Header="Удалить раздел"
+                    ToolTip="Удаляет раздел из спецификации"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="SimpleParamNodeMenu" d:DataContext="{d:DesignInstance Type=params:SimpleParamNode}">
+            <MenuItem
+                    Header="Удалить параметр"
+                    ToolTip="Удаляет параметр из раздела спецификации"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="EnumParamNodeMenu" d:DataContext="{d:DesignInstance Type=params:EnumParamNode}">
+            <MenuItem
+                    Header="Добавить значение"
+                    ToolTip="Добавляет новое значение в перечисление"
+                    Command="{Binding AddEnumValueCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Enum.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem
+                    Header="Удалить параметр"
+                    ToolTip="Удаляет параметр из раздела спецификации"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="BitFieldParamNodeMenu" d:DataContext="{d:DesignInstance Type=params:BitFieldParamNode}">
+            <MenuItem
+                    Header="Добавить значение"
+                    ToolTip="Добавляет новое значение в битовое поле"
+                    Command="{Binding AddBitValueCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Enum.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem
+                    Header="Удалить параметр"
+                    ToolTip="Удаляет параметр из раздела спецификации"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="ArrayParamNodeMenu" d:DataContext="{d:DesignInstance Type=params:ArrayParamNode}">
+            <MenuItem
+                    Header="Удалить параметр"
+                    ToolTip="Удаляет параметр из раздела спецификации"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="CommandParamNodeMenu" d:DataContext="{d:DesignInstance Type=params:CommandParamNode}">
+            <MenuItem
+                    Header="Добавить значение"
+                    ToolTip="Добавляет новое значение команды"
+                    Command="{Binding AddCommandValueCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Enum.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem
+                    Header="Удалить команду"
+                    ToolTip="Удаляет команду из раздела спецификации"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="EnumValueNodeMenu" d:DataContext="{d:DesignInstance Type=values:EnumValueNode}">
+            <MenuItem
+                    Header="Удалить значение"
+                    ToolTip="Удаляет значение из перечисления"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="BitValueNodeMenu" d:DataContext="{d:DesignInstance Type=values:BitValueNode}">
+            <MenuItem
+                    Header="Удалить значение"
+                    ToolTip="Удаляет значение из битового поля"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="CommandValueNodeMenu" d:DataContext="{d:DesignInstance Type=values:CommandValueNode}">
+            <MenuItem
+                    Header="Удалить значение"
+                    ToolTip="Удаляет значение из команды"
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="ErrorNodeMenu" d:DataContext="{d:DesignInstance Type=errors:ErrorNode}">
+            <MenuItem
+                    Header="Добавить код"
+                    ToolTip="Добавляет новый код ошибки"
+                    Command="{Binding AddValueCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/ErrorValue.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="ErrorValueNodeMenu" d:DataContext="{d:DesignInstance Type=errors:ErrorValueNode}">
+            <MenuItem
+                    Header="Удалить код"
+                    ToolTip="Удаляет код ошибки из списка."
+                    Command="{Binding RemoveSectionCommand}">
+                <MenuItem.Icon>
+                    <Image Source="/Images/Data/Delete.ico" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+    </UserControl.Resources>
+    <Grid>
+        
+
+        <StackPanel
+            Orientation="Horizontal"
+            AllowDrop="True"
+            MouseMove="Item_MouseMove"
+            DragOver="Item_DragOver"
+            Drop="Item_Drop">
+            <StackPanel.Style>
+                <Style TargetType="StackPanel">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Format}" Value="Spec">
+                            <Setter Property="ContextMenu" Value="{StaticResource SpecNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="InfoSection">
+                            <Setter Property="ContextMenu" Value="{StaticResource CommonSectionNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="SeparateSection">
+                            <Setter Property="ContextMenu" Value="{StaticResource CommonSectionNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="CriticalSection">
+                            <Setter Property="ContextMenu" Value="{StaticResource CommonSectionNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="ControlSection">
+                            <Setter Property="ContextMenu" Value="{StaticResource ControlSectionNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="DebugSection">
+                            <Setter Property="ContextMenu" Value="{StaticResource DebugSectionNodeMenu}" />
+                        </DataTrigger>
+
+
+                        <DataTrigger Binding="{Binding Format}" Value="SimpleParam">
+                            <Setter Property="ContextMenu" Value="{StaticResource SimpleParamNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="EnumParam">
+                            <Setter Property="ContextMenu" Value="{StaticResource EnumParamNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="BitFieldParam">
+                            <Setter Property="ContextMenu" Value="{StaticResource BitFieldParamNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="ArrayParam">
+                            <Setter Property="ContextMenu" Value="{StaticResource ArrayParamNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="CommandParam">
+                            <Setter Property="ContextMenu" Value="{StaticResource CommandParamNodeMenu}" />
+                        </DataTrigger>
+
+                        <DataTrigger Binding="{Binding Format}" Value="EnumValue">
+                            <Setter Property="ContextMenu" Value="{StaticResource EnumValueNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="BitValue">
+                            <Setter Property="ContextMenu" Value="{StaticResource BitValueNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="CommandValue">
+                            <Setter Property="ContextMenu" Value="{StaticResource CommandValueNodeMenu}" />
+                        </DataTrigger>
+
+                        <DataTrigger Binding="{Binding Format}" Value="Error">
+                            <Setter Property="ContextMenu" Value="{StaticResource ErrorNodeMenu}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Format}" Value="ErrorValue">
+                            <Setter Property="ContextMenu" Value="{StaticResource ErrorValueNodeMenu}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </StackPanel.Style>
+
+            <Image Source="{Binding Image}" Width="16" Height="16" Margin="0,0,2,0"/>
+            
+            <TextBlock Text="{Binding Name.Value}" VerticalAlignment="Center" Margin="4,0,0,0"/>
+            <!--<StackPanel.ContextMenu>
+                <ContextMenu DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Self}}">
+                    <MenuItem
+                Header="Переименовать"
+                ToolTip="Изменяет имя выбранного элемента"
+                Command="{Binding RenameNodeCommand}"
+                CommandParameter="{Binding}">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/Commands/Rename.ico" Width="16" Height="16"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+            
+                    <MenuItem Header="Добавить">
+                        <MenuItem
+                    Header="Группа"
+                    ToolTip="Добавляет новую группу"
+                    Command="{Binding AddGroupCommand}"
+                    CommandParameter="{Binding}">
+                            <MenuItem.Icon>
+                                <Image Source="/Images/Nodes/Group.ico" Width="16" Height="16"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem
+                    Header="Задача"
+                    ToolTip="Добавляет новую задачу"
+                    Command="{Binding AddChanceCommand}"
+                    CommandParameter="{Binding}">
+                            <MenuItem.Icon>
+                                <Image Source="/Images/Nodes/Chance.ico" Width="16" Height="16"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem
+                Header="Удалить"
+                ToolTip="Удаляет выбранный элемент"
+                Command="{Binding RemoveNodeCommand}"
+                CommandParameter="{Binding}">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/Commands/Remove.ico" Width="16" Height="16"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </StackPanel.ContextMenu>-->
+        </StackPanel>
+    </Grid>
+</UserControl>

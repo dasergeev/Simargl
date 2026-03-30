@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Type6 - Структура параметров пользовательского фантома",
+hmDescription:"Аналог данных параметров при использовании Automation - интерфейс ksType6.",
+hmPrevLink:"structtype5.html",
+hmNextLink:"structtan.html",
+hmParentLink:"bk1735830.html",
+hmBreadCrumbs:"<a href=\"3d_define.html\">Структуры параметров и константы<\/a> &gt; <a href=\"bk1735830.html\">Структуры параметров графических объектов&nbsp;<\/a>",
+hmTitlePath:"Структуры параметров и константы > Структуры параметров графических объектов  > Type6 - Структура параметров пользовательского фантома ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Type6 - Структура параметров пользовательского фантома <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbk1794494\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Аналог данных параметров при использовании Automation - интерфейс <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kstype6.html\" class=\"topiclink\">ksType6<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<div style=\"text-align: left; text-indent: 0; line-height: 1.48; padding: 0 0 0 0; margin: 0.2500rem 0 0 4.1250rem;\"><table style=\"border:none; border-spacing:0;\">\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">reference<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">gr<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">указатель на временную группу объектов, которая отображается в виде фантома.<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<\/table>\n\r<\/div>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">В этой структуре, в отличие от структуры Type1, не устанавливаются параметры поворота и масштабирования группы.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

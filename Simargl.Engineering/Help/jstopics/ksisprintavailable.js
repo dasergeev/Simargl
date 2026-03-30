@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksIsPrintAvailable - Разрешена ли печать",
+hmDescription:"Синтаксис: int LIB_FUNC ksIsPrintAvailable(); Возвращаемое значение TRUE - если печать разрешена. Примечание: Печать может быть запрещена приложением Компас-Защита. Подраз",
+hmPrevLink:"ksislibrarytrial.html",
+hmNextLink:"ksregisterlibrarynumber.html",
+hmParentLink:"serv_fncts_common.html",
+hmBreadCrumbs:"<a href=\"export_function.html\">API экспортных функций<\/a> &gt; <a href=\"docum_fncts_common.html\">Функции работы с документами&nbsp;<\/a> &gt; <a href=\"serv_fncts_common.html\">Сервисные функции&nbsp;<\/a>",
+hmTitlePath:"API экспортных функций > Функции работы с документами  > Сервисные функции  > ksIsPrintAvailable - Разрешена ли печать ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksIsPrintAvailable - Разрешена ли печать <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcn2108133\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">int LIB_FUNC ksIsPrintAvailable();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Возвращаемое значение<\/span><\/p>\n\r<div style=\"text-align: left; text-indent: 0; line-height: 1.48; padding: 0 0 0 0; margin: 0.2500rem 0 0 4.1250rem;\"><table style=\"border:none; border-spacing:0;\">\n\r<tr>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">TRUE<\/span><\/p>\n\r<\/td>\n\r<td style=\"vertical-align:top; padding:0; border:none\"><p class=\"p_Table_Cell\"><span class=\"f_Table_Cell\">- если печать разрешена.<\/span><\/p>\n\r<\/td>\n\r<\/tr>\n\r<\/table>\n\r<\/div>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Печать может быть запрещена приложением Компас-Защита.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

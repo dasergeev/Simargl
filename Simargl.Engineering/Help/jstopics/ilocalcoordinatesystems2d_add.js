@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Add - Создает новую ЛСК и добавляет её в коллекцию",
+hmDescription:"Интерфейс... Синтаксис Automation: LPDISPATCH Add(); Синтаксис COM: HRESULT Add( ILocalCoordinateSystem2D * * Result ); Создает и добавляет новую ЛСК в коллекцию. Возвращае",
+hmPrevLink:"ilocalcoordinatesystems2d_methods.html",
+hmNextLink:"ilocalcoordinatesystem2d.html",
+hmParentLink:"ilocalcoordinatesystems2d_methods.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb2330638.html\">Вспомогательные объекты&nbsp;<\/a> &gt; <a href=\"ilocalcoordinatesystems2d.html\">Интерфейс ILocalCoordinateSystems2D&nbsp;<\/a> &gt; <a href=\"ilocalcoordinatesystems2d_methods.html\">ILocalCoordinateSystems2D - методы&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Вспомогательные объекты  > Интерфейс ILocalCoordinateSystems2D  > ILocalCoordinateSystems2D - методы  > Add - Создает новую ЛСК и добавляет её в коллекцию ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Add - Создает новую ЛСК и добавляет её в коллекцию <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbb2330733\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ilocalcoordinatesystems2d.html\" class=\"topiclink\">Интерфейс...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис Automation<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">LPDISPATCH Add();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис COM<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">HRESULT Add( ILocalCoordinateSystem2D * * Result );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Создает и добавляет новую ЛСК в коллекцию.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Возвращаемое значение<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Указатель на интерфейс добавленной ЛСК.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

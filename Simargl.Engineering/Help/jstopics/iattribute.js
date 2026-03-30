@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IAttribute",
+hmDescription:"Интерфейс атрибута. Иерархия: IKompasAPIObject IAttribute Примечание: 1. Интерфейс позволяет осуществлять работу с атрибутом. 2. Интерфейс можно получить с помощью метода I",
+hmPrevLink:"iattrtypemng_getattrtypes.html",
+hmNextLink:"iattribute_props.html",
+hmParentLink:"attribute.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"attribute.html\">Атрибуты&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Атрибуты  > Интерфейс IAttribute ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IAttribute <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xba1991721\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс атрибута<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_GREEN\"><span class=\"f_Hier_0_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_1_BLUE\"><span class=\"f_Hier_1_BLUE\"><a href=\"iattribute.html\" class=\"topiclink\">IAttribute<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Numbered\"><span class=\"f_Numbered\">1. Интерфейс позволяет осуществлять работу с атрибутом.<\/span><\/p>\n\r<p class=\"p_Numbered\"><span class=\"f_Numbered\">2. Интерфейс можно получить с помощью метода <\/span><span class=\"f_Numbered\" style=\"text-decoration: underline;\"><a href=\"ikompasdocument1_createattr.html\" class=\"topiclink\">IKompasDocument1::CreateAttr<\/a><\/span><span class=\"f_Numbered\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iattribute_props.html\" class=\"topiclink hmlinklistitem\">IAttribute - свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iattribute_methods.html\" class=\"topiclink hmlinklistitem\">IAttribute - методы <\/a><\/span><\/p>\n\r"
+})

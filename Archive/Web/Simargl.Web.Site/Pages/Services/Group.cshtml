@@ -1,0 +1,40 @@
+﻿@page
+@model Simargl.Web.Site.Pages.Services.GroupModel
+@{
+    ViewData["Title"] = @Model.ServiceGroup.Name;
+}
+
+<div class="container mt-4">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h1 class="display-5">@Model.ServiceGroup.Name</h1>
+            <p class="lead">@Model.ServiceGroup.Description</p>
+        </div>
+        <div class="col-md-4 text-end">
+            <img src="@Model.ServiceGroup.ImageUrl" alt="@Model.ServiceGroup.Name"
+                 class="img-fluid rounded" />
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var position in Model.ServiceGroup.ServicePositions)
+        {
+            <div class="col">
+                <a asp-page="/Services/Position"
+                   asp-route-groupKey="@Model.ServiceGroup.Key"
+                   asp-route-positionKey="@position.Key"
+                   class="text-decoration-none text-dark">
+                    <div class="card h-100 shadow-sm service-card">
+                        <img src="@position.ImageUrl" class="card-img-top" alt="@position.Name" />
+                        <div class="card-body">
+                            <h5 class="card-title">@position.Name</h5>
+                            <p class="card-text">@position.Description</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

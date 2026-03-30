@@ -1,0 +1,90 @@
+﻿
+#pragma warning disable CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.
+namespace Simargl.Zero.Ssh.Renci.SshNet.Messages.Transport;
+
+/// <summary>
+/// Represents SSH_MSG_KEXDH_REPLY message.
+/// </summary>
+internal class KeyExchangeDhReplyMessage : Message
+{
+    /// <inheritdoc />
+    public override string MessageName
+    {
+        get
+        {
+            return "SSH_MSG_KEXDH_REPLY";
+        }
+    }
+
+    /// <inheritdoc />
+    public override byte MessageNumber
+    {
+        get
+        {
+            return 31;
+        }
+    }
+
+    /// <summary>
+    /// Gets server public host key and certificates.
+    /// </summary>
+    /// <value>The host key.</value>
+    public byte[] HostKey { get; private set; }
+
+    /// <summary>
+    /// Gets the F value.
+    /// </summary>
+    public byte[] F { get; private set; }
+
+    /// <summary>
+    /// Gets the signature of H.
+    /// </summary>
+    /// <value>The signature.</value>
+    public byte[] Signature { get; private set; }
+
+    /// <summary>
+    /// Gets the size of the message in bytes.
+    /// </summary>
+    /// <value>
+    /// The size of the messages in bytes.
+    /// </value>
+    protected override int BufferCapacity
+    {
+        get
+        {
+            var capacity = base.BufferCapacity;
+            capacity += 4; // HostKey length
+            capacity += HostKey.Length; // HostKey
+            capacity += 4; // F length
+            capacity += F.Length; // F
+            capacity += 4; // Signature length
+            capacity += Signature.Length; // Signature
+            return capacity;
+        }
+    }
+
+    /// <summary>
+    /// Called when type specific data need to be loaded.
+    /// </summary>
+    protected override void LoadData()
+    {
+        HostKey = ReadBinary();
+        F = ReadBinary();
+        Signature = ReadBinary();
+    }
+
+    /// <summary>
+    /// Called when type specific data need to be saved.
+    /// </summary>
+    protected override void SaveData()
+    {
+        WriteBinaryString(HostKey);
+        WriteBinaryString(F);
+        WriteBinaryString(Signature);
+    }
+
+    internal override void Process(Session session)
+    {
+        session.OnKeyExchangeDhReplyMessageReceived(this);
+    }
+}

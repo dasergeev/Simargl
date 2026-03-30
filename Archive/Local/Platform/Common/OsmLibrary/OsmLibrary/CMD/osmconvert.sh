@@ -1,0 +1,1 @@
+﻿osmconvert <(osmconvert russia-latest.osm.pbf --out-o5m) <(osmconvert belarus-latest.osm.pbf --out-o5m) <(osmconvert kazakhstan-latest.osm.pbf --out-o5m) <(osmconvert kyrgyzstan-latest.osm.pbf --out-o5m) <(osmconvert uzbekistan-latest.osm.pbf --out-o5m) <(osmconvert egypt-latest.osm.pbf --out-o5m) -o=merged_osm.pbf

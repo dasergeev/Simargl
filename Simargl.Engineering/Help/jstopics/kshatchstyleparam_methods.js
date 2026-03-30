@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksHatchStyleParam - методы",
+hmDescription:"Подразделы: GetArrLineParam - Получить указатель на интерфейс динамического массива структур параметров линий штриховки  GetRefPoint - Получить указатель на интерфейс базовой...",
+hmPrevLink:"kshatchstyleparam_width.html",
+hmNextLink:"kshatchstyleparam_getarrlineparam.html",
+hmParentLink:"kshatchstyleparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"cf1711377.html\">Интерфейсы параметров стилей объектов&nbsp;<\/a> &gt; <a href=\"cf1754358.html\">Стиль штриховки&nbsp;<\/a> &gt; <a href=\"kshatchstyleparam.html\">Стиль штриховки (Интерфейс ksHatchStyleParam)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров стилей объектов  > Стиль штриховки  > Стиль штриховки (Интерфейс ksHatchStyleParam)  > ksHatchStyleParam - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksHatchStyleParam - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kshatchstyleparam_getarrlineparam.html\" class=\"topiclink hmlinklistitem\">GetArrLineParam - Получить указатель на интерфейс динамического массива структур параметров линий штриховки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kshatchstyleparam_getrefpoint.html\" class=\"topiclink hmlinklistitem\">GetRefPoint - Получить указатель на интерфейс базовой точки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kshatchstyleparam_init.html\" class=\"topiclink hmlinklistitem\">Init - Инициализировать параметры <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kshatchstyleparam_setarrlineparam.html\" class=\"topiclink hmlinklistitem\">SetArrLineParam - Установить указатель на интерфейс динамического массива структур параметров линий штриховки <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kshatchstyleparam_setrefpoint.html\" class=\"topiclink hmlinklistitem\">SetRefPoint - Установить указатель на интерфейс базовой точки <\/a><\/span><\/p>\n\r"
+})

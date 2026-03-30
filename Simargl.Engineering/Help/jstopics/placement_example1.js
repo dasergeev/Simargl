@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Пример задания Placement детали",
+hmDescription:"Последовательность установки направления осей задается абсолютными координатами направляющих векторов осей.",
+hmPrevLink:"",
+hmNextLink:"",
+hmParentLink:"compiling_libraries.html",
+hmBreadCrumbs:"",
+hmTitlePath:"Компиляция библиотек > Использование библиотек типов интерфейсов Системы КОМПАС-3D",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Пример задания Placement детали <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcq1948794\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Последовательность установки направления осей задается абсолютными координатами направляющих векторов осей.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Для их задания нужно передавать сумму координат точки привязки и смещения.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ Получить указатель на интерфейс размещения детали<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">IPlacement *iPlacement = m_pPart-&gt;GetPlacement();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ Установить точку привязки:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">iPlacement-&gt;SetOrigin(x, y, z);<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">&nbsp;<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ Установить направления осей:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">iPlacement-&gt;SetAxis(<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">x 1,<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">y 0,<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">z 0,<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">0); \/\/ ось X<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">iPlacement-&gt;SetAxis(<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">x 0,<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">y 1,<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">z 0,<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">1); \/\/ ось Y<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">\/\/ Обновить Placement:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">m_pPart-&gt;UpdatePlacement();<\/span><\/p>\n\r"
+})

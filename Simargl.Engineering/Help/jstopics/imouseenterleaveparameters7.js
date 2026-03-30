@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс IMouseEnterLeaveParameters7",
+hmDescription:"Параметры отображения точки, позволяющей определить место применения контрола.",
+hmPrevLink:"iplacement3dmanipulator_setrotaterange.html",
+hmNextLink:"imouseenterleaveparameters7_propers.html",
+hmParentLink:"ap1782828.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Интерфейс IMouseEnterLeaveParameters7 ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс IMouseEnterLeaveParameters7 <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xap1948934\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Параметры отображения точки, позволяющей определить место применения контрола<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"imouseenterleaveparameters7.html\" class=\"topiclink\">IMouseEnterLeaveParameters7<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс параметров используется в событии <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ksprocess2dnotify_getmouseenterleavepoint.html\" class=\"topiclink\">ksProcess2DNotify::GetMouseEnterLeavePoint<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Версия: KOMPAS v19<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"imouseenterleaveparameters7_propers.html\" class=\"topiclink hmlinklistitem\">IMouseEnterLeaveParameters7 - свойства <\/a><\/span><\/p>\n\r"
+})

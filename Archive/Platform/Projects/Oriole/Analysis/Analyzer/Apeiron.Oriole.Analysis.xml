@@ -1,0 +1,1115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apeiron.Oriole.Analysis</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Oriole.Analysis.App">
+            <summary>
+            Представляет приложение.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.ChildNode`1">
+            <summary>
+            Представляет дочерний узел проекта.
+            </summary>
+            <typeparam name="TParentNode">
+            Тип родительского узла.
+            </typeparam>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.ChildNode`1.#ctor(System.Windows.Threading.Dispatcher,System.String,`0)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="name">
+            Имя узла.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.ChildNode`1.Parent">
+            <summary>
+            Возвращает родительский узел.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.Data`1">
+            <summary>
+            Представляет узел дерева проекта, представляющий данные.
+            </summary>
+            <typeparam name="TParentNode">
+            Тип родительского узла.
+            </typeparam>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Data`1.#ctor(System.Windows.Threading.Dispatcher,System.String,`0,System.Int32)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="name">
+            Имя узла.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="position">
+            Положение в файле.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="position"/> передано отрицательное значение.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Data`1.Position">
+            <summary>
+            Возвращает положение в файле.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.Package">
+            <summary>
+            Представляет пакет.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Package.#ctor(System.Windows.Threading.Dispatcher,System.String,Apeiron.Oriole.Analysis.Projects.PackageFile,System.Int32,Apeiron.Recording.Adxl357.Adxl357DataPackage)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="name">
+            Имя узла.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="position">
+            Положение в файле.
+            </param>
+            <param name="data">
+            Данные пакета.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="position"/> передано отрицательное значение.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="data"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Package.Data">
+            <summary>
+            Возвращает данные пакета.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Package.LoadCore">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.Directory`1">
+            <summary>
+            Представляет узел дерева проекта, представляющий каталог файловой системы.
+            </summary>
+            <typeparam name="TParentNode">
+            Тип родительского узла.
+            </typeparam>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Directory`1.#ctor(System.Windows.Threading.Dispatcher,System.String,`0,System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="name">
+            Имя узла.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="path">
+            Путь к каталогу.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="path"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Directory`1.Path">
+            <summary>
+            Возвращает путь к каталогу.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.RootDirectory">
+            <summary>
+            Представляет корневой каталог проекта.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.RootDirectory.#ctor(System.Windows.Threading.Dispatcher,Apeiron.Oriole.Analysis.Projects.Project,System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="path">
+            Путь к каталогу.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="path"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.RootDirectory.LoadCore">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.SourceDirectory">
+            <summary>
+            Представляет каталог исходных данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.SourceDirectory.#ctor(System.Windows.Threading.Dispatcher,Apeiron.Oriole.Analysis.Projects.TimeDirectory,System.String,Apeiron.Oriole.DataFormat)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="path">
+            Путь к каталогу.
+            </param>
+            <param name="format">
+            Формат данных каталога.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="path"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="format"/> передано значение,
+            которое не содержится в перечислении <see cref="T:Apeiron.Oriole.DataFormat"/>.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.SourceDirectory.Format">
+            <summary>
+            Возвращает формат данных каталога.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.SourceDirectory.LoadCore">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.TimeDirectory">
+            <summary>
+            Представляет каталог исходных данных сгруппированных по времени.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.TimeDirectory.#ctor(System.Windows.Threading.Dispatcher,Apeiron.Oriole.Analysis.Projects.RootDirectory,System.String,System.DateTime)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="path">
+            Путь к каталогу.
+            </param>
+            <param name="time">
+            Время каталога.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="path"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.TimeDirectory.Time">
+            <summary>
+            Возвращает время каталога.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.TimeDirectory.LoadCore">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.EmptyNode">
+            <summary>
+            Представляет пустой узел.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.EmptyNode.#ctor(System.Windows.Threading.Dispatcher)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.EmptyNode.LoadCore">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.File`1">
+            <summary>
+            Представляет узел дерева проекта, представляющий файл.
+            </summary>
+            <typeparam name="TParentNode">
+            Тип родительского узла.
+            </typeparam>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.File`1.#ctor(System.Windows.Threading.Dispatcher,System.String,`0,System.String,System.DateTime)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="name">
+            Имя узла.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="path">
+            Путь к каталогу.
+            </param>
+            <param name="time">
+            Время начала записи в файл.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="path"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.File`1.Path">
+            <summary>
+            Возвращает путь к файлу.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.File`1.Time">
+            <summary>
+            Возвращает время начала записи в файл.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.GeolocationFile">
+            <summary>
+            Представляет файл, содержащий данные геолокации.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.GeolocationFile.#ctor(System.Windows.Threading.Dispatcher,Apeiron.Oriole.Analysis.Projects.SourceDirectory,System.String,System.DateTime)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="path">
+            Путь к каталогу.
+            </param>
+            <param name="time">
+            Время начала записи в файл.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="path"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.GeolocationFile.LoadCore">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.PackageFile">
+            <summary>
+            Представляет файл, содержащий пакеты данных.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.PackageFile.#ctor(System.Windows.Threading.Dispatcher,Apeiron.Oriole.Analysis.Projects.SourceDirectory,System.String,System.DateTime)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="path">
+            Путь к каталогу.
+            </param>
+            <param name="time">
+            Время начала записи в файл.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="path"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.PackageFile.LoadCore">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.Node">
+            <summary>
+            Представляет узел проекта.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Analysis.Projects.Node._Name">
+            <summary>
+            Поле для хранения имени узла.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Analysis.Projects.Node._IsLoaded">
+            <summary>
+            Поле для хранения значения, определяющего загружен ли узел.
+            </summary>
+        </member>
+        <member name="E:Apeiron.Oriole.Analysis.Projects.Node.PropertyChanged">
+            <summary>
+            Происходит при изменении значения свойства.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Analysis.Projects.Node._Invoker">
+            <summary>
+            Поле для хранения метода, который выполняет делегат в базовом потоке.
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Analysis.Projects.Node._PropertyChangedProvider">
+            <summary>
+            Поле для хранения поставщика события <see cref="E:Apeiron.Oriole.Analysis.Projects.Node.PropertyChanged"/>.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Node.#ctor(System.Windows.Threading.Dispatcher,System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="name">
+            Имя узла.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="name"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Node.Name">
+            <summary>
+            Возвращает имя узла.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Node.IsLoaded">
+            <summary>
+            Возвращает значение, определяющее был ли загружен узел.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Node.Dispatcher">
+            <summary>
+            Возвращает диспетчера.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Node.Nodes">
+            <summary>
+            Возвращает коллекцию дочерних узлов.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Node.NodesProvider">
+            <summary>
+            Возвращает поставщика коллекции <see cref="P:Apeiron.Oriole.Analysis.Projects.Node.Nodes"/>.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Node.Load">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Node.LoadCore">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Node.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:Apeiron.Oriole.Analysis.Projects.Node.PropertyChanged"/>.
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.NodeCollection">
+            <summary>
+            Представляет коллекцию узлов проекта.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.NodeCollection.#ctor(Apeiron.Oriole.Analysis.Projects.Node,Apeiron.Collections.NotableCollectionProvider{Apeiron.Oriole.Analysis.Projects.Node}@)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="parent">
+            Родительский узел.
+            </param>
+            <param name="provider">
+            Поставщик коллекции.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="parent"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.NodeCollection.Item(System.Int32)">
+            <summary>
+            Возвращает или задаёт элемент с указанным индексом.
+            </summary>
+            <param name="index">
+            Индекс элемента.
+            </param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="index"/> передано отрицательное значение.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            В параметре <paramref name="index"/> передано значение большее или равное количеству элементов в коллекции.
+            </exception>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.Projects.Project">
+            <summary>
+            Представляет проект.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Project.#ctor(System.Windows.Threading.Dispatcher,System.String)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="dispatcher">
+            Диспетчер.
+            </param>
+            <param name="rootPath">
+            Путь к корневому каталогу.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="dispatcher"/> передана пустая ссылка.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="rootPath"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Project.RootPath">
+            <summary>
+            Возвращает путь к корневому каталогу.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.Projects.Project.IsNeedSave">
+            <summary>
+            Возвращает значение, определяющее требует ли проект сохранения.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.Projects.Project.LoadCore">
+            <summary>
+            Выполняет загрузку узла.
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.UserInterface.AdxlView">
+            <summary>
+            Логика взаимодействия для AdxlView.xaml
+            </summary>
+            <summary>
+            AdxlView
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.AdxlView.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.AdxlView.Load(Apeiron.Recording.Adxl357.Adxl357DataPackage,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <param name="sampling"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.AdxlView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.UserInterface.AnalyzerWindow">
+            <summary>
+            Представляет главное окно приложения.
+            </summary>
+            <summary>
+            AnalyzerWindow
+            </summary>
+        </member>
+        <member name="F:Apeiron.Oriole.Analysis.UserInterface.AnalyzerWindow.ProjectProperty">
+            <summary>
+            Свойство зависимости проекта.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.AnalyzerWindow.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.AnalyzerWindow.TreeView_SelectedItemChanged(System.Object,System.Windows.RoutedPropertyChangedEventArgs{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.UserInterface.AnalyzerWindow.Project">
+            <summary>
+            Возвращает текущий проект.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.AnalyzerWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.UserInterface.WindowCommands">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.UserInterface.WindowCommands.Exit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.UserInterface.BinaryView">
+            <summary>
+            Логика взаимодействия для BinaryView.xaml
+            </summary>
+            <summary>
+            BinaryView
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.BinaryView.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.BinaryView.Load(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="buffer"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.BinaryView.BinaryRow.#ctor(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.BinaryView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.UserInterface.NodeView">
+            <summary>
+            Логика взаимодействия для NodeView.xaml
+            </summary>
+            <summary>
+            NodeView
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.NodeView.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.NodeView.TreeView_SelectedItemChanged(System.Object,System.Windows.RoutedPropertyChangedEventArgs{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.NodeView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.UserInterface.PackageFileView">
+            <summary>
+            Логика взаимодействия для PackageFileView.xaml
+            </summary>
+            <summary>
+            PackageFileView
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.PackageFileView.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.PackageFileView.SetNode(Apeiron.Oriole.Analysis.Projects.PackageFile)">
+            <summary>
+            
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.PackageFileView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Apeiron.Oriole.Analysis.UserInterface.ProjectView">
+            <summary>
+            Представляет элемент управления, отображающий проект.
+            </summary>
+            <summary>
+            ProjectView
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.ProjectView.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.UserInterface.ProjectView.AnalyzerWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Apeiron.Oriole.Analysis.UserInterface.ProjectView.TreeView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Analysis.UserInterface.ProjectView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:RailTest.TwoSection.DataViewer.GraphicView">
+            <summary>
+            Представляет элемент управления, отображающий графическую информацию.
+            </summary>
+        </member>
+        <member name="E:RailTest.TwoSection.DataViewer.GraphicView.LineColorChanged">
+            <summary>
+            Происходит при изменении свойства <see cref="P:RailTest.TwoSection.DataViewer.GraphicView.LineColor"/>.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._DisplayList">
+            <summary>
+            Поле для хранения списка графических команд.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._DeviceContext">
+            <summary>
+            Поле для хранения дескриптора контекста устройства.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._RenderingContext">
+            <summary>
+            Поле для хранения дескриптора контекста отображения.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._Data">
+            <summary>
+            Поле для хранения данных для отображения.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._LineColor">
+            <summary>
+            Поле для хранения цвета отображения линий.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="P:RailTest.TwoSection.DataViewer.GraphicView.LineColor">
+            <summary>
+            Возвращает или задаёт цвет отображения линий.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.Load(Apeiron.Recording.Adxl357.Adxl357DataPackage,System.Int32)">
+            <summary>
+            Загружает канал для отображения.
+            </summary>
+            <param name="channel">
+            Канал для отображения.
+            </param>
+            <param name="sampling"></param>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.OnResize(System.EventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:System.Windows.Forms.Control.Resize"/>
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.Reset">
+            <summary>
+            Сбрасывает настройки вида.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.CreateDisplayList">
+            <summary>
+            Создаёт список графических команд.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.DeleteDisplayList">
+            <summary>
+            Удаляет список графических команд.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.CallDisplayList">
+            <summary>
+            Выполняет список графических команд.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.Preparation">
+            <summary>
+            Выполняет подготовку к отображению.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView.LeftIndent">
+            <summary>
+            Отступ слева.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView.RightIndent">
+            <summary>
+            Отступ справа.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView.TopIndent">
+            <summary>
+            Отступ сверху.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView.BottomIndent">
+            <summary>
+            Отступ снизу.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView.GraphicBackColor">
+            <summary>
+            Цвет фона графика.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView.GraphicBorderColor">
+            <summary>
+            Цвет границы графика.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView.GridColor">
+            <summary>
+            Цвет сетки.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView.GridStepMinimum">
+            <summary>
+            Минимальный шаг сетки.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._XScale">
+            <summary>
+            Поле для хранения масштаба по оси Ox.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._XOffset">
+            <summary>
+            Поле для хранения смещения по оси Ox.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._YScale">
+            <summary>
+            Поле для хранения масштаба по оси Oy.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._YOffset">
+            <summary>
+            Поле для хранения смещения по оси Oy.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.UpdateFactors">
+            <summary>
+            Обновляет коэффициенты.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.NormalizeStep(System.Double)">
+            <summary>
+            Выполняет нормализацию шага сетки.
+            </summary>
+            <param name="value">
+            Исходный шаг сетки.
+            </param>
+            <returns>
+            Нормализованный шаг сетки.
+            </returns>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Рисует фон элемента.
+            </summary>
+            <param name="pevent">
+            Сведения об элементе управления, который следует нарисовать.
+            </param>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.OnDoubleClick(System.EventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:System.Windows.Forms.Control.DoubleClick"/>
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.SetCurrentColor(System.Drawing.Color)">
+            <summary>
+            Устанавливает текущий цвет.
+            </summary>
+            <param name="color">
+            Цвет, который необходимо установить как текущий.
+            </param>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._LastPoint">
+            <summary>
+            Поле для хранения последней точки.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:System.Windows.Forms.Control.MouseMove"/>
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:System.Windows.Forms.Control.MouseWheel"/>
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.OnHandleCreated(System.EventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:System.Windows.Forms.Control.HandleCreated"/>
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.GraphicView._TextListBase">
+            <summary>
+            Поле для хранения списка графических команд для отображения текста.
+            </summary>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.DrawText(System.Int32,System.Int32,System.String)">
+            <summary>
+            Отображает текст.
+            </summary>
+            <param name="x">
+            Координата x положения точки вывода.
+            </param>
+            <param name="y">
+            Координата y положения точки вывода.
+            </param>
+            <param name="text">
+            Выводимый текст.
+            </param>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.OnHandleDestroyed(System.EventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:System.Windows.Forms.Control.HandleDestroyed"/>
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.OnBackColorChanged(System.EventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:System.Windows.Forms.Control.BackColorChanged"/>
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="M:RailTest.TwoSection.DataViewer.GraphicView.OnLineColorChanged(System.EventArgs)">
+            <summary>
+            Вызывает событие <see cref="E:RailTest.TwoSection.DataViewer.GraphicView.LineColorChanged"/>.
+            </summary>
+            <param name="e">
+            Аргументы, связанные с событием.
+            </param>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_POINTS">
+            <summary>
+            Значение, показывающее, что каждую вершину необходимо обрабатывать как одну точку.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_LINES">
+            <summary>
+            Значение, показывающее, что каждую пару вершин необходимо обрабатывать как независимый отрезок.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_LINE_LOOP">
+            <summary>
+            Значение, показывающее, что вершины определяют связанную группу отрезков линии
+            от первой вершины до последней, а затем обратно до первой.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_LINE_STRIP">
+            <summary>
+            Значение, показывающее, что вершины определяют связанную группу отрезков линии от первой вершины до последней.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_TRIANGLES">
+            <summary>
+            Значение, показывающее, что каждые три вершины необходимо обрабатывать как независимый треугольник.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_TRIANGLE_STRIP">
+            <summary>
+            Значение, показывающее, что вершины определяют связанную группу треугольников.
+            Один треугольник определен для каждой вершины, представленной после первых двух вершин.
+            Для нечетного n вершины n, n + 1 и n + 2 определяют треугольник n.
+            Для четных n вершины n + 1, n и n + 2 определяют треугольник n.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_TRIANGLE_FAN">
+            <summary>
+            Значение, показывающее, что вершины определяют связанную группу треугольников.
+            Один треугольник определен для каждой вершины, представленной после первых двух вершин.
+            Вершины 1, n + 1, n + 2 определяют треугольник n.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_QUADS">
+            <summary>
+            Значение, показывающее, что вершины определяют независимый четырехугольник.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_QUAD_STRIP">
+            <summary>
+            Значение, показывающее, что вершины определяют связанную группу четырехугольников.
+            Один четырехугольник определен для каждой пары вершин, представленных после первой пары.
+            Вершины 2n - 1, 2n, 2n + 2 и 2n + 1 определяют четырехугольник n.
+            </summary>
+        </member>
+        <member name="F:RailTest.TwoSection.DataViewer.OpenGL.Import.GL_POLYGON">
+            <summary>
+            Значение, показывающее, что вершины определяют один выпуклый многоугольник.
+            </summary>
+        </member>
+    </members>
+</doc>

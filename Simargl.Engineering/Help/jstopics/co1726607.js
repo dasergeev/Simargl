@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс событий ActiveX объекта",
+hmDescription:"OnKgAddGabarit OnKgCreate OnKgCreateGLList OnKgMouseDblClick OnKgMouseDown OnKgMouseUp OnKgPaint OnKgStopCurrentProcess Подразделы: (отсутствуют)",
+hmPrevLink:"co1726548.html",
+hmNextLink:"compiling_libraries.html",
+hmParentLink:"co1726548.html",
+hmBreadCrumbs:"<a href=\"kgax.html\">KGAX - ActiveX компонент<\/a> &gt; <a href=\"co1725258.html\">Интерфейсы<\/a> &gt; <a href=\"co1726548.html\">События&nbsp;<\/a>",
+hmTitlePath:"KGAX - ActiveX компонент > Интерфейсы > События  > Интерфейс событий ActiveX объекта ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс событий ActiveX объекта <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"_dkgaxevents_onkgaddgabarit.html\" class=\"topiclink\">OnKgAddGabarit<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"_dkgaxevents_onkgcreate.html\" class=\"topiclink\">OnKgCreate<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"_dkgaxevents_oncreategllist.html\" class=\"topiclink\">OnKgCreateGLList<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"_dkgaxevents_onkgmousedblclick.html\" class=\"topiclink\">OnKgMouseDblClick<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"_dkgaxevents_onkgmousedown.html\" class=\"topiclink\">OnKgMouseDown<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"_dkgaxevents_onkgmouseup.html\" class=\"topiclink\">OnKgMouseUp<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"_dkgaxevents_onkgpaint.html\" class=\"topiclink\">OnKgPaint<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"_dkgaxevents_onkgstopcurrentprocess.html\" class=\"topiclink\">OnKgStopCurrentProcess<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

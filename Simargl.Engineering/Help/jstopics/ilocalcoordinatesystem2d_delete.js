@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Delete - Удаление ЛСК",
+hmDescription:"Интерфейс... Синтаксис Automation: BOOL Delete(); Синтаксис COM: HRESULT Delete( BOOL * Result ); Удаляет ЛСК из коллекции. Возвращаемое значение: Возвращает TRUE в случае",
+hmPrevLink:"ilocalcoordinatesystem2d_methods.html",
+hmNextLink:"bb2331024.html",
+hmParentLink:"ilocalcoordinatesystem2d_methods.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb2330638.html\">Вспомогательные объекты&nbsp;<\/a> &gt; <a href=\"ilocalcoordinatesystem2d.html\">Интерфейс ILocalCoordinateSystem2D&nbsp;<\/a> &gt; <a href=\"ilocalcoordinatesystem2d_methods.html\">ILocalCoordinateSystem2D - методы&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Вспомогательные объекты  > Интерфейс ILocalCoordinateSystem2D  > ILocalCoordinateSystem2D - методы  > Delete - Удаление ЛСК ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Delete - Удаление ЛСК <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbb2331012\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"ilocalcoordinatesystem2d.html\" class=\"topiclink\">Интерфейс...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис Automation<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">BOOL Delete();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис COM<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">HRESULT Delete( BOOL * Result );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Удаляет ЛСК из коллекции.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Возвращаемое значение<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Возвращает TRUE в случае успешного удаления, FALSE - в случае неудачи.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

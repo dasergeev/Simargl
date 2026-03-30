@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-CommunicationHub-c2440ee5-a6bd-4db3-a695-348372d5edf3</UserSecretsId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <RootNamespace>Apeiron.Platform.Communication</RootNamespace>
+        <AssemblyName>CommunicationHub</AssemblyName>
+        <DocumentationFile>CommunicationHub.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+        <AnalysisLevel>preview</AnalysisLevel>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <WarningLevel>5</WarningLevel>
+        <NoWarn />
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <ApplicationIcon>ApplicationIcon.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="ApplicationIcon.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Apeiron" Version="3.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CommunicationDatabase\CommunicationDatabase.csproj" />
+      <ProjectReference Include="..\Communication\Communication.csproj" />
+    </ItemGroup>
+
+</Project>

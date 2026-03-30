@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Параметры размера (Интерфейс ksRDimParam)",
+hmDescription:"Интерфейс параметров диаметрального и обычного радиального размера.",
+hmPrevLink:"cf1717982.html",
+hmNextLink:"ksrdimparam_methods.html",
+hmParentLink:"cf1717982.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"cf1713887.html\">Интерфейсы параметров размеров&nbsp;<\/a> &gt; <a href=\"cf1717982.html\">Радиальные и диаметральные размеры&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров размеров  > Радиальные и диаметральные размеры  > Параметры размера (Интерфейс ksRDimParam) ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Параметры размера (Интерфейс ksRDimParam) <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xcf1794054\" class=\"hmanchor\"><\/a><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс параметров диаметрального и обычного радиального размера<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Аналог данных параметров при использовании API экспортных функций - <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"structrdimparam.html\" class=\"topiclink\">RDimParam<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Указатель на интерфейс можно получить при помощи метода <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kompasobject_getparamstruct.html\" class=\"topiclink\">KompasObject::GetParamStruct<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Смотрите также: <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"kompasobject.html\" class=\"topiclink\">KompasObject<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrdimparam_methods.html\" class=\"topiclink hmlinklistitem\">ksRDimParam - методы <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IStraightAxis - свойства",
+hmDescription:"Подразделы: Angle - Угол наклона  Jut - Выступ  Length - Длина отрезка  MarkNodes - Коллекция узлов марок  X1 - Координата первой точки по оси X  X2 - Координата второй точки",
+hmPrevLink:"istraightaxis.html",
+hmNextLink:"istraightaxis_angle.html",
+hmParentLink:"istraightaxis.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb2362006.html\">Обозначения для строительства&nbsp;<\/a> &gt; <a href=\"istraightaxis.html\">Интерфейс IStraightAxis&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Обозначения для строительства  > Интерфейс IStraightAxis  > IStraightAxis - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IStraightAxis - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"istraightaxis_angle.html\" class=\"topiclink hmlinklistitem\">Angle - Угол наклона <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"istraightaxis_jut.html\" class=\"topiclink hmlinklistitem\">Jut - Выступ <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"istraightaxis_length.html\" class=\"topiclink hmlinklistitem\">Length - Длина отрезка <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"istraightaxis_marknodes.html\" class=\"topiclink hmlinklistitem\">MarkNodes - Коллекция узлов марок <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"istraightaxis_x1.html\" class=\"topiclink hmlinklistitem\">X1 - Координата первой точки по оси X <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"istraightaxis_x2.html\" class=\"topiclink hmlinklistitem\">X2 - Координата второй точки по оси X <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"istraightaxis_y1.html\" class=\"topiclink hmlinklistitem\">Y1 - Координата первой точки по оси Y <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"istraightaxis_y2.html\" class=\"topiclink hmlinklistitem\">Y2 - Координата второй точки по оси Y <\/a><\/span><\/p>\n\r"
+})

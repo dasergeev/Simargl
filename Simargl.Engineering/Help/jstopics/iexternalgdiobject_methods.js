@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IExternalGDIObject - методы",
+hmDescription:"Подразделы: Delete - Удалить объект  SetBkColors - Установить цвета фона текстов с Alpha каналом  SetPlace - Установить матрицу для отрисовки объекта  SetTextColors - Установит",
+hmPrevLink:"iexternalgdiobject_visible.html",
+hmNextLink:"iexternalgdiobject_delete.html",
+hmParentLink:"iexternalgdiobject.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"ba1782194.html\">Окна документа&nbsp;<\/a> &gt; <a href=\"ba1848735.html\">OpenGL&nbsp;<\/a> &gt; <a href=\"iexternalgdiobject.html\">Интерфейс IExternalGDIObject&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Окна документа  > OpenGL  > Интерфейс IExternalGDIObject  > IExternalGDIObject - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IExternalGDIObject - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_delete.html\" class=\"topiclink hmlinklistitem\">Delete - Удалить объект <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_setbkcolors.html\" class=\"topiclink hmlinklistitem\">SetBkColors - Установить цвета фона текстов с Alpha каналом <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_setplace.html\" class=\"topiclink hmlinklistitem\">SetPlace - Установить матрицу для отрисовки объекта <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_settextcolors.html\" class=\"topiclink hmlinklistitem\">SetTextColors - Установить цвета текстов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_settextorientation.html\" class=\"topiclink hmlinklistitem\">SetTextOrientation - Установить наклон символов текстов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_settexts.html\" class=\"topiclink hmlinklistitem\">SetTexts - Установить тексты и их параметры <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iexternalgdiobject_settextsalign.html\" class=\"topiclink hmlinklistitem\">SetTextsAlign - Установить выравнивание текста <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksRectangleParam - свойства",
+hmDescription:"Подразделы: ang - Угол вектора направления от первой точки ко второй (угол наклона стороны прямоугольника, выходящей из базовой точки)  height - Высота прямоугольника  style - С",
+hmPrevLink:"ksrectangleparam.html",
+hmNextLink:"ksrectangleparam_ang.html",
+hmParentLink:"ksrectangleparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"cd1743949.html\">Интерфейсы параметров графических примитивов&nbsp;<\/a> &gt; <a href=\"cd1713407.html\">Прямоугольники&nbsp;<\/a> &gt; <a href=\"ksrectangleparam.html\">Прямоугольник по центру (Интерфейс ksRectangleParam)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров графических примитивов  > Прямоугольники  > Прямоугольник по центру (Интерфейс ksRectangleParam)  > ksRectangleParam - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksRectangleParam - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrectangleparam_ang.html\" class=\"topiclink hmlinklistitem\">ang - Угол вектора направления от первой точки ко второй (угол наклона стороны прямоугольника, выходящей из базовой точки) <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrectangleparam_height.html\" class=\"topiclink hmlinklistitem\">height - Высота прямоугольника <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrectangleparam_style.html\" class=\"topiclink hmlinklistitem\">style - Стиль линии <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrectangleparam_width.html\" class=\"topiclink hmlinklistitem\">width - Ширина прямоугольника (длина стороны, характеризующейся углом наклона ang) <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"ksrectangleparam_x.html\" class=\"topiclink hmlinklistitem\">x, y - Координаты базовой точки прямоугольника - одной из его вершин <\/a><\/span><\/p>\n\r"
+})

@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Интерфейс ITextDocumentSection",
+hmDescription:"Интерфейс параметров раздела текстового документа.",
+hmPrevLink:"itextdocumentsectionsmanager_movesection.html",
+hmNextLink:"itextdocumentsection_propers.html",
+hmParentLink:"bd1748865.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bd1748865.html\">Текстовый документ&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Текстовый документ  > Интерфейс ITextDocumentSection ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Интерфейс ITextDocumentSection <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xbd1751697\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Интерфейс параметров раздела текстового документа<\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Иерархия<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_Hier_0_BLANK\"><span class=\"f_Hier_0_BLANK\">IDispatch<\/span><\/p>\n\r<p class=\"p_Hier_1_GREEN\"><span class=\"f_Hier_1_GREEN\"><a href=\"ikompasapiobject.html\" class=\"topiclink\">IKompasAPIObject<\/a><\/span><\/p>\n\r<p class=\"p_Hier_2_BLUE\"><span class=\"f_Hier_2_BLUE\"><a href=\"itextdocumentsection.html\" class=\"topiclink\">ITextDocumentSection<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Примечание<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Интерфейс можно получить с помощью методов менеджера разделов <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"itextdocumentsectionsmanager.html\" class=\"topiclink\">ITextDocumentSectionsManager<\/a><\/span><span class=\"f_bodytext\">.<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"itextdocumentsection_propers.html\" class=\"topiclink hmlinklistitem\">ITextDocumentSection - свойства <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"itextdocumentsection_methods.html\" class=\"topiclink hmlinklistitem\">ITextDocumentSection - методы <\/a><\/span><\/p>\n\r"
+})

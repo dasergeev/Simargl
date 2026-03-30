@@ -1,0 +1,5 @@
+﻿EntityFrameworkCore\Add-Migration -Project Databases\Ra2Database -StartupProject Databases\Ra2Database -Name
+EntityFrameworkCore\Update-Database -Project Databases\Ra2Database -StartupProject Databases\Ra2Database
+EntityFrameworkCore\Remove-Migration -Project Databases\Ra2Database -StartupProject Databases\Ra2Database
+EntityFrameworkCore\Remove-Migration -Project Databases\Ra2Database -StartupProject Databases\Ra2Database -Force
+

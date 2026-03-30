@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"Константы",
+hmDescription:"Подразделы: Перечисления событий  Константы спецификации  Константы размеров  Константы документов  Константы моделей  Константы графических объектов  Константы объектов офо",
+hmPrevLink:"propertyparam.html",
+hmNextLink:"bk1805164.html",
+hmParentLink:"3d_define.html",
+hmBreadCrumbs:"<a href=\"3d_define.html\">Структуры параметров и константы<\/a>",
+hmTitlePath:"Структуры параметров и константы > Константы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">Константы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1805164.html\" class=\"topiclink hmlinklistitem\">Перечисления событий <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1922686.html\" class=\"topiclink hmlinklistitem\">Константы спецификации <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1745391.html\" class=\"topiclink hmlinklistitem\">Константы размеров <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1805751.html\" class=\"topiclink hmlinklistitem\">Константы документов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1853230.html\" class=\"topiclink hmlinklistitem\">Константы моделей <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1806623.html\" class=\"topiclink hmlinklistitem\">Константы графических объектов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1808439.html\" class=\"topiclink hmlinklistitem\">Константы объектов оформления <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1846501.html\" class=\"topiclink hmlinklistitem\">Константы отчетов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1846758.html\" class=\"topiclink hmlinklistitem\">Константы текста <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1808863.html\" class=\"topiclink hmlinklistitem\">Константы системы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"bk1944694.html\" class=\"topiclink hmlinklistitem\">Прочие <\/a><\/span><\/p>\n\r"
+})

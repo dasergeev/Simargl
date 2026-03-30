@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StatisticalAnalysis</name>
+    </assembly>
+    <members>
+        <member name="T:Apeiron.Oriole.Server.Services.StatisticalAnalysis">
+            <summary>
+            Представляет фоновый процесс, выполняющий статистический анализ.
+            </summary>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.StatisticalAnalysis.#ctor(Microsoft.Extensions.Logging.ILogger{Apeiron.Oriole.Server.Services.StatisticalAnalysis})">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="logger">
+            Средство записи в журнал службы.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            В параметре <paramref name="logger"/> передана пустая ссылка.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.StatisticalAnalysis.InvokeAsync(System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет фоновую работу.
+            </summary>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая фоновую работу.
+            </returns>
+            <exception cref="T:System.OperationCanceledException">
+            Операция отменена.
+            </exception>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.StatisticalAnalysis.WorkInFrameAsync(System.Tuple{System.Int32,System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно выполняет работу с кадром регистрации.
+            </summary>
+            <param name="frameKey">
+            Ключ кадра регистрации.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая работу с кадром регистрации.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.StatisticalAnalysis.GetSpeedAsync(System.Int32,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно определяет скорость.
+            </summary>
+            <param name="registrarId">
+            Идентификатор регистратора.
+            </param>
+            <param name="beginTime">
+            Время начала периода.
+            </param>
+            <param name="endTime">
+            Время оконачания периода.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая поиск данных.
+            </returns>
+        </member>
+        <member name="M:Apeiron.Oriole.Server.Services.StatisticalAnalysis.GetLocationAsync(System.Int32,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+            <summary>
+            Асинхронно определяет данные местоположения.
+            </summary>
+            <param name="registrarId">
+            Идентификатор регистратора.
+            </param>
+            <param name="beginTime">
+            Время начала периода.
+            </param>
+            <param name="endTime">
+            Время оконачания периода.
+            </param>
+            <param name="cancellationToken">
+            Токен отмены.
+            </param>
+            <returns>
+            Задача, выполняющая поиск данных местоположения.
+            </returns>
+        </member>
+    </members>
+</doc>

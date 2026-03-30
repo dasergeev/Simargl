@@ -1,0 +1,21 @@
+--CREATE OR REPLACE FUNCTION public.hstore_has_key_value(IN "@hstore" hstore, IN "@key" text, IN "@operator" text, IN "@value" text)
+--    RETURNS boolean
+--	AS $func$
+--	SELECT
+--		CASE 
+--			WHEN "@operator" = '=' THEN "@hstore" -> "@key" = "@value"
+--			WHEN "@operator" = '<>' THEN "@hstore" -> "@key" <> "@value" 
+--			WHEN "@operator" = '>' THEN "@hstore" -> "@key" > "@value" 
+--			WHEN "@operator" = '>=' THEN "@hstore" -> "@key" >= "@value" 
+--			WHEN "@operator" = '<' THEN "@hstore" -> "@key" < "@value" 
+--			WHEN "@operator" = '<=' THEN "@hstore" -> "@key" <= "@value"
+--			WHEN "@operator" = 'LIKE' THEN "@hstore" -> "@key" LIKE "@value"
+--			ELSE "@hstore" -> "@key" = "@value"
+--		END
+--$func$ LANGUAGE sql;
+
+--CREATE OR REPLACE FUNCTION public.hstore_has_key(IN "@hstore" hstore, IN "@key" text)
+--    RETURNS boolean
+--	AS $func$
+--	EXIST("@hstore", "@key");
+--$func$ LANGUAGE sql;

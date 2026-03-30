@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"API экспортных функций",
+hmDescription:"Подразделы: Функции работы с документом моделью  Функции работы с графическим документом  Редактирование графических объектов  Функции работы с текстовым документом  Функции р",
+hmPrevLink:"ksdocument3dnotifyresult_getrequestfilestype.html",
+hmNextLink:"doc_3d_fncts_common.html",
+hmParentLink:"index.html",
+hmBreadCrumbs:"",
+hmTitlePath:"API экспортных функций",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">API экспортных функций<\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"doc_3d_fncts_common.html\" class=\"topiclink hmlinklistitem\">Функции работы с документом моделью <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cm1726661.html\" class=\"topiclink hmlinklistitem\">Функции работы с графическим документом <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cn1712096.html\" class=\"topiclink hmlinklistitem\">Редактирование графических объектов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cn1724036.html\" class=\"topiclink hmlinklistitem\">Функции работы с текстовым документом <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"work_with_files_common.html\" class=\"topiclink hmlinklistitem\">Функции работы с файлами документов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"spc_fncts_common.html\" class=\"topiclink hmlinklistitem\">Функции работы с документом-спецификацией <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"docum_fncts_common.html\" class=\"topiclink hmlinklistitem\">Функции работы с документами <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"calc_fncts.html\" class=\"topiclink hmlinklistitem\">Функции работы с калькулятором <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"impex_fncts_common.html\" class=\"topiclink hmlinklistitem\">Функции экспорта документов <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"cn1731963.html\" class=\"topiclink hmlinklistitem\">Функции работы с прикладной библиотекой <\/a><\/span><\/p>\n\r"
+})

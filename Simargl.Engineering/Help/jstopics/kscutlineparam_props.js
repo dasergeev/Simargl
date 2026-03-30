@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ksCutLineParam - свойства",
+hmDescription:"Подразделы: right - Положение стрелок относительно линии разреза\/сечения  str - Текст на линии разреза\/сечения  style - Стиль текста  type - Способ задания надписи на линии раз",
+hmPrevLink:"kscutlineparam.html",
+hmNextLink:"kscutlineparam_right.html",
+hmParentLink:"kscutlineparam.html",
+hmBreadCrumbs:"<a href=\"ag57940.html\">API интерфейсов. Версия 5<\/a> &gt; <a href=\"ksdocument2d.html\">Графический документ (Интерфейсы - ksDocument2D и IDocument2D)&nbsp;<\/a> &gt; <a href=\"ch1786244.html\">Интерфейсы параметров обозначений&nbsp;<\/a> &gt; <a href=\"kscutlineparam.html\">Линия разреза\/сечения (Интерфейс ksCutLineParam)&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 5 > Графический документ (Интерфейсы - ksDocument2D и IDocument2D)  > Интерфейсы параметров обозначений  > Линия разреза\/сечения (Интерфейс ksCutLineParam)  > ksCutLineParam - свойства ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ksCutLineParam - свойства <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscutlineparam_right.html\" class=\"topiclink hmlinklistitem\">right - Положение стрелок относительно линии разреза\/сечения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscutlineparam_str.html\" class=\"topiclink hmlinklistitem\">str - Текст на линии разреза\/сечения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscutlineparam_style.html\" class=\"topiclink hmlinklistitem\">style - Стиль текста <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscutlineparam_type.html\" class=\"topiclink hmlinklistitem\">type - Способ задания надписи на линии разреза\/сечения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscutlineparam_x1.html\" class=\"topiclink hmlinklistitem\">х1, y1 - Координаты надписи у первого участка линии разреза\/сечения <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"kscutlineparam_x2.html\" class=\"topiclink hmlinklistitem\">х2, y2 - Координаты надписи у второго участка линии разреза\/сечения <\/a><\/span><\/p>\n\r"
+})

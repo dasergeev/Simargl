@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"ICutViewParam - методы",
+hmDescription:"Подразделы: AddCut - Добавить разрез  DeleteCut - Удалить разрез  DeleteAllCuts - Удалить все разрезы  GetCutParams - Получить параметры разреза  GetCutPlanePosition - Получит",
+hmPrevLink:"icutviewparam_localcut.html",
+hmNextLink:"icutviewparam_addcut.html",
+hmParentLink:"icutviewparam.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"bb2325661.html\">Документ 2D&nbsp;<\/a> &gt; <a href=\"bb2370796.html\">Параметры&nbsp;<\/a> &gt; <a href=\"icutviewparam.html\">Интерфейс ICutViewParam&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ 2D  > Параметры  > Интерфейс ICutViewParam  > ICutViewParam - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">ICutViewParam - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icutviewparam_addcut.html\" class=\"topiclink hmlinklistitem\">AddCut - Добавить разрез <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icutviewparam_deletecut.html\" class=\"topiclink hmlinklistitem\">DeleteCut - Удалить разрез <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icutviewparam_deleteallcuts.html\" class=\"topiclink hmlinklistitem\">DeleteAllCuts - Удалить все разрезы <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icutviewparam_getcutparams.html\" class=\"topiclink hmlinklistitem\">GetCutParams - Получить параметры разреза <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icutviewparam_getcutplaneposition.html\" class=\"topiclink hmlinklistitem\">GetCutPlanePosition - Получить координаты точки, через которую пройдет секущая плоскость <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icutviewparam_setcutparams.html\" class=\"topiclink hmlinklistitem\">SetCutParams - Установить параметры разреза <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"icutviewparam_setcutplaneposition.html\" class=\"topiclink hmlinklistitem\">SetCutPlanePosition - Установить координаты точки, через которую пройдет секущая плоскость <\/a><\/span><\/p>\n\r"
+})

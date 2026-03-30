@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Tunings.hpp" />
+    <ClInclude Include="Tunings\Implementation.hpp">
+      <Filter>Tunings\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Tunings\Preparation.hpp">
+      <Filter>Tunings\Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Tunings">
+      <UniqueIdentifier>{e34b901d-78f9-4554-946a-6e41e4c8207b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tunings\Main">
+      <UniqueIdentifier>{28a47574-55fe-4278-889c-2e3c220dd115}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

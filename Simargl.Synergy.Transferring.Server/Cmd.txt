@@ -1,0 +1,2 @@
+﻿sc.exe create "Simargl.Synergy.Transferring.Server" binpath= "C:\Environs\Programs\Simargl\Synergy\Transferring\Server\Simargl.Synergy.Transferring.Server.exe"
+sc delete "Simargl.Synergy.Transferring.Server"

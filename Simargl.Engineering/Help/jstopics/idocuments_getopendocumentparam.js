@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"GetOpenDocumentParam - Получить интерфейс параметров открытия документа",
+hmDescription:"Интерфейс... Синтаксис Automation: LPDISPATCH GetOpenDocumentParam(); Синтаксис COM: HRESULT GetOpenDocumentParam( IOpenDocumentParam ** Result ); Возвращаемое значение: Ук",
+hmPrevLink:"idocuments_getloadcombinationsparam.html",
+hmNextLink:"idocuments_open.html",
+hmParentLink:"idocuments_methods.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"ap1782828.html\">Приложение&nbsp;<\/a> &gt; <a href=\"ap2013730.html\">Коллекция документов&nbsp;<\/a> &gt; <a href=\"idocuments.html\">Интерфейс IDocuments&nbsp;<\/a> &gt; <a href=\"idocuments_methods.html\">IDocuments - методы&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Приложение  > Коллекция документов  > Интерфейс IDocuments  > IDocuments - методы  > GetOpenDocumentParam - Получить интерфейс параметров открытия документа ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">GetOpenDocumentParam - Получить интерфейс параметров открытия документа <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_bodytext\"><a id=\"xap1803505\" class=\"hmanchor\"><\/a><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"idocuments.html\" class=\"topiclink\">Интерфейс...<\/a><\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис Automation<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">LPDISPATCH GetOpenDocumentParam();<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Синтаксис COM<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">HRESULT GetOpenDocumentParam( IOpenDocumentParam ** Result );<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\" style=\"font-weight: bold;\">Возвращаемое значение<\/span><span class=\"f_bodytext\">:<\/span><\/p>\n\r<p class=\"p_bodytext\"><span class=\"f_bodytext\">Указатель на интерфейс <\/span><span class=\"f_bodytext\" style=\"text-decoration: underline;\"><a href=\"iopendocumentparam.html\" class=\"topiclink\">IOpenDocumentParam<\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\">(отсутствуют)<\/span><\/p>\n\r"
+})

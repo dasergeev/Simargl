@@ -1,0 +1,12 @@
+hmLoadTopic({
+hmKeywords:"",
+hmTitle:"IAttributeType - методы",
+hmDescription:"Подразделы: AddColumn - Добавить колонку  Delete - Удалить объект  GetKeysInfo - Получить информацию о ключах атрибута  SetKeysInfo - Установить информацию о ключах атрибута",
+hmPrevLink:"iattributetype_uniquenumb.html",
+hmNextLink:"iattributetype_addcolumn.html",
+hmParentLink:"iattributetype.html",
+hmBreadCrumbs:"<a href=\"applicate.html\">API интерфейсов. Версия 7<\/a> &gt; <a href=\"doc.html\">Документ&nbsp;<\/a> &gt; <a href=\"attribute.html\">Атрибуты&nbsp;<\/a> &gt; <a href=\"iattributetype.html\">Интерфейс IAttributeType&nbsp;<\/a>",
+hmTitlePath:"API интерфейсов. Версия 7 > Документ  > Атрибуты  > Интерфейс IAttributeType  > IAttributeType - методы ",
+hmHeader:"<h1 class=\"p_Heading1\"><span class=\"f_Heading1\">IAttributeType - методы <\/span><\/h1>\n\r",
+hmBody:"<p class=\"p_Z_LOC_TOC_Title\" style=\"border-top: none; border-right: none; border-left: none;\"><span class=\"f_Z_LOC_TOC_Title\">Подразделы:<\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iattributetype_addcolumn.html\" class=\"topiclink hmlinklistitem\">AddColumn - Добавить колонку <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iattributetype_delete.html\" class=\"topiclink hmlinklistitem\">Delete - Удалить объект <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iattributetype_getkeysinfo.html\" class=\"topiclink hmlinklistitem\">GetKeysInfo - Получить информацию о ключах атрибута <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iattributetype_setkeysinfo.html\" class=\"topiclink hmlinklistitem\">SetKeysInfo - Установить информацию о ключах атрибута <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iattributetype_setpassword.html\" class=\"topiclink hmlinklistitem\">SetPassword - Установить новый пароль на изменение данных атрибута <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iattributetype_update.html\" class=\"topiclink hmlinklistitem\">Update - Обновить данные <\/a><\/span><\/p>\n\r<p class=\"p_Z_LOC_TOC\"><span class=\"f_Z_LOC_TOC\"><a href=\"iattributetype_viewedit.html\" class=\"topiclink hmlinklistitem\">ViewEdit - Открыть диалог для просмотра и редактирования типа атрибута <\/a><\/span><\/p>\n\r"
+})

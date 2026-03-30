@@ -1,0 +1,188 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0-ios;net7.0-maccatalyst;net7.0-android33.0</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>CommutatorMaui</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <!-- Display name -->
+		<ApplicationTitle>CommutatorMaui</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.commutatormaui</ApplicationId>
+		<ApplicationIdGuid>3ce10726-49fd-4885-bda6-864fb846eefc</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">29.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appiconfg.png" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+    <PropertyGroup>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+        <AnalysisLevel>preview</AnalysisLevel>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <WarningLevel>5</WarningLevel>
+        <NoWarn />
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+        <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+        <AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>
+        <GenerateTestArtifacts>True</GenerateTestArtifacts>
+        <AppInstallerUri>C:\Users\user\Desktop\MPT</AppInstallerUri>
+        <HoursBetweenUpdateChecks>168</HoursBetweenUpdateChecks>
+        <AndroidSigningKeyStore>myapp.keystore</AndroidSigningKeyStore>
+        <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+        <PackageCertificateThumbprint>7B105377D0BC4E9535B573B5AE6DD5FC09A0208B</PackageCertificateThumbprint>
+        <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
+      <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+      <AndroidPackageFormat>apk</AndroidPackageFormat>
+      <AndroidKeyStore>True</AndroidKeyStore>
+      <AndroidSigningStorePass>etivon14</AndroidSigningStorePass>
+      <AndroidSigningKeyAlias>Andrey</AndroidSigningKeyAlias>
+      <AndroidSigningKeyPass>123QWEasd</AndroidSigningKeyPass>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
+      <AndroidKeyStore>True</AndroidKeyStore>
+      <AndroidSigningStorePass>etivon14</AndroidSigningStorePass>
+      <AndroidSigningKeyAlias>Andrey</AndroidSigningKeyAlias>
+      <AndroidSigningKeyPass>123QWEasd</AndroidSigningKeyPass>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
+      <AndroidKeyStore>True</AndroidKeyStore>
+      <AndroidSigningStorePass>etivon14</AndroidSigningStorePass>
+      <AndroidSigningKeyAlias>key</AndroidSigningKeyAlias>
+      <AndroidSigningKeyPass>etivon14</AndroidSigningKeyPass>
+      <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+      <AndroidUseAapt2>True</AndroidUseAapt2>
+      <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+      <AndroidPackageFormat>aab</AndroidPackageFormat>
+      <DebugSymbols>False</DebugSymbols>
+      <ApplicationTitle>MPT.Com</ApplicationTitle>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
+      <AndroidKeyStore>True</AndroidKeyStore>
+      <AndroidSigningStorePass>etivon14</AndroidSigningStorePass>
+      <AndroidSigningKeyAlias>key</AndroidSigningKeyAlias>
+      <AndroidSigningKeyPass>etivon14</AndroidSigningKeyPass>
+      <AndroidPackageFormat>aab</AndroidPackageFormat>
+      <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+      <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+      <AndroidUseAapt2>True</AndroidUseAapt2>
+      <DebugSymbols>False</DebugSymbols>
+      <RunAOTCompilation>False</RunAOTCompilation>
+      <PublishTrimmed>False</PublishTrimmed>
+      <ApplicationTitle>MPT.Com</ApplicationTitle>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+      <ApplicationTitle>MPT.Com</ApplicationTitle>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
+      <ApplicationTitle>MPT.Com</ApplicationTitle>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|AnyCPU'">
+      <ApplicationTitle>MPT.Com</ApplicationTitle>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|AnyCPU'">
+      <ApplicationTitle>MPT.Com</ApplicationTitle>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|AnyCPU'">
+      <ApplicationTitle>MPT.Com</ApplicationTitle>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|AnyCPU'">
+      <ApplicationTitle>MPT.Com</ApplicationTitle>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <MauiImage Remove="Resources\Images\messaging.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Icons\user.png" />
+      <None Remove="Resources\Images\messaging.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiImage Include="Resources\Icons\user.png" />
+    </ItemGroup>
+    
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Apeiron" Version="3.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Communication\Communication.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="MessagePage.xaml.cs">
+        <DependentUpon>MessagePage.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiXaml Update="ChatsPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+      <MauiXaml Update="MessagePage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+    </ItemGroup>
+
+</Project>
