@@ -16,6 +16,7 @@
     MinHeight="780"
     WindowState="Maximized">
     <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
         <DataTemplate DataType="{x:Type sourceViewModels:WheelRotationSignalSourceViewModel}">
             <sourceEditors:WheelRotationSignalSourceEditorControl />
         </DataTemplate>
@@ -78,7 +79,89 @@
                 ResizeBehavior="PreviousAndNext"
                 ShowsPreview="True" />
             <Border Grid.Row="2" Padding="14" CornerRadius="16">
-                <ContentControl Content="{Binding SelectedSignalSource}" />
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <TextBlock FontSize="22" FontWeight="SemiBold" Text="Параметры модели" />
+                        <Border Margin="0,12,0,0" Padding="12" CornerRadius="12">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="90" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.ColumnSpan="2" FontSize="18" FontWeight="SemiBold" Text="Общие параметры движения" />
+                                <TextBlock Grid.Row="1" Margin="0,12,0,0" VerticalAlignment="Center" Text="Скорость вагона, км/ч" />
+                                <TextBox Grid.Row="1" Grid.Column="1" Margin="12,12,0,0" Text="{Binding WagonSpeedKilometersPerHour}" />
+                                <TextBlock Grid.Row="2" Margin="0,12,0,0" VerticalAlignment="Center" Text="Диаметр колеса, мм" />
+                                <TextBox Grid.Row="2" Grid.Column="1" Margin="12,12,0,0" Text="{Binding WheelDiameterMillimeters}" />
+                            </Grid>
+                        </Border>
+                        <Border Margin="0,12,0,0" Padding="12" CornerRadius="12">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="90" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.ColumnSpan="2" FontSize="18" FontWeight="SemiBold" Text="Общие параметры узла и регистрации" />
+                                <TextBlock Grid.Row="1" Margin="0,12,0,0" VerticalAlignment="Center" Text="Нагрузка на ось, кН" />
+                                <TextBox Grid.Row="1" Grid.Column="1" Margin="12,12,0,0" Text="{Binding AxleLoadKilonewtons}" />
+                                <TextBlock Grid.Row="2" Margin="0,12,0,0" VerticalAlignment="Center" Text="Диаметр подшипника, мм" />
+                                <TextBox Grid.Row="2" Grid.Column="1" Margin="12,12,0,0" Text="{Binding BearingPitchDiameterMillimeters}" />
+                                <TextBlock Grid.Row="3" Margin="0,12,0,0" VerticalAlignment="Center" Text="Диаметр тела качения, мм" />
+                                <TextBox Grid.Row="3" Grid.Column="1" Margin="12,12,0,0" Text="{Binding RollingElementDiameterMillimeters}" />
+                                <TextBlock Grid.Row="4" Margin="0,12,0,0" VerticalAlignment="Center" Text="Число тел качения" />
+                                <TextBox Grid.Row="4" Grid.Column="1" Margin="12,12,0,0" Text="{Binding RollingElementCount}" />
+                                <TextBlock Grid.Row="5" Margin="0,12,0,0" VerticalAlignment="Center" Text="Контактный угол, град" />
+                                <TextBox Grid.Row="5" Grid.Column="1" Margin="12,12,0,0" Text="{Binding ContactAngleDegrees}" />
+                            </Grid>
+                        </Border>
+                        <Border Margin="0,12,0,0" Padding="12" CornerRadius="12">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="90" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.ColumnSpan="2" FontSize="18" FontWeight="SemiBold" Text="Параметры регистрации" />
+                                <TextBlock Grid.Row="1" Margin="0,12,0,0" VerticalAlignment="Center" Text="Частота дискретизации" />
+                                <TextBox Grid.Row="1" Grid.Column="1" Margin="12,12,0,0" Text="{Binding SampleRate}" />
+                                <TextBlock Grid.Row="2" Margin="0,12,0,0" VerticalAlignment="Center" Text="Длительность окна, с" />
+                                <TextBox Grid.Row="2" Grid.Column="1" Margin="12,12,0,0" Text="{Binding DurationSeconds}" />
+                            </Grid>
+                        </Border>
+                        <Border Margin="0,12,0,0" Padding="12" CornerRadius="12" Visibility="{Binding Sources[0].IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <sourceEditors:WheelRotationSignalSourceEditorControl DataContext="{Binding Sources[0]}" />
+                        </Border>
+                        <Border Margin="0,12,0,0" Padding="12" CornerRadius="12" Visibility="{Binding Sources[1].IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <sourceEditors:TrackExcitationSignalSourceEditorControl DataContext="{Binding Sources[1]}" />
+                        </Border>
+                        <Border Margin="0,12,0,0" Padding="12" CornerRadius="12" Visibility="{Binding Sources[2].IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <sourceEditors:StructuralResonanceSignalSourceEditorControl DataContext="{Binding Sources[2]}" />
+                        </Border>
+                        <Border Margin="0,12,0,0" Padding="12" CornerRadius="12" Visibility="{Binding Sources[3].IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <sourceEditors:DefectImpulseSignalSourceEditorControl DataContext="{Binding Sources[3]}" Faults="{Binding Faults}" />
+                        </Border>
+                        <Border Margin="0,12,0,0" Padding="12" CornerRadius="12" Visibility="{Binding Sources[4].IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <sourceEditors:MeasurementNoiseSignalSourceEditorControl DataContext="{Binding Sources[4]}" />
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
             </Border>
         </Grid>
         <GridSplitter
