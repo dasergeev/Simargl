@@ -401,6 +401,25 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
                 _ => 1d, // Возвращает стандартный масштаб для остальных источников.
             }; // Завершает выбор типового масштаба амплитуды.
             source.FrequencyScale = 1d; // Возвращает стандартный масштаб частоты.
+            source.DetailScale = source.SourceType switch // Возвращает типовой дополнительный параметр источника.
+            { // Начинает выбор дополнительного параметра.
+                SignalSourceType.WheelRotation => 1.4d, // Устанавливает типовую насыщенность гармониками.
+                SignalSourceType.TrackExcitation => 0.8d, // Устанавливает типовую выраженность профиля пути.
+                SignalSourceType.StructuralResonance => 0.7d, // Устанавливает типовое демпфирование резонанса.
+                SignalSourceType.DefectImpulses => 1.8d, // Устанавливает типовую остроту импульсов.
+                SignalSourceType.MeasurementNoise => 0.6d, // Устанавливает типовую структуру шума.
+                _ => 1d, // Возвращает резервное значение.
+            }; // Завершает выбор дополнительного параметра.
+            source.ModeIndex = source.SourceType switch // Возвращает типовой режим источника.
+            { // Начинает выбор режима источника.
+                SignalSourceType.WheelRotation => 1, // Выбирает полигармонический режим вращения.
+                SignalSourceType.TrackExcitation => 0, // Выбирает режим стыков пути.
+                SignalSourceType.StructuralResonance => 0, // Выбирает резонанс рамы.
+                SignalSourceType.DefectImpulses => 1, // Выбирает резонансный режим дефектов.
+                SignalSourceType.MeasurementNoise => 0, // Выбирает белый шум.
+                _ => 0, // Возвращает резервный режим.
+            }; // Завершает выбор режима источника.
+            source.IsAuxiliaryEnabled = source.SourceType is not SignalSourceType.MeasurementNoise; // Возвращает типовое состояние дополнительной опции.
         } // Завершает цикл сброса источников.
 
         SelectedSignalSource ??= Sources.FirstOrDefault(); // Гарантирует наличие выбранного источника после сброса.
@@ -413,4 +432,5 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
         StartStreaming(); // Запускает потоковую симуляцию после сброса параметров.
     } // Завершает метод сброса параметров.
 } // Завершает тело главной view model.
+
 

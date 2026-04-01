@@ -5,7 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="clr-namespace:Simargl.FlawDetector.Controls"
-    xmlns:models="clr-namespace:Simargl.FlawDetector.Models"
     mc:Ignorable="d"
     Title="Симулятор дефектов буксового подшипника"
     Width="1440"
@@ -13,275 +12,62 @@
     MinWidth="1200"
     MinHeight="780"
     WindowState="Maximized">
-    <Window.Resources>
-        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-        <DataTemplate x:Key="WheelRotationSourceTemplate">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="138" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="56" />
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,10" FontWeight="SemiBold" Text="Вращение колесной пары" />
-                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Использовать" />
-                <CheckBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsEnabled}" />
-                <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Уровень" />
-                <Slider Grid.Row="2" Grid.Column="1" Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding AmplitudeScale}" />
-                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding AmplitudeScale, StringFormat=F2}" />
-                <TextBlock Grid.Row="3" VerticalAlignment="Center" Text="Гармоники" />
-                <Slider Grid.Row="3" Grid.Column="1" Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding DetailScale}" />
-                <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding DetailScale, StringFormat=F2}" />
-                <TextBlock Grid.Row="4" VerticalAlignment="Center" Text="Эксцентриситет" />
-                <CheckBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsAuxiliaryEnabled}" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="TrackExcitationSourceTemplate">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="138" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="56" />
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,10" FontWeight="SemiBold" Text="Возбуждение от пути" />
-                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Использовать" />
-                <CheckBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsEnabled}" />
-                <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Режим профиля" />
-                <ComboBox Grid.Row="2" Grid.Column="1" SelectedIndex="{Binding ModeIndex}" ItemsSource="{Binding ModeOptions}" />
-                <TextBlock Grid.Row="3" VerticalAlignment="Center" Text="Интенсивность" />
-                <Slider Grid.Row="3" Grid.Column="1" Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding AmplitudeScale}" />
-                <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding AmplitudeScale, StringFormat=F2}" />
-                <TextBlock Grid.Row="4" VerticalAlignment="Center" Text="Удары стыков" />
-                <CheckBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsAuxiliaryEnabled}" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="StructuralResonanceSourceTemplate">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="138" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="56" />
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,10" FontWeight="SemiBold" Text="Структурный резонанс" />
-                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Использовать" />
-                <CheckBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsEnabled}" />
-                <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Резонанс" />
-                <ComboBox Grid.Row="2" Grid.Column="1" SelectedIndex="{Binding ModeIndex}" ItemsSource="{Binding ModeOptions}" />
-                <TextBlock Grid.Row="3" VerticalAlignment="Center" Text="Демпфирование" />
-                <Slider Grid.Row="3" Grid.Column="1" Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding DetailScale}" />
-                <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding DetailScale, StringFormat=F2}" />
-                <TextBlock Grid.Row="4" VerticalAlignment="Center" Text="Доминирование Z" />
-                <CheckBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsAuxiliaryEnabled}" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="DefectImpulsesSourceTemplate">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="138" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="56" />
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,10" FontWeight="SemiBold" Text="Импульсы дефектов" />
-                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Использовать" />
-                <CheckBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsEnabled}" />
-                <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Режим отклика" />
-                <ComboBox Grid.Row="2" Grid.Column="1" SelectedIndex="{Binding ModeIndex}" ItemsSource="{Binding ModeOptions}" />
-                <TextBlock Grid.Row="3" VerticalAlignment="Center" Text="Энергия" />
-                <Slider Grid.Row="3" Grid.Column="1" Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding AmplitudeScale}" />
-                <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding AmplitudeScale, StringFormat=F2}" />
-                <TextBlock Grid.Row="4" VerticalAlignment="Center" Text="Острота" />
-                <Slider Grid.Row="4" Grid.Column="1" Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding DetailScale}" />
-                <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding DetailScale, StringFormat=F2}" />
-                <TextBlock Grid.Row="5" VerticalAlignment="Center" Text="Боковые полосы" />
-                <CheckBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsAuxiliaryEnabled}" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="MeasurementNoiseSourceTemplate">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="138" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="56" />
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,10" FontWeight="SemiBold" Text="Измерительный шум" />
-                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Использовать" />
-                <CheckBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsEnabled}" />
-                <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Спектр" />
-                <ComboBox Grid.Row="2" Grid.Column="1" SelectedIndex="{Binding ModeIndex}" ItemsSource="{Binding ModeOptions}" />
-                <TextBlock Grid.Row="3" VerticalAlignment="Center" Text="Уровень" />
-                <Slider Grid.Row="3" Grid.Column="1" Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding AmplitudeScale}" />
-                <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding AmplitudeScale, StringFormat=F2}" />
-                <TextBlock Grid.Row="4" VerticalAlignment="Center" Text="Пакетный режим" />
-                <CheckBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding IsAuxiliaryEnabled}" />
-            </Grid>
-        </DataTemplate>
-    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="390" />
+            <ColumnDefinition Width="430" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Margin="18" Padding="20" CornerRadius="16">
-            <DockPanel LastChildFill="True">
-                <StackPanel DockPanel.Dock="Top">
-                    <TextBlock FontSize="28" FontWeight="SemiBold" Text="Параметры узла" />
-                    <Border Margin="0,10,0,0" Padding="10" CornerRadius="10">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontWeight="SemiBold" Text="Модельное время: " />
-                            <TextBlock Text="{Binding SimulationTimeSeconds, StringFormat={}{0:F2} с}" />
-                        </StackPanel>
-                    </Border>
-                </StackPanel>
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <StackPanel>
-                        <UniformGrid Columns="2" Margin="0,14,0,12">
-                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Скорость, км/ч" />
-                            <TextBox Margin="0,0,0,6" Text="{Binding WagonSpeedKilometersPerHour, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Диаметр колеса, мм" />
-                            <TextBox Margin="0,0,0,6" Text="{Binding WheelDiameterMillimeters, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Нагрузка на ось, кН" />
-                            <TextBox Margin="0,0,0,6" Text="{Binding AxleLoadKilonewtons, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Средний диаметр подшипника, мм" />
-                            <TextBox Margin="0,0,0,6" Text="{Binding BearingPitchDiameterMillimeters, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Диаметр тела качения, мм" />
-                            <TextBox Margin="0,0,0,6" Text="{Binding RollingElementDiameterMillimeters, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Количество тел качения" />
-                            <TextBox Margin="0,0,0,6" Text="{Binding RollingElementCount, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Контактный угол, °" />
-                            <TextBox Margin="0,0,0,6" Text="{Binding ContactAngleDegrees, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Частота дискретизации, Гц" />
-                            <TextBox Margin="0,0,0,6" Text="{Binding SampleRate, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Окно сигнала, с" />
-                            <TextBox Margin="0,0,0,6" Text="{Binding DurationSeconds, UpdateSourceTrigger=PropertyChanged}" />
-                        </UniformGrid>
-                        <TextBlock Margin="0,10,0,10" FontSize="20" FontWeight="SemiBold" Text="Источники сигнала" />
-                        <Grid Margin="0,0,0,12">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="160" />
-                                <ColumnDefinition Width="10" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <ListBox Grid.Column="0" MinHeight="210" SelectedItem="{Binding SelectedSignalSource}" ItemsSource="{Binding Sources}">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <DockPanel LastChildFill="True">
-                                            <CheckBox Margin="0,0,8,0" VerticalAlignment="Center" IsChecked="{Binding IsEnabled}" />
-                                            <TextBlock VerticalAlignment="Center" Text="{Binding DisplayName}" />
-                                        </DockPanel>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-                            <Border Grid.Column="2" Padding="12" CornerRadius="12">
-                                <ContentControl Content="{Binding SelectedSignalSource}">
-                                    <ContentControl.Style>
-                                        <Style TargetType="ContentControl">
-                                            <Setter Property="ContentTemplate" Value="{StaticResource WheelRotationSourceTemplate}" />
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding SelectedSignalSource.SourceType}" Value="{x:Static models:SignalSourceType.WheelRotation}">
-                                                    <Setter Property="ContentTemplate" Value="{StaticResource WheelRotationSourceTemplate}" />
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding SelectedSignalSource.SourceType}" Value="{x:Static models:SignalSourceType.TrackExcitation}">
-                                                    <Setter Property="ContentTemplate" Value="{StaticResource TrackExcitationSourceTemplate}" />
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding SelectedSignalSource.SourceType}" Value="{x:Static models:SignalSourceType.StructuralResonance}">
-                                                    <Setter Property="ContentTemplate" Value="{StaticResource StructuralResonanceSourceTemplate}" />
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding SelectedSignalSource.SourceType}" Value="{x:Static models:SignalSourceType.DefectImpulses}">
-                                                    <Setter Property="ContentTemplate" Value="{StaticResource DefectImpulsesSourceTemplate}" />
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding SelectedSignalSource.SourceType}" Value="{x:Static models:SignalSourceType.MeasurementNoise}">
-                                                    <Setter Property="ContentTemplate" Value="{StaticResource MeasurementNoiseSourceTemplate}" />
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </ContentControl.Style>
-                                </ContentControl>
-                            </Border>
-                        </Grid>
-                        <TextBlock Margin="0,10,0,10" FontSize="20" FontWeight="SemiBold" Text="Дефекты подшипника" />
-                        <ItemsControl ItemsSource="{Binding Faults}">
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <Border Margin="0,0,0,10" Padding="12" CornerRadius="12">
-                                        <StackPanel>
-                                            <CheckBox FontWeight="SemiBold" IsChecked="{Binding IsEnabled}" Content="{Binding DisplayName}" />
-                                            <Grid Margin="0,10,0,0" Visibility="{Binding IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="Auto" />
-                                                    <RowDefinition Height="Auto" />
-                                                </Grid.RowDefinitions>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="120" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="56" />
-                                                </Grid.ColumnDefinitions>
-                                                <TextBlock VerticalAlignment="Center" Text="Тяжесть" />
-                                                <Slider Grid.Column="1" Minimum="0" Maximum="1" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding Severity}" />
-                                                <TextBlock Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Severity, StringFormat=F2}" />
-                                                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Ударность" />
-                                                <Slider Grid.Row="1" Grid.Column="1" Minimum="0.05" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding ImpactFactor}" />
-                                                <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding ImpactFactor, StringFormat=F2}" />
-                                            </Grid>
-                                        </StackPanel>
-                                    </Border>
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
-                        <UniformGrid Margin="0,12,0,0" Columns="3">
-                            <Button Margin="0,0,8,0" Padding="12,10" Command="{Binding ToggleStreamingCommand}" Content="{Binding ToggleStreamingButtonText}" />
-                            <Button Margin="8,0,8,0" Padding="12,10" Command="{Binding RestartCommand}" Content="Перезапустить поток" />
-                            <Button Margin="8,0,0,0" Padding="12,10" Command="{Binding ResetCommand}" Content="Сбросить параметры" />
-                        </UniformGrid>
-                    </StackPanel>
-                </ScrollViewer>
-            </DockPanel>
-        </Border>
+        <Grid Grid.Column="0" Margin="18">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="240" />
+                <RowDefinition Height="12" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Padding="14" CornerRadius="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock FontSize="22" FontWeight="SemiBold" Text="Источники сигнала" />
+                    <ListBox
+                        Grid.Row="1"
+                        Margin="0,12,0,0"
+                        ItemsSource="{Binding Sources}"
+                        SelectedItem="{Binding SelectedSignalSource}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <DockPanel LastChildFill="True">
+                                    <CheckBox
+                                        Margin="0,0,8,0"
+                                        VerticalAlignment="Center"
+                                        IsChecked="{Binding IsEnabled}" />
+                                    <TextBlock VerticalAlignment="Center" Text="{Binding DisplayName}" />
+                                </DockPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
+            <controls:SignalSourceEditorControl
+                Grid.Row="2"
+                Source="{Binding SelectedSignalSource}"
+                Faults="{Binding Faults}" />
+        </Grid>
         <Grid Grid.Column="1" Margin="0,18,18,18">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Border Grid.Row="0" Margin="0,0,0,14" Padding="18" CornerRadius="16">
                 <StackPanel>
-                    <TextBlock FontSize="26" FontWeight="SemiBold" Text="Трёхкоординатный сигнал акселерометра" />
+                    <DockPanel LastChildFill="False">
+                        <TextBlock FontSize="26" FontWeight="SemiBold" Text="Трёхкоординатный сигнал акселерометра" />
+                        <Button Margin="16,0,0,0" Padding="12,6" Command="{Binding ToggleStreamingCommand}" Content="{Binding ToggleStreamingButtonText}" />
+                        <Button Margin="8,0,0,0" Padding="12,6" Command="{Binding RestartCommand}" Content="Перезапустить" />
+                    </DockPanel>
                     <TextBlock Margin="0,8,0,0" TextWrapping="Wrap" Text="{Binding Summary}" />
                 </StackPanel>
             </Border>
