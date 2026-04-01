@@ -1,10 +1,13 @@
-﻿<Window
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
     x:Class="Simargl.FlawDetector.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="clr-namespace:Simargl.FlawDetector.Controls"
+    xmlns:sourceEditors="clr-namespace:Simargl.FlawDetector.Controls.SourceEditors"
+    xmlns:sourceViewModels="clr-namespace:Simargl.FlawDetector.ViewModels.Sources"
     mc:Ignorable="d"
     Title="Симулятор дефектов буксового подшипника"
     Width="1440"
@@ -12,6 +15,23 @@
     MinWidth="1200"
     MinHeight="780"
     WindowState="Maximized">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type sourceViewModels:WheelRotationSignalSourceViewModel}">
+            <sourceEditors:WheelRotationSignalSourceEditorControl />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type sourceViewModels:TrackExcitationSignalSourceViewModel}">
+            <sourceEditors:TrackExcitationSignalSourceEditorControl />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type sourceViewModels:StructuralResonanceSignalSourceViewModel}">
+            <sourceEditors:StructuralResonanceSignalSourceEditorControl />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type sourceViewModels:DefectImpulseSignalSourceViewModel}">
+            <sourceEditors:DefectImpulseSignalSourceEditorControl Faults="{Binding DataContext.Faults, RelativeSource={RelativeSource AncestorType=Window}}" />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type sourceViewModels:MeasurementNoiseSignalSourceViewModel}">
+            <sourceEditors:MeasurementNoiseSignalSourceEditorControl />
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="430" />
@@ -49,10 +69,9 @@
                     </ListBox>
                 </Grid>
             </Border>
-            <controls:SignalSourceEditorControl
-                Grid.Row="2"
-                Source="{Binding SelectedSignalSource}"
-                Faults="{Binding Faults}" />
+            <Border Grid.Row="2" Padding="14" CornerRadius="16">
+                <ContentControl Content="{Binding SelectedSignalSource}" />
+            </Border>
         </Grid>
         <Grid Grid.Column="1" Margin="0,18,18,18">
             <Grid.RowDefinitions>

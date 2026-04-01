@@ -1,0 +1,20 @@
+﻿<UserControl
+    x:Class="Simargl.FlawDetector.Controls.SourceEditors.TrackExcitationSignalSourceEditorControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="320"
+    d:DesignWidth="360">
+    <StackPanel>
+        <TextBlock FontSize="18" FontWeight="SemiBold" Text="Возбуждение от пути" />
+        <CheckBox Margin="0,10,0,0" Content="Использовать источник" IsChecked="{Binding IsEnabled}" />
+        <TextBlock Margin="0,12,0,0" Text="Тип профиля пути" />
+        <ComboBox SelectedIndex="{Binding ProfileMode}" ItemsSource="{Binding ProfileModes}" />
+        <TextBlock Margin="0,8,0,0" Text="Интенсивность воздействия" />
+        <Slider Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding IntensityScale}" />
+        <TextBlock HorizontalAlignment="Right" Text="{Binding IntensityScale, StringFormat=F2}" />
+        <CheckBox Margin="0,8,0,0" Content="Добавить удары от стыков" IsChecked="{Binding IncludeJointImpacts}" />
+    </StackPanel>
+</UserControl>

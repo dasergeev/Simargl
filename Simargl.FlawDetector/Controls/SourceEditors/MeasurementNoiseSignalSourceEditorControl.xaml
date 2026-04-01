@@ -1,0 +1,20 @@
+﻿<UserControl
+    x:Class="Simargl.FlawDetector.Controls.SourceEditors.MeasurementNoiseSignalSourceEditorControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="320"
+    d:DesignWidth="360">
+    <StackPanel>
+        <TextBlock FontSize="18" FontWeight="SemiBold" Text="Измерительный шум" />
+        <CheckBox Margin="0,10,0,0" Content="Использовать источник" IsChecked="{Binding IsEnabled}" />
+        <TextBlock Margin="0,12,0,0" Text="Тип спектра" />
+        <ComboBox SelectedIndex="{Binding SpectrumMode}" ItemsSource="{Binding SpectrumModes}" />
+        <TextBlock Margin="0,8,0,0" Text="Уровень шума" />
+        <Slider Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding NoiseLevel}" />
+        <TextBlock HorizontalAlignment="Right" Text="{Binding NoiseLevel, StringFormat=F2}" />
+        <CheckBox Margin="0,8,0,0" Content="Пакетный режим шума" IsChecked="{Binding PacketMode}" />
+    </StackPanel>
+</UserControl>

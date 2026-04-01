@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="Simargl.FlawDetector.Controls.SourceEditors.DefectImpulseSignalSourceEditorControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="420"
+    d:DesignWidth="360">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" FontSize="18" FontWeight="SemiBold" Text="Импульсы дефектов подшипника" />
+        <CheckBox Grid.Row="1" Margin="0,10,0,0" Content="Использовать источник" IsChecked="{Binding IsEnabled}" />
+        <TextBlock Grid.Row="2" Margin="0,12,0,0" Text="Режим дефектного отклика" />
+        <ComboBox Grid.Row="2" Margin="0,24,0,0" SelectedIndex="{Binding ResponseMode}" ItemsSource="{Binding ResponseModes}" />
+        <TextBlock Grid.Row="3" Margin="0,12,0,0" Text="Энергия импульсов" />
+        <Slider Grid.Row="3" Margin="0,24,0,0" Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding EnergyScale}" />
+        <TextBlock Grid.Row="3" Margin="0,48,0,0" HorizontalAlignment="Right" Text="{Binding EnergyScale, StringFormat=F2}" />
+        <TextBlock Grid.Row="4" Margin="0,12,0,0" Text="Острота импульсов" />
+        <Slider Grid.Row="4" Margin="0,24,0,0" Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding SharpnessScale}" />
+        <TextBlock Grid.Row="4" Margin="0,48,0,0" HorizontalAlignment="Right" Text="{Binding SharpnessScale, StringFormat=F2}" />
+        <ScrollViewer Grid.Row="5" Margin="0,12,0,0" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <CheckBox Margin="0,0,0,8" Content="Добавить боковые полосы модуляции" IsChecked="{Binding IncludeSidebands}" />
+                <TextBlock Margin="0,0,0,8" FontWeight="SemiBold" Text="Параметры дефектов" />
+                <ItemsControl ItemsSource="{Binding Faults, RelativeSource={RelativeSource AncestorType=UserControl}}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="0,0,0,8" Padding="10" CornerRadius="10">
+                                <StackPanel>
+                                    <CheckBox FontWeight="SemiBold" Content="{Binding DisplayName}" IsChecked="{Binding IsEnabled}" />
+                                    <Grid Margin="0,8,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="110" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="52" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock VerticalAlignment="Center" Text="Тяжесть" />
+                                        <Slider Grid.Column="1" Minimum="0" Maximum="1" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding Severity}" />
+                                        <TextBlock Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Severity, StringFormat=F2}" />
+                                        <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Ударность" />
+                                        <Slider Grid.Row="1" Grid.Column="1" Minimum="0.05" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding ImpactFactor}" />
+                                        <TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding ImpactFactor, StringFormat=F2}" />
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

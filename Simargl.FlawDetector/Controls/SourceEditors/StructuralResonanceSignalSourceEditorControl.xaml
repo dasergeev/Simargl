@@ -1,0 +1,20 @@
+﻿<UserControl
+    x:Class="Simargl.FlawDetector.Controls.SourceEditors.StructuralResonanceSignalSourceEditorControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="320"
+    d:DesignWidth="360">
+    <StackPanel>
+        <TextBlock FontSize="18" FontWeight="SemiBold" Text="Структурный резонанс" />
+        <CheckBox Margin="0,10,0,0" Content="Использовать источник" IsChecked="{Binding IsEnabled}" />
+        <TextBlock Margin="0,12,0,0" Text="Резонансный контур" />
+        <ComboBox SelectedIndex="{Binding ResonanceMode}" ItemsSource="{Binding ResonanceModes}" />
+        <TextBlock Margin="0,8,0,0" Text="Демпфирование" />
+        <Slider Minimum="0.1" Maximum="4" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding DampingScale}" />
+        <TextBlock HorizontalAlignment="Right" Text="{Binding DampingScale, StringFormat=F2}" />
+        <CheckBox Margin="0,8,0,0" Content="Усилить вклад по оси Z" IsChecked="{Binding EmphasizeVerticalAxis}" />
+    </StackPanel>
+</UserControl>
