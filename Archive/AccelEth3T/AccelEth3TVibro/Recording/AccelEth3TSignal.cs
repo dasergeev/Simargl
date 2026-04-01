@@ -57,7 +57,7 @@ public sealed class AccelEth3TSignal
         Name = name;
 
         //  Создание сигнала.
-        Signal = new(sampling, new(length));
+        Signal = new(sampling, length);
 
         //  Создание спектра.
         Spectrum = new(this);

@@ -415,7 +415,7 @@ public sealed class FrameCollector
                 //  Создание канала.
                 Channel channel = new(
                     new TestLabChannelHeader(item.Name, "g", 0.25 * sampling),
-                    new Signal(sampling, new Vector<double>(data)));
+                    new Signal(sampling, data));
 
                 //  Добавление канала.
                 channels.Add(channel);
@@ -464,7 +464,7 @@ public sealed class FrameCollector
                 //  Создание канала.
                 Channel channel = new(
                     new TestLabChannelHeader(item.Name, "g", 0.25 * sampling),
-                    new Signal(sampling, new Vector<double>(data)));
+                    new Signal(sampling, data));
 
                 //  Добавление вспомогательного канала.
                 supports.Add(channel);

@@ -1,0 +1,2 @@
+﻿sc.exe create "Simargl.AdxlRecorder" binpath= "C:\Environs\Programs\Simargl.AdxlRecorder\Simargl.AdxlRecorder.exe"
+sc delete "Simargl.AdxlRecorder"

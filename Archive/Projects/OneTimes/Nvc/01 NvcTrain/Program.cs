@@ -400,13 +400,13 @@ async Task workGatner(FileInfo file)
         Frame frame = new();
         frame.Channels.Add(new(
             new TestLabChannelHeader("Time", "s", 0),
-            new(sampleRate, new(time))));
+            new(sampleRate, time)));
 
         for (int j = 0; j < variableCount; j++)
         {
             frame.Channels.Add(new(
                 new TestLabChannelHeader(data[j].Name, data[j].Unit, 0),
-                new(sampleRate, new(data[j].Data))));
+                new(sampleRate, data[j].Data)));
         }
 
 

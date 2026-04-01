@@ -1,4 +1,5 @@
-﻿using Simargl.Analysis;
+﻿using Simargl.Algebra;
+using Simargl.Analysis;
 using System.Collections.Concurrent;
 using System.Linq;
 
@@ -207,7 +208,7 @@ public sealed class AccelEth3TSpectrum
     {
         //  Возврат подсигнала.
         return new(signal.Signal.Sampling,
-            signal.Signal.Vector.Subvector(signal.Signal.Length - Settings.SpectrumSignalLength));
+            new Vector<double>(signal.Signal.Items).Subvector(signal.Signal.Length - Settings.SpectrumSignalLength).Items);
     }
 
     /// <summary>

@@ -126,9 +126,9 @@ public sealed class SideGroup :
         if (_Device.Packages[synchromarker] is DevicePackage package)
         {
             //  Создание сигналов.
-            Signal signal0 = new(2000, new([.. package.Data0.Select(x => (double)x)]));
-            Signal signal1 = new(2000, new([.. package.Data1.Select(x => (double)x)]));
-            Signal signal2 = new(2000, new([.. package.Data2.Select(x => (double)x)]));
+            Signal signal0 = new(2000, [.. package.Data0.Select(x => (double)x)]);
+            Signal signal1 = new(2000, [.. package.Data1.Select(x => (double)x)]);
+            Signal signal2 = new(2000, [.. package.Data2.Select(x => (double)x)]);
 
             //  Регистрация сигналов.
             Source0.Register(synchromarker, signal0);

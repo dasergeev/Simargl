@@ -1,0 +1,335 @@
+﻿<Window
+    x:Class="Simargl.FlawDetector.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Simargl.FlawDetector.Controls"
+    mc:Ignorable="d"
+    Title="Симулятор дефектов буксового подшипника"
+    Width="1440"
+    Height="920"
+    MinWidth="1200"
+    MinHeight="780"
+    WindowState="Maximized">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="390" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Border
+            Grid.Column="0"
+            Margin="18"
+            Padding="20"
+            CornerRadius="16">
+            <DockPanel LastChildFill="True">
+                <StackPanel DockPanel.Dock="Top">
+                    <TextBlock
+                        FontSize="28"
+                        FontWeight="SemiBold"
+                        Text="Параметры узла" />
+                    <Border
+                        Margin="0,10,0,0"
+                        Padding="10"
+                        CornerRadius="10">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontWeight="SemiBold" Text="Модельное время: " />
+                            <TextBlock Text="{Binding SimulationTimeSeconds, StringFormat={}{0:F2} с}" />
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <UniformGrid Columns="2" Margin="0,14,0,12">
+                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Скорость, км/ч" />
+                            <TextBox Margin="0,0,0,6" Text="{Binding WagonSpeedKilometersPerHour, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Диаметр колеса, мм" />
+                            <TextBox Margin="0,0,0,6" Text="{Binding WheelDiameterMillimeters, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Нагрузка на ось, кН" />
+                            <TextBox Margin="0,0,0,6" Text="{Binding AxleLoadKilonewtons, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Средний диаметр подшипника, мм" />
+                            <TextBox Margin="0,0,0,6" Text="{Binding BearingPitchDiameterMillimeters, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Диаметр тела качения, мм" />
+                            <TextBox Margin="0,0,0,6" Text="{Binding RollingElementDiameterMillimeters, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Количество тел качения" />
+                            <TextBox Margin="0,0,0,6" Text="{Binding RollingElementCount, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Контактный угол, °" />
+                            <TextBox Margin="0,0,0,6" Text="{Binding ContactAngleDegrees, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Частота дискретизации, Гц" />
+                            <TextBox Margin="0,0,0,6" Text="{Binding SampleRate, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Margin="0,0,8,6" VerticalAlignment="Center" Text="Окно сигнала, с" />
+                            <TextBox Margin="0,0,0,6" Text="{Binding DurationSeconds, UpdateSourceTrigger=PropertyChanged}" />
+                        </UniformGrid>
+                        <TextBlock
+                            Margin="0,10,0,10"
+                            FontSize="20"
+                            FontWeight="SemiBold"
+                            Text="Источники сигнала" />
+                        <ListBox
+                            MinHeight="160"
+                            SelectedItem="{Binding SelectedSignalSource}"
+                            ItemsSource="{Binding Sources}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <DockPanel LastChildFill="True">
+                                        <CheckBox
+                                            Margin="0,0,8,0"
+                                            VerticalAlignment="Center"
+                                            IsChecked="{Binding IsEnabled}" />
+                                        <TextBlock VerticalAlignment="Center" Text="{Binding DisplayName}" />
+                                    </DockPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <Border
+                            Margin="0,10,0,12"
+                            Padding="12"
+                            CornerRadius="12"
+                            DataContext="{Binding SelectedSignalSource}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="132" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="56" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock
+                                    Grid.Row="0"
+                                    Grid.ColumnSpan="3"
+                                    Margin="0,0,0,10"
+                                    FontWeight="SemiBold"
+                                    Text="{Binding DisplayName, TargetNullValue=Выберите источник сигнала}" />
+                                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Использовать" />
+                                <CheckBox
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    HorizontalAlignment="Left"
+                                    IsChecked="{Binding IsEnabled}" />
+                                <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Амплитуда" />
+                                <Slider
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Minimum="0.1"
+                                    Maximum="4"
+                                    TickFrequency="0.1"
+                                    IsSnapToTickEnabled="False"
+                                    Value="{Binding AmplitudeScale}" />
+                                <TextBlock
+                                    Grid.Row="2"
+                                    Grid.Column="2"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding AmplitudeScale, StringFormat=F2}" />
+                                <TextBlock Grid.Row="3" VerticalAlignment="Center" Text="Частота" />
+                                <Slider
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Minimum="0.25"
+                                    Maximum="4"
+                                    TickFrequency="0.05"
+                                    IsSnapToTickEnabled="False"
+                                    Value="{Binding FrequencyScale}" />
+                                <TextBlock
+                                    Grid.Row="3"
+                                    Grid.Column="2"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding FrequencyScale, StringFormat=F2}" />
+                            </Grid>
+                        </Border>
+                        <TextBlock
+                            Margin="0,10,0,10"
+                            FontSize="20"
+                            FontWeight="SemiBold"
+                            Text="Дефекты подшипника" />
+                        <ItemsControl ItemsSource="{Binding Faults}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border
+                                        Margin="0,0,0,10"
+                                        Padding="12"
+                                        CornerRadius="12">
+                                        <StackPanel>
+                                            <CheckBox
+                                                FontWeight="SemiBold"
+                                                IsChecked="{Binding IsEnabled}"
+                                                Content="{Binding DisplayName}" />
+                                            <Grid
+                                                Margin="0,10,0,0"
+                                                Visibility="{Binding IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="120" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="56" />
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock VerticalAlignment="Center" Text="Тяжесть" />
+                                                <Slider
+                                                    Grid.Column="1"
+                                                    Minimum="0"
+                                                    Maximum="1"
+                                                    TickFrequency="0.1"
+                                                    IsSnapToTickEnabled="False"
+                                                    Value="{Binding Severity}" />
+                                                <TextBlock
+                                                    Grid.Column="2"
+                                                    HorizontalAlignment="Right"
+                                                    VerticalAlignment="Center"
+                                                    Text="{Binding Severity, StringFormat=F2}" />
+                                                <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="Ударность" />
+                                                <Slider
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"
+                                                    Minimum="0.05"
+                                                    Maximum="4"
+                                                    TickFrequency="0.1"
+                                                    IsSnapToTickEnabled="False"
+                                                    Value="{Binding ImpactFactor}" />
+                                                <TextBlock
+                                                    Grid.Row="1"
+                                                    Grid.Column="2"
+                                                    HorizontalAlignment="Right"
+                                                    VerticalAlignment="Center"
+                                                    Text="{Binding ImpactFactor, StringFormat=F2}" />
+                                            </Grid>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <UniformGrid Margin="0,12,0,0" Columns="3">
+                            <Button
+                                Margin="0,0,8,0"
+                                Padding="12,10"
+                                Command="{Binding ToggleStreamingCommand}"
+                                Content="{Binding ToggleStreamingButtonText}" />
+                            <Button
+                                Margin="8,0,8,0"
+                                Padding="12,10"
+                                Command="{Binding RestartCommand}"
+                                Content="Перезапустить поток" />
+                            <Button
+                                Margin="8,0,0,0"
+                                Padding="12,10"
+                                Command="{Binding ResetCommand}"
+                                Content="Сбросить параметры" />
+                        </UniformGrid>
+                    </StackPanel>
+                </ScrollViewer>
+            </DockPanel>
+        </Border>
+        <Grid Grid.Column="1" Margin="0,18,18,18">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Border
+                Grid.Row="0"
+                Margin="0,0,0,14"
+                Padding="18"
+                CornerRadius="16">
+                <StackPanel>
+                    <TextBlock
+                        FontSize="26"
+                        FontWeight="SemiBold"
+                        Text="Трёхкоординатный сигнал акселерометра" />
+                    <TextBlock
+                        Margin="0,8,0,0"
+                        TextWrapping="Wrap"
+                        Text="{Binding Summary}" />
+                </StackPanel>
+            </Border>
+            <Border
+                Grid.Row="1"
+                Margin="0,0,0,14"
+                Padding="14"
+                CornerRadius="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <DockPanel Grid.Row="0" Margin="0,0,0,10">
+                        <TextBlock
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            Text="Ось X" />
+                        <TextBlock
+                            Margin="12,2,0,0"
+                            Text="{Binding XAxis.PeakAcceleration, StringFormat=Пик {0:F2} g}" />
+                    </DockPanel>
+                    <controls:SignalPlotControl
+                        Grid.Row="1"
+                        Background="Transparent"
+                        Foreground="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                        Series="{Binding XAxis}" />
+                </Grid>
+            </Border>
+            <Border
+                Grid.Row="2"
+                Margin="0,0,0,14"
+                Padding="14"
+                CornerRadius="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <DockPanel Grid.Row="0" Margin="0,0,0,10">
+                        <TextBlock
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            Text="Ось Y" />
+                        <TextBlock
+                            Margin="12,2,0,0"
+                            Text="{Binding YAxis.PeakAcceleration, StringFormat=Пик {0:F2} g}" />
+                    </DockPanel>
+                    <controls:SignalPlotControl
+                        Grid.Row="1"
+                        Background="Transparent"
+                        Foreground="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                        Series="{Binding YAxis}" />
+                </Grid>
+            </Border>
+            <Border
+                Grid.Row="3"
+                Padding="14"
+                CornerRadius="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <DockPanel Grid.Row="0" Margin="0,0,0,10">
+                        <TextBlock
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            Text="Ось Z" />
+                        <TextBlock
+                            Margin="12,2,0,0"
+                            Text="{Binding ZAxis.PeakAcceleration, StringFormat=Пик {0:F2} g}" />
+                    </DockPanel>
+                    <controls:SignalPlotControl
+                        Grid.Row="1"
+                        Background="Transparent"
+                        Foreground="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                        Series="{Binding ZAxis}" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
