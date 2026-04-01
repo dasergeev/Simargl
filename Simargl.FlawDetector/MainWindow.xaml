@@ -92,7 +92,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="12" />
-                <RowDefinition Height="260" MinHeight="180" />
+                <RowDefinition Height="*" MinHeight="180" />
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
