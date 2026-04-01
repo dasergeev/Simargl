@@ -58,11 +58,11 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
         this.statusText = string.Empty; // Инициализирует пустой текст состояния.
         Sources = new ObservableCollection<SignalSourceViewModel> // Создаёт коллекцию редактируемых источников сигнала.
         { // Начинает инициализацию коллекции источников.
-            new SignalSourceViewModel(SignalSourceType.WheelRotation, "Вращение колесной пары", 1d, 1d), // Добавляет источник базовой вибрации от вращения.
-            new SignalSourceViewModel(SignalSourceType.TrackExcitation, "Возбуждение от пути", 1d, 1d), // Добавляет источник низкочастотного возбуждения от пути.
-            new SignalSourceViewModel(SignalSourceType.StructuralResonance, "Структурный резонанс тележки", 0.9d, 1d), // Добавляет источник структурного резонанса.
-            new SignalSourceViewModel(SignalSourceType.DefectImpulses, "Импульсы дефектов подшипника", 1d, 1d), // Добавляет источник импульсов от дефектов.
-            new SignalSourceViewModel(SignalSourceType.MeasurementNoise, "Измерительный шум датчика", 1d, 1d), // Добавляет источник измерительного шума.
+            new SignalSourceViewModel(SignalSourceType.WheelRotation, "Вращение колесной пары", 1d, 1d, 1.4d, 1, true), // Добавляет источник базовой вибрации от вращения.
+            new SignalSourceViewModel(SignalSourceType.TrackExcitation, "Возбуждение от пути", 1d, 1d, 0.8d, 0, true), // Добавляет источник низкочастотного возбуждения от пути.
+            new SignalSourceViewModel(SignalSourceType.StructuralResonance, "Структурный резонанс тележки", 0.9d, 1d, 0.7d, 0, true), // Добавляет источник структурного резонанса.
+            new SignalSourceViewModel(SignalSourceType.DefectImpulses, "Импульсы дефектов подшипника", 1d, 1d, 1.8d, 1, true), // Добавляет источник импульсов от дефектов.
+            new SignalSourceViewModel(SignalSourceType.MeasurementNoise, "Измерительный шум датчика", 1d, 1d, 0.6d, 0, false), // Добавляет источник измерительного шума.
         }; // Завершает инициализацию коллекции источников.
         Faults = new ObservableCollection<FaultDefinitionViewModel> // Создаёт коллекцию редактируемых дефектов.
         { // Начинает инициализацию коллекции дефектов.
@@ -413,3 +413,4 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
         StartStreaming(); // Запускает потоковую симуляцию после сброса параметров.
     } // Завершает метод сброса параметров.
 } // Завершает тело главной view model.
+

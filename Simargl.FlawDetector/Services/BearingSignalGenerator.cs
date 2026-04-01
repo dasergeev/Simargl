@@ -207,7 +207,7 @@ internal sealed class BearingSignalGenerator // Объявляет сервис 
     /// <returns>Настройки указанного источника сигнала.</returns> // Документирует возвращаемое значение.
     private static SignalSourceDefinition GetSource(SignalGenerationSettings settings, SignalSourceType sourceType) // Объявляет метод получения источника сигнала.
     { // Начинает тело метода получения источника сигнала.
-        return settings.Sources.FirstOrDefault(source => source.SourceType == sourceType) ?? new SignalSourceDefinition(sourceType, sourceType.ToString(), false, 1d, 1d); // Возвращает найденный источник или значение по умолчанию.
+        return settings.Sources.FirstOrDefault(source => source.SourceType == sourceType) ?? new SignalSourceDefinition(sourceType, sourceType.ToString(), false, 1d, 1d, 1d, 0, false); // Возвращает найденный источник или значение по умолчанию.
     } // Завершает метод получения источника сигнала.
 
     /// <summary> // Документирует псевдошум.
@@ -374,6 +374,9 @@ internal sealed class BearingSignalGenerator // Объявляет сервис 
         double Y, // Хранит ускорение по оси Y.
         double Z); // Хранит ускорение по оси Z.
 } // Завершает тело класса сервиса.
+
+
+
 
 
 

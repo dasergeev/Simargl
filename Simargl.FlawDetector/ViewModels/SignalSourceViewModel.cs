@@ -10,6 +10,9 @@ internal sealed class SignalSourceViewModel : ObservableObject // Объявля
     private bool isEnabled; // Хранит признак включения источника.
     private double amplitudeScale; // Хранит масштаб амплитуды источника.
     private double frequencyScale; // Хранит масштаб частоты источника.
+    private double detailScale; // Хранит дополнительный параметр источника.
+    private int modeIndex; // Хранит индекс режима источника.
+    private bool isAuxiliaryEnabled; // Хранит флаг дополнительной опции источника.
 
     /// <summary> // Документирует конструктор.
     /// Инициализирует новую view model источника сигнала. // Уточняет назначение конструктора.
@@ -18,12 +21,19 @@ internal sealed class SignalSourceViewModel : ObservableObject // Объявля
     /// <param name="displayName">Имя источника для интерфейса.</param> // Документирует отображаемое имя.
     /// <param name="defaultAmplitudeScale">Начальный амплитудный масштаб.</param> // Документирует стартовый масштаб амплитуды.
     /// <param name="defaultFrequencyScale">Начальный частотный масштаб.</param> // Документирует стартовый масштаб частоты.
-    public SignalSourceViewModel(SignalSourceType sourceType, string displayName, double defaultAmplitudeScale, double defaultFrequencyScale) // Объявляет конструктор view model.
+    /// <param name="defaultDetailScale">Начальный дополнительный параметр.</param> // Документирует стартовый дополнительный параметр.
+    /// <param name="defaultModeIndex">Начальный режим источника.</param> // Документирует стартовый режим источника.
+    /// <param name="defaultAuxiliaryState">Начальное состояние дополнительной опции.</param> // Документирует стартовое состояние дополнительной опции.
+    public SignalSourceViewModel(SignalSourceType sourceType, string displayName, double defaultAmplitudeScale, double defaultFrequencyScale, double defaultDetailScale, int defaultModeIndex, bool defaultAuxiliaryState) // Объявляет конструктор view model.
     { // Начинает тело конструктора.
         SourceType = sourceType; // Сохраняет тип источника сигнала.
         DisplayName = displayName; // Сохраняет отображаемое имя источника.
+        ModeOptions = CreateModeOptions(sourceType); // Формирует список режимов для данного источника.
         this.amplitudeScale = defaultAmplitudeScale; // Инициализирует амплитудный масштаб.
         this.frequencyScale = defaultFrequencyScale; // Инициализирует частотный масштаб.
+        this.detailScale = defaultDetailScale; // Инициализирует дополнительный параметр.
+        this.modeIndex = Math.Clamp(defaultModeIndex, 0, ModeOptions.Count - 1); // Инициализирует режим источника.
+        this.isAuxiliaryEnabled = defaultAuxiliaryState; // Инициализирует дополнительную опцию.
     } // Завершает тело конструктора.
 
     /// <summary> // Документирует тип источника сигнала.
@@ -35,6 +45,11 @@ internal sealed class SignalSourceViewModel : ObservableObject // Объявля
     /// Получает имя источника сигнала для показа в интерфейсе. // Уточняет значение свойства.
     /// </summary> // Завершает XML-документацию свойства.
     public string DisplayName { get; } // Хранит отображаемое имя источника сигнала.
+
+    /// <summary> // Документирует список режимов.
+    /// Получает набор доступных режимов работы источника сигнала. // Уточняет значение свойства.
+    /// </summary> // Завершает XML-документацию свойства.
+    public IReadOnlyList<string> ModeOptions { get; } // Хранит список доступных режимов источника.
 
     /// <summary> // Документирует признак включения источника.
     /// Получает или задаёт участие источника в генерации сигнала. // Уточняет назначение свойства.
@@ -63,12 +78,57 @@ internal sealed class SignalSourceViewModel : ObservableObject // Объявля
         set => SetProperty(ref this.frequencyScale, Math.Clamp(value, 0.25d, 4d)); // Ограничивает и обновляет частотный масштаб.
     } // Завершает тело свойства частотного масштаба.
 
+    /// <summary> // Документирует дополнительный параметр.
+    /// Получает или задаёт дополнительный параметр источника сигнала. // Уточняет значение свойства.
+    /// </summary> // Завершает XML-документацию свойства.
+    public double DetailScale // Объявляет свойство дополнительного параметра.
+    { // Начинает тело свойства дополнительного параметра.
+        get => this.detailScale; // Возвращает текущий дополнительный параметр.
+        set => SetProperty(ref this.detailScale, Math.Clamp(value, 0.1d, 4d)); // Ограничивает и обновляет дополнительный параметр.
+    } // Завершает тело свойства дополнительного параметра.
+
+    /// <summary> // Документирует индекс режима.
+    /// Получает или задаёт выбранный режим источника сигнала. // Уточняет значение свойства.
+    /// </summary> // Завершает XML-документацию свойства.
+    public int ModeIndex // Объявляет свойство режима источника.
+    { // Начинает тело свойства режима источника.
+        get => this.modeIndex; // Возвращает текущий индекс режима.
+        set => SetProperty(ref this.modeIndex, Math.Clamp(value, 0, ModeOptions.Count - 1)); // Ограничивает и обновляет индекс режима.
+    } // Завершает тело свойства режима источника.
+
+    /// <summary> // Документирует дополнительную опцию.
+    /// Получает или задаёт состояние дополнительной опции источника сигнала. // Уточняет значение свойства.
+    /// </summary> // Завершает XML-документацию свойства.
+    public bool IsAuxiliaryEnabled // Объявляет свойство дополнительной опции.
+    { // Начинает тело свойства дополнительной опции.
+        get => this.isAuxiliaryEnabled; // Возвращает текущее состояние дополнительной опции.
+        set => SetProperty(ref this.isAuxiliaryEnabled, value); // Обновляет состояние дополнительной опции.
+    } // Завершает тело свойства дополнительной опции.
+
     /// <summary> // Документирует экспорт модели.
     /// Создаёт неизменяемую модель источника сигнала для сервиса генерации. // Уточняет назначение метода.
     /// </summary> // Завершает XML-документацию метода.
     /// <returns>Модель источника сигнала для расчёта.</returns> // Документирует возвращаемое значение.
     public SignalSourceDefinition ToModel() // Объявляет метод преобразования во внутреннюю модель.
     { // Начинает тело метода преобразования.
-        return new SignalSourceDefinition(SourceType, DisplayName, IsEnabled, AmplitudeScale, FrequencyScale); // Возвращает модель для генератора.
+        return new SignalSourceDefinition(SourceType, DisplayName, IsEnabled, AmplitudeScale, FrequencyScale, DetailScale, ModeIndex, IsAuxiliaryEnabled); // Возвращает модель для генератора.
     } // Завершает метод преобразования.
+
+    /// <summary> // Документирует построение списка режимов.
+    /// Возвращает набор режимов, допустимых для указанного типа источника. // Уточняет назначение метода.
+    /// </summary> // Завершает XML-документацию метода.
+    /// <param name="sourceType">Тип источника сигнала.</param> // Документирует тип источника.
+    /// <returns>Список режимов для интерфейса.</returns> // Документирует возвращаемое значение.
+    private static IReadOnlyList<string> CreateModeOptions(SignalSourceType sourceType) // Объявляет метод построения списка режимов.
+    { // Начинает тело метода построения списка режимов.
+        return sourceType switch // Выбирает список режимов по типу источника.
+        { // Начинает switch-выражение.
+            SignalSourceType.WheelRotation => ["Синус", "Полигармоника", "Биение"], // Возвращает режимы вращательной вибрации.
+            SignalSourceType.TrackExcitation => ["Стык", "Гофра", "Случайный профиль"], // Возвращает режимы возбуждения от пути.
+            SignalSourceType.StructuralResonance => ["Рама", "Букса", "Тележка"], // Возвращает режимы структурного резонанса.
+            SignalSourceType.DefectImpulses => ["Широкополосный", "Резонансный", "Модулированный"], // Возвращает режимы дефектных импульсов.
+            SignalSourceType.MeasurementNoise => ["Белый", "Розовый", "Полосовой"], // Возвращает режимы измерительного шума.
+            _ => ["Базовый"], // Возвращает запасной список режимов.
+        }; // Завершает switch-выражение.
+    } // Завершает метод построения списка режимов.
 } // Завершает тело view model источника сигнала.
