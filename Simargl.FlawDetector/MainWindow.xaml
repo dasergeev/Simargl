@@ -83,6 +83,21 @@
                     <StackPanel>
                         <TextBlock FontSize="22" FontWeight="SemiBold" Text="Параметры модели" />
                         <Border Margin="0,12,0,0" Padding="12" CornerRadius="12">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                    <Style.Triggers>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition Binding="{Binding Sources[0].IsEnabled}" Value="False" />
+                                                <Condition Binding="{Binding Sources[1].IsEnabled}" Value="False" />
+                                                <Condition Binding="{Binding Sources[3].IsEnabled}" Value="False" />
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </MultiDataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
@@ -101,6 +116,19 @@
                             </Grid>
                         </Border>
                         <Border Margin="0,12,0,0" Padding="12" CornerRadius="12">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                    <Style.Triggers>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition Binding="{Binding Sources[3].IsEnabled}" Value="False" />
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </MultiDataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
@@ -128,6 +156,23 @@
                             </Grid>
                         </Border>
                         <Border Margin="0,12,0,0" Padding="12" CornerRadius="12">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                    <Style.Triggers>
+                                        <MultiDataTrigger>
+                                            <MultiDataTrigger.Conditions>
+                                                <Condition Binding="{Binding Sources[0].IsEnabled}" Value="False" />
+                                                <Condition Binding="{Binding Sources[1].IsEnabled}" Value="False" />
+                                                <Condition Binding="{Binding Sources[2].IsEnabled}" Value="False" />
+                                                <Condition Binding="{Binding Sources[3].IsEnabled}" Value="False" />
+                                                <Condition Binding="{Binding Sources[4].IsEnabled}" Value="False" />
+                                            </MultiDataTrigger.Conditions>
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </MultiDataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
