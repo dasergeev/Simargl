@@ -32,6 +32,9 @@
         <DataTemplate DataType="{x:Type sourceViewModels:MeasurementNoiseSignalSourceViewModel}">
             <sourceEditors:MeasurementNoiseSignalSourceEditorControl />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type sourceViewModels:RealSensorSignalSourceViewModel}">
+            <sourceEditors:RealSensorSignalSourceEditorControl />
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -205,6 +208,9 @@
                         <Border Margin="0,12,0,0" Padding="12" CornerRadius="12" Visibility="{Binding Sources[4].IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <sourceEditors:MeasurementNoiseSignalSourceEditorControl DataContext="{Binding Sources[4]}" />
                         </Border>
+                        <Border Margin="0,12,0,0" Padding="12" CornerRadius="12" Visibility="{Binding Sources[5].IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <sourceEditors:RealSensorSignalSourceEditorControl DataContext="{Binding Sources[5]}" />
+                        </Border>
                     </StackPanel>
                 </ScrollViewer>
             </Border>
@@ -290,7 +296,9 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" MinHeight="120" />
+                        <RowDefinition Height="8" />
+                        <RowDefinition Height="180" MinHeight="120" />
                     </Grid.RowDefinitions>
                     <TextBlock FontSize="20" FontWeight="SemiBold" Text="Область дальнейшего анализа" />
                     <Border
@@ -307,8 +315,27 @@
                                 Text="Здесь будет размещён функционал анализа сигнала" />
                         </Grid>
                     </Border>
+                    <GridSplitter
+                        Grid.Row="2"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        ResizeDirection="Rows"
+                        ResizeBehavior="PreviousAndNext"
+                        ShowsPreview="True" />
+                    <ListBox
+                        x:Name="LogListBox"
+                        Grid.Row="3"
+                        Margin="0,12,0,0"
+                        Padding="0"
+                        ItemsSource="{Binding LogEntries}"
+                        BorderThickness="0"
+                        Background="Transparent"
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" />
                 </Grid>
             </Border>
         </Grid>
     </Grid>
 </Window>
+
+

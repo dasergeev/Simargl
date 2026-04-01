@@ -1,0 +1,27 @@
+﻿<UserControl
+    x:Class="Simargl.FlawDetector.Controls.SourceEditors.RealSensorSignalSourceEditorControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="360">
+    <StackPanel>
+        <TextBlock FontSize="18" FontWeight="SemiBold" Text="Реальный датчик TCP" />
+        <CheckBox Margin="0,10,0,0" Content="Использовать источник" IsChecked="{Binding IsEnabled}" />
+        <TextBlock Margin="0,12,0,0" Text="Буфер, с" />
+        <TextBox Text="{Binding BufferDurationSeconds}" />
+        <TextBlock Margin="0,8,0,0" Text="Масштаб реального сигнала" />
+        <Slider Minimum="0.1" Maximum="8" TickFrequency="0.1" IsSnapToTickEnabled="False" Value="{Binding AmplitudeScale}" />
+        <TextBlock HorizontalAlignment="Right" Text="{Binding AmplitudeScale, StringFormat=F2}" />
+        <CheckBox Margin="0,8,0,0" Content="Проверять CRC32" IsChecked="{Binding ValidateChecksum}" />
+        <Separator Margin="0,10,0,10" />
+        <TextBlock FontWeight="SemiBold" Text="Состояние подключения" />
+        <TextBlock Margin="0,6,0,0" TextWrapping="Wrap" Text="{Binding ConnectionStatus}" />
+        <TextBlock Margin="0,6,0,0" TextWrapping="Wrap" Text="{Binding ActiveClientEndpoint, StringFormat=Клиент: {0}}" />
+        <TextBlock Margin="0,6,0,0" Text="{Binding FramesReceived, StringFormat=Кадров принято: {0}}" />
+        <TextBlock Margin="0,4,0,0" Text="{Binding SamplesReceived, StringFormat=Отсчётов принято: {0}}" />
+    </StackPanel>
+</UserControl>
+
