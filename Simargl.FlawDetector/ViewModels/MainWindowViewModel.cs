@@ -39,6 +39,8 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
     private bool suppressSourceSynchronization; // Хранит признак временного подавления реакции на промежуточные изменения источников.
     private double simulationTimeSeconds; // Хранит текущее модельное время потока.
     private ISignalSourceViewModel? selectedSignalSource; // Хранит выбранный в списке источник сигнала.
+    private bool isLogPaused; // Хранит признак приостановки видимого обновления журнала.
+    private string logText; // Хранит видимый текст журнала.
 
     /// <summary> // Документирует конструктор.
     /// Инициализирует главную view model окна с параметрами симуляции по умолчанию. // Уточняет назначение конструктора.
@@ -66,6 +68,7 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
         this.durationSeconds = 2.2d; // Устанавливает длительность окна по умолчанию.
         this.summary = "Сводка симуляции будет показана после запуска потока."; // Инициализирует текст сводки.
         this.statusText = string.Empty; // Инициализирует пустой текст состояния.
+        this.logText = string.Empty; // Инициализирует пустой видимый журнал.
         Sources = new ObservableCollection<ISignalSourceViewModel> // Создаёт коллекцию редактируемых источников сигнала.
         { // Начинает инициализацию коллекции источников.
             new WheelRotationSignalSourceViewModel(), // Добавляет источник базовой вибрации от вращения.
@@ -96,6 +99,7 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
 
         RestartCommand = new RelayCommand(RestartSimulation); // Создаёт команду перезапуска потока.
         ToggleStreamingCommand = new RelayCommand(ToggleStreaming); // Создаёт команду запуска и остановки потока.
+        ToggleLogPauseCommand = new RelayCommand(ToggleLogPause); // Создаёт команду приостановки обновления журнала.
         ResetCommand = new RelayCommand(ResetDefaults); // Создаёт команду сброса настроек.
         ResetDefaults(); // Устанавливает стартовый сценарий и запускает поток.
     } // Завершает тело конструктора.
@@ -109,6 +113,30 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
     /// Gets the bounded log of actions, errors, and network events. // Clarifies the property meaning.
     /// </summary> // Ends XML documentation.
     public ObservableCollection<string> LogEntries { get; } = []; // Stores a bounded UI log.
+
+    /// <summary> // Документирует состояние паузы журнала.
+    /// Получает признак приостановки обновления видимого текста журнала. // Уточняет значение свойства.
+    /// </summary> // Завершает XML-документацию свойства.
+    public bool IsLogPaused // Объявляет свойство паузы журнала.
+    { // Начинает тело свойства паузы журнала.
+        get => this.isLogPaused; // Возвращает текущий признак паузы журнала.
+        private set // Объявляет сеттер свойства паузы журнала.
+        { // Начинает тело сеттера свойства паузы журнала.
+            if (SetProperty(ref this.isLogPaused, value)) // Проверяет факт изменения состояния паузы журнала.
+            { // Начинает ветку обновления зависимых свойств журнала.
+                OnPropertyChanged(nameof(LogPauseButtonText)); // Обновляет подпись кнопки управления журналом.
+            } // Завершает ветку обновления зависимых свойств журнала.
+        } // Завершает тело сеттера свойства паузы журнала.
+    } // Завершает тело свойства паузы журнала.
+
+    /// <summary> // Документирует текст журнала.
+    /// Получает текст, отображаемый в области журнала. // Уточняет значение свойства.
+    /// </summary> // Завершает XML-документацию свойства.
+    public string LogText // Объявляет свойство видимого текста журнала.
+    { // Начинает тело свойства видимого текста журнала.
+        get => this.logText; // Возвращает текущий видимый текст журнала.
+        private set => SetProperty(ref this.logText, value); // Обновляет текущий видимый текст журнала.
+    } // Завершает тело свойства видимого текста журнала.
 
     /// <summary> // Документирует выбранный источник сигнала.
     /// Получает или задаёт источник сигнала, выбранный в отдельном списке параметров. // Уточняет значение свойства.
@@ -279,6 +307,11 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
     /// </summary> // Завершает XML-документацию свойства.
     public string ToggleStreamingButtonText => IsStreaming ? "Остановить поток" : "Запустить поток"; // Возвращает подпись кнопки потока.
 
+    /// <summary> // Документирует подпись кнопки журнала.
+    /// Получает текст кнопки приостановки или возобновления обновления журнала. // Уточняет значение свойства.
+    /// </summary> // Завершает XML-документацию свойства.
+    public string LogPauseButtonText => IsLogPaused ? "Продолжить" : "Пауза"; // Возвращает подпись кнопки управления журналом.
+
     /// <summary> // Документирует команду перезапуска.
     /// Получает команду перезапуска потоковой симуляции с текущими настройками. // Уточняет назначение свойства.
     /// </summary> // Завершает XML-документацию свойства.
@@ -293,6 +326,29 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
     /// Получает команду возврата настроек к типовым значениям. // Уточняет назначение свойства.
     /// </summary> // Завершает XML-документацию свойства.
     public ICommand ResetCommand { get; } // Хранит команду сброса настроек.
+
+    /// <summary> // Документирует команду управления журналом.
+    /// Получает команду приостановки или возобновления обновления журнала. // Уточняет назначение свойства.
+    /// </summary> // Завершает XML-документацию свойства.
+    public ICommand ToggleLogPauseCommand { get; } // Хранит команду управления журналом.
+
+    /// <summary> // Документирует переключение потока.
+    /// Запускает или останавливает потоковую симуляцию в зависимости от текущего состояния. // Уточняет назначение метода.
+    /// </summary> // Завершает XML-документацию метода.
+    private void ToggleLogPause() // Объявляет метод переключения паузы журнала.
+    { // Начинает тело метода переключения паузы журнала.
+        IsLogPaused = !IsLogPaused; // Переключает текущее состояние паузы журнала.
+
+        if (IsLogPaused) // Проверяет, был ли журнал переведён в режим паузы.
+        { // Начинает ветку включения паузы журнала.
+            AppendLog("Обновление журнала приостановлено."); // Добавляет запись о включении паузы журнала.
+        } // Завершает ветку включения паузы журнала.
+        else // Обрабатывает возобновление обновления журнала.
+        { // Начинает ветку выключения паузы журнала.
+            RefreshVisibleLog(); // Восстанавливает полный видимый текст журнала после паузы.
+            AppendLog("Обновление журнала возобновлено."); // Добавляет запись о возобновлении журнала.
+        } // Завершает ветку выключения паузы журнала.
+    } // Завершает метод переключения паузы журнала.
 
     /// <summary> // Документирует переключение потока.
     /// Запускает или останавливает потоковую симуляцию в зависимости от текущего состояния. // Уточняет назначение метода.
@@ -379,8 +435,16 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
     /// </summary> // Завершает XML-документацию метода.
     private void RenderCurrentWindow() // Объявляет метод отрисовки текущего окна.
     { // Начинает тело метода отрисовки окна.
-        SignalGenerationSettings settings = CreateSettingsSnapshot(); // Создаёт снимок текущих настроек симуляции.
-        SimulationResult result = this.generator.GenerateWindow(settings, SimulationTimeSeconds); // Выполняет расчёт текущего временного окна.
+        SignalGenerationSettings settings = CreateSettingsSnapshot(); // ??????? ?????? ??????? ???????? ?????????.
+        bool realSensorEnabled = Sources.OfType<RealSensorSignalSourceViewModel>().Any(static source => source.IsEnabled); // ?????????, ???????????? ?? ???????? ?????? ? ??????? ????????????.
+        double windowEndTimeSeconds = SimulationTimeSeconds; // ?????????????? ????? ????? ???? ??????? ????????? ????????.
+        if (realSensorEnabled && this.realSensorService.LatestSampleTimeSeconds > 0d) // ????????? ??????? ?????????? ?????? ????????? ???????.
+        { // ???????? ????? ????????????? ???? ?? ????????? ???????.
+            windowEndTimeSeconds = Math.Max(settings.DurationSeconds, this.realSensorService.LatestSampleTimeSeconds); // ??????????? ????? ???? ? ?????????? ??????? ????????? ???????.
+            SimulationTimeSeconds = windowEndTimeSeconds; // ?????????????? ????????? ????? ? ????????? ???? ????????? ???????.
+        } // ????????? ????? ????????????? ???? ?? ????????? ???????.
+
+        SimulationResult result = this.generator.GenerateWindow(settings, windowEndTimeSeconds); // ????????? ?????? ???????? ?????????? ????.
         XAxis = result.XAxis; // Обновляет график оси X.
         YAxis = result.YAxis; // Обновляет график оси Y.
         ZAxis = result.ZAxis; // Обновляет график оси Z.
@@ -414,6 +478,8 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
     { // Начинает тело метода сброса.
         this.suppressSourceSynchronization = true; // Временно отключает реакцию на промежуточные изменения источников.
         LogEntries.Clear(); // Clears old log entries before applying defaults.
+        IsLogPaused = false; // Возобновляет обновление журнала после сброса.
+        LogText = string.Empty; // Очищает видимый текст журнала перед новым заполнением.
         AppendLog("Выполняется сброс модели к типовым значениям."); // Writes a reset-start message to the log.
         WagonSpeedKilometersPerHour = 78d; // Возвращает типовую скорость вагона.
         WheelDiameterMillimeters = 920d; // Возвращает типовой диаметр колеса.
@@ -534,27 +600,42 @@ internal sealed class MainWindowViewModel : ObservableObject // Объявляе
         AppendLog(message); // Adds the sensor message to the shared log.
     } // Ends the handler body.
 
+    /// <summary> // Документирует обновление видимого текста журнала.
+    /// Пересобирает текст журнала из ограниченной коллекции записей. // Уточняет назначение метода.
+    /// </summary> // Завершает XML-документацию метода.
+    private void RefreshVisibleLog() // Объявляет метод обновления видимого текста журнала.
+    { // Начинает тело метода обновления видимого текста журнала.
+        LogText = string.Join(Environment.NewLine, LogEntries); // Пересобирает видимый текст журнала из текущих записей.
+    } // Завершает метод обновления видимого текста журнала.
+
     /// <summary> // Documents log appending.
     /// Adds a new line to the shared log and keeps only the latest entries. // Clarifies the method purpose.
     /// </summary> // Ends XML documentation.
     /// <param name="message">The short event text.</param> // Documents the log text.
     private void AppendLog(string message) // Adds a new line to the shared log.
     { // Begins the method body.
-        if (!this.uiDispatcher.CheckAccess()) // ?????????, ??????????? ?? ????? ?? UI-??????.
-        { // ???????? ????? ???????????? ? UI-?????.
-            _ = this.uiDispatcher.BeginInvoke(DispatcherPriority.Background, new Action(() => AppendLog(message))); // ?????????????? ?????????? ?????? ??????? ? UI-?????.
-            return; // ????????? ????? ?? ?????????? ? UI-??????.
-        } // ????????? ????? ???????????? ? UI-?????.
+        if (!this.uiDispatcher.CheckAccess()) // Проверяет, выполняется ли обновление журнала в UI-потоке.
+        { // Начинает ветку переноса обновления журнала в UI-поток.
+            _ = this.uiDispatcher.BeginInvoke(DispatcherPriority.Background, new Action(() => AppendLog(message))); // Переносит обновление журнала в UI-поток.
+            return; // Завершает метод до выполнения в UI-потоке.
+        } // Завершает ветку переноса обновления журнала в UI-поток.
 
-        string timestampedMessage = $"[{DateTime.Now:HH:mm:ss}] {message}"; // Prepends a local timestamp.
-        LogEntries.Add(timestampedMessage); // Adds the new log line.
+        string timestampedMessage = $"[{DateTime.Now:HH:mm:ss}] {message}"; // Добавляет локальную отметку времени к сообщению журнала.
+        LogEntries.Add(timestampedMessage); // Добавляет новую запись в ограниченную коллекцию журнала.
 
-        while (LogEntries.Count > MaxLogEntries) // Checks whether the log grew too large.
-        { // Begins the trimming loop.
-            LogEntries.RemoveAt(0); // Removes the oldest entry to keep memory bounded.
-        } // Ends the trimming loop.
+        while (LogEntries.Count > MaxLogEntries) // Проверяет, превышен ли допустимый размер журнала.
+        { // Начинает цикл ограничения размера журнала.
+            LogEntries.RemoveAt(0); // Удаляет самую старую запись из журнала.
+        } // Завершает цикл ограничения размера журнала.
+
+        if (!IsLogPaused) // Проверяет, разрешено ли обновление видимого текста журнала.
+        { // Начинает ветку активного обновления видимого журнала.
+            RefreshVisibleLog(); // Обновляет текст журнала в интерфейсе.
+        } // Завершает ветку активного обновления видимого журнала.
     } // Ends the method body.
 } // Завершает тело главной view model.
+
+
 
 
 
