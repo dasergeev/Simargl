@@ -5,8 +5,7 @@ namespace Simargl.Hardware.Strain.Demo.Core;
 /// <summary>
 /// Представляет средство вызова методов.
 /// </summary>
-public sealed class Invoker :
-    Anything
+public sealed class Invoker
 {
     /// <summary>
     /// Поле для хранения метода, отправляющего действие.
@@ -32,9 +31,6 @@ public sealed class Invoker :
     /// </exception>
     public Invoker(Sender sender, CancellationToken cancellationToken)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка метода, отправляющего действие.
         _Sender = IsNotNull(sender);
 

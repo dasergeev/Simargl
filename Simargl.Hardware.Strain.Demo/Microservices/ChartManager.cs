@@ -37,9 +37,6 @@ public sealed class ChartManager :
     public ChartManager(Heart heart, TargetChart chart) :
         base(heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка элемента управления, отображающего графики.
         Chart = chart;
 

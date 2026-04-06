@@ -5,8 +5,7 @@ namespace Simargl.Hardware.Strain.Demo.Main.Properties;
 /// <summary>
 /// Представляет свойство датчика.
 /// </summary>
-public abstract class SensorProperty :
-    Anything
+public abstract class SensorProperty
 {
     /// <summary>
     /// Инициализирует новый экземпляр.
@@ -19,9 +18,6 @@ public abstract class SensorProperty :
     /// </param>
     public SensorProperty(SensorPropertyContext context, Type valueType)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка контекста свойства датчика.
         Context = context;
 
@@ -192,8 +188,7 @@ public sealed class SensorProperty<T> :
     public SensorProperty(SensorPropertyContext context) :
         base(context, typeof(T))
     {
-        //  Обращение к объекту.
-        Lay();
+
     }
 
     /// <summary>

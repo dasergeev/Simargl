@@ -6,7 +6,6 @@ namespace Simargl.Synergy.Core.Criticalling;
 /// Представляет критический объект.
 /// </summary>
 internal class Critical :
-    Anything,
     IAsyncDisposable
 {
     /// <summary>

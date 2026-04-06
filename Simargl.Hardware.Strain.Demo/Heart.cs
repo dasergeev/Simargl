@@ -8,8 +8,7 @@ namespace Simargl.Hardware.Strain.Demo;
 /// <summary>
 /// Представляет сердце приложения.
 /// </summary>
-public sealed class Heart :
-    Anything
+public sealed class Heart
 {
     /// <summary>
     /// Поле для хранения приложения.
@@ -31,9 +30,6 @@ public sealed class Heart :
     /// </summary>
     public Heart()
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Создание элемента управления, отображающего графики.
         _Chart = new();
 

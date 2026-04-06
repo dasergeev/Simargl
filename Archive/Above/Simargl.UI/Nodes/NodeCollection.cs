@@ -9,7 +9,6 @@ namespace Simargl.UI.Nodes;
 /// Представляет коллекцию узлов.
 /// </summary>
 public sealed class NodeCollection :
-    Anything,
     IEnumerable<Node>,
     INotifyCollectionChanged
 {

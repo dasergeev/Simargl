@@ -7,7 +7,6 @@ namespace Simargl.Web.Proxies;
 /// Представляет информацию о подключении к прокси-серверу.
 /// </summary>
 public sealed class WebProxyInfo :
-    Anything,
     IEquatable<WebProxyInfo>
 {
     /// <summary>

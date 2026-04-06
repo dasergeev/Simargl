@@ -3,8 +3,7 @@
 /// <summary>
 /// Пердставляет запись в журнале.
 /// </summary>
-public sealed class JournalRecord :
-    Anything
+public sealed class JournalRecord
 {
     /// <summary>
     /// Поле для хранения следующего ключа.
@@ -22,9 +21,6 @@ public sealed class JournalRecord :
     /// </param>
     public JournalRecord(JournalRecordLevel level, string text)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка значений свойств.
         Level = IsDefined(level);
         Time = DateTime.Now;

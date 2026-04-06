@@ -9,7 +9,6 @@ namespace Simargl.Hardware.Strain.Demo.Main.Properties;
 /// Представляет коллекцию свойств датчика.
 /// </summary>
 public sealed class SensorPropertyCollection :
-    Anything,
     IEnumerable<SensorProperty>
 {
     /// <summary>
@@ -43,9 +42,6 @@ public sealed class SensorPropertyCollection :
     /// </param>
     public SensorPropertyCollection(Sensor sensor, ModbusConnection connection)
     {
-        //  Обращение к объекту.
-        Lay();
-
         Journal journal = ((App)System.Windows.Application.Current).Journal;
 
         //  Создание списка.

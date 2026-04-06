@@ -7,7 +7,6 @@ namespace Simargl.Designing;
 /// Представляет финализатор.
 /// </summary>
 public sealed class Finalizer :
-    Anything,
     IAsyncDisposable
 {
     /// <summary>
@@ -28,9 +27,6 @@ public sealed class Finalizer :
     /// </param>
     private Finalizer(CancellationTokenSource cancellationTokenSource)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка источника токена отмены.
         _CancellationTokenSource = cancellationTokenSource;
 

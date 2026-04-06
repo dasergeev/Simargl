@@ -22,9 +22,6 @@ public sealed class SensorNode :
     public SensorNode(Heart heart, Sensor sensor) :
         base(heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка датчика.
         Sensor = sensor;
 

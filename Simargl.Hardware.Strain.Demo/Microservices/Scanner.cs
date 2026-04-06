@@ -17,9 +17,6 @@ public sealed class Scanner :
     public Scanner(Heart heart) :
         base(heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Добавление основной задачи в механизм поддержки.
         Keeper.Add(InvokeAsync);
     }

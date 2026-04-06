@@ -19,8 +19,7 @@ namespace Simargl.Embedded.Modbus;
 /// <exception cref="ArgumentNullException">
 /// В параметре <paramref name="address"/> передана пустая ссылка.
 /// </exception>
-public sealed class ModbusConnect(IPAddress address, byte slaveIdentifier) :
-    Anything
+public sealed class ModbusConnect(IPAddress address, byte slaveIdentifier)
 {
     /// <summary>
     /// Поле для хранения ведущего устройства.

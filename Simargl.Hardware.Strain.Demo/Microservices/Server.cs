@@ -26,9 +26,6 @@ public sealed class Server :
     public Server(Heart heart) :
         base(heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Добавление основной задачи в механизм поддержки.
         Keeper.Add(InvokeAsync);
     }

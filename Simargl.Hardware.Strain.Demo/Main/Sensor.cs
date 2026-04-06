@@ -69,9 +69,6 @@ public sealed partial class Sensor :
     public Sensor(Heart heart, uint serial, IPAddress address) :
         base(heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Создание очереди транзакций.
         _Transaction = [];
 

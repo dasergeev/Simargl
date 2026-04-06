@@ -5,16 +5,14 @@ namespace Simargl.Hardware.Strain.Demo.Core;
 /// <summary>
 /// Представляет пакет данных.
 /// </summary>
-public sealed class DataPackage :
-    Anything
+public sealed class DataPackage
 {
     /// <summary>
     /// Инициализирует новый экземпляр.
     /// </summary>
     public DataPackage()
     {
-        //  Обращение к объекту.
-        Lay();
+
     }
 
     /// <summary>

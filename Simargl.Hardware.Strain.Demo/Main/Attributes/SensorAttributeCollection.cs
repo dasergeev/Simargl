@@ -9,7 +9,6 @@ namespace Simargl.Hardware.Strain.Demo.Main.Attributes;
 /// Представляет коллекцию атрибутов датчика.
 /// </summary>
 public sealed class SensorAttributeCollection :
-    Anything,
     IEnumerable<SensorAttribute>
 {
     /// <summary>
@@ -22,9 +21,6 @@ public sealed class SensorAttributeCollection :
     /// </summary>
     public SensorAttributeCollection()
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Создание списка элементов.
         _Items = [];
     }

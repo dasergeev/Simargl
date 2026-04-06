@@ -10,8 +10,7 @@ namespace Simargl.IO;
 /// <param name="stream">
 /// Поток, данные которого необходимо распределять.
 /// </param>
-internal sealed class SpreaderCore(Stream stream) :
-    Anything
+internal sealed class SpreaderCore(Stream stream)
 {
     /// <summary>
     /// Поле для хранения потока, данные которого необходимо распределять.

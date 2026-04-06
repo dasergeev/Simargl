@@ -3,8 +3,7 @@
 /// <summary>
 /// Представляет источник элемента управления.
 /// </summary>
-public abstract class ControlSource :
-    Anything
+public abstract class ControlSource
 {
     /// <summary>
     /// Возвращает тип элемента управления.

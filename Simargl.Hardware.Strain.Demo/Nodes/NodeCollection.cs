@@ -7,7 +7,6 @@ namespace Simargl.Hardware.Strain.Demo.Nodes;
 /// Представляет коллекию узлов.
 /// </summary>
 public sealed class NodeCollection :
-    Anything,
     IEnumerable<Node>,
     INotifyCollectionChanged,
     INotifyPropertyChanged
@@ -40,9 +39,6 @@ public sealed class NodeCollection :
     /// </param>
     internal NodeCollection([NoVerify] NodeCollectionProvider provider)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка поставщика коллекции.
         _Provider = provider;
 

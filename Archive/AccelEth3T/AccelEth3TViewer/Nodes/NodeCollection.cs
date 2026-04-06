@@ -9,7 +9,6 @@ namespace Simargl.AccelEth3T.AccelEth3TViewer.Nodes;
 /// Представляет коллекцию узлов.
 /// </summary>
 public sealed class NodeCollection :
-    Anything,
     IEnumerable<Node>,
     INotifyCollectionChanged
 {

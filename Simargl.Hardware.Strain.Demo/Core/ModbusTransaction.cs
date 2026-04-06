@@ -5,8 +5,7 @@ namespace Simargl.Hardware.Strain.Demo.Core;
 /// <summary>
 /// Представляет транзакцию по Modbus.
 /// </summary>
-public sealed class ModbusTransaction :
-    Anything
+public sealed class ModbusTransaction
 {
     /// <summary>
     /// Инициализирует новый экземпляр.
@@ -19,9 +18,6 @@ public sealed class ModbusTransaction :
     /// </param>
     public ModbusTransaction(TcpAduPackage request, TaskCompletionSource<TcpAduPackage> taskCompletionSource)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка значений.
         Request = request;
         TaskCompletionSource = taskCompletionSource;

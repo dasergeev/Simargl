@@ -10,8 +10,7 @@ namespace Simargl.Embedded.AccelEth3T;
 /// <summary>
 /// Представляет соединение с акселерометром AccelEth-3T
 /// </summary>
-public sealed class AccelEth3TConnect :
-    Anything
+public sealed class AccelEth3TConnect
 {
     /// <summary>
     /// Постоянная, определяющая идентификатор устройства.

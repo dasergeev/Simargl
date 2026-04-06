@@ -4,7 +4,6 @@
 /// Представляет коллекцию информации о пакетах данных датчика AccelEth3T.
 /// </summary>
 public sealed class AccelEth3TDataPackageInfoCollection :
-    Anything,
     IEnumerable<AccelEth3TDataPackageInfo>
 {
     /// <summary>

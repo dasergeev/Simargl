@@ -7,18 +7,7 @@ namespace Simargl.Designing;
 /// </summary>
 [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]
 public sealed class NoVerifyAttribute :
-    Attribute,
-    IAnything
+    Attribute
 {
-    /// <summary>
-    /// Возвращает базу объекта.
-    /// </summary>
-    /// <returns>
-    /// База объекта.
-    /// </returns>
-    public AnythingBasis GetBasis()
-    {
-        //  Возврат исходной базы объекта.
-        return this.GetOriginalBasis();
-    }
+
 }

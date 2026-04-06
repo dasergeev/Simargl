@@ -10,7 +10,6 @@ namespace Simargl.Hardware.Strain.Demo.Nodes;
 /// Представляет узел.
 /// </summary>
 public abstract class Node :
-    Anything,
     INotifyPropertyChanged
 {
     /// <summary>
@@ -71,9 +70,6 @@ public abstract class Node :
     /// </param>
     public Node(Heart heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка имени узла.
         _Name = string.Empty;
 

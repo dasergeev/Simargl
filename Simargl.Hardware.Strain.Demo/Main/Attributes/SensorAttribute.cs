@@ -14,7 +14,6 @@ namespace Simargl.Hardware.Strain.Demo.Main.Attributes;
 /// Представляет атрибут датчика.
 /// </summary>
 public class SensorAttribute :
-    Anything,
     INotifyPropertyChanged
 {
     /// <summary>
@@ -88,9 +87,6 @@ public class SensorAttribute :
     /// </param>
     public SensorAttribute(string name, SensorAttributeFormat format)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка имени атрибута.
         Name = name;
 
@@ -453,9 +449,6 @@ public sealed class SensorAttribute<T> :
     public SensorAttribute(SensorProperty<T> property, SensorAttributeFormat format) :
         base(property.Name, format)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка свойства.
         _Property = property;
     }

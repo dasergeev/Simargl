@@ -6,8 +6,7 @@ namespace Simargl.Hardware.Strain.Demo.Microservices;
 /// <summary>
 /// Представляет микросервис.
 /// </summary>
-public abstract class Microservice :
-    Anything
+public abstract class Microservice
 {
     /// <summary>
     /// Инициализирует новый экземпляр.
@@ -17,9 +16,6 @@ public abstract class Microservice :
     /// </param>
     public Microservice(Heart heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка сердца приложения.
         Heart = heart;
     }

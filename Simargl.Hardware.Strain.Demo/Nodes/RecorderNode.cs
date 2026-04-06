@@ -18,9 +18,6 @@ public sealed class RecorderNode :
     public RecorderNode(Heart heart) :
         base(heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка имени узла.
         Name = "Регистратор";
 

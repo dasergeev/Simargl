@@ -27,9 +27,6 @@ public sealed class EquipmentNode :
     public EquipmentNode(Heart heart) :
         base(heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка имени узла.
         Name = "Датчики";
 

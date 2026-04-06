@@ -5,8 +5,7 @@ namespace Simargl.Hardware.Strain.Demo.Core;
 /// <summary>
 /// Представляет механизм поддержки.
 /// </summary>
-public sealed class Keeper :
-    Anything
+public sealed class Keeper
 {
     /// <summary>
     /// Поле для хранения токена отмены.
@@ -21,9 +20,6 @@ public sealed class Keeper :
     /// </param>
     public Keeper(CancellationToken cancellationToken)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка токена отмены.
         _CancellationToken = cancellationToken;
     }

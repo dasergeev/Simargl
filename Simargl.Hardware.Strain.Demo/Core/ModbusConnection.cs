@@ -11,8 +11,7 @@ namespace Simargl.Hardware.Strain.Demo.Core;
 /// <summary>
 /// Представляет Modbus-соединение.
 /// </summary>
-public sealed class ModbusConnection :
-    Anything
+public sealed class ModbusConnection
 {
     /// <summary>
     /// Поле для хранения таймаута.
@@ -32,9 +31,6 @@ public sealed class ModbusConnection :
     /// </param>
     public ModbusConnection(ConcurrentQueue<ModbusTransaction> transaction)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка очереди транзакций.
         _Transaction = transaction;
     }

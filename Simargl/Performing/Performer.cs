@@ -6,7 +6,6 @@ namespace Simargl.Performing;
 /// Представляет исполнителя.
 /// </summary>
 public class Performer :
-    Anything,
     IDisposable
 {
     /// <summary>

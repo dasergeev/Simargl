@@ -6,8 +6,7 @@ namespace Simargl.IO;
 /// <summary>
 /// Представляет распределитель данных потока.
 /// </summary>
-public sealed class Spreader :
-    Anything
+public sealed class Spreader
 {
     /// <summary>
     /// Постоянная, определяющая размер значения типа <see cref="sbyte"/> в потоке.

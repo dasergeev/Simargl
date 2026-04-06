@@ -15,9 +15,6 @@ public sealed class RootNode :
     public RootNode(Heart heart) :
         base(heart)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка имени узла.
         Name = "root";
 

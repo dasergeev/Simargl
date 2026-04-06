@@ -15,7 +15,6 @@ namespace Simargl.Hardware.Strain.Demo.Main;
 /// Представляет сигнал данных.
 /// </summary>
 public sealed class Signal :
-    Anything,
     INotifyPropertyChanged
 {
     /// <summary>
@@ -38,9 +37,6 @@ public sealed class Signal :
     /// </summary>
     public Signal(long serial, int index)
     {
-        //  Обращение к объекту.
-        Lay();
-
         Serial = serial;
         Index = index;
 

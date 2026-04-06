@@ -11,8 +11,7 @@ namespace Simargl.Hardware.Strain.Demo.UI;
 /// Представляет элемент управления.
 /// </summary>
 public abstract class Control :
-    System.Windows.Controls.UserControl,
-    IAnything
+    System.Windows.Controls.UserControl
 {
     /// <summary>
     /// Происходит при изменении значения свойства <see cref="Heart"/>.
@@ -47,11 +46,6 @@ public abstract class Control :
                     FrameworkPropertyMetadataOptions.Inherits,
                     OnHeartChanged)
             );
-
-    /// <summary>
-    /// Поле для хранения базы объекта.
-    /// </summary>
-    private AnythingBasis? _Basis;
 
     /// <summary>
     /// Поле для хранения приложения.
@@ -90,28 +84,6 @@ public abstract class Control :
     /// Возвращает выбранный узел.
     /// </summary>
     public Node? SelectedNode => _SelectedNode;
-
-    /// <summary>
-    /// Возвращает базу объекта.
-    /// </summary>
-    /// <returns>
-    /// База объекта.
-    /// </returns>
-    public virtual AnythingBasis GetBasis()
-    {
-        //  Проверка базы объекта.
-        if (_Basis is not AnythingBasis basis)
-        {
-            //  Получение исходной базы объекта.
-            basis = this.GetOriginalBasis();
-
-            //  Замена базы.
-            basis = Interlocked.CompareExchange(ref _Basis, basis, null) ?? basis;
-        }
-
-        //  Возврат базы.
-        return basis;
-    }
 
     /// <summary>
     /// Возвращает значение, определяющее, находится ли элемент приложения в режиме разработки.

@@ -6,8 +6,7 @@ namespace Simargl.Hardware.Strain.Demo.Journaling;
 /// <summary>
 /// Пердставляет журнал.
 /// </summary>
-public sealed class Journal :
-    Anything
+public sealed class Journal
 {
     /// <summary>
     /// Поле для хранения очереди сообщений журнала.
@@ -22,9 +21,6 @@ public sealed class Journal :
     /// </param>
     public Journal(ConcurrentQueue<JournalRecord> queue)
     {
-        //  Обращение к объекту.
-        Lay();
-
         //  Установка очереди сообщений журнала.
         _Queue = queue;
     }
