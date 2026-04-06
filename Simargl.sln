@@ -188,12 +188,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simargl.Trials.Aurora.Auror
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simargl.Trials.Aurora.Aurora01.Analyzer", "Archive\Trials\Aurora\Aurora01\Simargl.Trials.Aurora.Aurora01.Analyzer\Simargl.Trials.Aurora.Aurora01.Analyzer.csproj", "{E66D58AA-E25B-4C2D-8B81-F532272D90FD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OS", "OS", "{FE8AC497-C149-4747-BC11-D5A34D02A2D9}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Setup", "Archive\OS\Kernel\Setup\Setup.shproj", "{50FA1175-56D7-401A-BBCA-91DF5CA80285}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kernel", "Kernel", "{36BC6475-0E9F-445A-A0A4-32CDD9813BB0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simargl.Synergy.Hub", "Archive\Synergy\Simargl.Synergy.Hub\Simargl.Synergy.Hub.csproj", "{7A7E5D6C-F420-48EB-A3F4-53B7BEB6AD53}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simargl.Synergy.Tester", "Archive\Synergy\Simargl.Synergy.Tester\Simargl.Synergy.Tester.csproj", "{501945F7-30F6-42DA-B26E-387E61C2BED2}"
@@ -3866,9 +3860,6 @@ Global
 		{D73B3458-A558-4D08-B9F6-4ABCC08F72E0} = {278AD6EB-82F3-4719-A8F9-8EA5ED25CE70}
 		{EEA148E8-3B38-4647-9990-A155F4752E00} = {278AD6EB-82F3-4719-A8F9-8EA5ED25CE70}
 		{E66D58AA-E25B-4C2D-8B81-F532272D90FD} = {278AD6EB-82F3-4719-A8F9-8EA5ED25CE70}
-		{FE8AC497-C149-4747-BC11-D5A34D02A2D9} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
-		{50FA1175-56D7-401A-BBCA-91DF5CA80285} = {36BC6475-0E9F-445A-A0A4-32CDD9813BB0}
-		{36BC6475-0E9F-445A-A0A4-32CDD9813BB0} = {FE8AC497-C149-4747-BC11-D5A34D02A2D9}
 		{7A7E5D6C-F420-48EB-A3F4-53B7BEB6AD53} = {93788880-1739-4170-A080-861CC8272F27}
 		{501945F7-30F6-42DA-B26E-387E61C2BED2} = {93788880-1739-4170-A080-861CC8272F27}
 		{3A220D00-1AE2-4854-9C80-C148E31DF45E} = {93788880-1739-4170-A080-861CC8272F27}
@@ -3951,7 +3942,6 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Archive\Synergy\Simargl.Synergy.Core\Simargl.Synergy.Core.projitems*{3a220d00-1ae2-4854-9c80-c148e31df45e}*SharedItemsImports = 13
 		Archive\Synergy\Simargl.Synergy.Core\Simargl.Synergy.Core.projitems*{501945f7-30f6-42da-b26e-387e61c2bed2}*SharedItemsImports = 5
-		Archive\OS\Kernel\Setup\Setup.projitems*{50fa1175-56d7-401a-bbca-91df5ca80285}*SharedItemsImports = 13
 		Archive\Synergy\Simargl.Synergy.Core\Simargl.Synergy.Core.projitems*{7a7e5d6c-f420-48eb-a3f4-53b7beb6ad53}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
